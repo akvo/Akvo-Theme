@@ -1,2 +1,2 @@
-# Akvo-Theme
+# Akvo-Web-Theme
 New Akvo.org theme

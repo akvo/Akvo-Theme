@@ -16,14 +16,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="author" content="Akvo Foundation">
 <meta name="HandheldFriendly" content="True">
-<meta name="google-site-verification" content="h6M7-buFJgu3jUVcALgFkBDxi0UtePXQhVUcZBYO5Lk" />
-<link rel="shortcut icon" href="https://akvo.org/wp-content/themes/Akvo-responsive/favicon.ico">
-<link rel="icon" href="https://akvo.org/wp-content/themes/Akvo-responsive/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="https://akvo.org/wp-content/themes/Akvo-responsive/apple-touch-icon-180x180.png">
-<link rel="apple-touch-icon" sizes="120x120" href="https://akvo.org/wp-content/themes/Akvo-responsive/apple-touch-icon-120x120.png">
-
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://akvo.org/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://akvo.org/wp-includes/wlwmanifest.xml" /> 
 
 <?php wp_head(); ?>
 

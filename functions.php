@@ -1,4 +1,9 @@
 <?php 
+
+	/* HIDE ADMIN BAR FROM THE FRONTEND */
+	add_filter('show_admin_bar', '__return_false');
+	
+	
 function my_assets() {
 //Enqueue Scripts
 wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.1.min.js', array('jquery'), null, true);
@@ -94,4 +99,3 @@ function footer_widgets() {
 
 }
 add_action( 'widgets_init', 'footer_widgets' );
-?>

@@ -1,7 +1,7 @@
 <?php get_header();?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="container fullwidth homeslider">
-<?php putRevSlider("home", "homepage") ?>
+<?php //putRevSlider("home", "homepage") ?>
 </div>
 <div class="fullwidth paddingtop paddingbottom">
 <div class="container"><?php the_content();?></div>

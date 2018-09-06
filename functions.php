@@ -1,17 +1,16 @@
 <?php 
 
-	/* HIDE ADMIN BAR FROM THE FRONTEND */
-	add_filter('show_admin_bar', '__return_false');
+/* HIDE ADMIN BAR FROM THE FRONTEND */
+add_filter('show_admin_bar', '__return_false');
 	
-	/* ADD SOW FROM THE THEME */
-	add_action('siteorigin_widgets_widget_folders', function( $folders ){
-		$folders[] = get_template_directory() . '/so-widgets/';
-		return $folders;
-	});
-	
-		// Enqueue assets
-function my_assets() {
+/* ADD SOW FROM THE THEME */
+add_action('siteorigin_widgets_widget_folders', function( $folders ){
+	$folders[] = get_template_directory() . '/so-widgets/';
+	return $folders;
+});
 
+function my_assets() {
+//Enqueue Scripts
 wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.1.min.js', array('jquery'), null, true);
 wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), null, true);
 wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js', array('jquery'), null, true);
@@ -40,15 +39,14 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 function register_my_menus() {
   register_nav_menus(
     array(
-		'header-menu' => __( 'Header Menu' ),
-		'footer-menu-1' => __( 'Footer Menu 1' ),
-		'footer-menu-2' => __( 'Footer Menu 2' )
+      'header-menu' => __( 'Header Menu' ),
+      'footer-menu-1' => __( 'Footer Menu 1' ),
+      'footer-menu-2' => __( 'Footer Menu 2' )
     )
   );
 }
 add_action( 'init', 'register_my_menus' );
 
-/*
 //Title
 function wpdocs_filter_wp_title( $title, $sep ) {
     global $paged, $page;
@@ -71,9 +69,6 @@ function wpdocs_filter_wp_title( $title, $sep ) {
     return $title;
 }
 add_filter( 'wp_title', 'wpdocs_filter_wp_title', 10, 2 );
-
-*/
-// we won't need the above function as YOAST will provide us with the required SEO TITLES
 
 
 //Widgets
@@ -105,7 +100,41 @@ function footer_widgets() {
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
 	) );
+	
+	register_sidebar( array(
+		'name'          => 'Video Modal',
+		'id'            => 'video_modal',
+		'before_widget' => '<div class="modal-content">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+			<h3 class="modal-title" id="lineModalLabel">',
+		'after_title'   => '</h3></div><div class="modal-body">',
+	) );
+	
+	register_sidebar( array(
+		'name'          => 'Apply Modal',
+		'id'            => 'apply_modal',
+		'before_widget' => '<div class="modal-content">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+			<h3 class="modal-title" id="lineModalLabel">',
+		'after_title'   => '</h3></div><div class="modal-body">',
+	) );
+	
+	register_sidebar( array(
+		'name'          => 'Newsletter Modal',
+		'id'            => 'newsletter_modal',
+		'before_widget' => '<div class="modal-content">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+			<h3 class="modal-title" id="lineModalLabel">',
+		'after_title'   => '</h3></div><div class="modal-body">',
+	) );
 
 
 }
 add_action( 'widgets_init', 'footer_widgets' );
+?>

@@ -40,14 +40,15 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 function register_my_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( 'Header Menu' ),
-      'footer-menu-1' => __( 'Footer Menu 1' ),
-      'footer-menu-2' => __( 'Footer Menu 2' )
+		'header-menu' => __( 'Header Menu' ),
+		'footer-menu-1' => __( 'Footer Menu 1' ),
+		'footer-menu-2' => __( 'Footer Menu 2' )
     )
   );
 }
 add_action( 'init', 'register_my_menus' );
 
+/*
 //Title
 function wpdocs_filter_wp_title( $title, $sep ) {
     global $paged, $page;
@@ -70,6 +71,9 @@ function wpdocs_filter_wp_title( $title, $sep ) {
     return $title;
 }
 add_filter( 'wp_title', 'wpdocs_filter_wp_title', 10, 2 );
+
+*/
+// we won't need the above function as YOAST will provide us with the required SEO TITLES
 
 
 //Widgets

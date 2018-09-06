@@ -1,17 +1,9 @@
 <?php 
 
-	/* HIDE ADMIN BAR FROM THE FRONTEND */
-	add_filter('show_admin_bar', '__return_false');
-	
-	/* ADD SOW FROM THE THEME */
-	add_action('siteorigin_widgets_widget_folders', function( $folders ){
-		$folders[] = get_template_directory() . '/so-widgets/';
-		return $folders;
-	});
-	
-		// Enqueue assets
-function my_assets() {
+add_filter('show_admin_bar', '__return_false');
 
+function my_assets() {
+//Enqueue Scripts
 wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.1.min.js', array('jquery'), null, true);
 wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), null, true);
 wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js', array('jquery'), null, true);
@@ -105,3 +97,4 @@ function footer_widgets() {
 
 }
 add_action( 'widgets_init', 'footer_widgets' );
+?>

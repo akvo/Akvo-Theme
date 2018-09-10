@@ -10,8 +10,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta charset="UTF-8">
+		<title><?php wp_title('|', true, 'right'); ?></title>
 		<!--
-		<title><?php //wp_title('|', true, 'right'); ?></title>
+		
 		<meta name="description" content="Akvo.org: See it Happen" />
 		<meta name="author" content="Akvo Foundation">
 

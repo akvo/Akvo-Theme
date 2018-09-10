@@ -39,81 +39,14 @@
 	<!-- line modal -->
 <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
   <div class="modal-dialog">
-	<div class="modal-content">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-			<h3 class="modal-title" id="lineModalLabel">Sign up for Our Newsletter</h3>
-		</div>
-		<div class="modal-body">
-			
-            <!-- content goes here -->
-			<form action="#" class="newsletterform">
-						<div class="input-group">
-							<input class="signup name left modalinput" name="Fname" id="Fname" type="text" placeholder="First Name" required>
-							<input class="signup name right modalinput" name="Lname" id="Lname" type="text" placeholder="Last Name" required>
-							<input class="signup email modalinput" name="email" id="email" type="email" placeholder="Your Email" required>
-							<select class="articlesdropdown selectpicker" data-style="btn-primary">
-      <option>Role</option>
-      <option>Manager</option>
-      <option>Director</option>
-  </select>
-					<div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">GDPR Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget congue justo, eu elementum ex. Nam dictum diam at leo sollicitudin imperdiet. Donec volutpat, quam a bibendum tristique, diam dolor lobortis dolor, a fermentum felis turpis a felis. Nam eget risus id quam dignissim porta eget et nisi. </label>
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck2">
-    <label class="form-check-label" for="exampleCheck2">Other Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget congue justo, eu elementum ex. Nam dictum diam at leo sollicitudin imperdiet. Donec volutpat, quam a bibendum tristique, diam dolor lobortis dolor, a fermentum felis turpis a felis. Nam eget risus id quam dignissim porta eget et nisi. </label>
-  </div>
-							<button class="button" type="submit">Sign Up</button>
-						</div>
-			</form>
-
-		</div>
-	</div>
+	<?php dynamic_sidebar( 'newsletter_modal' ); ?>
   </div>
 </div>
 
 <!-- apply modal -->
 <div class="modal fade" id="squarespaceModalApply" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
   <div class="modal-dialog">
-	<div class="modal-content">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-			<h3 class="modal-title" id="lineModalLabel">Apply to Work for Akvo</h3>
-		</div>
-		<div class="modal-body">
-			
-            <!-- content goes here -->
-			<form action="#" class="newsletterform">
-						<div class="input-group">
-							<input class="signup name left modalinput" name="Fname" id="Fname" type="text" placeholder="First Name" required>
-							<input class="signup name right modalinput" name="Lname" id="Lname" type="text" placeholder="Last Name" required>
-							<input class="signup email modalinput" name="email" id="email" type="email" placeholder="Your Email" required>
-							<select class="articlesdropdown selectpicker" data-style="btn-primary">
-      <option selected disabled>Select Job to Apply for</option>
-      <option>Copywriter - Europe</option>
-      <option>C# Programmer - APAC</option>
-      <option>Marketing Executive - West Africa</option>
-  </select>
-  <br/>
-							<label class="form-check-label" for="letterupload">Upload your Covering Letter<input type="file" name="image" id="letterupload"  required /></label>
-							<label class="form-check-label" for="cvupload">Upload your CV<input type="file" name="image" id="cvupload"  required /></label>
-	<br/>						
-					<div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">GDPR Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget congue justo, eu elementum ex. Nam dictum diam at leo sollicitudin imperdiet. Donec volutpat, quam a bibendum tristique, diam dolor lobortis dolor, a fermentum felis turpis a felis. Nam eget risus id quam dignissim porta eget et nisi. </label>
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck2">
-    <label class="form-check-label" for="exampleCheck2">Other Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget congue justo, eu elementum ex. Nam dictum diam at leo sollicitudin imperdiet. Donec volutpat, quam a bibendum tristique, diam dolor lobortis dolor, a fermentum felis turpis a felis. Nam eget risus id quam dignissim porta eget et nisi. </label>
-  </div>
-							<button class="button" type="submit">Send Your Application</button>
-						</div>
-			</form>
-
-		</div>
-	</div>
+		<?php dynamic_sidebar( 'apply_modal' ); ?>
   </div>
 </div>
 <!-- end apply modal -->
@@ -122,13 +55,7 @@
 <div class="modal fade" id="squarespaceModalVideo" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
   <div class="modal-dialog">
 	<div class="modal-content">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-			<h3 class="modal-title" id="lineModalLabel">Get to know us in two minutes</h3>
-		</div>
-		<div class="modal-body">
-		<div class="video"><iframe src="https://www.youtube.com/embed/QVAF2l3JP3I?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe></div>
-		</div>
+		<?php dynamic_sidebar( 'video_modal' ); ?>
 	</div>
   </div>
 </div>

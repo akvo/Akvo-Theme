@@ -52,11 +52,9 @@
 		
 		wp_enqueue_style('bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css', null, true);
 		
-		
-
 	} );
 
-
+	
 	add_action( 'init', function(){
 		
 		// REGISTER NAV MENUS

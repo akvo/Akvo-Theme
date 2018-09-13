@@ -1,5 +1,6 @@
 <?php 
 	
+	include('lib/class-akvo.php');
 	include('lib/shortcodes.php');
 	
 	/* HIDE ADMIN BAR FROM THE FRONTEND */

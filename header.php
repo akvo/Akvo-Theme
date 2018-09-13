@@ -43,7 +43,9 @@
 								<span class="icon-bar"></span>
 							</button>
 							<div class="logobrand">
-								<a id="brand" class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/akvotheme-NEW/images/logos/akvologowhite.png"></a>
+								<a id="brand" class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+									<img src="<?php bloginfo('template_url'); ?>/images/logos/akvologowhite.png">
+								</a>
 							</div>
 						</div>
 						<div id="navbar" class="collapse navbar-collapse">

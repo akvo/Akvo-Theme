@@ -1,7 +1,14 @@
 <?php 
 	
-	include('lib/class-akvo.php');
-	include('lib/shortcodes.php');
+	$inc_files = array(
+		'lib/class-akvo-admin.php',
+		'lib/class-akvo.php',
+		'lib/shortcodes.php'
+	);
+	
+	foreach( $inc_files as $inc_file ){
+		include( $inc_file );
+	}
 	
 	/* HIDE ADMIN BAR FROM THE FRONTEND */
 	add_filter('show_admin_bar', '__return_false');

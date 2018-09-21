@@ -53,3 +53,9 @@
 		include('templates/filter_stories.php');
 		return ob_get_clean();
 	} );
+
+	add_shortcode( 'title_header_image', function( $atts ){
+		ob_start();
+		include('templates/title_header_image.php');
+		return ob_get_clean();
+	} );

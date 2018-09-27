@@ -295,59 +295,23 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	
-	// settings OBJECT IS LOADED FROM FUNCTIONS.PHP
-	var clocks_img_path = settings['template_url'] + '/images/jClocks-';
- 
-	$('#clock_europe').jClocksGMT({
-		imgpath: clocks_img_path,
-		title: 'Europe',
-		hello: 'Hallo',
-		offset: '+2',
-		dst: true
-	});
-
-	$('#clock_west_africa').jClocksGMT({
-		imgpath: clocks_img_path,
-		title: 'West Africa',
-		hello: 'Bonjour',
-		offset: '+0',
-		dst: true
-	});
-
-	$('#clock_east_africa').jClocksGMT({
-		imgpath: clocks_img_path,
-		title: 'East Africa', 
-		hello: 'Hujambo',
-		offset: '+3',
-		dst: true
-	});
 	
-	$('#clock_south_asia').jClocksGMT({   
-		imgpath: clocks_img_path,
-		title: 'South Asia', 
-		hello: 'Namaste',
-		offset: '+5',
-		dst: true
+	$('body').find('[data-behaviour~=clock]').each( function(){
+		
+		var el 		= $( this ),
+			imgpath = settings['template_url'] + '/images/jClocks-'; // settings OBJECT IS LOADED FROM FUNCTIONS.PHP
+	
+		
+		el.jClocksGMT({
+			imgpath	: imgpath,
+			title	: el.data('title'),
+			hello	: el.data('hello'),
+			offset	: el.data('offset'),
+			dst		: true
+		});
+		
 	});
-
-	$('#clock_apac').jClocksGMT({
-		imgpath: clocks_img_path,
-		title: 'South East Asia & Pacific', 
-		hello: 'Ni Hao',
-		offset: '+7',
-		dst: true
-	});
-
-	$('#clock_americas').jClocksGMT({
-		imgpath: clocks_img_path,
-		title: 'Americas',
-		hello: 'Hi There',
-		offset: '-5.0',
-		dst: true,
-	});
-
-
-
+		
 	// magic happens here
 	var clocks = $('.jcgmt-container'); // get all clock elements
 

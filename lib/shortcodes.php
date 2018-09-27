@@ -1,6 +1,10 @@
 <?php
 	
-	
+	add_shortcode( 'akvo_clock', function( $atts ){
+		ob_start();
+		include('templates/clock.php');
+		return ob_get_clean();
+	} );
 
 	add_shortcode( 'akvo_clocks', function( $atts ){
 		ob_start();
@@ -50,11 +54,5 @@
 		return ob_get_clean();
 	} );
 	
-	/*
-	add_shortcode( 'akvo_header_image', function( $atts ){
-		ob_start();
-		include('templates/title_header_image.php');
-		return ob_get_clean();
-	} );
-	*/
+	
 	

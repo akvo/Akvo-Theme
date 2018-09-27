@@ -3,7 +3,8 @@
 	$inc_files = array(
 		'lib/class-akvo-admin.php',
 		'lib/class-akvo.php',
-		'lib/shortcodes.php'
+		'lib/shortcodes.php',
+		'lib/shortcodes/class-akvo-shortcode.php'
 	);
 	
 	foreach( $inc_files as $inc_file ){
@@ -23,13 +24,19 @@
 	// Enqueue assets
 	add_action( 'wp_enqueue_scripts', function(){
 		
+		$settings = array(
+			'template_url'	=> get_template_directory_uri()
+		);
+		
 		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.1.min.js', array('jquery'), null, true);
 		wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), null, true);
 		
 		// Why/Where are we using this?
 		wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js', array('jquery'), null, true);
 		
-		wp_enqueue_script('akvo-script', get_template_directory_uri() .'/js/akvo_scripts.js', array('jquery'), null, true);
+		wp_enqueue_script('akvo-script', get_template_directory_uri() .'/js/akvo_scripts.js', array('jquery'), '1.0.0', true);
+		
+		wp_localize_script( 'akvo-script', 'settings', $settings );	
 		
 		// clocks for every region
 		wp_enqueue_script('clock-script', get_template_directory_uri() .'/js/jClocksGMT.js', array('jquery'), null, true);

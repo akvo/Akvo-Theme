@@ -6,7 +6,16 @@
 		var $shortcode;
 		var $template;
 		
-		function __construct(){
+		var $default_atts;
+		
+		function __construct( $params ){
+			
+			$this->shortcode = $params['slug'];
+			
+			$this->template = $params['template'];
+			
+			$this->default_atts = $params['atts'];
+			
 			add_shortcode( $this->shortcode, array( $this, 'main_shortcode' ), 100 );
 		}
 		
@@ -15,9 +24,7 @@
 			return shortcode_atts( $defaults_atts, $atts, $this->shortcode );
 		}
 		
-		function get_default_atts(){
-			return array();
-		}
+		function get_default_atts(){ return $this->default_atts;}
 		
 		function plain_shortcode( $atts ){
 			
@@ -25,7 +32,7 @@
 			
 			ob_start();
 			
-			include( 'templates/'. $this->template );
+			include( $this->template );
 			
 			return ob_get_clean();
 		}
@@ -110,3 +117,13 @@
 		}
 		
 	}
+	
+	// USAGE: [akvo_header_image bg_image="" title=""]
+	new AKVO_SHORTCODE( array( 
+		'slug'		=> 'akvo_header_image',
+		'template'	=> get_template_directory().'/lib/templates/title_header_image.php',
+		'atts'		=> array(
+			'bg_image'	=> get_template_directory_uri().'/images/akvocover.jpg',
+			'title'		=> 'Title Goes Here'
+		)
+	) );

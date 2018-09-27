@@ -19,7 +19,6 @@
 			/* SAVE POST - FOR SAVING META FIELDS */
 			add_action( 'save_post', array( $this, 'save_meta_fields' ), 10, 2 );
 			
-			
 			/* change permalinks */
 			add_filter('post_type_link', function( $permalink, $post_id, $leavename ){
 				
@@ -163,8 +162,35 @@
 		
 		function get_taxonomies(){ return $this->taxonomies; }
 		
-		function set_meta_boxes(){ 
+		function set_meta_boxes(){
+			/*
 			$this->meta_boxes = array(
+				array(
+					'title'		=> 'New Staff Details',
+					'fields'	=> array(
+						'staff_title'		=> 'Job Title', 
+						'staff_twitter'		=> 'Twitter Link',
+						'staff_linkedin'	=> 'LinkedIn Link',
+						'staff_blog'		=> 'Blog Link'
+					),
+					'post_type'	=> 'new_staffs'
+				),
+				array(
+					'title'		=> 'Page Settings',
+					'fields'	=> array(
+						'disable_header'	=> array(
+							'label'		=> 'Disable Header',
+							'type'		=> 'boolean',
+							'default'	=> false
+						)
+					),
+					'post_type'	=> 'page'
+				)
+			);
+			*/
+			
+			$this->meta_boxes = array(
+				/*
 				'new_staffs'	=> array(
 					'title'		=> 'New Staff Details',
 					'fields'	=> array(
@@ -172,7 +198,8 @@
 						'staff_twitter'		=> 'Twitter Link',
 						'staff_linkedin'	=> 'LinkedIn Link',
 						'staff_blog'		=> 'Blog Link'
-					)
+					),
+					
 				),
 				'new_partners'	=> array(
 					'title'		=> 'Partner Details',
@@ -180,12 +207,21 @@
 						'partners_link'		=> 'Link to a microstory or a partners page'
 					)
 				),
-				'page'			=> array(
+				*/
+				'settings_box'	=> array(
 					'title'		=> 'Page Settings',
 					'fields'	=> array(
-						'hubs_headline'		=> 'Hubs Headline'
-					)
+						'disable_header'	=> array(
+							'label'		=> 'Disable Header Image',
+							'type'		=> 'boolean',
+							'default'	=> false
+						)
+					),
+					'post_type'	=> 'page',
+					'context'	=> 'side',
+					'priority'	=> 'default'
 				),
+				/*
 				'microstory'	=> array(
 					'title'		=> 'Settings',
 					'fields'	=> array(
@@ -195,13 +231,15 @@
 				'foundation_member'	=> array(
 					'title'		=> 'Settings',
 					'fields'	=> array(
-						'member_title'	=> 'Job Title',
+						'member_title'		=> 'Job Title',
 						'staff_twitter'		=> 'Twitter Link',
 						'staff_linkedin'	=> 'LinkedIn Link',
 						'staff_blog'		=> 'Blog Link'
 					)
 				),
+				*/
 			);
+			
 		}
 		
 		function get_meta_boxes(){ return $this->meta_boxes; }
@@ -257,45 +295,95 @@
 			/* META BOXES */
 			add_action( 'admin_init', function(){
 				
-				foreach( $this->get_meta_boxes() as $post_type => $metabox ){
-					$this->add_meta_box( $post_type, $metabox[ 'title' ] );
+				foreach( $this->get_meta_boxes() as $slug => $metabox ){
+					
+					$metabox['context'] = $metabox['context'] ? $metabox['context'] :  'normal';
+					
+					$metabox['priority'] = $metabox['priority'] ? $metabox['priority'] :  'default';
+					
+					/* ADD META BOX */
+					add_meta_box( $slug, $metabox[ 'title' ], array( $this, 'meta_box' ), $metabox['post_type'], $metabox['context'], $metabox['priority']);
 				}
 			} );
 			
-			
-		}
-		
-		/* ADD META BOX */
-		function add_meta_box( $post_type, $title ){
-			add_meta_box( $post_type.'_meta_box', $title, array( $this, 'meta_box' ), $post_type, 'normal', 'high');
 		}
 		
 		/* META BOXES */
-		function meta_box( $post ) {
-			$fields = $this->meta_boxes[ $post->post_type ]['fields'];
+		function meta_box( $post, $metabox ) {
+			
+			// GET THE METABOX ID, IF NOT THEN RETURN
+			if( !is_array( $metabox ) || !isset( $metabox['id'] ) ){ return; }
+			$slug = $metabox['id'];
+			
+			// GET THE REGISTERED META BOX FIELDS 
+			$metaboxes = $this->get_meta_boxes();
+			if( !is_array( $metaboxes ) || !isset( $metaboxes[ $slug ] ) ){ return ;}
+			$fields = $metaboxes[ $slug ][ 'fields' ];
+			
 			_e('<table>');
-			foreach( $fields as $slug => $field ): $value = esc_html( get_post_meta( $post->ID, $slug, true ) );?>
-			<tr>
-				<td style="width: 100%"><?php _e( $field );?></td>
-				<td><input type="text" size="80" name="<?php _e( $slug );?>" value="<?php _e( $value ); ?>" /></td>
-			</tr>
-		<?php endforeach;
+			
+			// ITERATING THROUGH EACH FIELD
+			foreach( $fields as $slug => $field ){
+				
+				// GETTING VALUE FROM THE DB
+				$value = esc_html( get_post_meta( $post->ID, $slug, true ) );
+				
+				// CHECKING IF THE FIELDS IS AN ARRAY OR NEEDS TO INVOKE THE LEGACY CODE
+				if( is_array( $field ) && isset( $field[ 'type' ] ) ){
+					$template_file = false;
+					switch( $field[ 'type' ] ){
+						case 'boolean':
+							$template_file = "metafield_boolean.php";
+							break;
+					}
+					
+					if( $template_file ){
+						include "templates/".$template_file;	
+					}
+					
+				}
+				else{
+					// LEGACY CODE ONLY APPICABLE FOR TEXT FIELDS
+					$label = $field;
+					include "templates/metafield_text.php";
+				}
+			}
 			_e('</table>');
 		}
 		
 		/* SAVE META BOXES */
 		function save_meta_fields( $post_id, $post ){
 			
-			if ( isset( $this->meta_boxes[ $post->post_type ] ) && isset( $this->meta_boxes[ $post->post_type ]['fields'] ) ) {	/* CHECK FIELDS FOR POST TYPE */
+			$metaboxes = $this->get_meta_boxes();
+			
+			foreach( $metaboxes as $metabox ){
 				
-				$fields = $this->meta_boxes[ $post->post_type ]['fields'];
+				$flag = false;
 				
-				foreach( $fields as $slug => $field ){									/* ITERATE THROUGH THE FIELDS */
-					
-					if ( isset( $_POST[ $slug ] ) ) {
-						update_post_meta( $post_id, $slug, $_POST[ $slug ] );			/* Store data in post meta table if present in post data */
+				// CHECK IF THIS METABOX IS VALID FOR THE CURRENT SCREEN
+				if( isset( $metabox['post_type'] ) ){
+					if( ( is_array( $metabox['post_type'] ) && in_array( $metabox['post_type'], $post->post_type ) ) || 
+						( $metabox['post_type'] == $post->post_type ) ){
+						$flag = true;
 					}
-				}	
+				} 
+				
+				if( $flag ){
+					
+					$fields = $metabox['fields'];
+					
+					foreach( $fields as $slug => $field ){									/* ITERATE THROUGH THE FIELDS */
+					
+						if ( isset( $_POST[ $slug ] ) ) {
+							update_post_meta( $post_id, $slug, $_POST[ $slug ] );			/* Store data in post meta table if present in post data */
+						}
+						
+						if( !isset( $_POST[ $slug ] ) && is_array( $field ) && isset( $field['type'] ) && $field['type'] == 'boolean' ){
+							delete_post_meta( $post_id, $slug );
+						}
+					}	
+				}
+				
 			}
 			
 		}

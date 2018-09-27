@@ -185,7 +185,7 @@ $(document).ready(function(){
         }, {
             breakpoint: 520,
             settings: {
-                slidesToShow: 3
+				slidesToShow: 3
             }
         }]
     });
@@ -294,49 +294,52 @@ $(document).ready(function(){
 /* CLOCKS */
 
 $(document).ready(function(){
-
-               
-$('#clock_europe').jClocksGMT(
-	{
+	
+	// settings OBJECT IS LOADED FROM FUNCTIONS.PHP
+	var clocks_img_path = settings['template_url'] + '/images/jClocks-';
+ 
+	$('#clock_europe').jClocksGMT({
+		imgpath: clocks_img_path,
 		title: 'Europe',
 		hello: 'Hallo',
 		offset: '+2',
 		dst: true
 	});
 
-$('#clock_west_africa').jClocksGMT(
-	{
+	$('#clock_west_africa').jClocksGMT({
+		imgpath: clocks_img_path,
 		title: 'West Africa',
 		hello: 'Bonjour',
 		offset: '+0',
 		dst: true
 	});
 
-$('#clock_east_africa').jClocksGMT(
-	{
+	$('#clock_east_africa').jClocksGMT({
+		imgpath: clocks_img_path,
 		title: 'East Africa', 
 		hello: 'Hujambo',
 		offset: '+3',
 		dst: true
 	});
-
-$('#clock_south_asia').jClocksGMT(
-	{   
+	
+	$('#clock_south_asia').jClocksGMT({   
+		imgpath: clocks_img_path,
 		title: 'South Asia', 
 		hello: 'Namaste',
 		offset: '+5',
 		dst: true
 	});
 
-$('#clock_apac').jClocksGMT(
-	{
+	$('#clock_apac').jClocksGMT({
+		imgpath: clocks_img_path,
 		title: 'South East Asia & Pacific', 
 		hello: 'Ni Hao',
 		offset: '+7',
 		dst: true
 	});
-$('#clock_americas').jClocksGMT(
-	{
+
+	$('#clock_americas').jClocksGMT({
+		imgpath: clocks_img_path,
 		title: 'Americas',
 		hello: 'Hi There',
 		offset: '-5.0',
@@ -345,41 +348,40 @@ $('#clock_americas').jClocksGMT(
 
 
 
-// magic happens here
-var clocks = $('.jcgmt-container'); // get all clock elements
+	// magic happens here
+	var clocks = $('.jcgmt-container'); // get all clock elements
 
-setTimeout(function() // delay 1 second to finish initialization of clocks
-{
-	clocks.each(function()
-	{
-		var clock = $(this);
-		var localeTime = clock.find('.jcgmt-clockHolder').prop('title'); // get clock time
-		var h = parseFloat(localeTime.split(':')[0]); // get hours from time
-		
-		if( localeTime.toUpperCase().indexOf('AM') !== -1 || localeTime.toUpperCase().indexOf('PM') !== -1 ) // check for am/pm 12 hour time
-		{ // convert from 12 hour clock
-			if( localeTime.toUpperCase().indexOf('PM') !== -1 )
-			{
-				if( h != 12 ) // if not 12pm
-					h+=12; // convert to 24 hour time
+	// delay 1 second to finish initialization of clocks	
+	setTimeout(function() {
+		clocks.each(function(){
+			var clock = $(this);
+			var localeTime = clock.find('.jcgmt-clockHolder').prop('title'); // get clock time
+			var h = parseFloat(localeTime.split(':')[0]); // get hours from time
+			
+			if( localeTime.toUpperCase().indexOf('AM') !== -1 || localeTime.toUpperCase().indexOf('PM') !== -1 ) // check for am/pm 12 hour time
+			{ // convert from 12 hour clock
+				if( localeTime.toUpperCase().indexOf('PM') !== -1 )
+				{
+					if( h != 12 ) // if not 12pm
+						h+=12; // convert to 24 hour time
+				}
+				else
+				{
+					if( h === 12 ) // if is 12am
+						h = 0; // convert to 24 hour time
+				}
+			}
+			
+			if( h > 07 && h < 18) // 7am - 6pm
+			{ 
+				clock.addClass("daytime"); // daytime mode
 			}
 			else
 			{
-				if( h === 12 ) // if is 12am
-					h = 0; // convert to 24 hour time
+				clock.addClass("nighttime"); // nighttime mode
 			}
-		}
-		
-		if( h > 07 && h < 18) // 7am - 6pm
-		{ 
-			clock.addClass("daytime"); // daytime mode
-		}
-		else
-		{
-			clock.addClass("nighttime"); // nighttime mode
-		}
-	});
-}, 1000);
+		});
+	}, 1000);
 
 
 });

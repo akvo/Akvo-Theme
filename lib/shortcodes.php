@@ -1,11 +1,7 @@
 <?php
 	
-	add_shortcode( 'akvo_sample', function( $atts ){
-		ob_start();
-		include('templates/sample.php');
-		return ob_get_clean();
-	} );
 	
+
 	add_shortcode( 'akvo_clocks', function( $atts ){
 		ob_start();
 		include('templates/clocks.php');
@@ -53,9 +49,12 @@
 		include('templates/filter_stories.php');
 		return ob_get_clean();
 	} );
-
-	add_shortcode( 'title_header_image', function( $atts ){
+	
+	/*
+	add_shortcode( 'akvo_header_image', function( $atts ){
 		ob_start();
 		include('templates/title_header_image.php');
 		return ob_get_clean();
 	} );
+	*/
+	

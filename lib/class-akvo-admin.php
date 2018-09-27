@@ -212,7 +212,12 @@
 					'title'		=> 'Page Settings',
 					'fields'	=> array(
 						'disable_header'	=> array(
-							'label'		=> 'Disable Header Image',
+							'label'		=> 'Hide Header Image',
+							'type'		=> 'boolean',
+							'default'	=> false
+						),
+						'disable_clocks'	=> array(
+							'label'		=> 'Hide Regional Clocks',
 							'type'		=> 'boolean',
 							'default'	=> false
 						)

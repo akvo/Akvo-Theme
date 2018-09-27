@@ -54,11 +54,5 @@
 		return ob_get_clean();
 	} );
 	
-	/*
-	add_shortcode( 'akvo_header_image', function( $atts ){
-		ob_start();
-		include('templates/title_header_image.php');
-		return ob_get_clean();
-	} );
-	*/
+	
 	

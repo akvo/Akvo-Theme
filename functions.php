@@ -21,6 +21,12 @@
 		return $folders;
 	});
 	
+	add_filter( 'akvo-sow-button-widget-types', function( $button_types ){
+		$button_types['buttonblack'] = 'Button Black';
+		$button_types['buttonwhite'] = 'Button White';
+		return $button_types;
+	});
+	
 	// Enqueue assets
 	add_action( 'wp_enqueue_scripts', function(){
 		
@@ -28,7 +34,8 @@
 			'template_url'	=> get_template_directory_uri()
 		);
 		
-		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.1.min.js', array('jquery'), null, true);
+		wp_deregister_script('jquery');
+		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.1.min.js', array(), null, true);
 		wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), null, true);
 		
 		// Why/Where are we using this?

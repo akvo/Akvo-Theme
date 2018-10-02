@@ -61,7 +61,7 @@
 				return $taxonomies;
 			} );
 			
-			
+			/*
 			foreach( $this->admin->get_post_types() as $slug => $post_type ){
 				add_filter( 'akvo-custom-posts-'.$slug.'-item-template', function( $slug ){
 					
@@ -70,7 +70,7 @@
 					return $template;
 				});
 			}
-			
+			*/
 			
 			
 			

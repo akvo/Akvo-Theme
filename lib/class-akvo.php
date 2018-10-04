@@ -30,50 +30,6 @@
 				return $class;
 			} );
 			
-			/*
-			 * FILTER TO UPDATE THE POST TYPES DROPDOWN IN THE NESTED FILTERS (SITE ORIGIN WIDGETS)
-			 * 
-			*/
-			add_filter( 'akvo-nested-filters-post-types', function( $post_types ){
-				
-				$post_types = array();
-				
-				foreach( $this->admin->get_post_types() as $slug => $post_type ){
-					$post_types[ $slug ] = $post_type['name'];
-				}
-				
-				return $post_types;
-			} );
-			
-			
-			/*
-			 * FILTER TO UPDATE THE TAXONOMIES DROPDOWN IN THE NESTED FILTERS (SITE ORIGIN WIDGETS)
-			 * 
-			*/
-			add_filter( 'akvo-nested-filters-taxonomies', function( $taxonomies ){
-				
-				$taxonomies = array();
-	
-				foreach( $this->admin->get_taxonomies() as $slug => $tax ){
-					$taxonomies[ $slug ] = $tax['labels']['name'];
-				}
-		
-				return $taxonomies;
-			} );
-			
-			/*
-			foreach( $this->admin->get_post_types() as $slug => $post_type ){
-				add_filter( 'akvo-custom-posts-'.$slug.'-item-template', function( $slug ){
-					
-					$template = get_template_directory()."/templates/".$slug.".php";
-					
-					return $template;
-				});
-			}
-			*/
-			
-			
-			
 		}
 		
 	}

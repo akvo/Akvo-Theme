@@ -127,3 +127,25 @@
 			'title'		=> 'Title Goes Here'
 		)
 	) );
+	
+	// USAGE: [akvo_clocks title=""]
+	new AKVO_SHORTCODE( array( 
+		'slug'		=> 'akvo_clocks',
+		'template'	=> get_template_directory().'/lib/templates/clocks.php',
+		'atts'		=> array(
+			'title'		=> 'Looking for one of our other offices?'
+		)
+	) );
+	
+	// USAGE: [akvo_clock id='clock_americas' offset='-5.0' title='Americas' hello='Hi There' link='']
+	new AKVO_SHORTCODE( array( 
+		'slug'		=> 'akvo_clock',
+		'template'	=> get_template_directory().'/lib/templates/clock.php',
+		'atts'		=> array(
+			'id'		=> 'clock',
+			'offset'	=> '0',
+			'title'		=> 'Title',
+			'hello'		=> 'Hi',
+			'link'		=> ''
+		)
+	) );

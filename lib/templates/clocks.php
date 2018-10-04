@@ -1,7 +1,7 @@
 <!-- World -->
 <div class="fullwidth bg-light-gray  paddingtop paddingbottom">
 	<div class="container counter">
-		<h2 class="paddingbottom massivetitle">Looking for one of our other offices?</h2>
+		<h2 class="paddingbottom massivetitle"><?php _e( $atts['title'] );?></h2>
 		<div class="row text-center">
 			<?php echo do_shortcode("[akvo_clock id='clock_americas' offset='-5.0' title='Americas' hello='Hi There' link='']");?>
 			<?php echo do_shortcode("[akvo_clock id='clock_west_africa' offset='+0' title='West Africa' hello='Bonjour' link='']");?>

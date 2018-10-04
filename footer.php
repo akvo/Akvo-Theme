@@ -67,3 +67,35 @@
 <?php wp_footer(); ?>
 
 </body></html>
+<!-- TO BE INCLUDED IN THE STYLES -->
+<style>
+	/* MICROSTORY */
+	body.single-microstory .so-widget-sow-editor, 
+	body.single-microstory .narrow-row{
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 50px 20px;
+		box-sizing: border-box;
+	}
+	
+	body.single-microstory iframe{
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	
+	
+	/* LIST OF STAFF */
+	.akvo-custom-posts.new_staffs li.post .imgWrapper img{
+		width: 100%;
+		height: auto;
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+	.akvo-custom-posts.new_staffs li.post:hover .imgWrapper img{
+		-webkit-filter: none;
+		filter: none;
+	}
+	.akvo-custom-posts.new_staffs li.post .fa{ padding: 10px; }
+</style>

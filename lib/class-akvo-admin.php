@@ -16,6 +16,52 @@
 			
 			$this->set_meta_boxes();
 			
+			/*
+			 * FILTER TO UPDATE THE POST TYPES DROPDOWN IN THE SITE ORIGIN WIDGETS
+			 * 
+			*/
+			add_filter( 'akvo-sow-post-types', function( $post_types ){
+				
+				$post_types = array();
+				
+				foreach( $this->get_post_types() as $slug => $post_type ){
+					$post_types[ $slug ] = $post_type['name'];
+				}
+				
+				return $post_types;
+			} );
+			
+			
+			/*
+			 * FILTER TO UPDATE THE TAXONOMIES DROPDOWN IN THE NESTED FILTERS (SITE ORIGIN WIDGETS)
+			 * 
+			*/
+			add_filter( 'akvo-sow-taxonomies', function( $taxonomies ){
+				
+				$taxonomies = array();
+	
+				foreach( $this->get_taxonomies() as $slug => $tax ){
+					$taxonomies[ $slug ] = $tax['labels']['name'];
+				}
+		
+				return $taxonomies;
+			} );
+			
+			/*
+			* OVERRIDE TEMPLATES FOR EACH POST TYPE THROUGH AKVO_CUSTOM_POSTS IN THE PLUGIN FOLDER OF AKVO_SITEORIGIN_WIDGETS
+			*/
+			foreach( $this->get_post_types() as $slug => $post_type ){
+				
+				add_filter( 'akvo-custom-posts-'.$slug.'-item-template', function( $slug ){
+					
+					$template = get_template_directory()."/templates/".$slug.".php";
+					
+					return $template;
+				});
+			
+			}
+			
+			
 			/* SAVE POST - FOR SAVING META FIELDS */
 			add_action( 'save_post', array( $this, 'save_meta_fields' ), 10, 2 );
 			
@@ -208,6 +254,16 @@
 					)
 				),
 				*/
+				'staff'	=> array(
+					'title'		=> 'New Staff Details',
+					'fields'	=> array(
+						'staff_title'		=> 'Job Title', 
+						'staff_twitter'		=> 'Twitter Link',
+						'staff_linkedin'	=> 'LinkedIn Link',
+						'staff_blog'		=> 'Blog Link'
+					),
+					'post_type'	=> 'new_staffs',
+				),
 				'settings_box'	=> array(
 					'title'		=> 'Page Settings',
 					'fields'	=> array(

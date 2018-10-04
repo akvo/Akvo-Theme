@@ -1,35 +1,5 @@
 <?php
 	
-	add_shortcode( 'akvo_clock', function( $atts ){
-		ob_start();
-		include('templates/clock.php');
-		return ob_get_clean();
-	} );
-
-	add_shortcode( 'akvo_clocks', function( $atts ){
-		ob_start();
-		include('templates/clocks.php');
-		return ob_get_clean();
-	} );
-	
-	add_shortcode( 'akvo_logo_slider', function( $atts ){
-		ob_start();
-		include('templates/logo_slider.php');
-		return ob_get_clean();
-	} );
-	
-	add_shortcode( 'akvo_button', function( $atts ){
-		ob_start();
-		include('templates/button.php');
-		return ob_get_clean();
-	} );
-	
-	add_shortcode( 'akvo_modal_button', function( $atts ){
-		ob_start();
-		include('templates/button_modal.php');
-		return ob_get_clean();
-	} );
-	
 	add_shortcode( 'akvo_multistage_form', function( $atts ){
 		ob_start();
 		include('templates/multistage_form.php');
@@ -53,6 +23,3 @@
 		include('templates/filter_stories.php');
 		return ob_get_clean();
 	} );
-	
-	
-	

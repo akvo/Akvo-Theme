@@ -36,7 +36,7 @@
 		
 		wp_deregister_script('jquery');
 		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.1.min.js', array(), null, true);
-		wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), null, true);
+		wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), null, true);
 		
 		// Why/Where are we using this?
 		wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js', array('jquery'), null, true);
@@ -60,7 +60,7 @@
 		wp_enqueue_script('fontawesome', 'https://use.fontawesome.com/641b62259f.js', array('jquery'), null, true);
 		
 		//Enqueue Styles
-		wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', null, true);
+		wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', null, true);
 		wp_enqueue_style('style', get_template_directory_uri() .'/css/akvo_style.css', null, true);
 		
 		// load google fonts - can be combined for later

@@ -12,5 +12,11 @@
 	
 	// CHECK IF THE HEADER HAS BEEN ENABLED FROM THE POST META SETTINGS
 	if( ! $disable_header_flag && $url ){
-		echo do_shortcode("[akvo_header_image title='".get_the_title()."' bg_image='".$url."']");
+		
+		$header_title = get_post_meta( $post->ID, 'header_title', true );
+		if( !$header_title ){
+			$header_title = get_the_title();
+		}
+		
+		echo do_shortcode("[akvo_header_image title='".$header_title."' bg_image='".$url."']");
 	}

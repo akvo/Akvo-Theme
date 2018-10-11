@@ -49,7 +49,15 @@
 							</div>
 						</div>
 						<div id="navbar" class="collapse navbar-collapse">
-							<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_id' => 'menu-main', 'menu_class' => 'nav navbar-nav' ) ); ?>
+						<?php 
+							wp_nav_menu( array( 
+								'theme_location' 	=> 'header-menu', 
+								'menu_id' 			=> 'menu-main', 
+								'menu_class' 		=> 'nav navbar-nav',
+								'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+								'walker'            => new WP_Bootstrap_Navwalker(),
+							) ); 
+						?>
 							<ul class="nav navbar-nav navbar-right">
 								<li><a href="#search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 							</ul>

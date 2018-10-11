@@ -98,4 +98,29 @@
 		filter: none;
 	}
 	.akvo-custom-posts.new_staffs li.post .fa{ padding: 10px; }
+	
+	/* OVERRIDE SOW */
+	.so-widget-sow-editor h3.widget-title{
+		color: #4E4A47;	
+		font-size: 5rem;
+		line-height: 1.4;
+		margin: 20px 0;
+	}
+	.so-widget-sow-editor .siteorigin-widget-tinymce h4{
+		color: #4E4A47 !important;	
+		font-family: 'Roboto Condensed', sans-serif !important;
+		font-weight: 300 !important;
+		line-height: 30px;
+		font-size: 24px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	
+	a.buttonblack{
+		font-size: 20px!important;
+	}
+	
+	.massivetitle{
+		font-size: 5rem !important;
+	}
 </style>

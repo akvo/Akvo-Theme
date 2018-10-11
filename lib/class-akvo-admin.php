@@ -272,6 +272,11 @@
 							'type'		=> 'boolean',
 							'default'	=> false
 						),
+						'header_title'	=> array(
+							'label'		=> 'Header Title',
+							'type'		=> 'text',
+							'default'	=> ''
+						),
 						'disable_clocks'	=> array(
 							'label'		=> 'Hide Regional Clocks',
 							'type'		=> 'boolean',
@@ -381,7 +386,7 @@
 			if( !is_array( $metaboxes ) || !isset( $metaboxes[ $slug ] ) ){ return ;}
 			$fields = $metaboxes[ $slug ][ 'fields' ];
 			
-			_e('<table>');
+			
 			
 			// ITERATING THROUGH EACH FIELD
 			foreach( $fields as $slug => $field ){
@@ -396,6 +401,9 @@
 						case 'boolean':
 							$template_file = "metafield_boolean.php";
 							break;
+						case 'text':
+							$template_file = "metafield_text.php";
+							break;	
 					}
 					
 					if( $template_file ){
@@ -409,7 +417,7 @@
 					include "templates/metafield_text.php";
 				}
 			}
-			_e('</table>');
+			
 		}
 		
 		/* SAVE META BOXES */

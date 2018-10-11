@@ -4,7 +4,8 @@
 		'lib/class-akvo-admin.php',
 		'lib/class-akvo.php',
 		'lib/shortcodes.php',
-		'lib/shortcodes/class-akvo-shortcode.php'
+		'lib/shortcodes/class-akvo-shortcode.php',
+		'lib/wp-bootstrap-navwalker.php'
 	);
 	
 	foreach( $inc_files as $inc_file ){

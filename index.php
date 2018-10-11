@@ -1,7 +1,7 @@
 <?php get_header();?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="fullwidth homeslider">
-		<div class="container-fluid">
+		<div class="container">
 			<?php get_template_part('partials/content', 'header'); ?>
 			<?php the_content();?>
 			<?php get_template_part('partials/content', 'clocks'); ?>

@@ -287,6 +287,28 @@
 					'context'	=> 'side',
 					'priority'	=> 'default'
 				),
+				'foundation_member'	=> array(
+					'title'		=> 'Settings',
+					'fields'	=> array(
+						'member_title'	=> array(
+							'label'	=> 'Job Title',
+							'type'	=> 'text'
+						),
+						'staff_twitter'	=> array(
+							'label'	=> 'Twitter Link',
+							'type'	=> 'text'
+						),
+						'staff_linkedin' => array(
+							'label'	=> 'LinkedIn Link',
+							'type'	=> 'text'
+						),
+						'staff_blog' => array(
+							'label'	=> 'Blog Link',
+							'type'	=> 'text'
+						)
+					),
+					'post_type'	=> 'foundation_member',
+				),
 				/*
 				'microstory'	=> array(
 					'title'		=> 'Settings',
@@ -294,15 +316,7 @@
 						'featured'	=> 'Featured'
 					)
 				),
-				'foundation_member'	=> array(
-					'title'		=> 'Settings',
-					'fields'	=> array(
-						'member_title'		=> 'Job Title',
-						'staff_twitter'		=> 'Twitter Link',
-						'staff_linkedin'	=> 'LinkedIn Link',
-						'staff_blog'		=> 'Blog Link'
-					)
-				),
+				
 				*/
 			);
 			

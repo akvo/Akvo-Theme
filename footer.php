@@ -69,6 +69,17 @@
 </body></html>
 <!-- TO BE INCLUDED IN THE STYLES -->
 <style>
+	/* HOMEPAGE FEATURES */
+	.so-widget-sow-features .sow-features-list .sow-features-feature h5{
+		font-size: 40px;
+		color: #fff !important;
+		margin: 10px 0;
+	}
+	.so-widget-sow-features .sow-features-list .sow-features-feature p{
+		color: #fff !important;
+		font-size: 13px;
+	}
+	
 	/* MICROSTORY */
 	body.single-microstory .so-widget-sow-editor, 
 	body.single-microstory .narrow-row{
@@ -86,18 +97,36 @@
 	}
 	
 	
-	/* LIST OF STAFF */
-	.akvo-custom-posts.new_staffs li.post .imgWrapper img{
+	/* LIST OF STAFF, MICROSTORIES, PARTNERS & ORGANISATIONS */
+	.akvo-custom-posts.new_staffs li.post,
+	.akvo-custom-posts.foundation_member li.post{
+		min-height: 335px;
+	}
+	
+	.akvo-custom-posts.microstory li.post{
+		min-height: 365px;
+	}
+	
+	.akvo-custom-posts.new_staffs li.post .imgWrapper img, 
+	.akvo-custom-posts.foundation_member li.post .imgWrapper img,
+	.akvo-custom-posts.new_partners li.post .imgWrapper img{
 		width: 100%;
 		height: auto;
 		-webkit-filter: grayscale(100%);
 		filter: grayscale(100%);
 	}
-	.akvo-custom-posts.new_staffs li.post:hover .imgWrapper img{
+	.akvo-custom-posts.new_staffs li.post:hover .imgWrapper img, 
+	.akvo-custom-posts.foundation_member li.post:hover .imgWrapper img,
+	.akvo-custom-posts.new_partners li.post:hover .imgWrapper img{
 		-webkit-filter: none;
 		filter: none;
 	}
-	.akvo-custom-posts.new_staffs li.post .fa{ padding: 10px; }
+	.akvo-custom-posts.new_staffs li.post .fa, .akvo-custom-posts.foundation_member li.post .fa{ padding: 10px; }
+	
+	.akvo-custom-posts.new_partners li.post{
+		width: 20%;
+	}
+	
 	
 	/* OVERRIDE SOW */
 	.so-widget-sow-editor h3.widget-title{

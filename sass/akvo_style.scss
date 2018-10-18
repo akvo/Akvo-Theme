@@ -1309,6 +1309,11 @@ body.modal-open {
   }
   .active {
     opacity: 1;
+    &.left, &.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
   }
 }
 

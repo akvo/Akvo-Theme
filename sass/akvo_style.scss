@@ -176,6 +176,8 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
   display: none;
 }
 
+/* Filter Bits and Boxes */
+
 .list-group {
   margin-bottom: 0px !important;
   .addressbox.first {
@@ -463,6 +465,8 @@ ul li {
   }
 }
 
+/* Black and White Buttons */
+
 a.buttonblack, button.buttonblack {
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -523,6 +527,8 @@ button {
     }
   }
 }
+
+/* END Black and White Buttons */
 
 .staffName.company {
   font-weight: bold;
@@ -814,6 +820,8 @@ li a.dropdown-toggle:hover {
   }
 }
 
+/* FOOTER */
+
 #footer {
   margin-top: 40px;
   padding-top: 40px;
@@ -897,6 +905,8 @@ li a.dropdown-toggle:hover {
   }
 }
 
+/* END FOOTER */
+
 @media (max-width: 767px) {
   .navbar-nav {
     margin-left: 0px !important;
@@ -927,6 +937,8 @@ li a.dropdown-toggle:hover {
   }
 }
 
+/* MASSIVE TITLES AND THIN TITLES */
+
 .massivetitle {
   color: #4E4A47!important;
   font-size: 4.8rem !important;
@@ -939,6 +951,10 @@ li a.dropdown-toggle:hover {
   font-weight: 300 !important;
   line-height: 30px;
 }
+
+/* END MASSIVE TITLE AND THIN TITLES */
+
+/* FORMS */
 
 .newsletterform {
   input.signup {
@@ -1195,7 +1211,9 @@ input {
     width: 70%;
   }
 }
+/* END FORMS */
 
+/* MODAL WINDOWS */
 .modal-dialog {
   margin-top: 5%;
 }
@@ -1246,6 +1264,8 @@ body.modal-open {
   }
 }
 
+/* END MODAL WINDOWS */
+
 .navbar-brand > img {
   max-width: 105px;
 }
@@ -1278,6 +1298,8 @@ body.modal-open {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+/* CAROUSEL */
 
 #myCarousel {
   padding-top: 20px;
@@ -1371,12 +1393,17 @@ img.slidelogo {
   }
 }
 
+/* END CAROUSEL */
+
 iframe#toolframe {
   height: 100%;
   border: none !important;
   max-height: 1800px;
   min-height: 1000px;
 }
+
+
+/* STATISTICS */
 
 .statistics i {
   font-size: 50px;
@@ -1494,7 +1521,9 @@ section {
     text-transform: uppercase;
   }
 }
+/* END STATISTICS */
 
+/* WHAT WE DO */
 #what-we-do {
   background: #ffffff;
   .card {
@@ -1562,6 +1591,8 @@ section {
   }
 }
 
+/* END WHAT WE DO */
+
 #toTop {
   position: fixed;
   bottom: 10px;
@@ -1572,6 +1603,8 @@ section {
   border-color:#404898!important;
 }
 
+/* GREY BG */
+
 .bg-light-gray {
   background: #f8f8f8;
   background-color: #f8f8f8;
@@ -1581,6 +1614,9 @@ section {
   background: #e6e6e6;
   background-color: #e6e6e6;
 }
+
+/* END GREY BG */
+
 
 .questionnaire {
   background-color: #e2e3ea;
@@ -1611,6 +1647,8 @@ section {
     height: 100%;
   }
 }
+
+/* SLICK SLIDER */
 
 .slick-slide {
   margin: 0px 20px;
@@ -1720,6 +1758,9 @@ section {
   display: none;
 }
 
+/* END SLICK SLIDER */
+
+
 .addressbox {
   background: #f8f8f8;
   height: 100%;
@@ -1747,6 +1788,9 @@ form {
 .newsletterform fieldset:not(:first-of-type) {
   display: none;
 }
+
+
+/* PROGRESS BAR */
 
 progress {
   position: fixed;
@@ -1785,6 +1829,10 @@ progress {
   display: block;
   height: inherit;
 }
+
+/* END PROGRESS BAR */
+
+/* CLOCKS */
 
 .jcgmt-container {
   display: inline-block;
@@ -1896,6 +1944,18 @@ progress {
   }
 }
 
+.nighttime img {
+  &.jcgmt-clock-hover, &.jcgmt-clock {
+    -webkit-filter: grayscale(100%) !important;
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) !important;
+  }
+}
+
+/* END CLOCKS */
+
+/* TITLES MOBILE FIX */
+
 @media (max-width: 768px) {
   .massivetitle {
     font-size: 4rem !important;
@@ -1908,6 +1968,10 @@ progress {
     line-height: 5.6rem !important;
   }
 }
+
+/* END TITLES MOBILE FIX */
+
+/* ACCORDIONS */
 
 #accordion-style-1 {
   h1, a {
@@ -1965,14 +2029,9 @@ i.arrowdown {
     }
   }
 }
+/* END ACCORDION */
 
-.nighttime img {
-  &.jcgmt-clock-hover, &.jcgmt-clock {
-    -webkit-filter: grayscale(100%) !important;
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%) !important;
-  }
-}
+/* FILTERS */
 
 .FilterNav {
   border-bottom: thin solid #e8e8e8;
@@ -1996,7 +2055,6 @@ i.arrowdown {
   }
 }
 
-
 ul {
   &.team li a, &.help li a {
     color: #4E4A47;
@@ -2005,6 +2063,8 @@ ul {
     color: #404898;
   }
 }
+
+/* END FILTERS */
 
 .logopadding {
   padding: 10px;

@@ -29,5 +29,9 @@
 		include('templates/statistics_module.php');
 		return ob_get_clean();
 	} );
-	
+	add_shortcode( 'akvo_testimonials', function( $atts ){
+		ob_start();
+		include('templates/testimonials.php');
+		return ob_get_clean();
+	} );
 	

@@ -1299,6 +1299,19 @@ body.modal-open {
   background-position: 50% 26% !important;
 }
 
+.carousel-fade .carousel-inner {
+  .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+  }
+  .active {
+    opacity: 1;
+  }
+}
+
 .carousel-caption {
   text-shadow: none !important;
   bottom: 15%;

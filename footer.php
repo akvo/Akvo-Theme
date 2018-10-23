@@ -69,87 +69,15 @@
 </body></html>
 <!-- TO BE INCLUDED IN THE STYLES -->
 <style>
-	/* HOMEPAGE FEATURES */
-	.so-widget-sow-features .sow-features-list .sow-features-feature h5{
-		font-size: 40px;
-		color: #fff !important;
-		margin: 10px 0;
-	}
-	.so-widget-sow-features .sow-features-list .sow-features-feature p{
-		color: #fff !important;
-		font-size: 13px;
-	}
-	
-	/* MICROSTORY */
-	body.single-microstory .so-widget-sow-editor, 
-	body.single-microstory .narrow-row{
-		max-width: 1000px;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 50px 20px;
-		box-sizing: border-box;
-	}
-	
 	body.single-microstory iframe{
 		margin-left: auto;
 		margin-right: auto;
 		display: block;
 	}
-	
-	
-	/* LIST OF STAFF, MICROSTORIES, PARTNERS & ORGANISATIONS */
-	.akvo-custom-posts.new_staffs li.post,
-	.akvo-custom-posts.foundation_member li.post{
-		min-height: 335px;
-	}
-	
-	.akvo-custom-posts.microstory li.post{
-		min-height: 365px;
-	}
-	
-	.akvo-custom-posts.new_staffs li.post .imgWrapper img, 
-	.akvo-custom-posts.foundation_member li.post .imgWrapper img,
-	.akvo-custom-posts.new_partners li.post .imgWrapper img{
-		width: 100%;
-		height: auto;
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);
-	}
-	.akvo-custom-posts.new_staffs li.post:hover .imgWrapper img, 
-	.akvo-custom-posts.foundation_member li.post:hover .imgWrapper img,
-	.akvo-custom-posts.new_partners li.post:hover .imgWrapper img{
-		-webkit-filter: none;
-		filter: none;
-	}
-	.akvo-custom-posts.new_staffs li.post .fa, .akvo-custom-posts.foundation_member li.post .fa{ padding: 10px; }
-	
-	.akvo-custom-posts.new_partners li.post{
-		width: 20%;
-	}
-	
-	
-	/* OVERRIDE SOW */
-	.so-widget-sow-editor h3.widget-title{
-		color: #4E4A47;	
-		font-size: 5rem;
-		line-height: 1.4;
-		margin: 20px 0;
-	}
-	.so-widget-sow-editor .siteorigin-widget-tinymce h4{
-		color: #4E4A47 !important;	
-		font-family: 'Roboto Condensed', sans-serif !important;
-		font-weight: 300 !important;
-		line-height: 30px;
-		font-size: 24px;
-		margin-top: 20px;
-		margin-bottom: 10px;
-	}
-	
 	a.buttonblack{
 		font-size: 20px!important;
 	}
 	
-	.massivetitle{
-		font-size: 5rem !important;
-	}
+	
+	/*.statistics .col.stat */
 </style>

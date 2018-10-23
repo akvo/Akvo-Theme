@@ -19,7 +19,7 @@
 	<div class="staffName"><?php the_title(); ?></div>
 	<p class="staffTitle"><?php _e( $staff_fields['member_title'] ); ?></p>
 	<!-- Display LINKS -->
-	<p>
+	<p class="links">
 		<?php if( $staff_fields['staff_twitter'] ):?>
 		<a href="<?php _e( $staff_fields['staff_twitter'] ); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
 		<?php endif;?>

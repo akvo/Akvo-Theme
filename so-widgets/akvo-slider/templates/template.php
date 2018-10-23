@@ -5,7 +5,7 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<?php $i = 0;foreach( $instance['slides'] as $slide ): if( isset( $slide['image'] ) ):?>
-			<div class="item <?php if( !$i ){_e('active');}?>" style="background:url('<?php _e( $akvo_widgets_template->get_image_url( $slide['image'] ) );?>') repeat;">
+			<div class="item <?php if( !$i ){_e('active');}?>" style="background-image:url('<?php _e( $akvo_widgets_template->get_image_url( $slide['image'] ) );?>');">
 				<div class="container">
 					<div class="carousel-caption microstory"><h1><?php _e( $slide['title'] );?></h1></div>
 				</div>

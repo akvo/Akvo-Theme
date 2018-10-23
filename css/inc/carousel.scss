@@ -1,0 +1,27 @@
+.carousel {
+	padding-top: 20px;
+	
+	.nav {
+		a {
+			small { display: block;}
+			border-radius: 0px;
+		}
+		background: #eee;
+	}
+	
+	.carousel-inner .item {
+		background-size: cover;
+		height: 600px;
+		width: 100%;
+		background-position: 50% 26%;
+	}
+	
+	.carousel-caption {
+		text-shadow: none;
+		bottom: 15%;
+		text-align: left;
+		right: auto;
+		left: auto;
+	}
+	
+}

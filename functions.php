@@ -62,7 +62,7 @@
 		
 		//Enqueue Styles
 		wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', null, true);
-		wp_enqueue_style('style', get_template_directory_uri() .'/css/akvo_style.css', null, true);
+		wp_enqueue_style('style', get_template_directory_uri() .'/css/main.css', '1.0.0', true);
 		
 		// load google fonts - can be combined for later
 		wp_enqueue_style('assistant', 'https://fonts.googleapis.com/css?family=Assistant:300,400', null, true);

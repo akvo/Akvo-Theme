@@ -281,7 +281,13 @@
 							'label'		=> 'Hide Regional Clocks',
 							'type'		=> 'boolean',
 							'default'	=> false
-						)
+						),
+						'clocks_title'	=> array(
+							'label'		=> 'Clocks Title',
+							'type'		=> 'text',
+							'default'	=> '',
+							'desc'		=> 'Leave empty for default text'
+						),
 					),
 					'post_type'	=> 'page',
 					'context'	=> 'side',

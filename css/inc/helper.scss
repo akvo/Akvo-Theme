@@ -1,0 +1,132 @@
+.fullwidth {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.alignright {
+	text-align: right;
+}
+
+.alignleft {
+	text-align: left;
+}
+
+.paddingtop {
+	padding-top: 60px;
+}
+
+.paddingbottom {
+	padding-bottom: 60px;
+}
+
+.paddingboth {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.nopadding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.lessbottom {
+  margin-bottom: 10px !important;
+}
+
+.desktoppadding {
+  padding-right: 40px !important;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.massivetitle {
+	color: #4E4A47;
+	font-size: 4.8rem;
+	margin-bottom: 20px;
+	line-height: 8.75rem;
+	padding-bottom: 20px;
+}
+
+.thin, .roboto-thin {
+	font-weight: 300;
+	line-height: 30px;
+}
+
+.bg-light-gray {
+	background: #f8f8f8;
+	background-color: #f8f8f8;
+}
+
+.bg-gray {
+	background: #e6e6e6;
+	background-color: #e6e6e6;
+}
+
+/* AKVO COLOUR OVERRIDES */
+
+.gray {
+	color: #333!important;
+}
+
+.graybg{
+	background: #333!important;
+	background-color: #333!important;
+}
+
+.blue {
+  color: #404898 !important;
+}
+
+.bluebg {
+  background: #404898 !important;
+  background-color: #404898 !important;
+}
+
+.green {
+  color: #03AD8C !important;
+}
+
+.greenbg {
+  background: #03AD8C !important;
+  background-color: #03AD8C !important;
+}
+
+.red {
+  color: #EA5547 !important;
+}
+
+.redbg {
+  background: #EA5547 !important;
+  background-color: #EA5547 !important;
+}
+
+.pink {
+  color: #E04D95 !important;
+}
+
+.pinkbg {
+  background: #E04D95 !important;
+  background-color: #E04D95 !important;
+}
+
+.white {
+  color:#fff!important;
+}
+
+.bg-mid-grey {
+	background: #fafafa !important;
+	background-color: #fafafa !important;
+}
+
+
+@media (max-width: 768px) {
+	.massivetitle {
+		font-size: 4rem !important;
+		padding-left: 20px;
+		padding-right: 20px;
+		line-height: 5rem !important;
+	}
+}

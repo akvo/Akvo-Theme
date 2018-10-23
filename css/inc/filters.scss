@@ -1,0 +1,234 @@
+.akvo-custom-posts{
+	
+	padding: 0px;
+    width: 100%;
+    list-style-type: none;
+    height: 100%;
+	
+	li.post{
+		margin: 0;
+		width: 33.05%;
+		padding: 15px;
+		display: block;
+		float: left;
+		
+		div.imgWrapper, div.imageWrapper{
+			background-color: #fff;
+			padding: 0px;
+			width: 100%;
+			max-height: 217px;
+			overflow: hidden;
+		}
+		
+		&:nth-child(3n+1) {
+			clear: left;
+		}
+		
+		.staffName{
+			font-size: 16px;
+			margin-top: 10px;
+		}
+		
+		.staffTitle{
+			font-size: 14px;
+		}
+		
+		i.fa{
+			font-size: 20px;
+			padding: 10px;
+		}
+		
+		.links a:hover{
+			color: #404898;
+		}
+		
+		@media screen and (max-width: 1024px) and (min-width: 768px) {
+			
+			width: 46%;
+			div.imgWrapper { max-height: 350px; }
+				
+			&:nth-child(3n+1) { clear: none; }
+			&:nth-child(2n+1) { clear: left; }
+			
+		}
+		@media screen and (max-width: 768px) {
+			div.imgWrapper {
+				max-height: 350px;
+			}
+			width: 96%;
+		}
+	}
+	/*
+	@media screen and (max-width: 1024px) and (min-width: 768px) {
+		ul {
+			
+			&.help.companies li {
+				width: 33% !important;
+				div.imgWrapper { max-height: 350px !important; }
+				&:nth-child(5n+1) { clear: none !important; }
+				&:nth-child(3n+1) { clear: left !important; }
+			}
+		}
+	}
+	*/
+	
+
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    &.anchorNav ul li, &.anchorNav2 ul li {
+      background: none !important;
+      display: inline-block !important;
+      padding: 10px !important;
+    }
+    &.anchorNav ul li a, &.anchorNav2 ul li a {
+      font-size: 16px !important;
+    }
+  }
+  ul {
+    &.mobilehidesorting {
+      display: none;
+    }
+    &.staff li {
+      
+    }
+    &.help.companies li {
+      div.imgWrapper {
+        max-height: 350px !important;
+      }
+      width: 48% !important;
+      display: inline-block !important;
+      float: none !important;
+      &:nth-child(3n+1) {
+        clear: none !important;
+      }
+    }
+  }
+}
+
+
+/* LIST OF STAFF, MICROSTORIES, PARTNERS & ORGANISATIONS */
+.akvo-custom-posts.new_staffs li.post,
+.akvo-custom-posts.foundation_member li.post{
+	min-height: 335px;
+}
+	
+.akvo-custom-posts.microstory li.post{
+	min-height: 365px;
+}
+	
+.akvo-custom-posts.new_staffs li.post .imgWrapper img, 
+.akvo-custom-posts.foundation_member li.post .imgWrapper img,
+.akvo-custom-posts.new_partners li.post .imgWrapper img{
+	width: 100%;
+	height: auto;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+.akvo-custom-posts.new_staffs li.post:hover .imgWrapper img, 
+.akvo-custom-posts.foundation_member li.post:hover .imgWrapper img,
+.akvo-custom-posts.new_partners li.post:hover .imgWrapper img{
+	-webkit-filter: none;
+	filter: none;
+}
+
+	
+.akvo-custom-posts.new_partners li.post{
+	width: 20%;
+}
+
+
+.microstoriesbox {
+	display: block;
+	min-height: 650px;
+	height: 100%;
+	width: 100%;
+}
+
+
+
+.featured .hovercontent {
+	color: #fff !important;
+}
+
+@-webkit-keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+@-moz-keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+@keyframes fadeOut {
+	from{ opacity: 1; }
+	to { opacity: 0; }
+}
+@-webkit-keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.nested-filters{
+	
+	nav ul{ padding: 0; }
+	
+	.primary-filter-list a{
+		color: #202024;
+		border-radius: 0px;
+		&:hover {
+			color: #202024;
+			background: #f0f0f0;
+			box-shadow: none;
+		}
+	}
+	.secondary-filter-list{ 
+		margin-top: 15px;
+		a{
+			color: #797979;
+			border-radius: 0px;
+			&:hover {
+				color: #797979;
+				background: #f0f0f0;
+				box-shadow: none;
+			}
+		}
+	}
+	&.tertiary-filter-list a{
+		color: #aaa8a8;
+		border-radius: 0px;
+		&:hover {
+			color: #aaa8a8;
+			background: #f0f0f0;
+			box-shadow: none;
+		}
+	}
+	
+	@media screen and ( max-width: 768px ){
+		.primary-filter-list a{
+			padding: 10px;
+			display: inline-block;
+		}
+		.secondary-filter-list{ display: none; }
+	}
+	
+}
+
+
+
+
+/* TO BE USED PROPERLY */
+.featured {
+	background: #404898 !important;
+	.staffName.company {
+		color: #fff !important;
+	}
+}

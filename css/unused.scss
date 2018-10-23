@@ -1,0 +1,111 @@
+nav {
+	&.anchorNav ul li a, &.anchorNav2 ul li a {
+		text-decoration: none !important;
+	}
+	&.anchorNav, &.anchorNav2 {
+		padding: 15px 0px;
+	}
+}
+
+nav {
+	&.anchorNav, &.anchorNav2 {
+		background: none !important;
+	}
+}
+
+li#updateTemplate ul.floats-in {
+  list-style: none;
+  margin: 1em 0;
+}
+
+@media (max-width: 768px) {
+	#n ul li ul.sub-menu li a {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.container-fluid > {
+		.navbar-collapse, .navbar-header {
+			margin-left: 0px !important;
+			margin-right: 0px !important;
+		}
+	}
+	.container > {
+		.navbar-collapse, .navbar-header {
+			margin-left: 0px !important;
+			margin-right: 0px !important;
+		}
+	}
+}
+.siteorigin-widget-tinymce h4 { color: inherit; }
+
+.so-widget-akvo-cover img { width: 100%;}
+
+.fullBlack #assessFunel #funnel-form.funelContainer .funnelContent {
+	max-width: 700px;
+}
+
+.home #content {
+	margin-top: 0;
+}
+
+.fullBlack {
+  .so-widget-logos li {
+    width: 185px;
+  }
+  .micro-story .iframe-row iframe {
+    margin: 0 auto;
+  }
+  .no-padding-col .siteorigin-widget-tinymce {
+    padding: 0;
+  }
+  .narrow-row {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    .panel-grid-cell {
+      padding: 30px;
+    }
+    .siteorigin-widget-tinymce {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .fullBlack .so-widget-logos {
+    ul {
+      white-space: nowrap;
+      overflow: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+    li {
+      width: 120px;
+    }
+  }
+  #search {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .homepage-2018-new.Page.fullBlack .gform_wrapper .top_label li.gfield {
+    &.gf_left_half, &.gf_right_half {
+      width: 49%;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .fullBlack .narrow-row {
+    padding: 15px;
+    .panel-grid-cell {
+      padding: 15px 0 !important;
+    }
+  }
+}
+
+.introtext a.buttonblack {
+	font-size: 16px !important;
+}

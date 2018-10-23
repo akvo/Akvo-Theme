@@ -1,0 +1,50 @@
+/* MODAL BOXES */
+.modal-dialog {
+	margin-top: 5%;
+}
+
+.modal-header {
+	padding-bottom: 5px;
+}
+
+.modal-footer {
+	padding: 0;
+	.btn-group {
+		button {
+			height: 40px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			border: none;
+			border-right: 1px solid #ddd;
+		}
+		&:last-child > button {
+			border-right: 0;
+		}
+	}
+}
+
+body.modal-open {
+	padding-right: 0px !important;
+}
+
+.modalinput {
+	&::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+		color: #202024 !important;
+	}
+}
+
+.modal-body form {
+	label.form-check-label {
+		width: 96%;
+		font-weight: normal!important;
+		line-height:18px!important;
+		font-size: 13px !important;
+		color: #202024 !important;
+	}
+	.form-check {
+		margin-bottom: 5px !important;
+	}
+	input[type=checkbox] {
+		vertical-align: top !important;
+	}
+}

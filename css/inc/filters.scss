@@ -136,7 +136,12 @@
 	
 .akvo-custom-posts.new_partners li.post{
 	width: 20%;
+	
+	&:nth-child(3n+1){
+		clear: none;
+	}
 }
+
 
 
 .microstoriesbox {

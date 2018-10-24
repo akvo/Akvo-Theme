@@ -510,10 +510,18 @@ input[type=button]:hover, input[type=submit]:hover {
   -webkit-filter: none;
   filter: none; }
 
-.akvo-custom-posts.new_partners li.post {
-  width: 20%; }
-  .akvo-custom-posts.new_partners li.post:nth-child(3n+1) {
-    clear: none; }
+@media (min-width: 1024px) {
+  .akvo-custom-posts.new_partners li.post {
+    width: 20%; }
+    .akvo-custom-posts.new_partners li.post:nth-child(3n+1) {
+      clear: none; } }
+@media screen and (max-width: 768px) {
+  .akvo-custom-posts.new_partners li.post {
+    width: 48%;
+    display: inline-block;
+    float: none; }
+    .akvo-custom-posts.new_partners li.post:nth-child(3n+1) {
+      clear: none; } }
 
 .microstoriesbox {
   display: block;

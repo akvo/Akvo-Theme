@@ -135,10 +135,21 @@
 
 	
 .akvo-custom-posts.new_partners li.post{
-	width: 20%;
 	
-	&:nth-child(3n+1){
-		clear: none;
+	@media( min-width: 1024px ){
+		width: 20%;
+		&:nth-child(3n+1){
+			clear: none;
+		}
+	}
+	
+	@media screen and (max-width: 768px){
+		width: 48%;
+		display: inline-block;
+		float: none;
+		&:nth-child(3n+1){
+			clear: none;
+		}
 	}
 }
 

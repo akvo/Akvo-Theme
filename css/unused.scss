@@ -1,17 +1,4 @@
-nav {
-	&.anchorNav ul li a, &.anchorNav2 ul li a {
-		text-decoration: none !important;
-	}
-	&.anchorNav, &.anchorNav2 {
-		padding: 15px 0px;
-	}
-}
 
-nav {
-	&.anchorNav, &.anchorNav2 {
-		background: none !important;
-	}
-}
 
 li#updateTemplate ul.floats-in {
   list-style: none;

@@ -12,6 +12,7 @@
 		return ob_get_clean();
 	} );
 	
+	/*
 	add_shortcode( 'akvo_sector_stories', function( $atts ){
 		ob_start();
 		include('templates/sector_stories.php');
@@ -30,4 +31,4 @@
 		include('templates/testimonials.php');
 		return ob_get_clean();
 	} );
-	
+	*/

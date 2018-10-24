@@ -77,7 +77,4 @@
 	a.buttonblack{
 		font-size: 20px!important;
 	}
-	
-	
-	/*.statistics .col.stat */
 </style>

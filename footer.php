@@ -7,7 +7,6 @@
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
 					<?php dynamic_sidebar( 'footer_2' ); ?>
-					<button data-toggle="modal" data-target="#squarespaceModal" class="buttonwhite">Sign up Now</button>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
 				<h5>Navigation</h5>
@@ -35,32 +34,31 @@
 	<!-- ./Footer -->
 
 	<!-- End /footer -->
-	
-	<!-- line modal -->
+<?php /*	
+<!-- line modal -->
 <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-	<?php dynamic_sidebar( 'newsletter_modal' ); ?>
-  </div>
+	<div class="modal-dialog">
+		<?php dynamic_sidebar( 'newsletter_modal' ); ?>
+	</div>
 </div>
-
 <!-- apply modal -->
 <div class="modal fade" id="squarespaceModalApply" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+	<div class="modal-dialog">
 		<?php dynamic_sidebar( 'apply_modal' ); ?>
-  </div>
+	</div>
 </div>
 <!-- end apply modal -->
 
 <!-- video modal -->
 <div class="modal fade" id="squarespaceModalVideo" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-	<div class="modal-content">
-		<?php dynamic_sidebar( 'video_modal' ); ?>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<?php dynamic_sidebar( 'video_modal' ); ?>
+		</div>
 	</div>
-  </div>
 </div>
 <!-- end video modal -->
-
+*/?>
 
 </div>
 <!-- end mainbody -->
@@ -74,7 +72,9 @@
 		margin-right: auto;
 		display: block;
 	}
+	/*
 	a.buttonblack{
 		font-size: 20px!important;
 	}
+	*/
 </style>

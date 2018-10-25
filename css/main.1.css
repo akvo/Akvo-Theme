@@ -413,38 +413,36 @@ input[type=button]:hover, input[type=submit]:hover {
     background: #fff !important;
     color: #202023 !important; }
 
+/* LIST OF STAFF, MICROSTORIES, PARTNERS & ORGANISATIONS */
 .akvo-custom-posts {
   padding: 0px;
   width: 100%;
   list-style-type: none;
   height: 100%;
+  /* EACH ITEM WITHIN THE POST LIST */
+  /* SET MINIMUM HEIGHT FOR STAFF, FOUNDATION AND MICROSTORY SO THAT EACH ITEM IS NEATLY ALIGNED */
+  /* GRAYSCALE THE IMAGES BY DEFAULT AND SHOW THE COLORS ON HOVER */
   /*
-  @media screen and (max-width: 1024px) and (min-width: 768px) {
-  	ul {
-  		
-  		&.help.companies li {
-  			width: 33% !important;
-  			div.imgWrapper { max-height: 350px !important; }
-  			&:nth-child(5n+1) { clear: none !important; }
-  			&:nth-child(3n+1) { clear: left !important; }
-  		}
-  	}
-  }
+  * PARTNER LOGOS 
+  * Break into 5 columns by default and for small screen break into two columns
   */ }
   .akvo-custom-posts li.post {
     margin: 0;
     width: 33.05%;
     padding: 15px;
     display: block;
-    float: left; }
+    float: left;
+    /* BY DEFAULT TO BREAK INTO THREE COLUMNS */
+    /* BREAKING INTO TWO COLUMNS */
+    /* BREAKING INTO SINGLE COLUMN */ }
+    .akvo-custom-posts li.post:nth-child(3n+1) {
+      clear: left; }
     .akvo-custom-posts li.post div.imgWrapper, .akvo-custom-posts li.post div.imageWrapper {
       background-color: #fff;
       padding: 0px;
       width: 100%;
       max-height: 217px;
       overflow: hidden; }
-    .akvo-custom-posts li.post:nth-child(3n+1) {
-      clear: left; }
     .akvo-custom-posts li.post .staffName {
       font-size: 16px;
       margin-top: 10px; }
@@ -469,7 +467,38 @@ input[type=button]:hover, input[type=submit]:hover {
         width: 96%; }
         .akvo-custom-posts li.post div.imgWrapper {
           max-height: 350px; } }
+  .akvo-custom-posts.new_staffs li.post, .akvo-custom-posts.foundation_member li.post {
+    min-height: 335px; }
+  .akvo-custom-posts.microstory li.post {
+    min-height: 365px; }
+  .akvo-custom-posts.new_staffs li.post .imgWrapper img, .akvo-custom-posts.foundation_member li.post .imgWrapper img, .akvo-custom-posts.new_partners li.post .imgWrapper img {
+    width: 100%;
+    height: auto;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
+  .akvo-custom-posts.new_staffs li.post:hover .imgWrapper img, .akvo-custom-posts.foundation_member li.post:hover .imgWrapper img, .akvo-custom-posts.new_partners li.post:hover .imgWrapper img {
+    -webkit-filter: none;
+    filter: none; }
+  @media (min-width: 1024px) {
+    .akvo-custom-posts.new_partners li.post {
+      width: 20%; }
+      .akvo-custom-posts.new_partners li.post:nth-child(3n+1) {
+        clear: none; } }
+  @media screen and (max-width: 768px) {
+    .akvo-custom-posts.new_partners li.post {
+      width: 48%;
+      display: inline-block;
+      float: none; }
+      .akvo-custom-posts.new_partners li.post:nth-child(3n+1) {
+        clear: none; } }
+  .akvo-custom-posts.microstory li.post:hover {
+    background: #FFF; }
+  .akvo-custom-posts.microstory li.post.featured {
+    background: #404898; }
+    .akvo-custom-posts.microstory li.post.featured .title, .akvo-custom-posts.microstory li.post.featured .hovercontent {
+      color: #fff; }
 
+/* FIGURE ON HOW THIS IS BEING USED */
 @media screen and (max-width: 768px) {
   nav.anchorNav ul li, nav.anchorNav2 ul li {
     background: none !important;
@@ -488,49 +517,11 @@ input[type=button]:hover, input[type=submit]:hover {
       max-height: 350px !important; }
     ul.help.companies li:nth-child(3n+1) {
       clear: none !important; } }
-/* LIST OF STAFF, MICROSTORIES, PARTNERS & ORGANISATIONS */
-.akvo-custom-posts.new_staffs li.post,
-.akvo-custom-posts.foundation_member li.post {
-  min-height: 335px; }
-
-.akvo-custom-posts.microstory li.post {
-  min-height: 365px; }
-
-.akvo-custom-posts.new_staffs li.post .imgWrapper img,
-.akvo-custom-posts.foundation_member li.post .imgWrapper img,
-.akvo-custom-posts.new_partners li.post .imgWrapper img {
-  width: 100%;
-  height: auto;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%); }
-
-.akvo-custom-posts.new_staffs li.post:hover .imgWrapper img,
-.akvo-custom-posts.foundation_member li.post:hover .imgWrapper img,
-.akvo-custom-posts.new_partners li.post:hover .imgWrapper img {
-  -webkit-filter: none;
-  filter: none; }
-
-@media (min-width: 1024px) {
-  .akvo-custom-posts.new_partners li.post {
-    width: 20%; }
-    .akvo-custom-posts.new_partners li.post:nth-child(3n+1) {
-      clear: none; } }
-@media screen and (max-width: 768px) {
-  .akvo-custom-posts.new_partners li.post {
-    width: 48%;
-    display: inline-block;
-    float: none; }
-    .akvo-custom-posts.new_partners li.post:nth-child(3n+1) {
-      clear: none; } }
-
 .microstoriesbox {
   display: block;
   min-height: 650px;
   height: 100%;
   width: 100%; }
-
-.featured .hovercontent {
-  color: #fff !important; }
 
 @-webkit-keyframes fadeOut {
   from {
@@ -562,6 +553,7 @@ input[type=button]:hover, input[type=submit]:hover {
     opacity: 0; }
   to {
     opacity: 1; } }
+/* STYLING FOR THE FILTERS */
 .nested-filters nav ul {
   padding: 0; }
 .nested-filters .primary-filter-list a {
@@ -593,12 +585,6 @@ input[type=button]:hover, input[type=submit]:hover {
     display: inline-block; }
   .nested-filters .secondary-filter-list {
     display: none; } }
-
-/* TO BE USED PROPERLY */
-.featured {
-  background: #404898 !important; }
-  .featured .staffName.company {
-    color: #fff !important; }
 
 .articlesdropdown {
   padding: 17px 10px;
@@ -1837,5 +1823,8 @@ body.single-microstory .narrow-row {
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 10px; }
+
+.so-widget-sow-editor .siteorigin-widget-tinymce h2 {
+  color: inherit; }
 
 /*# sourceMappingURL=main.1.css.map */

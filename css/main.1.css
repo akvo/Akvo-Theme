@@ -413,6 +413,13 @@ input[type=button]:hover, input[type=submit]:hover {
     background: #fff !important;
     color: #202023 !important; }
 
+
+ul.blog-detail {
+    list-style: none!important;
+    margin-left: 0px!important;
+    padding-left: 0px!important;
+}
+
 /* LIST OF STAFF, MICROSTORIES, PARTNERS & ORGANISATIONS */
 .akvo-custom-posts {
   padding: 0px;

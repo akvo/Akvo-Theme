@@ -237,16 +237,6 @@
 			
 			$this->meta_boxes = array(
 				/*
-				'new_staffs'	=> array(
-					'title'		=> 'New Staff Details',
-					'fields'	=> array(
-						'staff_title'		=> 'Job Title', 
-						'staff_twitter'		=> 'Twitter Link',
-						'staff_linkedin'	=> 'LinkedIn Link',
-						'staff_blog'		=> 'Blog Link'
-					),
-					
-				),
 				'new_partners'	=> array(
 					'title'		=> 'Partner Details',
 					'fields'	=> array(
@@ -315,15 +305,18 @@
 					),
 					'post_type'	=> 'foundation_member',
 				),
-				/*
 				'microstory'	=> array(
-					'title'		=> 'Settings',
+					'title'		=> 'Story Settings',
 					'fields'	=> array(
-						'featured'	=> 'Featured'
-					)
+						'featured'	=> array(
+							'label'		=> 'Featured Story',
+							'type'		=> 'boolean',
+							'default'	=> false
+						),
+					),
+					'post_type'	=> 'microstory',
+					'context'	=> 'side',
 				),
-				
-				*/
 			);
 			
 		}

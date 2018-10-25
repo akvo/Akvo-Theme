@@ -62,7 +62,7 @@
 		
 		//Enqueue Styles
 		wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', null, true);
-		wp_enqueue_style('style', get_template_directory_uri() .'/css/main.1.css', array('bootstrap'), '1.0.3' );
+		wp_enqueue_style('style', get_template_directory_uri() .'/css/main.1.css', array('bootstrap'), '1.0.5' );
 		
 		
 		

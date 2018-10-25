@@ -146,7 +146,16 @@
 					'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
 					'menu_icon' 	=> get_bloginfo('template_url').'/images/icons/akvoStaff_icn.png',
 					'has_archive' 	=> true	
-				)
+				),
+				/* ADVERTS */
+				'advert'	=> array(
+					'name' 			=> 'Akvo Adverts',
+					'singular_name' => 'Akvo Advert',
+					'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
+					//'menu_icon' 	=> get_bloginfo('template_url').'/images/akvoPartner_icn.png',
+					'rewrite'		=> false,
+					'has_archive' 	=> true	
+				),
 			);
 		}
 		function get_post_types(){ return $this->post_types; }
@@ -209,32 +218,6 @@
 		function get_taxonomies(){ return $this->taxonomies; }
 		
 		function set_meta_boxes(){
-			/*
-			$this->meta_boxes = array(
-				array(
-					'title'		=> 'New Staff Details',
-					'fields'	=> array(
-						'staff_title'		=> 'Job Title', 
-						'staff_twitter'		=> 'Twitter Link',
-						'staff_linkedin'	=> 'LinkedIn Link',
-						'staff_blog'		=> 'Blog Link'
-					),
-					'post_type'	=> 'new_staffs'
-				),
-				array(
-					'title'		=> 'Page Settings',
-					'fields'	=> array(
-						'disable_header'	=> array(
-							'label'		=> 'Disable Header',
-							'type'		=> 'boolean',
-							'default'	=> false
-						)
-					),
-					'post_type'	=> 'page'
-				)
-			);
-			*/
-			
 			$this->meta_boxes = array(
 				/*
 				'new_partners'	=> array(

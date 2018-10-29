@@ -6,6 +6,23 @@ ul.blog-detail {
     padding-left: 0px!important;
 }
 
+/* ON THE FLY AMENDS */
+
+p, strong {line-height: 29px;}
+h2 {line-height:49px;}
+h3.thin {line-height:38px;}
+.widget_akvo-logo-slider h3 {font-size:38px!important;line-height:49px!important;font-weight:700!important;text-align:center!important;}
+.hovercontent p, .hovercontent strong, .hovercontent a {font-style:normal!important;}
+.akvo-custom-posts li.post .title {font-weight:700!important;font-family:"Roboto Condensed", sans-serif!important;}
+.caret {display:none!important;} 
+a.buttonwhite, a.buttonblack {text-decoration:none!important;}
+.primary-filter-list li a {font-size:18px!important;}
+.counter h2 {text-align:center!important;}
+
+.titledate h4 {font-size:20px!important;line-height:30px!important;}
+
+.articlesdropdown {font-size:16px!important;border-radius:0px!important;}
+
 /* New Single Post */
 
 .singlepost .meta a {color:#03AD8C!important;}

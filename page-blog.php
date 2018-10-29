@@ -1,3 +1,4 @@
+<?php /* Template Name: Blog Page */ ?>
 <?php get_header();?>
 <!-- Carousel -->
 <div class="container fullwidth">

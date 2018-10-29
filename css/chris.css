@@ -26,6 +26,8 @@ a.buttonwhite, a.buttonblack {text-decoration:none!important;}
 
 /* New Single Post */
 
+.singlerow .postimage img {width:100%!important;}
+
 .singlepost .meta a {color:#03AD8C!important;}
 .greybox {background:#f8f8f8!important;padding:40px 60px;}
 .tweetboxpullout .greybox {padding:25px 40px 60px!important;}

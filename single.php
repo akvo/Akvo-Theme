@@ -30,9 +30,9 @@
 			<div class="row singlerow">
 			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 postpaddingbottom">
 				<ul class="meta"> 
-					<li>Written by <?php the_author(); ?> on <?php the_time('F jS, Y'); ?></li> 
+					<li>Written by <?php echo get_the_author_link(); ?> on <?php the_time('F jS, Y'); ?></li> 
 				</ul>
-                        <?php the_post_thumbnail('full'); ?>
+                        <div class="postimage"><?php the_post_thumbnail('full'); ?></div>
 						<br/>
 						<div class="bg-light-gray greybox fullheight"><?php echo get_post(get_post_thumbnail_id())->post_content; ?></div>
 						<br/>
@@ -127,23 +127,27 @@
 					</div>
 				<?php endwhile; wp_reset_postdata(); endif; ?>
 				
-				<?php
-//for use in the loop, list 5 post titles related to first tag on current post
-$tags = wp_get_post_tags($post->ID);
-if ($tags) {
-echo 'Related Posts';
-$first_tag = $tags[0]->term_id;
-$args=array(
-'tag__in' => array($first_tag),
-'post__not_in' => array($post->ID),
-'posts_per_page'=>3,
-'caller_get_posts'=>1
+<?php // Build our basic custom query arguments
+global $post;
+$categories = get_the_category( $post->ID );
+$catidlist = '';
+foreach( $categories as $category) {
+    $catidlist .= $category->cat_ID . ",";
+}
+// Build our category based custom query arguments
+$custom_query_args = array( 
+	'posts_per_page' => 8, // Number of related posts to display
+	'post__not_in' => array($post->ID), // Ensure that the current post is not displayed
+	'orderby' => 'rand', // Randomize the results
+	'cat' => $catidlist, // Select posts in the same categories as the current post
 );
-$my_query = new WP_Query($args);
-if( $my_query->have_posts() ) { ?> 
-				<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+// Initiate the custom query
+$custom_query = new WP_Query( $custom_query_args );
+$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+if ( $custom_query->have_posts() ) : ?>
+	<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 postpaddingbottom youmightlikecontainer">
-                    <div class="col-lg-12 col-xs-12 youmightlikebox" style="background:url(https://akvo.org/wp-content/uploads/2018/06/feature-image-1.jpg);"> 
+                    <div class="col-lg-12 col-xs-12 youmightlikebox" style="background:url(<?php echo $featured_img_url ?>);"> 
 						 <div class="blog-colum">
 						 <div class="youmightliketext">
 							<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
@@ -157,13 +161,12 @@ if( $my_query->have_posts() ) { ?>
 						</div>
 					</div>
                 </div>
-<?php
-endwhile;
-}
-wp_reset_query();
-}
-?>
-<?php endif; ?>
+<?php endwhile; ?>
+<?php else : ?>
+		<p>Sorry, no related articles to display.</p>
+<?php endif;
+// Reset postdata
+wp_reset_postdata(); ?>
             </div>
 </div>
 </div>

@@ -25,7 +25,6 @@
 						<li class="list-inline-item"><a href="mailto:info@akvo.org" target="_blank"><i class="fa fa-envelope"></i></a></li>
 					</ul>
 					<p class="text-center"><?php dynamic_sidebar( 'footer_creative_commons_text' ); ?></p>
-					<br/><a href="#">Privacy Policy</a>  |  <a href="#">Sitemap</a>
 				</div>
 				</hr>
 			</div>	

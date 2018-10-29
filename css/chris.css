@@ -9,6 +9,7 @@ ul.blog-detail {
 /* ON THE FLY AMENDS */
 
 p, strong {line-height: 29px;}
+a {color:#02ad8c;}
 h2 {line-height:49px;}
 h3.thin {line-height:38px;}
 .widget_akvo-logo-slider h3 {font-size:38px!important;line-height:49px!important;font-weight:700!important;text-align:center!important;}

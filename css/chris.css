@@ -5,3 +5,66 @@ ul.blog-detail {
     margin-left: 0px!important;
     padding-left: 0px!important;
 }
+
+/* New Single Post */
+
+.singlepost .meta a {color:#03AD8C!important;}
+.greybox {background:#f8f8f8!important;padding:40px 60px;}
+.tweetboxpullout .greybox {padding:25px 40px 60px!important;}
+.tweetboxpullout h3 {margin-top:0px!important;margin-bottom:0px!important;color:#2c509a;font-weight:300!important;}
+.tweetboxpullout .paragraph {padding-top:10px;}
+.tweetboxpullout h3 a {float:left;color:#2c509a;text-decoration:none!important;}
+.tweetboxpullout h3.tweetbutton {text-align:right;bottom:0!important;padding:10px;float:right;}
+.aboutauthor h3 {font-weight:300!important;}
+.aboutauthor h3 a {color:#03AD8C!important;font-weight:400!important;text-decoration:none!important;}
+.aboutauthor .categories {margin:0px!important;padding:0px!important;}
+.aboutauthor .authorbox {margin-right:1%;}
+@media (max-width: 768px) {.aboutauthor .authorbox {margin-right:none!important;}.tweetboxpullout .greybox {padding:20px 40px 60px 40px!important;}}
+
+.fullheight {height:100%!important;}
+
+.row-eq-height{display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;}
+@media (max-width: 768px) {.row-eq-height{display:block!important;}.fullheight{margin-bottom:10px;}}
+.imagebox img {margin-bottom:0px!important;}
+
+.whitetext p, .whitetext h2, .whitetext h1, .whitetext h3, .whitetext a, .whitetext li, .whitetext i, .whitetext small, .whitetext blockquote small, .whitetext blockquote, .whitetext label {color:#fff!important;}
+
+.greenbg.whitetext input[type=button], .greenbg.whitetext input[type=submit].submitbigform{background:#fff!important;color:#03AD8C!important;border:1px solid #fff!important;}
+.greenbg.whitetext input[type=button]:hover, .greenbg.whitetext input[type=submit].submitbigform:hover {background:none!important;color:#fff!important;}
+
+.bluebg.whitetext input[type=button], .bluebg.whitetext input[type=submit].submitbigform{background:#fff!important;color:#404898!important;border:1px solid #fff!important;}
+.bluebg.whitetext input[type=button]:hover, .bluebg.whitetext input[type=submit].submitbigform:hover {background:none!important;color:#fff!important;}
+
+.redbg.whitetext input[type=button], .redbg.whitetext input[type=submit].submitbigform{background:#fff!important;color:#EA5547!important;border:1px solid #fff!important;}
+.redbg.whitetext input[type=button]:hover, .redbg.whitetext input[type=submit].submitbigform:hover {background:none!important;color:#fff!important;}
+
+.pinkbg.whitetext input[type=button], .pinkbg.whitetext input[type=submit].submitbigform{background:#fff!important;color:#E04D95!important;border:1px solid #fff!important;}
+.pinkbg.whitetext input[type=button]:hover, .pinkbg.whitetext input[type=submit].submitbigform:hover {background:none!important;color:#fff!important;}
+
+/* Flex */
+
+.row-flex {
+  display: flex; /* columns are now equal height */
+  flex:1;
+  flex-flow: row wrap;
+}
+.row-flex .col {
+  flex: 1;
+  flex-grow: 1;
+  flex-flow: column nowrap;
+  min-width: 0;
+  padding: 5px;
+  margin-right: 10px;
+}
+.row-flex .col:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .flex-grid {
+    display: block;
+  }
+}

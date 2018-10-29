@@ -7,7 +7,7 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
       
-        <div class="item active" style="background:url(https://staging3.akvo.org/wp-content/uploads/2018/10/brushrepeat.jpg)!important;">
+        <div class="item active" style="background:url(https://staging3.akvo.org/wp-content/uploads/2018/10/BP-pink-3-600-1.jpg)!important;">
 		<div class="container">
            <div class="carousel-caption microstory">
             <h1><?php the_title(); ?></h1>
@@ -118,21 +118,15 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<h2 class="paddingbottom aligncenter">Things you may also like...</h2>
 			<div class="row">
-				<?php
-					$loop = new WP_Query( array( 'post_type' => 'advert', 'posts_per_page' => 1, ) );
-					if ( $loop->have_posts() ) :
-					while ( $loop->have_posts() ) : $loop->the_post(); 
-					$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
-					$advert_url = get_field( "advert_url" );
-					
-					echo '<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 postpaddingbottom">
-						<a href="'. $advert_url .'"><div class="col-lg-12 col-xs-12 advertbox" style="background:url('.esc_url($featured_img_url).');">
-						</div></a>
-						</div>'
-					endwhile;
-					endif;
-					wp_reset_postdata();
-				?>
+				<?php $query2 = new WP_Query( 'post_type=advert&order=asc&orderby=date&posts_per_page=1' ); ?>
+				<?php if ( $query2->have_posts() ) :?>	
+				<?php while ( $query2->have_posts() ) : $query2->the_post(); $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+					<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 postpaddingbottom">
+					<a href="<?php echo $advert_url ?>"><div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $featured_img_url ?>);">
+					</div></a>
+					</div>
+				<?php endwhile; wp_reset_postdata(); endif; ?>
+				
 				<?php
 //for use in the loop, list 5 post titles related to first tag on current post
 $tags = wp_get_post_tags($post->ID);

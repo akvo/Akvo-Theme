@@ -24,6 +24,19 @@ a.buttonwhite, a.buttonblack {text-decoration:none!important;}
 
 .articlesdropdown {font-size:16px!important;border-radius:0px!important;}
 
+.sow-accordion .sow-accordion-panel .sow-accordion-panel-content .sow-accordion-panel-border {background:none!important;}
+.sow-accordion .panel-row-style, .sow-accordion .fixed-col {padding-top:0px!important;}
+.sow-accordion .sow-accordion-panel:nth-child(even) {background:rgba(255,255,255,0.1);}
+.sow-accordion .sow-accordion-panel .sow-accordion-panel-header {background:none!important;border:none!important;}
+
+.white, .white h1, .white h2, .white h3, .white h4 {color:#fff!important;}
+
+.wpml-ls-legacy-list-horizontal {padding:10px 0px;font-size:17px;}
+.wpml-ls-legacy-dropdown {max-width:100px;width:100%;padding:10px 0px;font-size:17px;}
+.wpml-ls-legacy-dropdown a.wpml-ls-item-toggle:after {display:none!important;}
+.wpml-ls-legacy-dropdown a, .wpml-ls-legacy-list-horizontal a {text-decoration:none!important;border:none!important;}
+.sow-accordion .sow-accordion-panel .sow-accordion-panel-content .sow-accordion-panel-border {padding-top:0px!important;}
+
 /* New Single Post */
 
 .singlerow .postimage img {width:100%!important;}

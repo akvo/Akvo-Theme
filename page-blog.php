@@ -78,10 +78,10 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=6&
 					</div>
                 </div>
 				<?php endwhile;?>
-				<div class="pagination">
-					<div class="nav-previous alignleft"><?php previous_posts_link( 'Older posts' ); ?></div>
-					<div class="nav-next alignright"><?php next_posts_link( 'Newer posts' ); ?></div>
-				</div>
+				<ul class="list-inline">
+						<li><?php previous_posts_link( 'Newer posts' ); ?></li>
+						<li class='pull-right'><?php next_posts_link( 'Older posts' ); ?></li>
+					</ul>
 			</div>
 <?php 
 wp_reset_postdata();

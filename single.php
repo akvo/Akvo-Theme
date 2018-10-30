@@ -138,7 +138,7 @@ foreach( $categories as $category) {
 $custom_query_args = array( 
 	'posts_per_page' => 3, // Number of related posts to display
 	'post__not_in' => array($post->ID), // Ensure that the current post is not displayed
-	'orderby' => 'rand', // Randomize the results
+	'orderby' => 'ASC', // Randomize the results
 	'cat' => $catidlist, // Select posts in the same categories as the current post
 );
 // Initiate the custom query

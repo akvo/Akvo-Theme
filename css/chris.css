@@ -47,6 +47,12 @@ a:hover {text-decoration:underline;}
 
 .sow-accordion .sow-accordion-panel .sow-accordion-panel-header .sow-accordion-open-close-button {margin-top:-23px;}
 
+.sow-contact-form .sow-submit-styled .sow-submit {box-shadow:none!important;}
+
+.sow-form-field.sow-form-field-checkboxes ul label,  .sow-form-field.sow-form-field-radio ul label {font-weight: normal!important;font-size: 13px!important;color: #202024!important;line-height:20px!important;}
+
+.sow-form-field input, .sow-form-field select {padding: 10px 20px!important;width:100%;}
+
 /* New Single Post */
 
 .singlerow .postimage img {width:100%!important;}

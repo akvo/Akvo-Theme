@@ -45,6 +45,8 @@ a.buttonwhite, a.buttonblack {text-decoration:none!important;}
 a:hover {text-decoration:underline;}
 .widget-title {color:#191919!important;}
 
+.sow-accordion .sow-accordion-panel .sow-accordion-panel-header .sow-accordion-open-close-button {margin-top:-23px;}
+
 /* New Single Post */
 
 .singlerow .postimage img {width:100%!important;}

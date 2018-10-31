@@ -1,5 +1,5 @@
 <!-- Logos -->
-<div class="fullwidth paddingtop paddingbottom">
+<div class="fullwidth">
 	<div class="container">
 		<h3 class="thin"><?php _e( $instance['title'] );?></h3>
 		<section class="customer-logos slider">

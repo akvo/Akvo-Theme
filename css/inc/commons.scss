@@ -1,0 +1,26 @@
+%slidertitle, %slidercaption{
+	color						: $colorBlack;
+	text-shadow					: none;
+	padding						: 5px;
+	background					: $colorWhite;
+	display						: inline-block;
+}
+
+%slidertitle{
+	padding-bottom				: 0px;
+	font-size					: 7.75rem;
+	line-height					: 105px;
+	margin-bottom				: 20px;
+	-webkit-margin-after		: 0px;
+	-webkit-box-decoration-break: clone;
+	-ms-box-decoration-break	: clone;
+	-o-box-decoration-break		: clone;
+	box-decoration-break		: clone;
+	
+}
+
+%slidercaption{
+	font-size: 30px;
+	clear: both;
+	margin-top: 10px;
+}

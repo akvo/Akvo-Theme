@@ -5,9 +5,15 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner carousel-fade">
 			<?php $i = 0;foreach( $instance['slides'] as $slide ): if( isset( $slide['image'] ) ):?>
-			<div class="item <?php if( !$i ){_e('active');}?>" style="background-image:url('<?php _e( $akvo_widgets_template->get_image_url( $slide['image'] ) );?>');">
+			<div class="item <?php if( isset( $instance['bg-size'] ) )_e( $instance['bg-size'] );?> <?php if( !$i ){_e('active');}?>" style="background-image:url('<?php _e( $akvo_widgets_template->get_image_url( $slide['image'] ) );?>');">
 				<div class="container">
-					<div class="carousel-caption microstory"><h1><?php _e( $slide['title'] );?></h1></div>
+					<div class="carousel-caption microstory">
+						<h1><?php _e( $slide['title'] );?></h1>
+						<?php if( isset( $slide['content'] ) && $slide['content'] ):?>
+						<br>
+						<h2><?php _e( $slide['content'] );?></h2>
+						<?php endif;?>
+					</div>
 				</div>
 			</div><!-- End Item -->
 			<?php $i++;endif;endforeach;?>

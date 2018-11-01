@@ -1,3 +1,5 @@
+
+
 .fullwidth {
 	width: 100%;
 	padding-left: 0px;
@@ -43,7 +45,7 @@
 }
 
 .massivetitle {
-	color: #4E4A47;
+	color: $colorMidBlack;
 	font-size: 4.8rem;
 	margin-bottom: 20px;
 	line-height: 8.75rem;
@@ -55,71 +57,30 @@
 	line-height: 30px;
 }
 
-.bg-light-gray {
-	background: #f8f8f8;
-	background-color: #f8f8f8;
-}
-
-.bg-gray {
-	background: #e6e6e6;
-	background-color: #e6e6e6;
-}
-
 /* AKVO COLOUR OVERRIDES */
 
-.gray {
-	color: #333!important;
-}
+.bg-light-gray { background-color: $colorMidGray !important; }
+.bg-gray { background-color: $colorMidGray !important; }
+.bg-mid-grey { background-color: $colorMidGray !important; }
 
-.graybg{
-	background: #333!important;
-	background-color: #333!important;
-}
+.gray { color: $colorDarkGray !important; }
+.graybg{ background-color: $colorDarkGray !important; }
 
-.blue {
-  color: #404898 !important;
-}
+.blue{ color: $colorBlue !important; }
+.bluebg{ background-color: $colorBlue !important; }
 
-.bluebg {
-  background: #404898 !important;
-  background-color: #404898 !important;
-}
+.green{ color: $colorGreen !important; }
+.greenbg{ background-color: $colorGreen !important; }
 
-.green {
-  color: #03AD8C !important;
-}
+.red{ color: $colorRed !important; }
+.redbg{ background-color: $colorRed !important;}
 
-.greenbg {
-  background: #03AD8C !important;
-  background-color: #03AD8C !important;
-}
+.pink{ color: $colorPink !important; }
+.pinkbg{ background-color: $colorPink !important; }
 
-.red {
-  color: #EA5547 !important;
-}
+.white { color: $colorWhite !important; }
 
-.redbg {
-  background: #EA5547 !important;
-  background-color: #EA5547 !important;
-}
 
-.pink {
-  color: #E04D95 !important;
-}
-
-.pinkbg {
-  background: #E04D95 !important;
-  background-color: #E04D95 !important;
-}
-
-.white {
-  color:#fff!important;
-}
-
-.bg-mid-grey {
-	background: #fafafa !important;
-	background-color: #fafafa !important;
-}
 
 
 @media (max-width: 768px) {

@@ -1,13 +1,15 @@
+@import 'library';
+
 .container-fluid {padding:0px;}
 
 body {
-	color: #202024;
-	font-family: 'Assistant', sans-serif;
-	font-weight: 400;
-	font-size: 1.45em;
-	line-height: 1.4em;
-	text-rendering: optimizeLegibility;
-	overflow-x: hidden !important;
+	color			: $colorBlack;
+	font-family		: 'Assistant', sans-serif;
+	font-weight		: 400;
+	font-size		: 1.45em;
+	line-height		: 1.4em;
+	text-rendering	: optimizeLegibility;
+	overflow-x		: hidden !important;
 }
 
 
@@ -20,6 +22,8 @@ nav {
 		background: none !important;
 	}
 }
+
+@import 'inc/commons';
 
 @import 'inc/navbar';
 

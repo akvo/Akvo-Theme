@@ -44,6 +44,19 @@ class Akvo_Slider extends SiteOrigin_Widget {
 							'type' => 'text',
 							'label' => __( 'Title', 'siteorigin-widgets' )
 						),
+						'content' => array(
+							'type' 	=> 'textarea',
+							'label' => __( 'Content', 'siteorigin-widgets' )
+						),
+					)
+				),
+				'bg-size' => array(
+					'type' => 'select',
+					'label' => __( 'Choose background image size', 'siteorigin-widgets' ),
+					'default' => 'item-default',
+					'options' => array(
+						'item-default' 	=> __( 'Default', 'siteorigin-widgets' ),
+						'item-narrow' 	=> __( 'Narrow', 'siteorigin-widgets' ),
 					)
 				)
 			),

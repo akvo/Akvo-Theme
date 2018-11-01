@@ -44,7 +44,7 @@
 							</button>
 							<div class="logobrand">
 								<a id="brand" class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-									<img src="<?php bloginfo('template_url'); ?>/images/logos/akvologowhite.png">
+									<img src="<?php bloginfo('template_url'); ?>/images/logos/random/logo<?php echo rand(1,4); ?>.png" alt="logo" width="200px" >
 								</a>
 							</div>
 						</div>

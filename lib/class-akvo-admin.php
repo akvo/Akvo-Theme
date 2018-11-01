@@ -135,7 +135,7 @@
 					'name' 			=> 'Akvo Microstories',
 					'singular_name' => 'Akvo Microstory',
 					'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
-					//'menu_icon' 	=> get_bloginfo('template_url').'/images/akvoPartner_icn.png',
+					'menu_icon' 	=> 'dashicons-admin-page',
 					'rewrite'		=> false,
 					'has_archive' 	=> true	
 				),
@@ -152,7 +152,16 @@
 					'name' 			=> 'Akvo Adverts',
 					'singular_name' => 'Akvo Advert',
 					'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
-					//'menu_icon' 	=> get_bloginfo('template_url').'/images/akvoPartner_icn.png',
+					'menu_icon' 	=> 'dashicons-format-gallery',
+					'rewrite'		=> false,
+					'has_archive' 	=> true	
+				),
+				/* PRODUCT UPDATES */
+				'product_update'	=> array(
+					'name' 			=> 'Akvo Product Updates',
+					'singular_name' => 'Akvo Advert Update',
+					'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
+					'menu_icon' 	=> 'dashicons-edit',
 					'rewrite'		=> false,
 					'has_archive' 	=> true	
 				),
@@ -164,6 +173,23 @@
 		function set_taxonomies(){
 			
 			$this->taxonomies = array(
+				'product_category'	=> array(
+					'post_type'	=> 'product_update',
+					'labels'	=> array(
+						'name' 			=> 'Product Category',
+						'add_new_item' 	=> 'New Product Category',
+						'new_item_name' => 'New Product Category'
+					)
+				),
+				'product_tag'	=> array(
+					'post_type'	=> 'product_update',
+					'labels'	=> array(
+						'name' 			=> 'Product Tag',
+						'add_new_item' 	=> 'New Product Tag',
+						'new_item_name' => 'New Product Tag'
+					),
+					'hierarchical'	=> false
+				),
 				'new_staffs_team'	=> array(
 					'post_type'	=> 'new_staffs',
 					'labels'	=> array(
@@ -300,6 +326,17 @@
 					'post_type'	=> 'microstory',
 					'context'	=> 'side',
 				),
+				'advert'	=> array(
+					'title'		=> 'Settings',
+					'fields'	=> array(
+						'url'	=> array(
+							'label'	=> 'URL',
+							'type'	=> 'text'
+						),
+					),
+					'post_type'	=> 'advert',
+					'context'	=> 'side',
+				)
 			);
 			
 		}
@@ -347,7 +384,7 @@
 						'labels' 		=> $tax['labels'],
 						'show_ui' 		=> true,
 						'show_tagcloud' => false,
-						'hierarchical' 	=> true,
+						'hierarchical' 	=> isset( $tax['hierarchical'] ) ? $tax['hierarchical'] : true,
 						'query_var' 	=> true,
 						'rewrite' 		=> array('slug' => $slug )
 					)

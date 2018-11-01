@@ -24,7 +24,7 @@
 <!-- Posts -->
 <div class="container paddingtop paddingbottom">
 
-			<div class="row paddingbottom">
+			<div class="row row-eq-height paddingbottom">
 				<?php $query = new WP_Query( 'order=asc&orderby=date&posts_per_page=1' ); ?>
 				<?php if ( $query->have_posts() ) :?>	
 				<div>
@@ -63,7 +63,7 @@
 <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
 $query = new WP_Query( 'order=asc&orderby=date&posts_per_page=6&offset=1&paged='. $paged ); ?>
 <?php if ( $query->have_posts() ) :?>			   
-		   <div class="row paddingbottom">
+		   <div class="row row-eq-height paddingbottom">
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">

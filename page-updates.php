@@ -12,7 +12,7 @@
 wp_reset_postdata();
 endif; ?>
 <!-- Updates -->
-<div class="fullwidth paddingbottom bg-mid-grey">
+<div class="fullwidth paddingbottom">
 <div class="container updates">
 <?php $query = new WP_Query( 'post_type=product_update&order=DESC&orderby=date&posts_per_page=-1&offset=1' ); ?>
 <?php if ( $query->have_posts() ) :?>			   

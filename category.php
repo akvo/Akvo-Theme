@@ -31,7 +31,7 @@
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+                        <div class="featuredimage"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
 						 <div class="blog-column">
 						 <div class="titledatemain">
 							<h4><?php the_title(); ?></h4>
@@ -65,7 +65,7 @@ $query = new WP_Query( 'order=asc&orderby=date&posts_per_page=6&offset=1&paged='
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+                        <div class="featuredimage"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
 						 <div class="blog-colum">
 							<div class="titledate">
 							<h4><?php the_title(); ?></h4>

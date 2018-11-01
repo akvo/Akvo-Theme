@@ -326,6 +326,17 @@
 					'post_type'	=> 'microstory',
 					'context'	=> 'side',
 				),
+				'advert'	=> array(
+					'title'		=> 'Settings',
+					'fields'	=> array(
+						'url'	=> array(
+							'label'	=> 'URL',
+							'type'	=> 'text'
+						),
+					),
+					'post_type'	=> 'advert',
+					'context'	=> 'side',
+				)
 			);
 			
 		}

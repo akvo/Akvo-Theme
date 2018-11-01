@@ -42,7 +42,7 @@
 		// Why/Where are we using this?
 		wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js', array('jquery'), null, true);
 		
-		wp_enqueue_script('akvo-script', get_template_directory_uri() .'/js/akvo_scripts.js', array('jquery'), '1.0.1', true);
+		wp_enqueue_script('akvo-script', get_template_directory_uri() .'/js/akvo_scripts.js', array('jquery'), '1.0.2', true);
 		
 		wp_localize_script( 'akvo-script', 'settings', $settings );	
 		

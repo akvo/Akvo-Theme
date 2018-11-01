@@ -66,6 +66,28 @@
 </body></html>
 <!-- TO BE INCLUDED IN THE STYLES -->
 <style>
+
+	/* OVERRIDING HERO WIDGET */
+	.sow-slider-base .sow-slider-pagination, .sow-slider-base .sow-slide-nav{
+		display: none !important;
+	}
+	.sow-slider-base .sow-slider-image-wrapper{
+		padding-left: 15px;
+		padding-right: 15px;
+		max-width: none !important;
+		width: 1170px !important;
+		bottom: 20px;
+	}
+	.sow-slider-base .sow-slider-image-wrapper .carousel-caption{
+		text-align: left;
+		left: auto;
+		right: auto;
+		bottom: 8%;
+	}
+	
+	
+	
+
 	body.single-microstory iframe{
 		margin-left: auto;
 		margin-right: auto;

@@ -207,24 +207,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
 
 @import "inc/carousel";
 
-.carousel-caption h1, h1.slidertitle, .slidertitle {
-	text-shadow:none!important;
-	padding-bottom: 0px !important;
-	padding-left: 5px !important;
-	padding-right: 5px !important;
-	color: #202024 !important;
-	font-size: 7.75rem !important;
-	background: #fff;
-	margin-bottom: 20px !important;
-	-webkit-margin-after: 0px !important;
-	line-height: 8.75rem !important;
-	display: inline;
-	-webkit-box-decoration-break: clone;
-	-ms-box-decoration-break: clone;
-	-o-box-decoration-break: clone;
-	box-decoration-break: clone;
-	line-height: 105px !important;
-}
+
 
 body.microstory {
 	h3.thin, small {

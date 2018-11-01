@@ -1,3 +1,11 @@
+/*---------------------------------------------------------------------------------
+
+    Title:          Akvo.org Styles for Desktop, mobile, tablet
+    Author:         Samuel Thomas, samuel@akvo.org
+
+---------------------------------------------------------------------------------*/
+            /* Colours
+---------------------------------------------------------------------------------*/
 .container-fluid {
   padding: 0px; }
 
@@ -15,6 +23,29 @@ nav.anchorNav ul li a, nav.anchorNav2 ul li a {
 nav.anchorNav, nav.anchorNav2 {
   padding: 15px 0px;
   background: none !important; }
+
+.carousel-caption h1, h1.slidertitle, .slidertitle, .carousel-caption h2 {
+  color: #202024;
+  text-shadow: none;
+  padding: 5px;
+  background: #fff;
+  display: inline-block; }
+
+.carousel-caption h1, h1.slidertitle, .slidertitle {
+  padding-bottom: 0px;
+  font-size: 7.75rem;
+  line-height: 105px;
+  margin-bottom: 20px;
+  -webkit-margin-after: 0px;
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone; }
+
+.carousel-caption h2 {
+  font-size: 30px;
+  clear: both;
+  margin-top: 10px; }
 
 /* NAVBAR */
 nav#header {
@@ -46,7 +77,7 @@ nav#header {
 
 .navbar-nav > li > a:hover {
   background: none !important;
-  color: #404898 !important; }
+  color: #03AD8C !important; }
 
 li a.dropdown-toggle:hover {
   cursor: pointer !important; }
@@ -72,7 +103,7 @@ li a.dropdown-toggle:hover {
     background: #202024 !important;
     background-color: #202024 !important; }
   .dropdown-menu a:hover {
-    color: #404898 !important;
+    color: #03AD8C !important;
     background: #202024 !important;
     background-color: #202024 !important; }
 
@@ -244,55 +275,47 @@ li a.dropdown-toggle:hover {
   font-weight: 300;
   line-height: 30px; }
 
+/* AKVO COLOUR OVERRIDES */
 .bg-light-gray {
-  background: #f8f8f8;
   background-color: #f8f8f8; }
 
 .bg-gray {
-  background: #e6e6e6;
   background-color: #e6e6e6; }
 
-/* AKVO COLOUR OVERRIDES */
 .gray {
   color: #333 !important; }
 
 .graybg {
-  background: #333 !important;
   background-color: #333 !important; }
 
 .blue {
   color: #404898 !important; }
 
 .bluebg {
-  background: #404898 !important;
   background-color: #404898 !important; }
 
 .green {
   color: #03AD8C !important; }
 
 .greenbg {
-  background: #03AD8C !important;
   background-color: #03AD8C !important; }
 
 .red {
   color: #EA5547 !important; }
 
 .redbg {
-  background: #EA5547 !important;
   background-color: #EA5547 !important; }
 
 .pink {
   color: #E04D95 !important; }
 
 .pinkbg {
-  background: #E04D95 !important;
   background-color: #E04D95 !important; }
 
 .white {
   color: #fff !important; }
 
 .bg-mid-grey {
-  background: #fafafa !important;
   background-color: #fafafa !important; }
 
 @media (max-width: 768px) {
@@ -326,6 +349,10 @@ h3 {
 h4 {
   font-size: 27px;
   line-height: 34px; }
+
+body.category h4, body.single h4 {
+  font-size: 18px;
+  line-height: 25px; }
 
 h5 {
   font-size: 23px;
@@ -412,13 +439,6 @@ input[type=button]:hover, input[type=submit]:hover {
   .buttonwhite:hover {
     background: #fff !important;
     color: #202023 !important; }
-
-
-ul.blog-detail {
-    list-style: none!important;
-    margin-left: 0px!important;
-    padding-left: 0px!important;
-}
 
 /* LIST OF STAFF, MICROSTORIES, PARTNERS & ORGANISATIONS */
 .akvo-custom-posts {
@@ -834,7 +854,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     background-color: transparent;
     -webkit-text-decoration-skip: objects; }
     #footer a:hover {
-      color: #404898 !important;
+      color: #03AD8C !important;
       font-weight: normal !important; }
   #footer ul.social li {
     padding: 3px 0; }
@@ -846,7 +866,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
       transition: .5s all ease; }
     #footer ul.social li:hover a i {
       font-size: 30px;
-      color: #404898 !important;
+      color: #03AD8C !important;
       margin-top: -10px; }
     #footer ul.social li a {
       color: #ffffff; }
@@ -917,30 +937,14 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     height: 600px;
     width: 100%;
     background-position: 50% 26%; }
+    .carousel .carousel-inner .item.item-narrow {
+      height: 450px; }
   .carousel .carousel-caption {
     text-shadow: none;
     bottom: 15%;
     text-align: left;
     right: auto;
     left: auto; }
-
-.carousel-caption h1, h1.slidertitle, .slidertitle {
-  text-shadow: none !important;
-  padding-bottom: 0px !important;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
-  color: #202024 !important;
-  font-size: 7.75rem !important;
-  background: #fff;
-  margin-bottom: 20px !important;
-  -webkit-margin-after: 0px !important;
-  line-height: 8.75rem !important;
-  display: inline;
-  -webkit-box-decoration-break: clone;
-  -ms-box-decoration-break: clone;
-  -o-box-decoration-break: clone;
-  box-decoration-break: clone;
-  line-height: 105px !important; }
 
 body.microstory h3.thin, body.microstory small {
   font-family: "Assistant", sans-serif !important; }
@@ -1823,9 +1827,9 @@ body.single-microstory .narrow-row {
   margin: 20px 0; }
 
 .so-widget-sow-editor .siteorigin-widget-tinymce h4 {
-  color: #4E4A47 !important;
+  color: #4E4A47;
   font-family: 'Roboto Condensed', sans-serif !important;
-  font-weight: 300 !important;
+  /*font-weight: 300 !important;*/
   line-height: 30px;
   font-size: 24px;
   margin-top: 20px;

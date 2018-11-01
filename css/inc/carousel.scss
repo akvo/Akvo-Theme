@@ -14,6 +14,10 @@
 		height: 600px;
 		width: 100%;
 		background-position: 50% 26%;
+		
+		&.item-narrow{
+			height: 450px;
+		}
 	}
 	
 	.carousel-caption {
@@ -24,4 +28,11 @@
 		left: auto;
 	}
 	
+}
+
+.carousel-caption h1, h1.slidertitle, .slidertitle {
+	@extend %slidertitle;
+}
+.carousel-caption h2{
+	@extend %slidercaption;
 }

@@ -121,6 +121,14 @@
 		) );
 		
 		register_sidebar( array(
+			'name'          => 'Sidebar for Search Results',
+			'id'            => 'theme_sidebar',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+		) );
+		
+		/*
+		register_sidebar( array(
 			'name'          => 'Video Modal',
 			'id'            => 'video_modal',
 			'before_widget' => '<div class="modal-content">',
@@ -152,5 +160,5 @@
 				<h3 class="modal-title" id="lineModalLabel">',
 			'after_title'   => '</h3></div><div class="modal-body">',
 		) );
-		
+		*/
 	} );

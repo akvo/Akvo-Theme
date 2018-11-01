@@ -33,7 +33,7 @@ endif; ?>
 <!-- Updates -->
 <div class="fullwidth paddingbottom bg-mid-grey">
 <div class="container updates">
-<?php $query = new WP_Query( 'post_type=product-updates&order=DESC&orderby=date&posts_per_page=-1&offset=1' ); ?>
+<?php $query = new WP_Query( 'post_type=product_update&order=DESC&orderby=date&posts_per_page=-1&offset=1' ); ?>
 <?php if ( $query->have_posts() ) :?>			   
 		   <div class="row paddingbottom">
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>

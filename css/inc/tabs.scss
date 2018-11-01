@@ -1,54 +1,34 @@
-.tabs-left, .tabs-right {
+/* TABS */
+
+#maps iframe {overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px}
+
+#maps .nav .tabs-left, .nav .tabs-right {
   border-bottom: none;
   padding-top: 2px;
 }
-
-.tabs-left {
-  border-right: 1px solid #ddd;
+#maps .nav .tabs-left {
 }
-
-.tabs-right {
-  border-left: 1px solid #ddd;
+#maps .nav .tabs-right {
 }
-
-.tabs-left > li, .tabs-right > li {
+#maps .nav .tabs-left>li, #maps .nav .tabs-right>li {
   float: none;
   margin-bottom: 2px;
 }
-
-.tabs-left > li {
+#maps .nav .tabs-left>li {
   margin-right: -1px;
 }
-
-.tabs-right > li {
+#maps .nav .tabs-right>li {
   margin-left: -1px;
 }
 
-.tabs-left > li.active > a {
-  border-bottom-color: #ddd;
-  border-right-color: transparent;
-  &:hover, &:focus {
-    border-bottom-color: #ddd;
-    border-right-color: transparent;
-  }
-}
+#maps .nav-tabs {border:none!important;}
 
-.tabs-right > li.active > a {
-  border-bottom: 1px solid #ddd;
-  border-left-color: transparent;
-  &:hover, &:focus {
-    border-bottom: 1px solid #ddd;
-    border-left-color: transparent;
-  }
-}
+#maps .nav-tabs>li>a {color:#555!important;border:none!important;}
 
-.tabs-left > li > a {
-  border-radius: 4px 0 0 4px;
-  margin-right: 0;
-  display: block;
-}
-
-.tabs-right > li > a {
-  border-radius: 0 4px 4px 0;
-  margin-right: 0;
+#maps .nav-tabs>li.active>a, 
+#maps .nav-tabs>li.active>a:focus, 
+#maps .nav-tabs>li.active>a:hover {
+background:#eee!important;
+border-radius:none!important;
+border:none!important;
 }

@@ -1,25 +1,6 @@
 <?php /* Template Name: Product Updates Page */ ?>
 <?php get_header();?>
-<!-- Carousel -->
-<div class="container fullwidth">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-      
-        <div class="item active" style="background:url(https://staging3.akvo.org/wp-content/uploads/2018/09/testphoto.jpg);">
-		<div class="container">
-           <div class="carousel-caption microstory">
-            <h1>Product Updates</h1>
-          </div>
-		</div>
-        </div><!-- End Item -->
-                        
-      </div><!-- End Carousel Inner -->
-
-    </div>
-</div>
-<!-- End Carousel -->
+<div class="fullwidth homeslider paddingbottom"><?php get_template_part('partials/content', 'header'); ?></div>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <!-- Title -->
 <div class="container paddingtop paddingbottom aligncenter">

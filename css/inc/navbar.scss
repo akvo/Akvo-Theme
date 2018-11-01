@@ -3,7 +3,7 @@
 
 
 nav#header {
-	background: #202024;
+	background: $colorBlack;
 	
 	.navbar-brand {
 		font-size: 24px;
@@ -37,19 +37,19 @@ nav#header {
 }
 
 .navbar-nav > li > a {
-	color: #fff !important;
+	color: $colorWhite !important;
 	background: none !important;
 	font-size: 17px;
 }
 
 .navbar-toggle .icon-bar {
-	color: #fff !important;
-	background: #fff !important;
+	color: $colorWhite !important;
+	background: $colorWhite !important;
 }
 
 .navbar-nav > li > a:hover {
 	background: none !important;
-	color: #03AD8C !important;
+	color: $colorGreen !important;
 }
 
 
@@ -69,23 +69,23 @@ li a.dropdown-toggle:hover {
 }
 
 .dropdown-menu {
-	background: #202024 !important;
+	background: $colorBlack !important;
 	border-radius: 0px !important;
 	box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	border: none !important;
 	a {
-		color: #fff !important;
+		color: $colorWhite !important;
 		font-size: 15px;
 	}
 	li:hover {
-		background: #202024 !important;
-		background-color: #202024 !important;
+		background: $colorBlack !important;
+		background-color: $colorBlack !important;
 	}
 	a:hover {
-		color: #03AD8C !important;
-		background: #202024 !important;
-		background-color: #202024 !important;
+		color: $colorGreen !important;
+		background: $colorBlack !important;
+		background-color: $colorBlack !important;
 	}
 	
 	
@@ -159,8 +159,8 @@ li a.dropdown-toggle:hover {
     font-size: 16px !important;
     padding: 1em 2em;
     background: transparent;
-    border: 2px solid #fff;
-    color: #fff !important;
+    border: 2px solid $colorWhite;
+    color: $colorWhite !important;
     -webkit-border-radius: 0em;
     -moz-border-radius: 0em;
     border-radius: 0em;
@@ -171,7 +171,7 @@ li a.dropdown-toggle:hover {
     text-decoration: none;
     line-height: 1em;
     &:hover {
-      background: #fff !important;
+      background: $colorWhite !important;
       color: #404898 !important;
     }
   }
@@ -179,7 +179,7 @@ li a.dropdown-toggle:hover {
     position: fixed;
     top: 15px;
     right: 15px;
-    color: #fff;
+    color: $colorWhite;
     background-color: transparent;
     border-color: transparent;
     opacity: 1;
@@ -190,18 +190,18 @@ li a.dropdown-toggle:hover {
 }
 
 ::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder {
-  color: #fff !important;
+  color: $colorWhite !important;
 }
 
 @media screen and (max-width: 768px) {
   nav#header {
     background: none !important;
     .navbar-header {
-      background: #202024;
+      background: $colorBlack;
     }
   }
   .navbar-collapse {
-    background: #202024;
+    background: $colorBlack;
     width: 100% !important;
     overflow: hidden;
     -moz-border-radius: 0em !important;

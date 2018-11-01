@@ -29,7 +29,7 @@ body.modal-open {
 
 .modalinput {
 	&::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
-		color: #202024 !important;
+		color: $colorBlack !important;
 	}
 }
 
@@ -39,7 +39,7 @@ body.modal-open {
 		font-weight: normal!important;
 		line-height:18px!important;
 		font-size: 13px !important;
-		color: #202024 !important;
+		color: $colorBlack !important;
 	}
 	.form-check {
 		margin-bottom: 5px !important;

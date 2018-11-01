@@ -25,10 +25,10 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
 	}
 	a {
 		text-decoration: none !important;
-		color: #202024 !important;
+		color: $colorBlack !important;
 	}
 	.addressbox.active {
-		background: #e6e6e6 !important;
+		background: $colorGray !important;
 	}
 }
 
@@ -54,14 +54,14 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
 		font-size: 2.50em;
 		font-weight: bold;
 		text-align: left !important;
-		color: #000 !important;
+		color: $colorDarkBlack !important;
 	}
 }
 
 
 
 .blogfeature {
-	background: #fff !important;
+	background: $colorWhite !important;
 }
 
 
@@ -71,7 +71,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
   margin-top: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
-  background: #202024 !important;
+  background: $colorBlack !important;
   &.peopletop {
     margin-top: 0px !important;
   }
@@ -81,24 +81,24 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     font-size: 20px;
     padding-bottom: 6px;
     margin-bottom: 20px;
-    color: #ffffff!important;
+    color: $colorWhite!important;
   }
   p {
-    color: #fff;
+    color: $colorWhite;
   }
   h4 {
-    color: #fff;
+    color: $colorWhite;
     font-weight: bold;
   }
   a {
-    color: #ffffff;
+    color: $colorWhite;
 	font-size:16px!important;
 	line-height:21px!important;
     text-decoration: none !important;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
     &:hover {
-      color: #03AD8C !important;
+      color: $colorGreen !important;
       font-weight: normal !important;
     }
   }
@@ -114,15 +114,15 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
       }
       &:hover a i {
         font-size: 30px;
-        color: #03AD8C !important;
+        color: $colorGreen !important;
         margin-top: -10px;
       }
       a {
-        color: #ffffff;
+        color: $colorWhite;
       }
     }
     &.quick-links li a {
-      color: #ffffff;
+      color: $colorWhite;
       font-size: 16px;
       line-height: 21px;
     }
@@ -222,15 +222,7 @@ img.slidelogo {
   margin-bottom: 20px;
 }
 
-.carousel-caption.microstory {
-  padding-right: 27%;
-  &.largeimage h4 {
-    font-size: 24px;
-    padding: 5px;
-    background: #fff;
-    color: #202024 !important;
-  }
-}
+
 
 iframe#toolframe {
   height: 100%;
@@ -239,11 +231,40 @@ iframe#toolframe {
   min-height: 1000px;
 }
 
-.statistics i {
-  font-size: 50px;
-  margin-bottom: 10px;
-  color: #404898 !important;
+/*
+* STATISTICS
+*/
+.statistics{
+	i {
+		font-size: 50px;
+		margin-bottom: 10px;
+		color: $colorBlue !important;
+	}
+	.stattitle {
+		margin-bottom: 25px;
+		border-bottom: 1px solid $colorGray;
+		padding-bottom: 20px;
+	}
 }
+
+.stat {
+	padding-bottom: 15px;
+	&:nth-of-type(odd) { background-color: transparent; }
+	&:nth-of-type(even) { background-color: $colorWhite;}
+}
+
+.statistics.row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	> [class*='col-'] {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
 
 .partnerlogo {
   max-width: 80px;
@@ -252,38 +273,14 @@ iframe#toolframe {
   margin-bottom: 15px;
 }
 
-.statistics .stattitle {
-  margin-bottom: 25px;
-  border-bottom: 1px solid #d1d1d1;
-  padding-bottom: 20px;
-}
+
 
 img.toollogo {
   width: 100%;
   max-width: 115px;
 }
 
-.stat {
-  padding-bottom: 15px;
-  &:nth-of-type(odd) {
-    background-color: transparent;
-  }
-  &:nth-of-type(even) {
-    background-color: #fff;
-  }
-}
 
-.statistics.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  > [class*='col-'] {
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 .col-xs-5ths, .col-sm-5ths, .col-md-5ths, .col-lg-5ths {
   position: relative;
@@ -343,21 +340,21 @@ img.toollogo {
   margin: 0 auto;
   float: none;
   display: table;
-  color: #404898;
+  color: $colorBlue;
 }
 
 section {
   padding: 60px 0;
   .section-title {
     text-align: center;
-    color: #404898;
+    color: $colorBlue;
     margin-bottom: 50px;
     text-transform: uppercase;
   }
 }
 
 #what-we-do {
-	background: #ffffff;
+	background: $colorWhite;
 	.card {
 		padding: 1rem !important;
 		border: none;
@@ -374,7 +371,7 @@ section {
 			padding-left: 50px;
 			position: relative;
 			a {
-				color: #404898 !important;
+				color: $colorBlue !important;
 				font-weight: 700;
 				text-decoration: none;
 				i { display: none; }
@@ -388,7 +385,7 @@ section {
 			font-family: FontAwesome;
 			position: absolute;
 			font-size: 39px;
-			color: #404898;
+			color: $colorBlue;
 			left: 0;
 			-webkit-transition: -webkit-transform .2s ease-in-out;
 			transition: transform .2s ease-in-out;
@@ -427,8 +424,8 @@ section {
   right: 10px;
   cursor: pointer;
   display: none;
-  background:#404898!important;
-  border-color:#404898!important;
+  background:$colorBlue!important;
+  border-color:$colorBlue!important;
 }
 
 
@@ -438,7 +435,7 @@ section {
   position: relative;
   padding: 70px 20px 70px 20px;
   h2 span {
-    color: #404898;
+    color: $colorBlue;
     font-weight: 700 !important;
   }
 }
@@ -572,7 +569,7 @@ section {
 }
 
 .addressbox {
-  background: #f8f8f8;
+  background: $colorLightGray;
   height: 100%;
   padding-bottom: 20px;
 }
@@ -610,13 +607,13 @@ progress {
   appearance: none;
   border: none;
   background-color: transparent;
-  color: #404898!important;
+  color: $colorBlue!important;
   z-index: 100;
   &::-webkit-progress-bar {
     background-color: transparent;
   }
   &::-webkit-progress-value, &::-moz-progress-bar {
-    background-color: #404898;
+    background-color: $colorBlue;
   }
 }
 
@@ -648,12 +645,12 @@ progress {
 
 #accordion-style-1 {
 	h1, a {
-		color: #404898;
+		color: $colorBlue;
 	}
 	.btn-link {
 		font-weight: 400;
 		text-align: left !important;
-		color: #404898;
+		color: $colorBlue;
 		background-color: transparent;
 		text-decoration: none !important;
 		font-size: 18px;
@@ -671,7 +668,7 @@ i.arrowdown {
 }
 
 .card:nth-child(even) .card-header {
-	background: #f8f8f8 !important;
+	background: $colorLightGray !important;
 }
 
 .card-body {
@@ -681,16 +678,16 @@ i.arrowdown {
 
 #accordion-style-1 {
   .card-body hr {
-    border-top: 1px solid #404898 !important;
+    border-top: 1px solid $colorBlue !important;
   }
   .card-header .btn {
     &.collapsed .fa.main {
       display: none;
     }
     .fa.main {
-      background: #404898;
+      background: $colorBlue;
       padding: 13px 11px;
-      color: #ffffff;
+      color: $colorWhite;
       width: 35px;
       height: 41px;
       position: absolute;
@@ -726,7 +723,7 @@ i.arrowdown {
 }
 
 .bluebg .downloadlinks a {
-  color: #fff !important;
+  color: $colorWhite !important;
 }
 
 .logogroup {
@@ -765,7 +762,7 @@ i.arrowdown {
 	h4 {
 		padding: 5px;
 		a {
-			color: #fff !important;
+			color: $colorWhite !important;
 			text-decoration: none !important;
 		}
 	}
@@ -891,7 +888,7 @@ ul.meta {
 	bottom: 0;
 	left: 15px;
 	ul.blog-detail li {
-		color: #fff !important;
+		color: $colorWhite !important;
 	}
 }
 
@@ -915,9 +912,9 @@ ul.meta {
 }
 
 .carousel-caption h3.thin {
-	color: #000 !important;
+	color: $colorDarkBlack !important;
 	font-size: 20px !important;
-	background: #fff;
+	background: $colorWhite;
 	display: inline !important;
 	clear: both !important;
 	padding: 5px;
@@ -955,7 +952,7 @@ img {
 
 .updates {
 	.update {
-		background: #fff !important;
+		background: $colorWhite !important;
 		border: 1px solid #ededed;
 		padding: 20px !important;
 		border-bottom: none !important;
@@ -981,7 +978,7 @@ img {
 
 .tag {
 	padding: 5px 10px;
-	color: #fff !important;
+	color: $colorWhite !important;
 	float: left;
 	margin-right: 10px;
 	&:hover {
@@ -1040,14 +1037,14 @@ img {
 }
 
 .process .btn-info {
-	background: #404898 !important;
-	border-color: #404898 !important;
+	background: $colorBlue !important;
+	border-color: $colorBlue !important;
 }
 
 .boxlink {
 	min-height: 130px;
 	padding-bottom: 10px;
-	a { color: #4E4A47 !important; }
+	a { color: $colorMidBlack !important; }
 }
 
 
@@ -1112,11 +1109,11 @@ img.solutionimage {
 /* New Single Post */
 
 .singlepost .meta a {
-	color: #03AD8C !important;
+	color: $colorGreen !important;
 }
 
 .greybox {
-	background: #f8f8f8 !important;
+	background: $colorLightGray !important;
 	padding: 40px 60px;
 }
 
@@ -1152,7 +1149,7 @@ img.solutionimage {
 	h3 {
 		font-weight: 300 !important;
 		a {
-			color: #03AD8C !important;
+			color: $colorGreen !important;
 			font-weight: 400 !important;
 			text-decoration: none !important;
 		}
@@ -1201,13 +1198,13 @@ img.solutionimage {
 
 .whitetext {
   p, h2, h1, h3, a, li, i, small {
-    color: #fff !important;
+    color: $colorWhite !important;
   }
   blockquote {
     small {
-      color: #fff !important;
+      color: $colorWhite !important;
     }
-    color: #fff !important;
+    color: $colorWhite !important;
   }
 }
 

@@ -6,7 +6,7 @@
 			small { display: block;}
 			border-radius: 0px;
 		}
-		background: #eee;
+		background: $colorGray;
 	}
 	
 	.carousel-inner .item {
@@ -26,6 +26,17 @@
 		text-align: left;
 		right: auto;
 		left: auto;
+		
+		&.microstory {
+			padding-right: 27%;
+			&.largeimage h4 {
+				font-size: 24px;
+				padding: 5px;
+				background: $colorWhite;
+				color: $colorBlack !important;
+			}
+		}
+		
 	}
 	
 }

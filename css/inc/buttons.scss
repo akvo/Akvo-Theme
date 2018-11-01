@@ -6,9 +6,9 @@ input[type=button], input[type=submit] {
     font-family: Arial, Helvetica, Geneva, sans-serif;
     font-size: 16px !important;
     padding: 10px 20px;
-    background: #404898;
-    border: 2px solid #404898;
-    color: #fff !important;
+    background: $colorBlue;
+    border: 2px solid $colorBlue;
+    color: $colorWhite !important;
     -webkit-border-radius: 0em;
     -moz-border-radius: 0em;
     border-radius: 0em;
@@ -23,9 +23,9 @@ input[type=button], input[type=submit] {
 }
 
 input[type=button]:hover, input[type=submit]:hover {
-	background: #fff !important;
-	border-color: #404898 !important;
-	color: #404898 !important;
+	background: $colorWhite !important;
+	border-color: $colorBlue !important;
+	color: $colorBlue !important;
 }
 
 .buttonblack{
@@ -37,8 +37,8 @@ input[type=button]:hover, input[type=submit]:hover {
 	font-size: 16px !important;
 	padding: 1em 2em;
 	background: transparent;
-	border: 2px solid #000000;
-	color: #000000 !important;
+	border: 2px solid $colorDarkBlack;
+	color: $colorDarkBlack !important;
 	-webkit-border-radius: 0em;
 	-moz-border-radius: 0em;
 	border-radius: 0em;
@@ -51,8 +51,8 @@ input[type=button]:hover, input[type=submit]:hover {
 	margin: 0 auto;
 	
 	&:hover {
-		background: #000 !important;
-		color: #fff !important;
+		background: $colorDarkBlack !important;
+		color: $colorWhite !important;
 	}
 }
 
@@ -65,8 +65,8 @@ input[type=button]:hover, input[type=submit]:hover {
 	font-size: 16px !important;
 	padding: 1em 2em;
 	background: transparent;
-	border: 2px solid #fff;
-	color: #fff !important;
+	border: 2px solid $colorWhite;
+	color: $colorWhite !important;
 	-webkit-border-radius: 0em;
 	-moz-border-radius: 0em;
 	border-radius: 0em;
@@ -78,7 +78,7 @@ input[type=button]:hover, input[type=submit]:hover {
 	line-height: 1em;
 	margin: 0 auto;
 	&:hover {
-		background: #fff !important;
-		color: #202023 !important;
+		background: $colorWhite !important;
+		color: $colorBlack !important;
 	}
 }

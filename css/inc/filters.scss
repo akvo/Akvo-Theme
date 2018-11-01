@@ -19,7 +19,7 @@
 		&:nth-child(3n+1) { clear: left; }
 		
 		div.imgWrapper, div.imageWrapper{
-			background-color: #fff;
+			background-color: $colorWhite;
 			padding: 0px;
 			width: 100%;
 			max-height: 217px;
@@ -108,13 +108,13 @@
 	&.microstory li.post{
 		
 		&:hover{
-			background: #FFF;
+			background: $colorWhite;
 		}
 		
 		&.featured {
 			background: #404898;
 			.title, .hovercontent{
-				color: #fff;
+				color: $colorWhite;
 			}
 			
 		}
@@ -203,10 +203,10 @@
 	nav ul{ padding: 0; }
 	
 	.primary-filter-list a{
-		color: #202024;
+		color: $colorBlack;
 		border-radius: 0px;
 		&:hover {
-			color: #202024;
+			color: $colorBlack;
 			background: #f0f0f0;
 			box-shadow: none;
 		}

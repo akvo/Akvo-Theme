@@ -1,11 +1,11 @@
 /* HOMEPAGE FEATURES */
 .so-widget-sow-features .sow-features-list .sow-features-feature h5{
 	font-size: 40px;
-	color: #fff !important;
+	color: $colorWhite !important;
 	margin: 10px 0;
 }
 .so-widget-sow-features .sow-features-list .sow-features-feature p{
-	color: #fff !important;
+	color: $colorWhite !important;
 	font-size: 13px;
 
 }
@@ -22,13 +22,13 @@ body.single-microstory .narrow-row{
 
 /* OVERRIDE SOW */
 .so-widget-sow-editor h3.widget-title{
-	color: #4E4A47;	
+	color: $colorMidBlack;	
 	font-size: 5rem;
 	line-height: 1.4;
 	margin: 20px 0;
 }
 .so-widget-sow-editor .siteorigin-widget-tinymce h4{
-	color: #4E4A47;	
+	color: $colorMidBlack;	
 	font-family: 'Roboto Condensed', sans-serif !important;
 	/*font-weight: 300 !important;*/
 	line-height: 30px;

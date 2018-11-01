@@ -277,10 +277,13 @@ li a.dropdown-toggle:hover {
 
 /* AKVO COLOUR OVERRIDES */
 .bg-light-gray {
-  background-color: #f8f8f8; }
+  background-color: #f2f2f2 !important; }
 
 .bg-gray {
-  background-color: #e6e6e6; }
+  background-color: #f2f2f2 !important; }
+
+.bg-mid-grey {
+  background-color: #f2f2f2 !important; }
 
 .gray {
   color: #333 !important; }
@@ -314,9 +317,6 @@ li a.dropdown-toggle:hover {
 
 .white {
   color: #fff !important; }
-
-.bg-mid-grey {
-  background-color: #fafafa !important; }
 
 @media (max-width: 768px) {
   .massivetitle {

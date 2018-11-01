@@ -59,9 +59,9 @@
 
 /* AKVO COLOUR OVERRIDES */
 
-.bg-light-gray { background-color: $colorLightGray; }
-.bg-gray { background-color: $colorGray; }
-
+.bg-light-gray { background-color: $colorMidGray !important; }
+.bg-gray { background-color: $colorMidGray !important; }
+.bg-mid-grey { background-color: $colorMidGray !important; }
 
 .gray { color: $colorDarkGray !important; }
 .graybg{ background-color: $colorDarkGray !important; }
@@ -80,7 +80,7 @@
 
 .white { color: $colorWhite !important; }
 
-.bg-mid-grey { background-color: $colorMidGray!important; }
+
 
 
 @media (max-width: 768px) {

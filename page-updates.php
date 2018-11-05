@@ -3,8 +3,8 @@
 <div class="fullwidth homeslider paddingbottom"><?php get_template_part('partials/content', 'header'); ?></div>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <!-- Title -->
-<div class="container paddingtop paddingbottom aligncenter">
-<h3 class="thin"><?php the_content(); ?></h3>
+<div class="container aligncenter">
+<?php the_content(); ?>
 </div>
 <!-- End Title -->
 <?php endwhile;?>

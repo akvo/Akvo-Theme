@@ -29,7 +29,7 @@ nav.anchorNav, nav.anchorNav2 {
   text-shadow: none;
   padding: 5px;
   background: #fff;
-  display: inline-block; }
+  display: inline; }
 
 .carousel-caption h1, h1.slidertitle, .slidertitle {
   padding-bottom: 0px;
@@ -945,13 +945,11 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     text-align: left;
     right: auto;
     left: auto; }
-    .carousel .carousel-caption.microstory {
-      padding-right: 27%; }
-      .carousel .carousel-caption.microstory.largeimage h4 {
-        font-size: 24px;
-        padding: 5px;
-        background: #fff;
-        color: #202024 !important; }
+    .carousel .carousel-caption.microstory.largeimage h4 {
+      font-size: 24px;
+      padding: 5px;
+      background: #fff;
+      color: #202024 !important; }
 
 body.microstory h3.thin, body.microstory small {
   font-family: "Assistant", sans-serif !important; }

@@ -21,15 +21,16 @@ $terms = get_terms($taxonomy); // Get all terms of a taxonomy
 		   <div class="row paddingbottom">
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="updateholder">
-				<div class="col-md-3 col-sm-12 date"><small><?php the_time( 'F jS, Y' ); ?></small></div>
+				<div class="col-md-3 col-sm-12 date"><small><?php the_time( 'F jS, Y' ); ?></small><br><small><?php echo get_the_author_meta('display_name', $author_id); ?></small></div>
 				<div class="col-md-9 col-sm-12 update"><?php   // Get terms for post
 $terms = get_the_terms( $post->ID , 'product_category' );
 // Loop over each item since it's an array
 if ( $terms != null ){
 foreach( $terms as $term ) {
 $term_link = get_term_link( $term, 'product_category' );
+$url = site_url( '/', 'https' );
  // Print the name and URL
-echo '<div class="category"><a href="' . $term_link . '"><span class="tag '. $term->slug .'">' . $term->name . '</span></a></div>';
+echo '<div class="category"><a href="'. $url .''. $term->slug .'"><span class="tag '. $term->slug .'">' . $term->name . '</span></a></div>';
 // Get rid of the other data stored in the object, since it's not needed
 unset($term); } } ?> <h3><?php the_title(); ?></h3><?php the_content(); ?></div>
 				</div>

@@ -44,8 +44,8 @@
 				<div class="clear both"></div>
 							<br/>
 				<div class="row row-eq-height aboutauthor">
-				<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12authorbox"><div class="bg-light-gray greybox fullheight"><h3><?php $authorDesc = the_author_meta('description'); echo $authorDesc; ?></h3></div></div>
-				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12"><div class="bg-light-gray greybox fullheight">
+				<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 authorbox"><div class="bg-light-gray greybox fullheight"><h3><?php $authorDesc = the_author_meta('description'); echo $authorDesc; ?></h3></div></div>
+				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 catbox"><div class="bg-light-gray greybox fullheight">
 				<div class="categories">
 						<h3>Posted in <?php the_category( ', ' ); ?></h3>
 						<form id="category-select" class="category-select blog-detail" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">

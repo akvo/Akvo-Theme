@@ -53,6 +53,32 @@ a:hover {text-decoration:underline;}
 
 .sow-form-field input, .sow-form-field select {padding: 10px 20px!important;width:100%;}
 
+form input[type=checkbox] {width:auto!important;}
+
+form#gform_22 input, form#gform_22 textarea, form#gform_22 select {color:#000!important;}
+form#gform_22 input[type=button], form#gform_22 input[type=submit]{color:#fff!important;}
+
+form#gform_22 input[type=button]:hover, form#gform_22 input[type=submit]:hover {background:none!important;}
+
+.greenbg form#gform_22 input[type=button], .greenbg form#gform_22 input[type=submit] {background:#fff!important;border:1px solid #fff!important;color:#03AD8C!important;}
+
+.greenbg form#gform_22 input[type=button]:hover, .greenbg form#gform_22 input[type=submit]:hover {background:none!important;color:#fff!important;border-color:#fff!important;}
+
+.featuredimage img {width:100%!important;height:auto!important;}
+
+span.tag.akvo-flow {background: #03AD8C!important;background-color: #03AD8C!important;}
+span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!important;}
+
+.updates .update:last-of-type {border-bottom:1px solid #ededed!important;}
+
+#footer ul.quick-links {margin-top:0px!important;line-height:29px!important;}
+
+.updates .update h3 {font-size:24px!important;margin-top: -5px !important;}
+.updates .update p {margin-bottom:0px!important;}
+
+.row-eq-height {flex-wrap: wrap;}
+.row-eq-height > [class*='col-'] {flex-grow: 1;}
+
 /* New Single Post */
 
 .singlerow .postimage img {width:100%!important;}
@@ -64,7 +90,7 @@ a:hover {text-decoration:underline;}
 .tweetboxpullout .paragraph {padding-top:10px;}
 .tweetboxpullout h3 a {float:left;color:#2c509a;text-decoration:none!important;}
 .tweetboxpullout h3.tweetbutton {text-align:right;bottom:0!important;padding:10px;float:right;}
-.aboutauthor h3 {font-weight:300!important;}
+.aboutauthor h3 {font-size:23px!important;font-weight:300!important;}
 .aboutauthor h3 a {color:#03AD8C!important;font-weight:400!important;text-decoration:none!important;}
 .aboutauthor .categories {margin:0px!important;padding:0px!important;}
 .aboutauthor .authorbox {margin-right:1%;}

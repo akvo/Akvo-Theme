@@ -25,9 +25,8 @@
 <div class="container paddingtop paddingbottom">
 
 			<div class="row row-eq-height paddingbottom">
-				<?php $query = new WP_Query( 'order=asc&orderby=date&posts_per_page=1' ); ?>
+				<?php $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' ); ?>
 				<?php if ( $query->have_posts() ) :?>	
-				<div>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
@@ -45,9 +44,8 @@
 					</div>
                 </div>
 				<?php endwhile;?> 
-				</div>
 				<?php endif; ?>
-				<?php $query2 = new WP_Query( 'post_type=advert&order=asc&orderby=date&posts_per_page=1' ); ?>
+				<?php $query2 = new WP_Query( 'post_type=advert&order=DESC&orderby=date&posts_per_page=1' ); ?>
 				<?php if ( $query2->have_posts() ) :?>	
 				<?php while ( $query2->have_posts() ) : $query2->the_post(); 
 				$advert_url = get_post_meta($post->ID, 'url', true); 
@@ -56,12 +54,14 @@
 					<a href="<?php echo $advert_url ?>"><div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $featured_img_url ?>);">
 					</div></a>
 					</div>
-				<?php endwhile; endif; ?>
+				<?php endwhile; 
+				wp_reset_postdata();
+				endif; ?>
            </div>		   	   
 			   
 			   
 <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-$query = new WP_Query( 'order=asc&orderby=date&posts_per_page=6&offset=1&paged='. $paged ); ?>
+$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=6&offset=1&paged='. $paged ); ?>
 <?php if ( $query->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>

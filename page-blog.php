@@ -70,12 +70,11 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=3&
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
 						 <div class="blog-colum">
 							<div class="titledate">
-							<h4><?php the_title(); ?></h4>
+								<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 							 <ul class="blog-detail"> 
 								<li><i class="fa fa-clock-o"></i> <?php the_time( 'F jS, Y' ); ?></li> 
 							</ul> 
 							</div>
-							<a href="<?php the_permalink(); ?>" class="buttonblack">Read More</a>
 						</div>
 					</div>
                 </div>
@@ -102,12 +101,11 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
 						 <div class="blog-colum">
 							<div class="titledate">
-							<h4><?php the_title(); ?></h4>
+								<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 							 <ul class="blog-detail"> 
 								<li><i class="fa fa-clock-o"></i> <?php the_time( 'F jS, Y' ); ?></li> 
 							</ul> 
 							</div>
-							<a href="<?php the_permalink(); ?>" class="buttonblack">Read More</a>
 						</div>
 					</div>
                 </div>

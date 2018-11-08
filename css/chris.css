@@ -109,6 +109,10 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
     margin: 0 auto;}
 .pagenav a:hover {background:#000!important;color:#fff!important;}
 
+.pagenav .alignleft {float:left!important;}
+.pagenav .alignright {float:right!important;}
+
+
 /* New Single Post */
 
 .singlerow .postimage img {width:100%!important;}

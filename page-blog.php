@@ -50,10 +50,9 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1'
 					$my_query = get_posts('post_type=advert&order=DESC&orderby=date&posts_per_page=1');
 					foreach($my_query as $post) :
 					setup_postdata($post);
-       				$advert_url = get_post_meta($post->ID, 'url', true); 
-					$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+       				$advert_url = get_post_meta($post->ID, 'url', true);  ?>
 					<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
-					<a href="<?php echo $advert_url ?>"><div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $featured_img_url ?>);">
+					<a href="<?php echo $advert_url ?>"><div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php the_post_thumbnail_url('full'); ?>);">
 					</div></a>
 					</div>
 				<?php endforeach; ?>

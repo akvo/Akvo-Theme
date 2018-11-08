@@ -80,11 +80,7 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=3&
                 </div>
 				<?php endwhile;?>
 			</div>
-			<div class="pagenav">
-    <div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
-    <div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
-  </div>
-
+			
 <?php 
 wp_reset_postdata();
 endif; ?>
@@ -92,10 +88,10 @@ endif; ?>
 <?php } else { ?>
 
 <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-$query3 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
-<?php if ( $query3->have_posts() ) :?>			   
+$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
+<?php if ( $query->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">
-		   <?php while ( $query3->have_posts() ) : $query3->the_post(); ?>
+		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
@@ -111,16 +107,17 @@ $query3 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1
                 </div>
 				<?php endwhile;?>
 			</div>
-			<div class="pagenav">
-    <div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
-    <div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
-  </div>
-
 <?php 
 wp_reset_postdata();
 endif; ?>
 
 <?php } ?>
+<div class="row paddingbottom">
+<div class="pagenav">
+    <div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
+    <div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
+</div>
+</div>
 </div>
 <!-- End Posts -->
 

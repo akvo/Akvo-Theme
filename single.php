@@ -37,8 +37,13 @@
 				</ul>
                         <div class="postimage"><?php the_post_thumbnail('full'); ?></div>
 						<br/>
-						<?php <?php if (the_post_thumbnail_caption()) { ?><div class="bg-light-gray greybox fullheight"><?php echo the_post_thumbnail_caption(); ?></div>
-						<br/><?php } ?>
+						<?php
+						$get_description = get_post(get_post_thumbnail_id())->post_excerpt;
+						the_post_thumbnail();
+						if(!empty($get_description)){//If description is not empty show the div
+						echo '<div class="bg-light-gray greybox fullheight">' . $get_description . '</div><br/>';
+						}
+						?>
 						 <div class="blog-column">
 							<?php the_content();?>
 						</div>

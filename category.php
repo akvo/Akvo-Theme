@@ -1,3 +1,4 @@
+<?php /* Template Name: Blog Page */ ?>
 <?php get_header();?>
 <!-- Carousel -->
 <div class="container fullwidth">
@@ -90,11 +91,11 @@ endif; ?>
 
 <?php } else { ?>
 
-<?php $new_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-$the_query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $new_paged ); ?>
-<?php if ( $the_query->have_posts() ) :?>			   
+<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
+$the_query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
+<?php if ( $query->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">
-		   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>

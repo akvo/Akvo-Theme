@@ -6,7 +6,8 @@
     
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
-		<?php $image = get_field('image'); if( !empty($image) ): ?><div class="item active" style="background:url(<?php echo $image['url']; ?>)!important;background-size:auto!important;background-repeat:repeat!important;"><?php endif; ?>
+		<?php $image = get_field('image'); ?>
+		<div class="item active" style="background:url(<?php echo $image['url']; ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
 		<div class="container">
            <div class="carousel-caption microstory">
             <h1><?php the_title(); ?></h1>

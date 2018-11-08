@@ -45,7 +45,7 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1'
 						</div>
 					</div>
                 </div>
-				<?php endwhile;?>
+				<?php wp_reset_postdata(); endwhile;?>
 				<?php global $post;
 					$my_query = get_posts('post_type=advert&order=DESC&orderby=date&posts_per_page=1');
 					foreach($my_query as $post) :
@@ -55,7 +55,7 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1'
 					<a href="<?php echo $advert_url ?>"><div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php the_post_thumbnail_url('full'); ?>);">
 					</div></a>
 					</div>
-				<?php endforeach; ?>
+				<?php wp_reset_postdata(); endforeach; ?>
            </div>
 
 <?php } else { ?>

@@ -160,7 +160,7 @@
 				'product_update'	=> array(
 					'name' 			=> 'Akvo Product Updates',
 					'singular_name' => 'Akvo Advert Update',
-					'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
+					'supports' 		=> array( 'title', 'author', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
 					'menu_icon' 	=> 'dashicons-edit',
 					'rewrite'		=> false,
 					'has_archive' 	=> true	

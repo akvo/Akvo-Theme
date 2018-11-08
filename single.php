@@ -152,11 +152,10 @@ $custom_query_args = array(
 );
 // Initiate the custom query
 $custom_query = new WP_Query( $custom_query_args );
-$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 if ( $custom_query->have_posts() ) : ?>
 	<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 postpaddingbottom youmightlikecontainer">
-                    <div class="col-lg-12 col-xs-12 youmightlikebox" style="background:url(<?php echo $featured_img_url ?>);"> 
+                    <div class="col-lg-12 col-xs-12 youmightlikebox" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"> 
 						 <div class="blog-colum">
 						 <div class="youmightliketext">
 							<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>

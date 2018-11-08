@@ -87,6 +87,28 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
     width: 100%;
     display: block;}
 
+.pagenav a {    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Assistant", sans-serif !important;
+    font-size: 16px !important;
+    padding: 1em 2em;
+    background: transparent;
+    border: 2px solid #000;
+    color: #000 !important;
+    -webkit-border-radius: 0em;
+    -moz-border-radius: 0em;
+    border-radius: 0em;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1em;
+    margin: 0 auto;}
+.pagenav a:hover {background:#000!important;color:#fff!important;}
+
 /* New Single Post */
 
 .singlerow .postimage img {width:100%!important;}

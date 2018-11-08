@@ -26,13 +26,6 @@
 		<?php wp_head(); ?>
 
 		<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-		<script type="text/javascript">
-			jQuery(window).load(function(){
-   				window.lv_offset = function( currentOffset) {
-       				return currentOffset - (100px); // replace x with the height of the sticky header
-   				}; 
-			});
-		</script>
 	</head>
 	<body <?php body_class(); ?>>
 		

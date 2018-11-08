@@ -7,7 +7,7 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
       
-        <div class="item active" style="background:url(<?php if( get_field('background_header_image') ): ?><?php the_field('background_header_image'); ?><?php else;?><?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/10/BP-pink-3-600-1.jpg<?php endif; ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
+        <div class="item active" style="background:url(<?php the_field('background_header_image'); ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
 		<div class="container">
            <div class="carousel-caption microstory">
             <h1><?php the_title(); ?></h1>

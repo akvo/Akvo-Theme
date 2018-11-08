@@ -91,8 +91,8 @@ endif; ?>
 
 <?php } else { ?>
 
-<?php $paged2 = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-$query2 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged2 ); ?>
+<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
+$query2 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
 <?php if ( $query2->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">
 		   <?php while ( $query2->have_posts() ) : $query2->the_post(); ?>

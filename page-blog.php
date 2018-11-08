@@ -27,7 +27,7 @@
 // are we on page one?
 $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&paged='. $paged );
 if(1 == $paged) { ?>
-<?php if ( $query->have_posts() ) :?>	
+<?php if ( $query->have_posts() ) { ?>	
 			<div class="row row-eq-height paddingbottom">
 			<?php $temp_query2 = $wp_query2; ?>
 				<?php $query3 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' ); ?>	
@@ -77,7 +77,9 @@ if(1 == $paged) { ?>
 						</div>
 					</div>
                 </div>
-				<?php endwhile;?>
+				<?php endwhile;
+				rewind_posts();
+				}?>
 			</div>
 <?php } else { ?>
 		   <div class="row row-eq-height paddingbottom">

@@ -92,10 +92,10 @@ endif; ?>
 <?php } else { ?>
 
 <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-$query2 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
-<?php if ( $query2->have_posts() ) :?>			   
+$the_query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
+<?php if ( $the_query->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">
-		   <?php while ( $query2->have_posts() ) : $query2->the_post(); ?>
+		   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>

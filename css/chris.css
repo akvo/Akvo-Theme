@@ -80,10 +80,10 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
 .row-eq-height > [class*='col-'] {flex-grow: 1;}
 
 
-.blogimagesmall {background-size: 100% auto;
-    background-position: center;
+.blogimagesmall {background-size: 100% auto!important;
+    background-position: center!important;
     overflow: hidden;
-    height: 180px;
+    height: 220px;
     width: 100%;
     display: block;}
 

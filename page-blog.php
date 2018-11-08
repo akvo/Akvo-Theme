@@ -38,7 +38,7 @@ $args = array(
 	'paged' => $paged 
 	);
 
-//$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&paged='. $paged );
+$query = new WP_Query( $args );
 if(1 == $paged) { ?>
 <?php if ( $query->have_posts() ) {	?>	
 			<div class="row row-eq-height paddingbottom">
@@ -76,7 +76,7 @@ if(1 == $paged) { ?>
 				<?php $wp_query = $temp_query; ?>
            </div>
 		   <div class="row row-eq-height paddingbottom">
-		   <?php while ( $args->have_posts() ) : $args->the_post(); ?>
+		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
@@ -96,7 +96,7 @@ if(1 == $paged) { ?>
 			</div>
 <?php } else { ?>
 		   <div class="row row-eq-height paddingbottom">
-		   <?php while ( $args->have_posts() ) : $args->the_post(); ?>
+		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>

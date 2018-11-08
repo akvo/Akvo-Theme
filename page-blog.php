@@ -27,10 +27,9 @@
 // are we on page one?
 $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1&posts_per_page=12&paged='. $paged );
 if(1 == $paged) { ?>
+<?php if ( $query->have_posts() ) { ?>	
 			<div class="row row-eq-height paddingbottom">
-				<?php if ( $query->have_posts() ) { ?>	
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-				
 			    <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <div class="featuredimage"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
@@ -77,7 +76,7 @@ if(1 == $paged) { ?>
 						</div>
 					</div>
                 </div>
-				<?php endwhile;?>
+				<?php endwhile; ?>
 			</div>
 <?php } else { ?>
 		   <div class="row row-eq-height paddingbottom">
@@ -95,7 +94,7 @@ if(1 == $paged) { ?>
 						</div>
 					</div>
                 </div>
-				<?php endwhile;?>
+				<?php endwhile; ?>
 			</div>
 <?php wp_reset_postdata(); ?>
 <?php } ?>
@@ -107,5 +106,5 @@ if(1 == $paged) { ?>
 </div>
 </div>
 <!-- End Posts -->
-
+<?php endif; ?>
 <?php get_footer();?>

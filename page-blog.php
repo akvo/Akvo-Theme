@@ -25,9 +25,9 @@
 <div class="container paddingtop paddingbottom">
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // are we on page one?
+$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' );
 if(1 == $paged) { ?>
 			<div class="row row-eq-height paddingbottom">
-				<?php $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' ); ?>
 				<?php if ( $query->have_posts() ) :?>	
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 			    <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
@@ -45,48 +45,21 @@ if(1 == $paged) { ?>
 						</div>
 					</div>
                 </div>
-				<?php endwhile;?> 
-				<?php endif; ?>
-				<?php $query2 = new WP_Query( 'post_type=advert&order=DESC&orderby=date&posts_per_page=1' ); ?>
-				<?php if ( $query2->have_posts() ) :?>	
-				<?php while ( $query2->have_posts() ) : $query2->the_post(); 
-				$advert_url = get_post_meta($post->ID, 'url', true); 
-				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+				<?php global $post;
+					$my_query = get_posts('post_type=advert&order=DESC&orderby=date&posts_per_page=1');
+					foreach($my_query as $post) :
+					setup_postdata($post);
+       				$advert_url = get_post_meta($post->ID, 'url', true); 
+					$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
 					<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
 					<a href="<?php echo $advert_url ?>"><div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $featured_img_url ?>);">
 					</div></a>
 					</div>
-				<?php endwhile; endif; ?>
-           </div>		   	   
-			   
-			   
-<?php  
-$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=3&offset=1&paged='. $paged ); ?>
-<?php if ( $query->have_posts() ) :?>			   
-		   <div class="row row-eq-height paddingbottom">
-		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
-                    <div class="col-lg-12 col-xs-12">
-                        <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
-						 <div class="blog-colum">
-							<div class="titledate">
-								<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
-							 <ul class="blog-detail"> 
-								<li><i class="fa fa-calendar"></i> <?php the_time( 'F jS, Y' ); ?></li> 
-							</ul> 
-							</div>
-						</div>
-					</div>
-                </div>
-				<?php endwhile;?>
-			</div>
-			
-<?php endif; ?>
+				<?php endforeach; ?>
+           </div>
 
 <?php } else { ?>
 
-<?php  
-$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
 <?php if ( $query->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>

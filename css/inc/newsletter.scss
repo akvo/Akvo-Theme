@@ -10,8 +10,8 @@
 		padding: 6px 20px;
 		background: transparent;
 		border-radius: 0px;
-		border: 1px solid #000;
-		color: #000;
+		border: 1px solid $colorDarkBlack;
+		color: $colorDarkBlack;
 		background: $colorWhite;
 		&.name {
 			-moz-box-shadow: none;
@@ -36,8 +36,8 @@
 		font-size:16px;
 		background: transparent;
 		border-radius: 0px;
-		border: 1px solid #000;
-		color: #000;
+		border: 1px solid $colorDarkBlack;
+		color: $colorDarkBlack;
 		background: $colorWhite;
 	}
 	input.signup.email {
@@ -50,7 +50,7 @@
 		margin-bottom: 10px;
 	}
 	select {
-		border: 1px solid #000;
+		border: 1px solid $colorDarkBlack;
 		padding: 10px 20px;
 		width: 100%;
 		font-size:16px;
@@ -70,8 +70,8 @@
 		font-family: Arial, Helvetica, Geneva, sans-serif;
 		font-size: 16px;
 		padding: 10px 20px;
-		background: #404898;
-		border: 2px solid #404898;
+		background: $colorBlue;
+		border: 2px solid $colorBlue;
 		color: $colorWhite;
 		-webkit-border-radius: 0em;
 		-moz-border-radius: 0em;
@@ -87,8 +87,8 @@
 	}
 	button.button:hover, .button:hover {
 		background: $colorWhite !important;
-		border-color: #404898 !important;
-		color: #404898 !important;
+		border-color: $colorBlue !important;
+		color: $colorBlue !important;
 	}
 	input {
 		&[type=button] {

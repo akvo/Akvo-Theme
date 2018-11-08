@@ -15,6 +15,7 @@
 <div class="imgWrapper">
 	<?php the_post_thumbnail(); ?>
 </div>
+<?php if( isset( $partner_fields['partners_link'] ) && $partner_fields['partners_link'] ):?>
 <a style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" href='<?php _e( $partner_fields['partners_link'] );?>'></a>
-
+<?php endif;?>
 	

@@ -12,6 +12,23 @@
 		include( $inc_file );
 	}
 	
+	function akvo_universal_color_pallet() {
+	?>
+    <script>
+        jQuery(document).ready(function($){
+            $.wp.wpColorPicker.prototype.options = {
+                palettes: ['#000000', '#f2f2f2','#ffffff', '#EA5547','#03AD8C', '#404898', '#E04D95']
+            };
+        });
+    </script>
+	<?php
+	}
+	add_action('admin_print_footer_scripts', 'akvo_universal_color_pallet');
+	add_action('customize_controls_print_footer_scripts', 'akvo_universal_color_pallet');
+	
+	
+	
+	
 	/* HIDE ADMIN BAR FROM THE FRONTEND */
 	add_filter('show_admin_bar', '__return_false');
 	

@@ -242,7 +242,7 @@ function myprefix_adjust_offset_pagination($found_posts, $query) {
     $offset = 1;
 
     // Ensure we're modifying the right query object...
-    if ( $query->is_home() && $query->is_main_query() ) {
+    if ( $query->is_page('blog') && $query->is_main_query() ) {
         // Reduce WordPress's found_posts count by the offset... 
         return $found_posts - $offset;
     }

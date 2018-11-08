@@ -79,6 +79,14 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
 .row-eq-height {flex-wrap: wrap;}
 .row-eq-height > [class*='col-'] {flex-grow: 1;}
 
+
+.blogimagesmall {background-size: 100% auto;
+    background-position: center;
+    overflow: hidden;
+    height: 180px;
+    width: 100%;
+    display: block;}
+
 /* New Single Post */
 
 .singlerow .postimage img {width:100%!important;}

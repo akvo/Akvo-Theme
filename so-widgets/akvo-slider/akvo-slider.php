@@ -32,7 +32,7 @@ class Akvo_Slider extends SiteOrigin_Widget {
 					'label' => __( 'Sliders' , 'siteorigin-widgets' ),
 					'item_name'  => __( 'Slide', 'siteorigin-widgets' ),
 					'fields' => array(
-						'image' => array(
+						'image' 	=> array(
 							'type' 		=> 'media',
 							'label' 	=> __( 'Choose Image', 'siteorigin-widgets' ),
 							'choose' 	=> __( 'Choose image', 'siteorigin-widgets' ),
@@ -40,14 +40,19 @@ class Akvo_Slider extends SiteOrigin_Widget {
 							'library' 	=> 'image',
 							'fallback' 	=> false
 						),
-						'title' => array(
+						'title' 	=> array(
 							'type' => 'text',
 							'label' => __( 'Title', 'siteorigin-widgets' )
 						),
-						'content' => array(
+						'content' 	=> array(
 							'type' 	=> 'textarea',
 							'label' => __( 'Content', 'siteorigin-widgets' )
 						),
+						'repeat' 	=> array(
+							'type' 		=> 'checkbox',
+							'label' 	=> __( 'Repeat the background image', 'siteorigin-widgets' ),
+							'default' 	=> false
+						)
 					)
 				),
 				'bg-size' => array(

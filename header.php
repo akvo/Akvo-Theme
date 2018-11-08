@@ -29,7 +29,7 @@
 		<script type="text/javascript">
 			jQuery(window).load(function(){
    				window.lv_offset = function( currentOffset) {
-       				return currentOffset - (100); // replace x with the height of the sticky header
+       				return currentOffset - (100px); // replace x with the height of the sticky header
    				}; 
 			});
 		</script>

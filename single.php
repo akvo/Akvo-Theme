@@ -39,7 +39,6 @@
 						<br/>
 						<?php
 						$get_description = get_post(get_post_thumbnail_id())->post_excerpt;
-						the_post_thumbnail();
 						if(!empty($get_description)){//If description is not empty show the div
 						echo '<div class="bg-light-gray greybox fullheight">' . $get_description . '</div><br/>';
 						}

@@ -96,6 +96,7 @@
 		
 	} );
 
+	add_filter( 'gform_confirmation_anchor', '__return_false' );
 	
 	add_action( 'init', function(){
 		

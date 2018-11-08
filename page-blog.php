@@ -67,7 +67,7 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=3&
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
-                        <a href="<?php the_permalink(); ?>"><div class="featuredimage" style="background:url(<?php the_post_thumbnail_url('full'); ?>);background-size:100% 100%;overflow:hidden;height:180px;width:100%;display:block;"></div></a>
+                        <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
 						 <div class="blog-colum">
 							<div class="titledate">
 							<h4><?php the_title(); ?></h4>
@@ -99,7 +99,7 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
-                        <a href="<?php the_permalink(); ?>"><div class="featuredimage" style="background:url(<?php the_post_thumbnail_url('full'); ?>);background-size:100% 100%;overflow:hidden;height:180px;width:100%;display:block;"></div></a>
+                        <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
 						 <div class="blog-colum">
 							<div class="titledate">
 							<h4><?php the_title(); ?></h4>

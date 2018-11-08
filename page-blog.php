@@ -82,8 +82,8 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=3&
 				<?php endwhile;?>
 			</div>
 			<div class="pagenav">
-    <div class="alignleft"><?php previous_posts_link('Previous', $query->max_num_pages) ?></div>
-    <div class="alignright"><?php next_posts_link('Next', $query->max_num_pages) ?></div>
+    <div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
+    <div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
   </div>
 
 <?php 
@@ -114,8 +114,8 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12
 				<?php endwhile;?>
 			</div>
 			<div class="pagenav">
-    <div class="alignleft"><?php previous_posts_link('Previous', $query->max_num_pages) ?></div>
-    <div class="alignright"><?php next_posts_link('Next', $query->max_num_pages) ?></div>
+    <div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
+    <div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
   </div>
 
 <?php 

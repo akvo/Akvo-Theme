@@ -6,8 +6,11 @@
     
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
-		<?php $image = get_field('image'); ?>
-		<div class="item active" style="background:url(<?php echo $image['url']; ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
+		<?php if ( get_field( 'background_header_image' ) ): ?>
+		<div class="item active" style="background:url(<?php the_field('background_header_image'); ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
+		<?php else: ?>
+		<div class="item active" style="background:url(<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/10/BP-pink-3-600-1.jpg)!important;background-size:auto!important;background-repeat:repeat!important;">
+		<?php endif; ?>
 		<div class="container">
            <div class="carousel-caption microstory">
             <h1><?php the_title(); ?></h1>

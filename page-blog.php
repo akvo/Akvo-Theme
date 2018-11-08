@@ -25,8 +25,7 @@
 <div class="container paddingtop paddingbottom">
 <?php 
 $args = array(
-	'posts_per_page' => 12, 
-	'offset' => ( $paged - 1 ) * $posts_per_page + 12,
+	'offset' => ( $paged - 1 ) * 12
 	'paged' => $paged );
 	 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts($args); 

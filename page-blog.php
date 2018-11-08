@@ -25,10 +25,10 @@
 <div class="container paddingtop paddingbottom">
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // are we on page one?
-$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' );?>
-<?php if(1 == $paged) { ?>
+$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1&posts_per_page=12&paged='. $paged );
+if(1 == $paged) { ?>
 			<div class="row row-eq-height paddingbottom">
-				<?php if ( $query->have_posts() ) :?>	
+				<?php if ( $query->have_posts() ) { ?>	
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 			    <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
@@ -45,21 +45,23 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1'
 						</div>
 					</div>
                 </div>
-				<?php wp_reset_postdata(); endwhile;?>
-				<?php global $post;
-					$my_query = get_posts('post_type=advert&order=DESC&orderby=date&posts_per_page=1');
-					foreach($my_query as $post) :
-					setup_postdata($post);
-       				$advert_url = get_post_meta($post->ID, 'url', true);  ?>
+				<?php endwhile;
+				rewind_posts();
+				} ?>
+
+				<?php $temp_query = $wp_query; ?>
+				<?php $query2 = new WP_Query( 'post_type=advert&order=DESC&orderby=date&posts_per_page=1' ); ?>	
+				<?php while ( $query2->have_posts() ) : $query2->the_post(); 
+				$advert_url = get_post_meta($post->ID, 'url', true); 
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
 					<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
-					<a href="<?php echo $advert_url ?>"><div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php the_post_thumbnail_url('full'); ?>);">
+					<a href="<?php echo $advert_url ?>"><div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $featured_img_url ?>);">
 					</div></a>
 					</div>
-				<?php wp_reset_postdata(); endforeach; ?>
+				<?php endwhile; ?>
+				<?php $wp_query = $temp_query; ?>
            </div>
-
 <?php } else { ?>
- 
 		   <div class="row row-eq-height paddingbottom">
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
@@ -77,10 +79,7 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1'
                 </div>
 				<?php endwhile;?>
 			</div>
-<?php 
-wp_reset_postdata();
-endif; ?>
-
+<?php wp_reset_postdata(); ?>
 <?php } ?>
 <div class="row paddingbottom">
 <div class="pagenav">

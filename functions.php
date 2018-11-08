@@ -27,7 +27,9 @@
 	add_action('customize_controls_print_footer_scripts', 'akvo_universal_color_pallet');
 	
 	/* GRAVITY FORMS FIX */
-	add_filter( 'gform_confirmation_anchor', '__return_true' );
+	add_filter( 'gform_confirmation_anchor', function() {
+    		return 20;
+	} );
 	
 	/* HIDE ADMIN BAR FROM THE FRONTEND */
 	add_filter('show_admin_bar', '__return_false');

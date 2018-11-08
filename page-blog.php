@@ -25,9 +25,6 @@
 <div class="container paddingtop paddingbottom">
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // are we on page one?
-$offset = $offset + ( ($query->query_vars['paged']-1) * $ppp );
-$query->set('posts_per_page',$ppp);
-$query->set('offset',$offset); 
 $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&paged='. $paged );
 if(1 == $paged) { ?>
 <?php if ( $query->have_posts() ) { ?>	

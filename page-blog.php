@@ -60,7 +60,7 @@ if(1 == $paged) { ?>
            </div>		   	   
 			   
 			   
-<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
+<?php  
 $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=3&offset=1&paged='. $paged ); ?>
 <?php if ( $query->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">
@@ -87,7 +87,7 @@ endif; ?>
 
 <?php } else { ?>
 
-<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
+<?php  
 $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
 <?php if ( $query->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">

@@ -23,7 +23,13 @@
 
 <!-- Posts -->
 <div class="container paddingtop paddingbottom">
-<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+<?php 
+$args = array(
+	'posts_per_page' => 12, 
+	'offset' => ( $paged - 1 ) * $posts_per_page + 12,
+	'paged' => $paged );
+	 
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts($args); 
 // are we on page one?
 
 $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&paged='. $paged );

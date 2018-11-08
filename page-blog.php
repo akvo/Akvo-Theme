@@ -25,8 +25,8 @@
 <div class="container paddingtop paddingbottom">
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // are we on page one?
-$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' );
-if(1 == $paged) { ?>
+$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' );?>
+<?php if(1 == $paged) { ?>
 			<div class="row row-eq-height paddingbottom">
 				<?php if ( $query->have_posts() ) :?>	
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -45,6 +45,7 @@ if(1 == $paged) { ?>
 						</div>
 					</div>
                 </div>
+				<?php endwhile;?>
 				<?php global $post;
 					$my_query = get_posts('post_type=advert&order=DESC&orderby=date&posts_per_page=1');
 					foreach($my_query as $post) :
@@ -59,8 +60,7 @@ if(1 == $paged) { ?>
            </div>
 
 <?php } else { ?>
-
-<?php if ( $query->have_posts() ) :?>			   
+ 
 		   <div class="row row-eq-height paddingbottom">
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">

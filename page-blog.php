@@ -28,7 +28,7 @@
 
 $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&paged='. $paged );
 if(1 == $paged) { ?>
-<?php if ( $query->have_posts() ) {	?>	
+<?php if ( $query->have_posts() ) :	?>	
 			<div class="row row-eq-height paddingbottom">
 			<?php $i = 0; 
     while ( $queryObject->have_posts() ) :

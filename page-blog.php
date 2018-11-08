@@ -81,9 +81,7 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=3&
 				<?php endwhile;?>
 			</div>
 			
-<?php 
-wp_reset_postdata();
-endif; ?>
+<?php endif; ?>
 
 <?php } else { ?>
 

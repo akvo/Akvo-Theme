@@ -17,7 +17,7 @@
     <script>
         jQuery(document).ready(function($){
             $.wp.wpColorPicker.prototype.options = {
-                palettes: ['#000000', '#191919','#ffffff', '#EA5547','#03AD8C', '#404898', '#E04D95']
+                palettes: ['#000000', '#f2f2f2','#ffffff', '#EA5547','#03AD8C', '#404898', '#E04D95']
             };
         });
     </script>

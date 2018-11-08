@@ -39,7 +39,7 @@
 		}
 		
 		.links a:hover{
-			color: #404898;
+			color: $colorBlue;
 		}
 		
 		/* BREAKING INTO TWO COLUMNS */
@@ -112,7 +112,7 @@
 		}
 		
 		&.featured {
-			background: #404898;
+			background: $colorBlue;
 			.title, .hovercontent{
 				color: $colorWhite;
 			}

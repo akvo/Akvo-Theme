@@ -23,9 +23,29 @@
 
 <!-- Posts -->
 <div class="container paddingtop paddingbottom">
-<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+<?php 
+//$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // are we on page one?
-$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&paged='. $paged );
+// First, initialize how many posts to render per page
+$display_count = 12;
+
+// Next, get the current page
+$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+
+// After that, calculate the offset
+$offset = ( $paged - 1 ) * $display_count;
+
+// Finally, we'll set the query arguments and instantiate WP_Query
+$query_args = array(
+  'post_type'  =>  'post',
+  'orderby'    =>  'date',
+  'order'      =>  'desc',
+  'number'     =>  $display_count,
+  'paged'       =>  $paged,
+  'offset'     =>  $offset
+);
+$query = new WP_Query ( $query_args );
+//$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&paged='. $paged );
 if(1 == $paged) { ?>
 <?php if ( $query->have_posts() ) { ?>	
 			<div class="row row-eq-height paddingbottom">

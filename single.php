@@ -37,7 +37,7 @@
 				</ul>
                         <div class="postimage"><?php the_post_thumbnail('full'); ?></div>
 						<br/>
-						<?php if ( has_post_thumbnail() )->post_content; { ?><div class="bg-light-gray greybox fullheight"><?php echo get_post(get_post_thumbnail_id())->post_content; ?></div>
+						<?php if ( has_post_thumbnail() ->post_content; ) { ?><div class="bg-light-gray greybox fullheight"><?php echo get_post(get_post_thumbnail_id())->post_content; ?></div>
 						<br/><?php } ?>
 						 <div class="blog-column">
 							<?php the_content();?>

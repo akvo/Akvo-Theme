@@ -30,6 +30,7 @@ if(1 == $paged) { ?>
 			<div class="row row-eq-height paddingbottom">
 				<?php if ( $query->have_posts() ) { ?>	
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				
 			    <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <div class="featuredimage"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
@@ -47,7 +48,7 @@ if(1 == $paged) { ?>
                 </div>
 				<?php endwhile;
 				rewind_posts();
-				} ?>
+				}?>
 
 				<?php $temp_query = $wp_query; ?>
 				<?php $query2 = new WP_Query( 'post_type=advert&order=DESC&orderby=date&posts_per_page=1' ); ?>	
@@ -61,6 +62,23 @@ if(1 == $paged) { ?>
 				<?php endwhile; ?>
 				<?php $wp_query = $temp_query; ?>
            </div>
+		   <div class="row row-eq-height paddingbottom">
+		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
+                    <div class="col-lg-12 col-xs-12">
+                        <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
+						 <div class="blog-colum">
+							<div class="titledate">
+								<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+							 <ul class="blog-detail"> 
+								<li><i class="fa fa-calendar"></i> <?php the_time( 'F jS, Y' ); ?></li> 
+							</ul> 
+							</div>
+						</div>
+					</div>
+                </div>
+				<?php endwhile;?>
+			</div>
 <?php } else { ?>
 		   <div class="row row-eq-height paddingbottom">
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>

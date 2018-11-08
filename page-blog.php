@@ -28,12 +28,11 @@
 
 $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&paged='. $paged );
 if(1 == $paged) { ?>
-<?php if ( $query->have_posts() ) :	?>	
+<?php if ( $query->have_posts() ) {	?>	
 			<div class="row row-eq-height paddingbottom">
-			<?php $i = 0; 
-    while ( $queryObject->have_posts() ) :
-        $queryObject->the_post();
-        if ( $i == 0 ) : ?>
+			<?php $temp_query2 = $wp_query2; ?>
+				<?php $query3 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' ); ?>	
+				<?php while ( $query3->have_posts() ) : $query3->the_post(); ?>
 			    <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <div class="featuredimage"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
@@ -50,6 +49,7 @@ if(1 == $paged) { ?>
 					</div>
                 </div>
 				<?php endwhile; ?>
+				<?php $wp_query2 = $temp_query2; ?>
 
 				<?php $temp_query = $wp_query; ?>
 				<?php $query2 = new WP_Query( 'post_type=advert&order=DESC&orderby=date&posts_per_page=1' ); ?>	
@@ -64,9 +64,7 @@ if(1 == $paged) { ?>
 				<?php $wp_query = $temp_query; ?>
            </div>
 		   <div class="row row-eq-height paddingbottom">
-		   <?php endif; 
-		   if ( $i != 0 ) :
-		   while ( $query->have_posts() ) : $query->the_post(); ?>
+		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
@@ -80,9 +78,9 @@ if(1 == $paged) { ?>
 						</div>
 					</div>
                 </div>
-				<?php $i++;
-				endwhile;
-				endif; ?>
+				<?php endwhile;
+				rewind_posts();
+				}?>
 			</div>
 <?php } else { ?>
 		   <div class="row row-eq-height paddingbottom">

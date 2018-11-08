@@ -76,7 +76,7 @@ if(1 == $paged) { ?>
 						</div>
 					</div>
                 </div>
-				<?php endwhile; ?>
+				<?php endwhile;?>
 			</div>
 <?php } else { ?>
 		   <div class="row row-eq-height paddingbottom">
@@ -94,7 +94,7 @@ if(1 == $paged) { ?>
 						</div>
 					</div>
                 </div>
-				<?php endwhile; ?>
+				<?php endwhile;?>
 			</div>
 <?php wp_reset_postdata(); ?>
 <?php } ?>
@@ -106,5 +106,5 @@ if(1 == $paged) { ?>
 </div>
 </div>
 <!-- End Posts -->
-<?php endif; ?>
+
 <?php get_footer();?>

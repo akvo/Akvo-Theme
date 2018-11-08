@@ -28,8 +28,8 @@
 if(1 == $paged) { ?>
 			<div class="row row-eq-height paddingbottom">
 				<?php $query1 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' ); ?>
-				<?php if ( $query1->have_posts() ) :?>	
-				<?php while ( $query1->have_posts() ) : $query1->the_post(); ?>
+				<?php if ( $query->have_posts() ) :?>	
+				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 			    <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <div class="featuredimage"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
@@ -61,10 +61,10 @@ if(1 == $paged) { ?>
 			   
 			   
 <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-$query3 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=3&offset=1&paged='. $paged ); ?>
-<?php if ( $query3->have_posts() ) :?>			   
+$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=3&offset=1&paged='. $paged ); ?>
+<?php if ( $query->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">
-		   <?php while ( $query3->have_posts() ) : $query3->the_post(); ?>
+		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
@@ -92,10 +92,10 @@ endif; ?>
 <?php } else { ?>
 
 <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-$query4 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
-<?php if ( $query4->have_posts() ) :?>			   
+$query3 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&offset=4&paged='. $paged ); ?>
+<?php if ( $query3->have_posts() ) :?>			   
 		   <div class="row row-eq-height paddingbottom">
-		   <?php while ( $query4->have_posts() ) : $query4->the_post(); ?>
+		   <?php while ( $query3->have_posts() ) : $query3->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>

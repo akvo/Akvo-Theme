@@ -87,6 +87,8 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
     width: 100%;
     display: block;}
 
+.titledate {min-height:135px!important;}
+
 .pagenav a {    -ms-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;

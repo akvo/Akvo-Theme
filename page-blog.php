@@ -23,22 +23,10 @@
 
 <!-- Posts -->
 <div class="container paddingtop paddingbottom">
-<?php 
-//$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // are we on page one?
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts($args);
 
-$posts_per_page = 12;
-$args = array(
-	'post_type' => 'post',
-	'order' => 'DESC',
-	'orderby' => 'date',
-	'posts_per_page' => $posts_per_page, 
-	'offset' => ( $paged - 1 ) * $posts_per_page ,
-	'paged' => $paged 
-	);
-
-$query = new WP_Query( $args );
+$query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12&paged='. $paged );
 if(1 == $paged) { ?>
 <?php if ( $query->have_posts() ) {	?>	
 			<div class="row row-eq-height paddingbottom">

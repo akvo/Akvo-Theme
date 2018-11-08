@@ -1,3 +1,4 @@
+<?php /* Template Name: Blog Page */ ?>
 <?php get_header();?>
 <!-- Carousel -->
 <div class="container fullwidth">
@@ -26,7 +27,7 @@
 // are we on page one?
 if(1 == $paged) { ?>
 			<div class="row row-eq-height paddingbottom">
-				<?php $query1 = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' ); ?>
+				<?php $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=1' ); ?>
 				<?php if ( $query->have_posts() ) :?>	
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 			    <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 postpaddingbottom">

@@ -13,7 +13,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9">
-					<h3>All of <?php echo $curauth->nickname; ?> posts:</h3>
+					<h3>All of <?php echo $curauth->display_name; ?> posts:</h3>
 					<hr>
 					<br>
 					<?php while ( have_posts() ) : the_post(); ?>

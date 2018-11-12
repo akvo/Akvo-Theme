@@ -30,5 +30,10 @@
 <?php the_content();?>
 </div>
 <!-- End Title -->
-
+<?php endwhile; ?>
+<?php else : ?>
+		<p>Sorry, no related articles to display.</p>
+<?php endif;
+// Reset postdata
+wp_reset_postdata(); ?>
 <?php include 'footer.php';?>

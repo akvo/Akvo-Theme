@@ -186,3 +186,5 @@ form#category-select select {width:100%!important;padding:6px!important;}
 
 span.tag.akvo-flow {background: #03AD8C!important;background-color: #03AD8C!important;}
 span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!important;}
+
+.so-widget-sow-editor .siteorigin-widget-tinymce h1 {color: inherit!important;}

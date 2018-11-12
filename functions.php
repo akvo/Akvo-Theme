@@ -30,18 +30,6 @@
 	/*add_filter( 'gform_confirmation_anchor', '__return_true' );*/
 	add_filter("gform_confirmation_anchor", create_function("","return true;"));
 	
-/* DEFAULT POST IMAGE */
-function wpse55748_filter_post_thumbnail_html( $html ) {
-    // If there is no post thumbnail,
-    // Return a default image
-    if ( '' == $html ) {
-        return '<img src="' . get_template_directory_uri() . '/images/defaultimage.jpg" class="image-size-name" />';
-    }
-    // Else, return the post thumbnail
-    return $html;
-}
-add_filter( 'post_thumbnail_html', 'wpse55748_filter_post_thumbnail_html' );
-
 
 	/* HIDE ADMIN BAR FROM THE FRONTEND */
 	add_filter('show_admin_bar', '__return_false');

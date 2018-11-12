@@ -9,7 +9,7 @@
 		<?php if ( get_field( 'background_header_image' ) ): ?>
 		<div class="item active" style="background:url(<?php the_field('background_header_image'); ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
 		<?php elseif(has_post_thumbnail()): ?>
-		<div class="item active" style="background:url(<?php get_the_post_thumbnail_url(get_the_ID(),'full'); ?>)!important;background-size:cover!important;background-repeat:no-repeat!important;">
+		<div class="item active" style="background:url(<?php the_post_thumbnail_url('full'); ?>)!important;background-size:cover!important;background-repeat:no-repeat!important;">
 		<?php else: ?>
 		<div class="item active" style="background:url(<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/10/BP-pink-3-600-1.jpg)!important;background-size:auto!important;background-repeat:repeat!important;">
 		<?php endif; ?>

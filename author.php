@@ -6,11 +6,14 @@
 ?>
 <?php get_header();?>
 	<?php if ( have_posts() ) : ?>
+	 <?php
+    $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+    ?>
 	<div class="fullwidth paddingtop paddingbottom">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9">
-					<h3>You searched for " <?php echo esc_html( get_search_query( false ) ); ?> ". Here are the results:</h3>
+					<h3>All of <?php echo $curauth->nickname; ?> posts:</h3>
 					<hr>
 					<br>
 					<?php while ( have_posts() ) : the_post(); ?>

@@ -6,6 +6,22 @@ ul.blog-detail {
     padding-left: 0px!important;
 }
 
+.fixed-col{
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px 20px;
+}
+
+a.buttonblack{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.so-widget-sow-editor .siteorigin-widget-tinymce h2{
+	color: inherit;
+}
+
 /* ON THE FLY AMENDS */
 
 p, strong {line-height: 29px;}
@@ -78,6 +94,15 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
 
 .row-eq-height {flex-wrap: wrap;}
 .row-eq-height > [class*='col-'] {flex-grow: 1;}
+
+.aboutauthor .authorbox {margin-right:0px!important;}
+.aboutauthor.row-eq-height > [class*='col-'] {flex-grow: 0!important;} 
+
+body.home #myCarousel {display:none!important;}
+
+.wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a {padding-top:6px!important;}
+
+body.page .csbwfs-social-widget, .csbwfs-show, .csbwfs-hide, .theChampPullOut{display:none!important;}
 
 
 .blogimagesmall {background-size: cover!important;

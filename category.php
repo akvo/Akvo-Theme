@@ -22,6 +22,7 @@
 
 <!-- Posts -->
 <div class="container paddingtop paddingbottom">
+<div class="row row-eq-height paddingbottom">
 <?php
         $current_page = get_queried_object();
         $category     = $current_page->post_name;
@@ -37,9 +38,8 @@
             )
         );
 
-        if ($query->have_posts()) { ?>
-		   <div class="row row-eq-height paddingbottom">
-		   <?php while ($query->have_posts()) { 
+        if ($query->have_posts()) {
+               while ($query->have_posts()) { 
                $query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
@@ -54,19 +54,20 @@
 						</div>
 					</div>
                 </div>
-		   <?php }?>
+		   <?php
+            }
+
+            // next_posts_link() usage with max_num_pages
+            next_posts_link( 'Older Entries', $query->max_num_pages );
+            previous_posts_link( 'Newer Entries' );
+
+            wp_reset_postdata();
+        }
+        ?>
 			</div>
 
 
-<div class="row paddingbottom">
-<div class="pagenav">
-    <div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
-    <div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
-</div>
-</div>
-<?php wp_reset_postdata();
-        }
-        ?>
+
 </div>
 <!-- End Posts -->
 

@@ -1,35 +1,45 @@
-<?php include 'header.php';?>
+<?php get_header();?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+
+
 <!-- Carousel -->
 <div class="container fullwidth post">
+	<?php
+		$bg_img_url = get_bloginfo('template_url')."/images/defaultheader.jpg";
+					
+		if( function_exists('get_field') && get_field( 'background_header_image' ) ){
+			$bg_img_url = get_field( 'background_header_image' );
+		}
+		echo do_shortcode("[akvo_header_image title='".get_the_title()."' bg_image='".$bg_img_url."' bg_repeat='1']");
+	?>
+	<?php /* NOT NEEDED ANYMORE
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-		<?php if ( get_field( 'background_header_image' ) ): ?>
-		<div class="item active" style="background:url(<?php the_field('background_header_image'); ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
-		<?php else: ?>
-		<div class="item active" style="background:url(<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/10/BP-pink-3-600-1.jpg)!important;background-size:auto!important;background-repeat:repeat!important;">
-		<?php endif; ?>
-		<div class="container">
-           <div class="carousel-caption microstory">
-            <h1><?php the_title(); ?></h1>
+		
+		<div class="carousel-inner">
 			
-          </div>
-		</div>
-        </div><!-- End Item -->
-                        
-      </div><!-- End Carousel Inner -->
+			<div class="item active" style="background:url(<?php echo $bg_img_url; ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
+				<div class="container">
+					<div class="carousel-caption microstory">
+						<h1><?php the_title(); ?></h1>
+					</div>
+				</div>
+			</div>
+        </div>
 
     </div>
+		*/
+	?>
 </div>
+
+
 <!-- End Carousel -->
 
 
 <!-- Posts -->
 <div class="container paddingtop singlepost">
 
-
+	
 			<div class="row singlerow">
 			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 postpaddingbottom">
 				<ul class="meta"> 
@@ -181,4 +191,4 @@ wp_reset_postdata(); ?>
 </div>
 <!-- End Related Posts -->
 
-<?php include 'footer.php';?>
+<?php get_footer();?>

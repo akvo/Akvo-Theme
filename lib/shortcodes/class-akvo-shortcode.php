@@ -124,7 +124,8 @@
 		'template'	=> get_template_directory().'/lib/templates/title_header_image.php',
 		'atts'		=> array(
 			'bg_image'	=> get_template_directory_uri().'/images/akvocover.jpg',
-			'title'		=> 'Title Goes Here'
+			'title'		=> 'Title Goes Here',
+			'bg_repeat' => 0
 		)
 	) );
 	

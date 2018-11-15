@@ -11,6 +11,21 @@
 		if( function_exists('get_field') && get_field( 'background_header_image' ) ){
 			$bg_img_url = get_field( 'background_header_image' );
 		}
+		
+		if (class_exists('MultiPostThumbnails')) { 
+			if( MultiPostThumbnails::has_post_thumbnail( 'post', 'background_header_image') ) {
+				global $post;
+				$image_id = MultiPostThumbnails::get_post_thumbnail_id( 'post', 'background_header_image', $post->ID ); 
+				if( $image_id ){
+					$image_src = wp_get_attachment_image_src( $image_id, 'full' );  
+					
+					if( is_array( $image_src ) ){
+						$bg_img_url = $image_src[0];
+					}
+				}
+			}
+		}
+		
 		echo do_shortcode("[akvo_header_image title='".get_the_title()."' bg_image='".$bg_img_url."' bg_repeat='1']");
 	?>
 	<?php /* NOT NEEDED ANYMORE

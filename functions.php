@@ -5,11 +5,22 @@
 		'lib/class-akvo.php',
 		'lib/shortcodes.php',
 		'lib/shortcodes/class-akvo-shortcode.php',
-		'lib/wp-bootstrap-navwalker.php'
+		'lib/wp-bootstrap-navwalker.php',
+		'lib/multiple-post-thumbnails/multi-post-thumbnails.php'
 	);
 	
 	foreach( $inc_files as $inc_file ){
 		include( $inc_file );
+	}
+	
+	// Define additional "post thumbnails". Relies on MultiPostThumbnails to work
+	if (class_exists('MultiPostThumbnails')) {
+		new MultiPostThumbnails(array(
+			'label' 	=> 'Post Header Image',
+			'id' 		=> 'background_header_image',
+			'post_type' => 'post'
+			)
+		);
 	}
 	
 	function akvo_universal_color_pallet() {

@@ -45,13 +45,14 @@ $query = new WP_Query( 'post_type=post&order=DESC&orderby=date&posts_per_page=12
 			</div>
 
 <?php wp_reset_postdata(); ?>
+<?php endif; ?>
 <div class="row paddingbottom">
 <div class="pagenav">
     <div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
     <div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
 </div>
 </div>
-<?php endif; ?>
+
 </div>
 <!-- End Posts -->
 

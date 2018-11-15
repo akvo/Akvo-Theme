@@ -1,32 +1,45 @@
-<?php include 'header.php';?>
+<?php get_header();?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+
+
 <!-- Carousel -->
 <div class="container fullwidth post">
+	<?php
+		$bg_img_url = get_bloginfo('template_url')."/images/defaultheader.jpg";
+					
+		if( function_exists('get_field') && get_field( 'background_header_image' ) ){
+			$bg_img_url = get_field( 'background_header_image' );
+		}
+		echo do_shortcode("[akvo_header_image title='".get_the_title()."' bg_image='".$bg_img_url."' bg_repeat='1']");
+	?>
+	<?php /* NOT NEEDED ANYMORE
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-      
-        <div class="item active" style="background:url(<?php if( get_field('background_header_image') ): ?><?php the_field('background_header_image'); ?><?php else:?><?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/10/BP-pink-3-600-1.jpg<?php endif; ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
-		<div class="container">
-           <div class="carousel-caption microstory">
-            <h1><?php the_title(); ?></h1>
+		
+		<div class="carousel-inner">
 			
-          </div>
-		</div>
-        </div><!-- End Item -->
-                        
-      </div><!-- End Carousel Inner -->
+			<div class="item active" style="background:url(<?php echo $bg_img_url; ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
+				<div class="container">
+					<div class="carousel-caption microstory">
+						<h1><?php the_title(); ?></h1>
+					</div>
+				</div>
+			</div>
+        </div>
 
     </div>
+		*/
+	?>
 </div>
+
+
 <!-- End Carousel -->
 
 
 <!-- Posts -->
 <div class="container paddingtop singlepost">
 
-
+	
 			<div class="row singlerow">
 			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 postpaddingbottom">
 				<ul class="meta"> 
@@ -34,8 +47,12 @@
 				</ul>
                         <div class="postimage"><?php the_post_thumbnail('full'); ?></div>
 						<br/>
-						<div class="bg-light-gray greybox fullheight"><?php echo get_post(get_post_thumbnail_id())->post_content; ?></div>
-						<br/>
+						<?php
+						$get_description = get_post(get_post_thumbnail_id())->post_excerpt;
+						if(!empty($get_description)){//If description is not empty show the div
+						echo '<div class="bg-light-gray greybox fullheight">' . $get_description . '</div><br/>';
+						}
+						?>
 						 <div class="blog-column">
 							<?php the_content();?>
 						</div>
@@ -120,7 +137,9 @@
 			<div class="row">
 				<?php $query2 = new WP_Query( 'post_type=advert&order=asc&orderby=date&posts_per_page=1' ); ?>
 				<?php if ( $query2->have_posts() ) :?>	
-				<?php while ( $query2->have_posts() ) : $query2->the_post(); $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+				<?php while ( $query2->have_posts() ) : $query2->the_post(); 
+				$advert_url = get_post_meta($post->ID, 'url', true);
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
 					<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 postpaddingbottom">
 					<a href="<?php echo $advert_url ?>"><div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $featured_img_url ?>);">
 					</div></a>
@@ -143,11 +162,10 @@ $custom_query_args = array(
 );
 // Initiate the custom query
 $custom_query = new WP_Query( $custom_query_args );
-$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 if ( $custom_query->have_posts() ) : ?>
 	<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 postpaddingbottom youmightlikecontainer">
-                    <div class="col-lg-12 col-xs-12 youmightlikebox" style="background:url(<?php echo $featured_img_url ?>);"> 
+                    <div class="col-lg-12 col-xs-12 youmightlikebox" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"> 
 						 <div class="blog-colum">
 						 <div class="youmightliketext">
 							<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
@@ -173,4 +191,4 @@ wp_reset_postdata(); ?>
 </div>
 <!-- End Related Posts -->
 
-<?php include 'footer.php';?>
+<?php get_footer();?>

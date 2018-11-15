@@ -5,34 +5,61 @@
  */ 
 ?>
 <?php get_header();?>
-	<?php if ( have_posts() ) : ?>
-	 <?php
+<?php
     $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
     ?>
-	<div class="fullwidth paddingtop paddingbottom">
+<!-- Carousel -->
+<div class="container fullwidth">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+      
+        <div class="item active" style="background:url(<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2018/09/testphoto.jpg);">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-9">
-					<h3>All of <?php echo $curauth->display_name; ?> posts:</h3>
-					<hr>
-					<br>
-					<?php while ( have_posts() ) : the_post(); ?>
-					<div style="padding:20px 0;margin-bottom: 20px">	
-						<h4 class="thin search-post-title"><?php the_title(); ?></h4>
-						<p class="search-post-excerpt"><?php the_excerpt(); ?></p>
-						<p class="search-post-link"><a href="<?php the_permalink(); ?>">Read More</a></p>
-					</div>
-					<?php endwhile; ?>
-					<ul class="list-inline">
-						<li><?php previous_posts_link( 'Newer posts' ); ?></li>
-						<li class='pull-right'><?php next_posts_link( 'Older posts' ); ?></li>
-					</ul>
-				</div>
-			</div>
+           <div class="carousel-caption microstory">
+            <h1><?php echo $curauth->display_name; ?></h1>
+          </div>
 		</div>
-	</div>
-	<?php else : ?>
-		<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-	<?php endif; ?>
-	<?php get_template_part('partials/content', 'clocks'); ?>
+        </div><!-- End Item -->
+                        
+      </div><!-- End Carousel Inner -->
+
+    </div>
+</div>
+<!-- End Carousel -->
+
+<!-- Posts -->
+<div class="container paddingtop paddingbottom">
+<?php if ( have_posts() ) :  ?>
+		   <div class="row row-eq-height paddingbottom">
+		   <?php while ( have_posts() ) : the_post(); ?>
+				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
+                    <div class="col-lg-12 col-xs-12">
+                        <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>
+						 <div class="blog-colum">
+							<div class="titledate">
+								<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+							 <ul class="blog-detail"> 
+								<li><i class="fa fa-calendar"></i> <?php the_time( 'F jS, Y' ); ?></li> 
+							</ul> 
+							</div>
+						</div>
+					</div>
+                </div>
+				<?php endwhile;?>
+			</div>
+
+<?php wp_reset_postdata(); ?>
+<?php endif; ?>
+<div class="row paddingbottom">
+<div class="pagenav">
+    <div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
+    <div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
+</div>
+</div>
+
+</div>
+<!-- End Posts -->
+
 <?php get_footer();?>

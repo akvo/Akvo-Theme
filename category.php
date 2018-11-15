@@ -22,12 +22,16 @@
 
 <!-- Posts -->
 <div class="container paddingtop paddingbottom">
-<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-// are we on page one?
-$query = new WP_Query( 'paged='. $paged ); ?>
-<?php if ( $query->have_posts() ) :	?>	
+<?php
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $temp = $wp_query;
+  $wp_query = null;
+  $wp_query = new WP_Query();
+  $wp_query->query('showposts=12&post_type=post&paged='.$paged.'&cat='.$cat_id);
+ ?>
+<?php if ( $wp_query->have_posts() ) :	?>	
 		   <div class="row row-eq-height paddingbottom">
-		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+		   <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 				<div class="col col-lg-4 col-md-4 col-sm-4 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
                         <a href="<?php the_permalink(); ?>"><div class="featuredimage blogimagesmall" style="background:url(<?php the_post_thumbnail_url('full'); ?>);"></div></a>

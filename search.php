@@ -3,7 +3,7 @@
 	<div class="fullwidth paddingtop paddingbottom">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-9">
+				<div class="col-lg-12">
 					<h3>You searched for " <?php echo esc_html( get_search_query( false ) ); ?> ". Here are the results:</h3>
 					<hr>
 					<br>

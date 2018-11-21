@@ -164,7 +164,7 @@ margin:-180px 0 0;
 .tweetboxpullout .paragraph {padding-top:10px;}
 .tweetboxpullout h3 a {float:left;color:#2c509a;text-decoration:none!important;}
 .tweetboxpullout h3.tweetbutton {text-align:right;bottom:0!important;padding:10px;float:right;}
-.aboutauthor h3 {font-size:23px!important;font-weight:300!important;line-height:30px!important;}
+.aboutauthor h3 {font-size:23px!important;font-weight:300!important;line-height:30px!important;margin-top:0px!important;}
 .aboutauthor h3 a {color:#03AD8C!important;font-weight:400!important;text-decoration:none!important;}
 .aboutauthor .categories {margin:0px!important;padding:0px!important;}
 /*.aboutauthor .authorbox {margin-right:1%;}*/

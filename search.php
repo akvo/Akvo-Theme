@@ -14,10 +14,14 @@
 						<p class="search-post-link"><a href="<?php the_permalink(); ?>">Read More</a></p>
 					</div>
 					<?php endwhile; ?>
-					<ul class="list-inline">
-						<li><?php previous_posts_link( 'Newer posts' ); ?></li>
-						<li class='pull-right'><?php next_posts_link( 'Older posts' ); ?></li>
-					</ul>
+					<div class="row paddingbottom">
+		<div class="pagenav">
+			<div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
+			<div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
+		</div>
+	</div>
+					
+					
 				</div>
 			</div>
 		</div>

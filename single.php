@@ -6,7 +6,7 @@
 <!-- Carousel -->
 <div class="container fullwidth post">
 	<?php
-		$bg_img_url = get_bloginfo('template_url')."/images/defaultheader.jpg";
+		$bg_img_url = get_bloginfo('template_url')."/images/defaultheader'. echo rand(1,32); .'.jpg";
 					
 		if( function_exists('get_field') && get_field( 'background_header_image' ) ){
 			$bg_img_url = get_field( 'background_header_image' );

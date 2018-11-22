@@ -12,6 +12,12 @@
 		return ob_get_clean();
 	} );
 	
+	add_shortcode( 'akvo_iframe_report', function( $atts ){
+		ob_start();
+		include('templates/akvo_iframe_report.php');
+		return ob_get_clean();
+	} );
+	
 	/*
 	add_shortcode( 'akvo_sector_stories', function( $atts ){
 		ob_start();

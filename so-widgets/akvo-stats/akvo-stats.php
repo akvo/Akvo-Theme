@@ -40,6 +40,12 @@ class Akvo_Stats extends SiteOrigin_Widget {
 							'type' => 'icon',
 							'label' => __( 'Select Icon', 'siteorigin-widgets' )
 						),
+						/*
+						'fa_pro_icon' => array(
+							'type' => 'text',
+							'label' => __( 'Fontawesome Pro Icon', 'siteorigin-widgets' )
+						),
+						*/
 						'title' => array(
 							'type' => 'text',
 							'label' => __( 'Title', 'siteorigin-widgets' )

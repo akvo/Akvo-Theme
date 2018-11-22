@@ -58,6 +58,8 @@ a.buttonwhite, a.buttonblack {text-decoration:none!important;}
 
 .nested-filters .primary-filter-list a.active, .nested-filters nav ul li a[href]:hover {color:#e04d95!important;text-decoration:none!important;}
 
+.nested-filters nav ul {text-align:center;}
+
 a:hover {text-decoration:underline;}
 .widget-title {color:#191919!important;}
 

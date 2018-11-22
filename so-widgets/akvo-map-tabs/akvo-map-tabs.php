@@ -36,9 +36,9 @@ class Akvo_Map_Tabs extends SiteOrigin_Widget {
 					'label' => __( 'Tabs' , 'siteorigin-widgets' ),
 					'item_name'  => __( 'Tab', 'siteorigin-widgets' ),
 					'fields' => array(
-						'src' 	=> array(
-							'type' 	=> 'text',
-							'label' => __( 'IFRAME SOURCE', 'siteorigin-widgets' )
+						'page_builder' => array(
+							'type' 	=> 'builder',
+							'label' => __( 'Map Content', 'siteorigin-widgets'),
 						),
 						'heading' 	=> array(
 							'type' 	=> 'text',

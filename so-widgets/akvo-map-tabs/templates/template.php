@@ -12,7 +12,7 @@
 				<div class="tab-content">
 					<?php $i = 0;foreach( $instance['tabs'] as $tab ):?>
 					<div class="tab-pane <?php if( !$i ){ _e('active');}?>" id="address-<?php _e( $i );?>">
-						<iframe src="<?php _e( $tab['src'] );?>" width="100%" height="300px" style="border:none;"></iframe>
+						<?php echo siteorigin_panels_render( 'w-tab-'.$i, true, $tab['page_builder'] );?>
 					</div>
 					<?php $i++; endforeach;?>
 				</div>

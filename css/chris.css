@@ -228,3 +228,10 @@ span.tag.akvo-flow {background: #03AD8C!important;background-color: #03AD8C!impo
 span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!important;}
 
 .so-widget-sow-editor .siteorigin-widget-tinymce h1 {color: inherit!important;}
+
+
+/* VIDEO MODAL FROM IMAGE */
+
+.videomodal2 img{cursor:pointer!important;width:100%;height:auto;}
+#squarespaceModalVideoClean .modal-content{background:none!important;border:none!important;border-radius:none!important;-webkit-box-shadow: none!important;box-shadow:none!important;}
+#squarespaceModalVideoClean .modal-dialog.video {max-width:1000px!important;}

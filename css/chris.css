@@ -271,9 +271,11 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
 #maps .nav-tabs>li.active>a:focus, 
 #maps .nav-tabs>li.active>a:hover {
 background:#eee!important;
-border-radius:none!important;
+border-radius:0px!important;
 border:none!important;
 }
+
+#maps h3 {font-size:24px!important;margin-top:0px!important;}
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {

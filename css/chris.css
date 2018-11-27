@@ -264,8 +264,8 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
 }
 
 #maps .nav-tabs {border:none!important;}
-
-#maps .nav-tabs>li>a {color:#555!important;border:none!important;padding:20px!important;}
+#maps .nav-tabs>li {width:100%!important;}
+#maps .nav-tabs>li>a {color:#555!important;width:100%!important;border:none!important;padding:20px!important;}
 
 #maps .nav-tabs>li.active>a, 
 #maps .nav-tabs>li.active>a:focus, 

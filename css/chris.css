@@ -95,7 +95,11 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
 .updates .update p {margin-bottom:0px!important;}
 
 .row-eq-height {flex-wrap: wrap;}
-.row-eq-height > [class*='col-'] {/*flex-grow: 1;*/flex-grow:0;}
+.row-eq-height > [class*='col-'] {/*flex-grow: 1;*/flex-grow:0!important;}
+
+@media screen and (max-width: 768px) {
+.row-eq-height > [class*='col-'] {/*flex-grow: 1;*/flex-grow:1!important;}
+}
 
 .aboutauthor .authorbox {margin-right:0px!important;}
 .aboutauthor.row-eq-height > [class*='col-'] {flex-grow: 0!important;} 

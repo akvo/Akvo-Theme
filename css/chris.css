@@ -280,7 +280,7 @@ border:none!important;
 
 .sow-accordion-title {line-height:35px!important;}
 
-.sow-google-map-canvas {min-height:426px!important;height:100%!important;}
+#maps .sow-google-map-canvas {min-height:426px!important;height:100%!important;}
 
 
 /* PROCESS ROW RESPONSIVE */

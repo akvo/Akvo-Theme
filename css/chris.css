@@ -283,7 +283,7 @@ border:none!important;
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {
-	.sow-accordion .sow-accordion-panel .sow-accordion-panel-header .sow-accordion-open-close-button {margin-top:-35px!important;}
+	.sow-accordion .sow-accordion-panel .sow-accordion-panel-header .sow-accordion-open-close-button {margin-top:-45px!important;}
 .sow-accordion-title {font-size:20px;line-height:25px!important;}
 	.process-row:before {display:none!important;}
 .process-step {display:inline-block;width:33%;}

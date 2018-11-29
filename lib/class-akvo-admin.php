@@ -245,14 +245,13 @@
 		
 		function set_meta_boxes(){
 			$this->meta_boxes = array(
-				/*
 				'new_partners'	=> array(
 					'title'		=> 'Partner Details',
 					'fields'	=> array(
 						'partners_link'		=> 'Link to a microstory or a partners page'
-					)
+					),
+					'post_type'	=> 'new_partners',
 				),
-				*/
 				'staff'	=> array(
 					'title'		=> 'New Staff Details',
 					'fields'	=> array(

@@ -28,7 +28,7 @@
 <!-- End Carousel -->
 
 <!-- Title -->
-<div class="container paddingtop paddingbottom">
+<div class="container paddingtop">
 <?php the_content();?>
 </div>
 <!-- End Title -->

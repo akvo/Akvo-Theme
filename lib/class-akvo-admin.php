@@ -270,7 +270,12 @@
 					'title'		=> 'Page Settings',
 					'fields'	=> array(
 						'disable_header'	=> array(
-							'label'		=> 'Hide Header Image',
+							'label'		=> 'Hide Header Image Section',
+							'type'		=> 'boolean',
+							'default'	=> false
+						),
+						'disable_header_title'	=> array(
+							'label'		=> 'Hide Header Title',
 							'type'		=> 'boolean',
 							'default'	=> false
 						),
@@ -291,7 +296,7 @@
 							'desc'		=> 'Leave empty for default text'
 						),
 					),
-					'post_type'	=> 'page',
+					'post_type'	=> array('page', 'microstory'),
 					'context'	=> 'side',
 					'priority'	=> 'default'
 				),
@@ -467,9 +472,13 @@
 				
 				// CHECK IF THIS METABOX IS VALID FOR THE CURRENT SCREEN
 				if( isset( $metabox['post_type'] ) ){
-					if( ( is_array( $metabox['post_type'] ) && in_array( $metabox['post_type'], $post->post_type ) ) || 
+					if( ( is_array( $metabox['post_type'] ) && in_array( $post->post_type, $metabox['post_type'] ) ) || 
 						( $metabox['post_type'] == $post->post_type ) ){
 						$flag = true;
+						
+						//print_r( $metabox );
+						
+						//wp_die();
 					}
 				} 
 				

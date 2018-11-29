@@ -5,6 +5,6 @@
 	<?php get_template_part('partials/content', 'header');?>    
 	</div>
 	<!-- End Carousel -->
-	<div class="container paddingtop paddingbottom"><?php the_content();?></div>	
+	<div class="container"><?php the_content();?></div>	
 <?php endwhile; endif; wp_reset_postdata(); ?>
 <?php get_footer();?>

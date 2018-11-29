@@ -18,6 +18,12 @@
 		return ob_get_clean();
 	} );
 	
+	add_shortcode( 'akvo_process', function( $atts ){
+		ob_start();
+		include('templates/akvo_process.php');
+		return ob_get_clean();
+	} );
+	
 	/*
 	add_shortcode( 'akvo_sector_stories', function( $atts ){
 		ob_start();

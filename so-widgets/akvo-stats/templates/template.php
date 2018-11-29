@@ -1,7 +1,7 @@
 <!-- Statistics Flex -->
-<div class="fullwidth bg-light-gray">
+<div class="fullwidth aligncenter">
 	<div class="container paddingtop paddingbottom">
-		<h2 class="paddingbottom massivetitle"><?php _e( $instance['title'] );?></h2>
+		<h2 class="paddingbottom"><?php _e( $instance['title'] );?></h2>
 		<div class="row row-flex aligncenter statistics row-eq-height">
 			<?php foreach( $instance['items'] as $item ):?>
 			<div class="col stat">

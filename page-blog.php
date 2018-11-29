@@ -40,7 +40,7 @@ if(1 == $paged) { ?>
 						 <div class="titledatemain">
 							<h4><?php the_title(); ?></h4>
 							 <ul class="blog-detail"> 
-								<li><i class="fa fa-calendar"></i> <?php the_time('F jS, Y'); ?></li> 
+								<li><i class="fa fa-calendar"></i> <?php the_time('j F, Y'); ?></li> 
 							</ul> 
 							<p><?php the_excerpt(); ?></p>
 						 </div>
@@ -72,7 +72,7 @@ if(1 == $paged) { ?>
 							<div class="titledate">
 								<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 							 <ul class="blog-detail"> 
-								<li><i class="fa fa-calendar"></i> <?php the_time( 'F jS, Y' ); ?></li> 
+								<li><i class="fa fa-calendar"></i> <?php the_time('j F, Y'); ?></li> 
 							</ul> 
 							</div>
 						</div>
@@ -92,7 +92,7 @@ if(1 == $paged) { ?>
 							<div class="titledate">
 								<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 							 <ul class="blog-detail"> 
-								<li><i class="fa fa-calendar"></i> <?php the_time( 'F jS, Y' ); ?></li> 
+								<li><i class="fa fa-calendar"></i> <?php the_time('j F, Y'); ?></li> 
 							</ul> 
 							</div>
 						</div>

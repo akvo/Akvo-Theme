@@ -290,6 +290,8 @@ border:none!important;
 #field_23_5 .ginput_container_checkbox, #field_23_6 .ginput_container_checkbox, #field_22_20 .ginput_container_checkbox, #field_22_21 .ginput_container_checkbox{margin-top:0px;}
 
 .modal-body .gform_wrapper.gf_browser_chrome .gfield_checkbox li input, .modal-body  .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox] {margin-top:3px!important;}
+.modal-body .gform_wrapper ul.gform_fields li.gfield {padding-right:0px!important;}
+.modal-body .gform_wrapper .gform_footer input.button, .modal-body .gform_wrapper .gform_footer input[type=submit] {width:100%!important;}
 
 #maps .sow-google-map-canvas {min-height:426px!important;height:100%!important;}
 

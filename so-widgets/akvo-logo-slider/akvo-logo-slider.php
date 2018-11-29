@@ -32,6 +32,11 @@ class Akvo_Logo_Slider extends SiteOrigin_Widget {
 					'label' 		=> __( 'Title', 'siteorigin-widgets' ),
 					'default' 		=> '',
 				),
+				'show_slides' => array(
+					'type' 			=> 'number',
+					'label' 		=> __( 'Show number of slides', 'siteorigin-widgets' ),
+					'default' 		=> 6,
+				),
 				'slides' => array(
 					'type' 	=> 'repeater',
 					'label' => __( 'Logo Section' , 'siteorigin-widgets' ),

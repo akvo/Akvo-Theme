@@ -345,5 +345,16 @@ $(document).ready(function(){
 		});
 	}, 1000);
 
-
+	$('body').find('[data-behaviour~=process]').each( function(){
+		
+		var $el = $( this );
+		
+		$el.find('.btn-circle').on('click',function(){
+			
+			$('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
+			$(this).addClass('btn-info').removeClass('btn-default').blur();
+		
+		});
+		
+	});
 });

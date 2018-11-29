@@ -5,7 +5,7 @@
 ?>
 <!-- Process Section -->
 <div class="paddingtop paddingbottom">
-	<div class="row">
+	<div class="row" data-behaviour="process">
 		<div class="process">
 			<div class="process-row nav nav-tabs">
 				<?php $i = 0; foreach( $instance['items'] as $item ):?>

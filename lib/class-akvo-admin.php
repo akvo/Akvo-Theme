@@ -248,7 +248,11 @@
 				'new_partners'	=> array(
 					'title'		=> 'Partner Details',
 					'fields'	=> array(
-						'partners_link'		=> 'Link to a microstory or a partners page'
+						'partners_link'	=> array(
+							'label'		=> 'Link to a microstory or a partners page',
+							'type'		=> 'text',
+							'default'	=> ''
+						),
 					),
 					'post_type'	=> 'new_partners',
 				),

@@ -27,7 +27,7 @@
 			<div class="<?php _e( $item_class );?>" style="background-image:url('<?php _e( $akvo_widgets_template->get_image_url( $slide['image'] ) );?>');">
 				<div class="container">
 					<div class="carousel-caption microstory">
-						<?php if( isset( $slide['title'] ) ):?><h1><?php _e( $slide['title'] );?></h1><?php endif;?>
+						<?php if( isset( $slide['title'] ) && $slide['title'] ):?><h1><?php _e( $slide['title'] );?></h1><?php endif;?>
 						<?php if( isset( $slide['content'] ) && $slide['content'] ):?>
 						<br>
 						<h2><?php _e( $slide['content'] );?></h2>

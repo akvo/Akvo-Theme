@@ -295,6 +295,9 @@ border:none!important;
 
 #maps .sow-google-map-canvas {min-height:426px!important;height:100%!important;}
 
+.faded {opacity:0.5;}
+.faded:hover {opacity:1;}
+
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {

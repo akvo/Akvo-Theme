@@ -301,6 +301,16 @@ a.buttonwhite {border: 2px solid #fff!important;}
 .faded {opacity:0.5;}
 .faded:hover {opacity:1;}
 
+/* PRICING TABLE */
+
+.origin-widget.origin-widget-price-box-simple-clean {
+border: none!important;
+background: none!important;
+-webkit-box-shadow:none!important;
+-moz-box-shadow:none!important;
+box-shadow: none!important;}
+
+.origin-widget.origin-widget-price-box-simple-clean h4 span {display:none!important;}
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {

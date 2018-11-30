@@ -311,6 +311,8 @@ background: none!important;
 box-shadow: none!important;}
 
 .origin-widget.origin-widget-price-box-simple-clean h4 span {display:none!important;}
+.origin-widget.origin-widget-price-box-simple-clean {text-align:center!important;}
+
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {

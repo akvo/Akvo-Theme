@@ -295,6 +295,9 @@ border:none!important;
 
 #maps .sow-google-map-canvas {min-height:426px!important;height:100%!important;}
 
+a.buttonblack{border: 2px solid #000!important;}
+a.buttonwhite {border: 2px solid #fff!important;}
+
 .faded {opacity:0.5;}
 .faded:hover {opacity:1;}
 

@@ -304,46 +304,7 @@ a.buttonwhite {border: 2px solid #fff!important;}
 
 /* PRICING TABLE */
 
-.origin-widget.origin-widget-price-box-simple-clean {
-border: none!important;
-background: none!important;
--webkit-box-shadow:none!important;
--moz-box-shadow:none!important;
-box-shadow: none!important;}
-
-.origin-widget.origin-widget-price-box-simple-clean h4 span {display:none!important;}
-.origin-widget.origin-widget-price-box-simple-clean {text-align:center!important;}
-
-.origin-widget.origin-widget-button-simple-white a {
-    -ms-box-sizing: border-box!important;
-    -moz-box-sizing: border-box!important;
-    -webkit-box-sizing: border-box!important;
-    box-sizing: border-box!important;
-    font-family: "Assistant", sans-serif !important;
-    font-size: 16px !important;
-    padding: 1em 2em!important;
-    background: transparent!important;
-    border: 2px solid #000!important;
-    color: #000 !important;
-    -webkit-border-radius: 0em!important;
-    -moz-border-radius: 0em!important;
-    border-radius: 0em!important;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05)!important;
-    text-align: center!important;
-    display: inline-block!important;
-    cursor: pointer!important;
-    text-decoration: none!important;
-    line-height: 1em!important;
-    margin: 0 auto!important;
-}
-.origin-widget.origin-widget-button-simple-white a:hover {
-	padding: 1em 2em!important;
-	border:2px solid #000!important;
-	background:#000!important;
-	color:#fff!important;
-	margin:0px!important;
-	text-shadow:none!important;box-shadow:none!important;
-}
+.pricing .faded {padding:20px;border:1px solid #f8f8f8;}
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {

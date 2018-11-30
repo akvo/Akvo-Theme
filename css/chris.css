@@ -335,7 +335,7 @@ box-shadow: none!important;}
     line-height: 1em!important;
     margin: 0 auto!important;
 }
-.origin-widget.origin-widget-button-simple-white a:hover {background:#000!important;color:#fff!important;}
+.origin-widget.origin-widget-button-simple-white a:hover {background:#000!important;color:#fff!important;margin:0px!important;}
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {

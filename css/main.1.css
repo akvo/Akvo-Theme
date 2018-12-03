@@ -1671,8 +1671,8 @@ img.solutionimage {
   height: 200px; }
 
 #quote-carousel {
-  padding: 0 10px 30px 10px;
-  margin-top: 60px; }
+  /*padding: 0 10px 30px 10px;
+  margin-top: 60px;*/ }
   #quote-carousel .carousel-control {
     background: none;
     color: #CACACA;

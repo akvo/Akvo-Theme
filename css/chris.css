@@ -306,6 +306,10 @@ a.buttonwhite {border: 2px solid #fff!important;}
 
 .pricing .faded {padding:20px;border:1px solid #d5d5d5;}
 
+/* PULL UP */
+
+.pullup {margin-top:-80px;}
+
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {
 	.sow-accordion .sow-accordion-panel .sow-accordion-panel-header .sow-accordion-open-close-button {margin-top:-45px!important;}

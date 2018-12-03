@@ -312,6 +312,7 @@ a.buttonwhite {border: 2px solid #fff!important;}
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {
+	.pullup {margin-top:0px!important;}
 	.sow-accordion .sow-accordion-panel .sow-accordion-panel-header .sow-accordion-open-close-button {margin-top:-45px!important;}
 .sow-accordion-title {font-size:20px;line-height:25px!important;}
 	.process-row:before {display:none!important;}

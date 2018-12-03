@@ -1,6 +1,6 @@
 <!-- Statistics Flex -->
 <div class="fullwidth">
-	<div class="container paddingtop paddingbottom">
+	<div class="so-widget-sow-editor so-widget-sow-editor-base">
 		<h2 class="paddingbottom"><?php _e( $instance['title'] );?></h2>
 		<div class="row row-flex aligncenter statistics row-eq-height">
 			<?php foreach( $instance['items'] as $item ):?>

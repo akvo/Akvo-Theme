@@ -1,6 +1,6 @@
 <!-- World -->
 <div class="fullwidth bg-light-gray  paddingtop paddingbottom">
-	<div class="container counter">
+	<div class="so-widget-sow-editor so-widget-sow-editor-base container counter">
 		<h3 class="widget-title"><?php _e( $atts['title'] );?></h3>
 		<div class="row text-center">
 			<?php echo do_shortcode("[akvo_clock id='clock_americas' offset='-5.0' title='Americas' hello='Hola' link='']");?>

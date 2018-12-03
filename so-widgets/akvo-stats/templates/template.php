@@ -1,7 +1,7 @@
 <!-- Statistics Flex -->
 <div class="fullwidth">
 	<div class="so-widget-sow-editor so-widget-sow-editor-base">
-		<h2 class="paddingbottom"><?php _e( $instance['title'] );?></h2>
+		<h3 class="widget-title"><?php _e( $instance['title'] );?></h3>
 		<div class="row row-flex aligncenter statistics row-eq-height">
 			<?php foreach( $instance['items'] as $item ):?>
 			<div class="col stat aligncenter">

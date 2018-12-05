@@ -1804,7 +1804,8 @@ img.solutionimage {
 /* HOMEPAGE FEATURES */
 .so-widget-sow-features .sow-features-list .sow-features-feature h5 {
   font-size: 40px;
-  color: #fff !important;
+  /*color: #fff !important*/;
+    color:inherit;
   margin: 10px 0; }
 
 .so-widget-sow-features .sow-features-list .sow-features-feature p {

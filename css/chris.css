@@ -310,6 +310,9 @@ a.buttonwhite {border: 2px solid #fff!important;}
 
 .pullup {margin-top:-80px;}
 
+
+.squarespaceModalVideoClean .modal-dialog {width:100%!important;max-width:800px!important;}
+
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {
 	.pullup {margin-top:0px!important;}

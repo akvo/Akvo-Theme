@@ -1829,7 +1829,8 @@ body.single-microstory .narrow-row {
   margin: 20px 0; }
 
 .so-widget-sow-editor .siteorigin-widget-tinymce h4 {
-  color: #191919;
+  /*color: #191919;*/
+    color:inherit!important;
   font-family: 'Roboto Condensed', sans-serif !important;
   /*font-weight: 300 !important;*/
   line-height: 30px;

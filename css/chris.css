@@ -330,6 +330,18 @@ body.single-microstory .so-widget-sow-editor, body.single-microstory .narrow-row
 /* PROGRESS BAR FIXES */
 progress .progress-bar, .progress-bar, span.progress-bar {color:#404898 !important;background-color:#404898 !important;background:#404898 !important;}
 
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-color: #404898 !important;
+}
+
+progress::-moz-progress-bar {
+  background-color: #404898 !important;
+}
+
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {
 	.pullup {margin-top:0px!important;}

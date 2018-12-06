@@ -354,3 +354,8 @@ progress::-moz-progress-bar {
 @media screen and (max-width: 500px) {
 .process-step {display:inline-block;width:50%;}
 }
+
+
+/* NEW SINGLE POST MK2 */
+
+body.single-post #myCarousel item {height:250px;margin-top:10px;}

@@ -35,7 +35,7 @@ class Akvo_Process extends SiteOrigin_Widget {
 						'fa_pro_icon' => array(
 							'type' 			=> 'text',
 							'label' 		=> __( 'Fontawesome Pro Icon', 'siteorigin-widgets' ),
-							'description'	=> 'Example: fa-check-circle'
+							'description'	=> 'Example: fa fa-check-circle'
 						),
 						'title' => array(
 							'type' => 'text',

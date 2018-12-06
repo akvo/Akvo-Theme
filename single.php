@@ -65,10 +65,10 @@
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 authorbox"><div class="bg-light-gray greybox fullheight"><h3><?php $authorDesc = the_author_meta('description'); echo $authorDesc; ?></h3></div></div>
 				</div>
 				<div class="row aboutauthor">
-				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 catbox"><div class="fullheight">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catbox"><div class="fullheight">
 				<div class="categories">
 						<p><strong>Posted in:</strong> <?php the_category( ', ' ); ?></p>
-						<p><strong>All categories:</strong><?php $categories = get_categories();
+						<p><strong>All categories:</strong> <?php $categories = get_categories();
 foreach($categories as $category) {
    echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>, ';
 }?></p>

@@ -328,18 +328,18 @@ body.single-microstory .so-widget-sow-editor, body.single-microstory .narrow-row
 .so-widget-sow-editor .siteorigin-widget-tinymce h4 {color:inherit!important;}
 
 /* PROGRESS BAR FIXES */
-progress .progress-bar, .progress-bar, span.progress-bar {color:#404898 !important;background-color:#404898 !important;background:#404898 !important;}
+progress .progress-bar, .progress-bar, span.progress-bar {color:#03ad8c !important;background-color:#03ad8c !important;background:#03ad8c !important;}
 
 progress::-webkit-progress-bar {
   background-color: transparent;
 }
 
 progress::-webkit-progress-value {
-  background-color: #404898 !important;
+  background-color: #03ad8c !important;
 }
 
 progress::-moz-progress-bar {
-  background-color: #404898 !important;
+  background-color: #03ad8c !important;
 }
 
 /* PROCESS ROW RESPONSIVE */

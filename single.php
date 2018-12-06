@@ -43,8 +43,8 @@
 			<div class="row singlerow">
 			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 postpaddingbottom">
 				<ul class="meta"> 
-					<li>Written by <?php echo get_the_author_link(); ?></li>
-					<li><?php the_time('j F, Y'); ?></li> 
+					<li>Written by <?php echo get_the_author_link(); ?><br/>
+					<?php the_time('j F, Y'); ?></li> 
 				</ul>
                         <div class="postimage"><?php the_post_thumbnail('full'); ?></div>
 						<br/>

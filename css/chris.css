@@ -313,6 +313,9 @@ a.buttonwhite {border: 2px solid #fff!important;}
 
 .so-widget-akvo-video-modal .modal-dialog {width:100%!important;max-width:800px!important;}
 
+/* IFRAME UPDATE */
+
+iframe#toolframe {max-height:600px!important;min-height:300px!important;}
 
 /* COLOUR OVERRIDES */
 

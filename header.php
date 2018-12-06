@@ -73,7 +73,9 @@
 				<?php get_search_form(); ?>
 			</div>
 			<!-- Progress Bar -->
-			<div class="progress" style="position:fixed;margin-top:80px;z-index:2;">
-  				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
+			<progress value="0" id="progressBar">
+				<div class="progress-container">
+					<span class="progress-bar"></span>
+				</div>		
+			</progress>
 			<!-- End Progress Bar -->

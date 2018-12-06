@@ -61,28 +61,17 @@
 				
 				<div class="clear both"></div>
 							<br/>
-				<div class="row row-eq-height aboutauthor">
-				<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 authorbox"><div class="bg-light-gray greybox fullheight"><h3><?php $authorDesc = the_author_meta('description'); echo $authorDesc; ?></h3></div></div>
-				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 catbox"><div class="bg-light-gray greybox fullheight">
+				<div class="row aboutauthor">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 authorbox"><div class="bg-light-gray greybox fullheight"><h3><?php $authorDesc = the_author_meta('description'); echo $authorDesc; ?></h3></div></div>
+				</div>
+				<div class="row aboutauthor">
+				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 catbox"><div class="fullheight">
 				<div class="categories">
-						<h3>Posted in <?php the_category( ', ' ); ?></h3>
-						<form id="category-select" class="category-select blog-detail" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
-						<?php
-						$args = array(
-							'show_option_none' => __( 'Browse Categories' ),
-							'show_count'       => 1,
-							'orderby'          => 'name',
-							'echo'             => 0,
-						);
-						?>
-						<?php $select  = wp_dropdown_categories( $args ); ?>
-						<?php $replace = "<select$1 onchange='return this.form.submit()'>"; ?>
-						<?php $select  = preg_replace( '#<select([^>]*)>#', $replace, $select ); ?>
-						<?php echo $select; ?>
-						<noscript>
-							<input type="submit" value="View" />
-						</noscript>
-						</form>
+						<p><strong>Posted in:</strong> <?php the_category( ', ' ); ?></p>
+						<p><strong>All categories:</strong><?php $categories = get_categories();
+foreach($categories as $category) {
+   echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>, ';
+}?></p>
 				</div>
 				</div>
 				</div>

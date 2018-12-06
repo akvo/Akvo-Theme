@@ -32,6 +32,10 @@
 			
 		}
 		
+		function getUniqueID( $data ){
+			return substr( md5( json_encode( $data ) ), 0, 8 );
+		}
+		
 	}
 	
 	global $akvo;

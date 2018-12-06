@@ -357,4 +357,30 @@ $(document).ready(function(){
 		});
 		
 	});
+	
+	/*
+	* IMAGE ON CLICK OPENS A VIDEO MODAL. 
+	* WHEN THE VIDEO MODAL OPEN, THE VIDEO SHOULD PLAY AUTOMATICALLY
+	* WHEN THE VIDEO MODAL CLOSES, THE VIDEO SHOULD STOP PLAYING
+	*/
+	$('.video-modal').each( function(){
+		
+		var $videoModal = $( this ),
+			$iframe = $videoModal.find('iframe'),
+			src = $iframe.attr('src');
+			
+		$videoModal.on( 'show.bs.modal', function( e ){
+			
+			var newSrc = src + "?autoplay=1";
+			
+			$iframe.attr( 'src', newSrc );
+			
+		} );
+		
+		$videoModal.on( 'hide.bs.modal', function( e ){
+			$iframe.attr( 'src', src );
+		});
+		
+	});
+	
 });

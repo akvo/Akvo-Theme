@@ -60,8 +60,9 @@ class Akvo_Slider extends SiteOrigin_Widget {
 					'label' => __( 'Choose background image size', 'siteorigin-widgets' ),
 					'default' => 'item-default',
 					'options' => array(
-						'item-default' 	=> __( 'Default', 'siteorigin-widgets' ),
-						'item-narrow' 	=> __( 'Narrow', 'siteorigin-widgets' ),
+						'item-default' 		=> __( 'Default', 'siteorigin-widgets' ),
+						'item-narrow' 		=> __( 'Narrow', 'siteorigin-widgets' ),
+						'item-extra-narrow' => __( 'Extra Narrow', 'siteorigin-widgets' ),
 					)
 				)
 			),

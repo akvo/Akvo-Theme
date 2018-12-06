@@ -359,3 +359,6 @@ progress::-moz-progress-bar {
 /* NEW SINGLE POST MK2 */
 
 body.single-post #myCarousel .item {height:350px!important;margin-top:10px!important;}
+body.single-post .authorimage {padding:0px!important;}
+body.single-post .authorimage img {border-radius:50%;}
+

@@ -78,4 +78,7 @@
 					<span class="progress-bar"></span>
 				</div>		
 			</progress>
+			<div class="progress">
+  				<div class="progress-bar bg-reading" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
 			<!-- End Progress Bar -->

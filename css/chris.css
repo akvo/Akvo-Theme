@@ -237,8 +237,8 @@ span.tag.akvo-rsr {background: #E04D95!important;background-color: #E04D95!impor
 /* VIDEO MODAL FROM IMAGE */
 
 .videomodal2 img{cursor:pointer!important;width:100%;height:auto;}
-#squarespaceModalVideoClean .modal-content{background:none!important;border:none!important;border-radius:none!important;-webkit-box-shadow: none!important;box-shadow:none!important;}
-#squarespaceModalVideoClean .modal-dialog.video {max-width:1000px!important;}
+.so-widget-akvo-video-modal .modal-content{background:none!important;border:none!important;border-radius:none!important;-webkit-box-shadow: none!important;box-shadow:none!important;}
+.so-widget-akvo-video-modal .modal-dialog.video {max-width:1000px!important;}
 
 /* MAP TAB EXTRA STYLES */
 
@@ -311,7 +311,7 @@ a.buttonwhite {border: 2px solid #fff!important;}
 .pullup {margin-top:-80px;}
 
 
-#squarespaceModalVideoClean .modal-dialog {width:100%!important;max-width:800px!important;}
+.so-widget-akvo-video-modal .modal-dialog {width:100%!important;max-width:800px!important;}
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {

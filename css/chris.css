@@ -313,6 +313,11 @@ a.buttonwhite {border: 2px solid #fff!important;}
 
 .so-widget-akvo-video-modal .modal-dialog {width:100%!important;max-width:800px!important;}
 
+
+/* COLOUR OVERRIDES */
+
+.so-widget-sow-features .sow-features-list .sow-features-feature h5, .so-widget-sow-editor .siteorigin-widget-tinymce h4 {color:inherit!important;}
+
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {
 	.pullup {margin-top:0px!important;}

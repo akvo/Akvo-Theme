@@ -34,7 +34,12 @@ class Akvo_Stats extends SiteOrigin_Widget {
 				'items' => array(
 					'type' 	=> 'repeater',
 					'label' => __( 'Items' , 'siteorigin-widgets' ),
-					'item_name'  => __( 'Item', 'siteorigin-widgets' ),
+					//'item_name'  => __( 'Item', 'siteorigin-widgets' ),
+					'item_label' => array(
+						'selector' => "[id*='items-title']",
+						'update_event' => 'change',
+						'value_method' => 'val'
+					),
 					'fields' => array(
 						'icon' => array(
 							'type' => 'icon',

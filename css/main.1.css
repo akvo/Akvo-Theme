@@ -938,6 +938,8 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
     background-position: 50% 26%; }
     .carousel .carousel-inner .item.item-narrow {
       height: 450px; }
+    .carousel .carousel-inner .item.item-extra-narrow {
+      height: 250px; }
     .carousel .carousel-inner .item.item-repeat {
       background-repeat: repeat;
       background-size: auto; }
@@ -965,7 +967,7 @@ iframe#toolframe {
   height: 100%;
   border: none !important;
   max-height: 1800px;
-  min-height: 600px; }
+  min-height: 1000px; }
 
 /*
 * STATISTICS
@@ -1671,8 +1673,8 @@ img.solutionimage {
   height: 200px; }
 
 #quote-carousel {
-  /*padding: 0 10px 30px 10px;
-  margin-top: 60px;*/ }
+  padding: 0 10px 30px 10px;
+  margin-top: 60px; }
   #quote-carousel .carousel-control {
     background: none;
     color: #CACACA;
@@ -1804,13 +1806,11 @@ img.solutionimage {
 /* HOMEPAGE FEATURES */
 .so-widget-sow-features .sow-features-list .sow-features-feature h5 {
   font-size: 40px;
-  /*color: #fff !important*/;
-    color:inherit;
+  color: #fff !important;
   margin: 10px 0; }
 
 .so-widget-sow-features .sow-features-list .sow-features-feature p {
-  /*color: #fff !important;*/
-    color:inherit!important;
+  color: #fff !important;
   font-size: 13px; }
 
 /* MICROSTORY */
@@ -1819,7 +1819,7 @@ body.single-microstory .narrow-row {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  /*padding: 50px 20px;*/
+  padding: 50px 20px;
   box-sizing: border-box; }
 
 /* OVERRIDE SOW */
@@ -1830,8 +1830,7 @@ body.single-microstory .narrow-row {
   margin: 20px 0; }
 
 .so-widget-sow-editor .siteorigin-widget-tinymce h4 {
-  /*color: #191919;*/
-    color:inherit!important;
+  color: #191919;
   font-family: 'Roboto Condensed', sans-serif !important;
   /*font-weight: 300 !important;*/
   line-height: 30px;

@@ -103,9 +103,11 @@
 		wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700', null, true);
 		
 		// two versions of fontawesome
+		
+		/*
 		wp_enqueue_style('fontawesome', 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', null, true);
 		wp_enqueue_style('fontawesome-new', 'https://use.fontawesome.com/releases/v5.0.13/css/all.css', null, true);
-		
+		*/
 		
 		wp_enqueue_style('bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css', null, true);
 		

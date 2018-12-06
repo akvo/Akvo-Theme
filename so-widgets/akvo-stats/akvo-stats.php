@@ -43,7 +43,8 @@ class Akvo_Stats extends SiteOrigin_Widget {
 					'fields' => array(
 						'icon' => array(
 							'type' => 'icon',
-							'label' => __( 'Select Icon', 'siteorigin-widgets' )
+							'label' => __( 'Select Icon', 'siteorigin-widgets' ),
+							'description'	=> 'Example: fa fa-check-circle'
 						),
 						'fa_pro_icon' => array(
 							'type' => 'text',

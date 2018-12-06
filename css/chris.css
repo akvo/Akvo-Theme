@@ -327,6 +327,9 @@ body.single-microstory .so-widget-sow-editor, body.single-microstory .narrow-row
 .so-widget-sow-features .sow-features-list .sow-features-feature h5, 
 .so-widget-sow-editor .siteorigin-widget-tinymce h4 {color:inherit!important;}
 
+/* PROGRESS BAR FIXES */
+progress .progress-bar, .progress-bar {color:#404898 !important;background-color:#404898 !important;background:#404898 !important;}
+
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {
 	.pullup {margin-top:0px!important;}

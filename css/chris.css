@@ -358,4 +358,4 @@ progress::-moz-progress-bar {
 
 /* NEW SINGLE POST MK2 */
 
-body.single-post #myCarousel item {height:250px;margin-top:10px;}
+body.single-post #myCarousel item {height:250px!important;margin-top:10px!important;}

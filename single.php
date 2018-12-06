@@ -29,23 +29,7 @@
 		
 		echo do_shortcode("[akvo_header_image title='".get_the_title()."' bg_image='".$bg_img_url."' bg_repeat='1']");
 	?>
-	<?php /* NOT NEEDED ANYMORE
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-		
-		<div class="carousel-inner">
-			
-			<div class="item active" style="background:url(<?php echo $bg_img_url; ?>)!important;background-size:auto!important;background-repeat:repeat!important;">
-				<div class="container">
-					<div class="carousel-caption microstory">
-						<h1><?php the_title(); ?></h1>
-					</div>
-				</div>
-			</div>
-        </div>
-
-    </div>
-		*/
-	?>
+	
 </div>
 
 
@@ -59,7 +43,8 @@
 			<div class="row singlerow">
 			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 postpaddingbottom">
 				<ul class="meta"> 
-					<li>Written by <?php echo get_the_author_link(); ?> on <?php the_time('j F, Y'); ?></li> 
+					<li>Written by <?php echo get_the_author_link(); ?></li>
+					<li><?php the_time('j F, Y'); ?></li> 
 				</ul>
                         <div class="postimage"><?php the_post_thumbnail('full'); ?></div>
 						<br/>

@@ -62,7 +62,7 @@
 				<div class="clear both"></div>
 							<br/>
 				<div class="row aboutauthor">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 authorbox bg-light-gray greybox fullheight"><div class="col-lg-3 col-sm-3 authorimage"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?></div><div class="col-lg-9 col-sm-12"><h3><?php $authorDesc = the_author_meta('description'); echo $authorDesc; ?></h3></div></div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 authorbox bg-light-gray greybox fullheight"><?php if(echo get_avatar( get_the_author_meta( 'ID' ) == 0){ ?><div class="col-lg-3 col-sm-3 authorimage"><?php echo get_avatar( get_the_author_meta( 'ID' ), 120 ); ?></div><div class="col-lg-9 col-sm-12"><?php }else{ ?><div class="col-lg-12"><?php } ?><h3><?php $authorDesc = the_author_meta('description'); echo $authorDesc; ?></h3></div></div>
 				</div>
 				<div class="row aboutauthor" style="margin-top:15px;">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catbox"><div class="fullheight">

@@ -20,7 +20,7 @@
 			<?php $i = 0; foreach( $instance['items'] as $item ):?>
 			<div id="<?php _e( $process_menu_id.$i );?>" class="tab-pane fade <?php if( !$i ){ _e('active in');}?>">
 				<h3 class="thin"><?php _e( $item['title'] );?></h3>
-				<?php _e( $item['desc'] );?>
+				<?php echo siteorigin_panels_render( 'process-desc-'.$i, true, $item['desc'] );?>
 			</div>
 			<?php $i++; endforeach; ?>
 		</div>

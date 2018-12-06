@@ -42,7 +42,7 @@ class Akvo_Process extends SiteOrigin_Widget {
 							'label' => __( 'Title', 'siteorigin-widgets' )
 						),
 						'desc' => array(
-							'type' 	=> 'tinymce',
+							'type' 	=> 'builder',
 							'label' => __( 'Description', 'siteorigin-widgets' )
 						),
 					)

@@ -316,7 +316,9 @@ a.buttonwhite {border: 2px solid #fff!important;}
 
 /* COLOUR OVERRIDES */
 
-.so-widget-sow-features .sow-features-list .sow-features-feature h5, .so-widget-sow-editor .siteorigin-widget-tinymce h4 {color:inherit!important;}
+.so-widget-sow-features .sow-features-list .sow-features-feature .textwidget > p,
+.so-widget-sow-features .sow-features-list .sow-features-feature h5, 
+.so-widget-sow-editor .siteorigin-widget-tinymce h4 {color:inherit!important;}
 
 /* PROCESS ROW RESPONSIVE */
 @media screen and (max-width: 768px) {

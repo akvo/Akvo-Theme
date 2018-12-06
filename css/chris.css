@@ -317,6 +317,10 @@ a.buttonwhite {border: 2px solid #fff!important;}
 
 iframe#toolframe {max-height:800px!important;min-height:600px!important;}
 
+/* PADDING OVERRIDE */
+
+body.single-microstory .so-widget-sow-editor, body.single-microstory .narrow-row {padding:0px!important;}
+
 /* COLOUR OVERRIDES */
 
 .so-widget-sow-features .sow-features-list .sow-features-feature .textwidget > p,

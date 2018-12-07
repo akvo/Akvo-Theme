@@ -363,5 +363,5 @@ body.single-post .authorimage {padding:0px!important;}
 body.single-post .authorimage img {border-radius:50%;}
 
 /* TESTIMONIAL FIXES */
-.testimonials #quote-carousel {margin-top:0px!important;padding-bottom:0px!important;}
-.testimonials .carousel .carousel-inner .item {height:auto!important;}
+.widget_akvo-testimonials #quote-carousel, .testimonials #quote-carousel {margin-top:0px!important;padding-bottom:0px!important;}
+.widget_akvo-testimonials .carousel .carousel-inner .item, .testimonials .carousel .carousel-inner .item {height:auto!important;}

@@ -1,8 +1,10 @@
 <?php /* Template Name: Blog Page */ ?>
 <?php get_header();?>
+<div class="container paddingbottom">
+	<div class="container-fluid"><?php the_content();?></div>
+</div>
 <!-- Posts -->
 <div class="container paddingtop paddingbottom">
-	<div class="container-fluid"><?php the_content();?></div>
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // are we on page one?
 

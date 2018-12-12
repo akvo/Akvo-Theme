@@ -1,6 +1,6 @@
 /* Chris Amends */
 
-h1, h2, h3, h4, h5, h6 {color:inherit!important;}
+h3, h4, h5, h6 {color:inherit!important;}
 
 ul.blog-detail {
     list-style: none!important;

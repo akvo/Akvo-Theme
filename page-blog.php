@@ -1,6 +1,5 @@
 <?php /* Template Name: Blog Page */ ?>
 <?php get_header();?>
-<div class="fullwidth homeslider paddingbottom"><?php get_template_part('partials/content', 'header'); ?></div>
 <!-- Posts -->
 <div class="container paddingtop paddingbottom">
 	<div class="container-fluid"><?php the_content();?></div>

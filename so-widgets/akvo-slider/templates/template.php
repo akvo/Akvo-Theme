@@ -4,10 +4,10 @@
     <div class="carousel slide" data-ride="carousel">
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner carousel-fade">
-			<?php $i = 0;foreach( $instance['slides'] as $slide ): if( isset( $slide['image'] ) ):?>
+			<?php $i = 0;foreach( $instance['slides'] as $slide ): if( isset( $slide['image'] ) && $slide['image'] ):?>
 			
 			<?php
-			
+				
 				$item_class = "item";
 				
 				if( isset( $instance['bg-size'] ) ){
@@ -24,7 +24,7 @@
 			
 			?>
 			
-			<div class="<?php _e( $item_class );?>" style="background-image:url('<?php _e( $akvo_widgets_template->get_image_url( $slide['image'] ) );?>');">
+			<div class="<?php _e( $item_class );?>" style="background-image:url('<?php _e( wp_get_attachment_url( $slide['image'] ) );?>');">
 				<div class="container">
 					<div class="carousel-caption microstory">
 						<?php if( isset( $slide['title'] ) && $slide['title'] ):?><h1><?php _e( $slide['title'] );?></h1><?php endif;?>

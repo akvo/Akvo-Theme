@@ -2,6 +2,9 @@
 
 h3, h4, h5, h6, h3.widget-title {color:inherit!important;}
 
+.titledate a {color:#404898!important;text-decoration:none!important;}
+.titledate a:hover {color:#03ad8c!important;}
+
 ul.blog-detail {
     list-style: none!important;
     margin-left: 0px!important;

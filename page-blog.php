@@ -1,28 +1,9 @@
 <?php /* Template Name: Blog Page */ ?>
 <?php get_header();?>
-<!-- Carousel -->
-<div class="container fullwidth">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-      
-        <div class="item active" style="background:url(<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2018/09/testphoto.jpg);">
-		<div class="container">
-           <div class="carousel-caption microstory">
-            <h1>Backstage Blog</h1>
-          </div>
-		</div>
-        </div><!-- End Item -->
-                        
-      </div><!-- End Carousel Inner -->
-
-    </div>
-</div>
-<!-- End Carousel -->
-
+<div class="fullwidth homeslider paddingbottom"><?php get_template_part('partials/content', 'header'); ?></div>
 <!-- Posts -->
 <div class="container paddingtop paddingbottom">
+	<div class="container-fluid"><?php the_content();?></div>
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // are we on page one?
 

@@ -4,7 +4,7 @@
 	<div class="container-fluid"><?php the_content();?></div>
 </div>
 <!-- Posts -->
-<div class="container paddingtop paddingbottom">
+<div class="container paddingbottom">
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 // are we on page one?
 

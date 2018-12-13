@@ -7,7 +7,7 @@
 <div class="tweetboxpullout">
 	<div class="fullheight">
 		<h3><?php _e( $instance['text'] );?></h3>
-		<h3 class="tweetbutton"><a target="_blank" href="<?php _e( $twitter_link );?>" target="_blank">Click to tweet <i class="fa fa-twitter" aria-hidden="true"></i></a></h3>
+		<h3 class="tweetbutton"><a target="_blank" href="<?php _e( $twitter_link );?>" target="_blank">Click to Tweet <i class="fa fa-twitter" aria-hidden="true"></i></a></h3>
 	</div>
 </div>
 <!-- END TWEET PULL OUT -->

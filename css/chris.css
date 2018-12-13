@@ -174,7 +174,7 @@ margin:-180px 0 0;
 .tweetboxpullout h3 {margin-top:0px!important;margin-bottom:0px!important;color:#2c509a;font-weight:300!important;font-size: 23px!important;line-height: 30px!important;}
 .tweetboxpullout .paragraph {padding-top:10px;}
 
-.tweetboxpullout h3 a {float:left;color:#2c509a;text-decoration:none!important;font-size:27px!important;opacity:0.5;transition: opacity 0.3s;}
+.tweetboxpullout h3 a {float:left;color:#2c509a;text-decoration:none!important;font-size:20px!important;opacity:0.5;transition: opacity 0.3s;}
 .tweetboxpullout h3 a:hover {opacity:1!important;transition: opacity 0.3s;}
 
 .tweetboxpullout h3.tweetbutton {text-align:right;bottom:0!important;padding:10px;float:right;}

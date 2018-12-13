@@ -372,6 +372,16 @@ body.single-post .authorimage img {border-radius:50%;}
 .widget_akvo-testimonials .carousel .carousel-inner .item, .testimonials .carousel .carousel-inner .item, .testimonials .carousel .carousel-inner {height:auto!important;}
 
 
+/* ACCORDION FIXES */
+
+.accordion btn {text-align:left!important;
+	font-family: Roboto Condensed!important;
+	font-weight: 300!important;
+	font-size: 28px!important;
+	color:inherit!important;
+	text-decoration:none!important;
+}
+
 /* RESPSONSIVE AMENDS */
 
 @media screen and (max-width: 1024px) and (min-width: 781px) {

@@ -5,7 +5,7 @@
 		<div class="card-header" id="heading<?php _e( $i );?>">
 			<h5 class="mb-0">
 				<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#<?php _e( $id );?>" aria-expanded="false" aria-controls="collapseOne">
-					<?php _e( $item['title'] );?><i class="fas fa-arrow-circle-down arrowdown"></i>
+					<?php _e( $item['title'] );?><i class="far fa-chevron-down arrowdown"></i>
 				</button>
 			</h5>
 		</div>

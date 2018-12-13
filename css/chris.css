@@ -374,7 +374,7 @@ body.single-post .authorimage img {border-radius:50%;}
 
 /* ACCORDION FIXES */
 
-.accordion btn {text-align:left!important;
+.accordion .btn {text-align:left!important;
 	font-family: Roboto Condensed!important;
 	font-weight: 300!important;
 	font-size: 28px!important;

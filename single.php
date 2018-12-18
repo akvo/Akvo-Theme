@@ -20,6 +20,10 @@
 				?>
 				<div class="blog-column"><?php the_content();?></div>
 				<div class="clear both"></div>
+				<?php 
+				global $user_ID;
+					if ( get_the_author_meta('description',$user_ID) ) : 
+				?>
 				<br/>
 				<div class="row aboutauthor">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 authorbox bg-light-gray greybox fullheight">
@@ -27,6 +31,7 @@
 						<div class="col-lg-10 col-sm-12"><h3><?php $authorDesc = the_author_meta('description'); echo $authorDesc; ?></h3></div>
 					</div>
 				</div>
+				<?php endif; ?>
 				<div class="row aboutauthor" style="margin-top:15px;">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 catbox">
 						<div class="fullheight">

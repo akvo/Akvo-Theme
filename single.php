@@ -22,7 +22,7 @@
 				<div class="clear both"></div>
 				<?php 
 				global $user_ID;
-					if ( get_the_author_meta('description',$user_ID) ) : 
+					if ( the_author_meta('description',$user_ID) ) : 
 				?>
 				<br/>
 				<div class="row aboutauthor">

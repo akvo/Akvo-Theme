@@ -427,3 +427,23 @@ body.home .statistics p {font-size:30px!important;color:inherit!important;}
 
 .amendedstat .statistics .stattitle {border:none!important;font-size: 50px;font-family: "Roboto Condensed", sans-serif;font-weight: 700;color:inherit!important;margin-bottom:15px!important;padding-bottom:0px!important;}
 .amendedstat .statistics p {font-size:30px!important;color:inherit!important;}
+
+
+/* CAROUSEL FADE FIXES */
+
+.carousel-fade .carousel-inner .item {
+            transition-property: opacity;
+        }
+        
+.carousel-fade .carousel-inner .item, .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+            opacity: 0;
+        }
+
+.carousel-fade .carousel-inner .active, .carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right {
+            opacity: 1;
+        }
+
+.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }

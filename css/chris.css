@@ -453,7 +453,7 @@ body.home .statistics p {font-size:30px!important;color:inherit!important;}
 /* PROCESS FIXES */
 
 /*.process .btn-info i {color:#fff!important;}*/
-.process h3 {display:none!important;}
+.so-widget-akvo-process .tab-content h3 {display:none!important;}
 
 
 /* NO BG IMAGE FIX */

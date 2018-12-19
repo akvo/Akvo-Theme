@@ -452,8 +452,8 @@ body.home .statistics p {font-size:30px!important;color:inherit!important;}
 
 /* PROCESS FIXES */
 
-.process .btn-info i {color:#fff!important;}
-.process .tab-pane.active h3 {display:none!important;}
+/*.process .btn-info i {color:#fff!important;}*/
+.process h3 {display:none!important;}
 
 
 /* NO BG IMAGE FIX */

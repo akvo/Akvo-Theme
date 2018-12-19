@@ -1,7 +1,7 @@
 <?php global $akvo_widgets_template; if( isset( $instance['slides'] ) ):?>
 <!-- Carousel -->
 <div class="container fullwidth short-title">
-    <div class="carousel slide" data-ride="carousel">
+    <div class="carousel slide carousel-fade" data-ride="carousel">
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner carousel-fade">
 			<?php $i = 0;foreach( $instance['slides'] as $slide ): if( isset( $slide['image'] ) && $slide['image'] ):?>

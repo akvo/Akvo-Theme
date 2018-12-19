@@ -454,6 +454,8 @@ body.home .statistics p {font-size:30px!important;color:inherit!important;}
 
 /*.process .btn-info i {color:#fff!important;}*/
 .so-widget-akvo-process .tab-content h3 {display:none!important;}
+.so-widget-akvo-process .panel-row-style {padding-top:20px!important;}
+.so-widget-akvo-process .process-step p small {font-size:18px!important;}
 
 
 /* NO BG IMAGE FIX */

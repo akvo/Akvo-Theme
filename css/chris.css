@@ -450,8 +450,10 @@ body.home .statistics p {font-size:30px!important;color:inherit!important;}
 .carousel-fade .carousel-inner .container {z-index:3!important;}
 
 
+/* PROCESS FIXES */
 
-
+.process .btn-info i {color:#fff!important;}
+.process .tab-pane.active h3 {display:none!important;}
 
 
 /* NO BG IMAGE FIX */

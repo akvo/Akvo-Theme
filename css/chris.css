@@ -447,7 +447,7 @@ body.home .statistics p {font-size:30px!important;color:inherit!important;}
             left: 0;
             transform: translate3d(0, 0, 0);
         }
-
+.carousel-fade .carousel-inner .container {z-index:3!important;}
 
 
 

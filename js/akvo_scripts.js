@@ -384,7 +384,3 @@ $(document).ready(function(){
 	});
 	
 });
-
-$('.collapse').on('hidden.bs.collapse', function () {
-        $('.collapse').eq(0).collapse('show');
-  });

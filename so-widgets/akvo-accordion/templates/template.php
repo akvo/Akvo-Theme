@@ -1,10 +1,10 @@
 <!-- AKVO ACCORDION -->
 <div class="accordion" id="accordionJobs">
 	<?php $i = 0;foreach( $instance['items'] as $item ): $id = "collapse".$i;?>
-	<div class="card" data-parent="#accordionJobs">
+	<div class="card">
 		<div class="card-header" id="heading<?php _e( $i );?>">
 			<h5 class="mb-0">
-				<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#<?php _e( $id );?>" aria-expanded="false" aria-controls="collapseOne">
+				<button class="btn btn-link btn-block text-left" type="button" data-parent="#accordionJobs" data-toggle="collapse" data-target="#<?php _e( $id );?>" aria-expanded="false" aria-controls="collapseOne">
 					<?php _e( $item['title'] );?><i class="far fa-chevron-down arrowdown"></i>
 				</button>
 			</h5>

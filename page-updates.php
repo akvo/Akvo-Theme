@@ -21,7 +21,7 @@ $terms = get_terms($taxonomy); // Get all terms of a taxonomy
 		   <div class="row paddingbottom">
 		   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="updateholder">
-				<div class="col-md-3 col-sm-12 date"><small><?php the_time( 'F jS, Y' ); ?></small><br><small><?php echo get_the_author_meta('display_name', $author_id); ?></small></div>
+				<div class="col-md-3 col-sm-12 date"><small><?php the_time( 'j F Y' ); ?></small><br><small><?php echo get_the_author_meta('display_name', $author_id); ?></small></div>
 				<div class="col-md-9 col-sm-12 update"><h3><?php the_title(); ?></h3><?php the_content(); ?></div>
 				</div>
 

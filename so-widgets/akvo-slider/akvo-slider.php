@@ -40,6 +40,11 @@ class Akvo_Slider extends SiteOrigin_Widget {
 							'library' 	=> 'image',
 							'fallback' 	=> false
 						),
+						'bg_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Choose a background color', 'siteorigin-widgets' ),
+							'default' 	=> '#bada55'
+						),
 						'title' 	=> array(
 							'type' => 'text',
 							'label' => __( 'Title', 'siteorigin-widgets' )

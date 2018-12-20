@@ -4,7 +4,7 @@
     <div class="carousel slide carousel-fade" data-ride="carousel">
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner carousel-fade">
-			<?php $i = 0;foreach( $instance['slides'] as $slide ): if( isset( $slide['image'] ) && $slide['image'] ):?>
+			<?php $i = 0;foreach( $instance['slides'] as $slide ):?>
 			
 			<?php
 				
@@ -21,10 +21,19 @@
 				if( !$i ){ 
 					$item_class .= " active";
 				}
+				
+				$item_style = "";
+				if( isset( $slide['image'] ) && $slide['image'] ){
+					$item_style .= "background-image:url('".wp_get_attachment_url( $slide['image'] )."');";
+				}
+				if( isset( $slide['bg_color'] ) && $slide['bg_color'] ){
+					$item_style .= "background-color:".$slide['bg_color'].";";
+				}
+				
 			
 			?>
 			
-			<div class="<?php _e( $item_class );?>" style="background-image:url('<?php _e( wp_get_attachment_url( $slide['image'] ) );?>');">
+			<div class="<?php _e( $item_class );?>" style="<?php _e( $item_style );?>">
 				<div class="container">
 					<div class="carousel-caption microstory">
 						<?php if( isset( $slide['title'] ) && $slide['title'] ):?><h1><?php _e( $slide['title'] );?></h1><?php endif;?>
@@ -35,7 +44,7 @@
 					</div>
 				</div>
 			</div><!-- End Item -->
-			<?php $i++;endif;endforeach;?>
+			<?php $i++;endforeach;?>
         </div><!-- End Carousel Inner -->	
 	</div>
 </div>

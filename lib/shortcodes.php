@@ -24,6 +24,12 @@
 		return ob_get_clean();
 	} );
 	
+	add_shortcode( 'akvo_rotating_sentence', function( $atts ){
+		ob_start();
+		include('templates/rotating_sentence.php');
+		return ob_get_clean();
+	} );
+	
 	/*
 	add_shortcode( 'akvo_sector_stories', function( $atts ){
 		ob_start();

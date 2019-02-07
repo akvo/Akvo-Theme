@@ -1,5 +1,4 @@
 .so-widget-akvo-rotating-sentence h2 {color:inherit!important;}
-.so-widget-akvo-rotating-sentence h2 .fadeIn {color:inherit!important;}
 
 /*FadeIn*/
 .fadeIn{
@@ -10,7 +9,7 @@
 	animation: fadeEffect 12.5s linear infinite 0s;
 	-ms-animation: fadeEffect 12.5s linear infinite 0s;
 	-webkit-animation: fadeEffect 12.5s linear infinite 0s;
-	color: #00abe9;
+	color: inherit;
 	opacity: 0;
 	overflow: hidden;
 	position: absolute;

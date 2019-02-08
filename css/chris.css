@@ -63,3 +63,10 @@
 	80% { opacity: 0; }
 	100% { opacity: 0; }
 }
+
+.greenbg form#gform_22 input[type=button], .greenbg form#gform_22 input[type=submit] {
+	background:#fff!important;color:#404898!important;border:1px solid #fff!important;
+}
+.purplebg form#gform_22 input[type=button]:hover, .purplebg form#gform_22 input[type=submit]:hover {
+	background:none!important;color:#fff!important;
+}

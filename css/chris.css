@@ -64,9 +64,9 @@
 	100% { opacity: 0; }
 }
 
-.purplebg form#gform_22 input[type=button], .purplebg form#gform_22 input[type=submit] {
+.purplebg form#gform_22 input[type=button], .purplebg form#gform_22 input[type=submit], .purplebg form input[type=button], .purplebg form input[type=submit]  {
 	background:#fff!important;color:#404898!important;border:1px solid #fff!important;
 }
-.purplebg form#gform_22 input[type=button]:hover, .purplebg form#gform_22 input[type=submit]:hover {
+.purplebg form#gform_22 input[type=button]:hover, .purplebg form#gform_22 input[type=submit]:hover, .purplebg form input[type=button]:hover, .purplebg form input[type=submit]:hover {
 	background:none!important;color:#fff!important;
 }

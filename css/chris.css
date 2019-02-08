@@ -70,3 +70,7 @@
 .purplebg form#gform_22 input[type=button]:hover, .purplebg form#gform_22 input[type=submit]:hover, .purplebg form input[type=button]:hover, .purplebg form input[type=submit]:hover {
 	background:none!important;color:#fff!important;
 }
+
+
+.greenbg form input, .greenbg form textarea, .greenbg form select {color:#000!important;}
+.purplebg form input, .purplebg form textarea, .purplebg form select {color:#000!important;}

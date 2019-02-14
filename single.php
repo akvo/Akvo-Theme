@@ -49,7 +49,7 @@
 			<!-- Share -->
 						
 			<!-- Comments -->
-			<div class="paddingtop paddingbottom">
+			<div class="paddingbottom">
 				<?php if (comments_open()) :?>
 				<div id="disqus_thread"></div>
 				<script>

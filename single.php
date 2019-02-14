@@ -49,7 +49,7 @@
 			<!-- Share -->
 						
 			<!-- Comments -->
-			<div class="paddingbottom">
+			<div class="paddingtop paddingbottom">
 				<?php if (comments_open()) :?>
 				<div id="disqus_thread"></div>
 				<script>
@@ -90,7 +90,7 @@
 <div class="fullwidth paddingtop paddingbottom greenbg whitetext">
 	<div class="container singlepost">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h2 class="paddingbottom aligncenter">Things you may also like...</h2>
+			<h2 class="paddingbottom aligncenter">You might also like...</h2>
 			<div class="row">
 				<?php $query2 = new WP_Query( 'post_type=advert&order=asc&orderby=date&posts_per_page=1' ); ?>
 				<?php if ( $query2->have_posts() ) :?>	

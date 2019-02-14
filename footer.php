@@ -9,7 +9,7 @@
 					<?php dynamic_sidebar( 'footer_2' ); ?>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-				<h5>Navigation</h5>
+				<h5>Explore resources</h5>
 				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-1', 'container_class' => 'col-xs-12 col-sm-6 col-md-6 nopadding', 'menu_class' => 'list-unstyled quick-links' ) ); ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-2', 'container_class' => 'col-xs-12 col-sm-6 col-md-6 nopadding', 'menu_class' => 'list-unstyled quick-links' ) ); ?>
 				</div>

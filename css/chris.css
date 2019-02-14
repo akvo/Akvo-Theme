@@ -1,5 +1,15 @@
 .so-widget-akvo-rotating-sentence h2 {color:inherit!important;}
 
+#disqus_thread iframe{
+	margin-top: 60px;
+}
+
+#gform_23 a, #gform_23 a:hover{
+	font-size: inherit !important;
+	color: inherit !important;
+	border-bottom: 1px solid #e04d95!important;
+}
+
 /*FadeIn*/
 .fadeIn{
 	display: inline;
@@ -64,12 +74,17 @@
 	100% { opacity: 0; }
 }
 
-.purplebg form#gform_22 input[type=button], .purplebg form#gform_22 input[type=submit], .purplebg form input[type=button], .purplebg form input[type=submit]  {
+.purplebg .gform_page_footer input[type=button], .purplebg form#gform_22 input[type=button], .purplebg form#gform_22 input[type=submit], .purplebg form input[type=button], .purplebg form input[type=submit]  {
 	background:#fff!important;color:#404898!important;border:1px solid #fff!important;
 }
-.purplebg form#gform_22 input[type=button]:hover, .purplebg form#gform_22 input[type=submit]:hover, .purplebg form input[type=button]:hover, .purplebg form input[type=submit]:hover {
+.purplebg .gform_page_footer input[type=button]:hover, .purplebg form#gform_22 input[type=button]:hover, .purplebg form#gform_22 input[type=submit]:hover, .purplebg form input[type=button]:hover, .purplebg form input[type=submit]:hover {
 	background:none!important;color:#fff!important;
 }
+.purplebg .gform_confirmation_wrapper a{
+	color: inherit;
+	border-bottom: 1px solid #e04d95!important;
+}
+
 
 
 .greenbg form input, .greenbg form textarea, .greenbg form select {color:#000!important;}

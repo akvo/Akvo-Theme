@@ -99,7 +99,7 @@
 	background:#000!important;color:#fff;border:1px solid #000!important;
 }
 .whitebg form input[type=button]:hover, .whitebg form input[type=submit]:hover {
-	background:none!important;color:#000!important;
+	background:#e6e6e6!important;color:#000!important;
 }
 
 

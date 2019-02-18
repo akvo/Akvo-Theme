@@ -96,7 +96,7 @@
 
 
 .whitebg form input[type=button], .whitebg form input[type=submit]  {
-	background:#000!important;color:#fff!important;border:1px solid #000!important;
+	background:#000!important;color:#fff;border:1px solid #000!important;
 }
 .whitebg form input[type=button]:hover, .whitebg form input[type=submit]:hover {
 	background:none!important;color:#000!important;

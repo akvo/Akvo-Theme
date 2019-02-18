@@ -99,7 +99,7 @@
 		
 		
 		// load google fonts - can be combined for later
-		wp_enqueue_style('assistant', 'https://fonts.googleapis.com/css?family=Assistant:300,400', null, true);
+		wp_enqueue_style('assistant', 'https://fonts.googleapis.com/css?family=Assistant:300,400,700', null, true);
 		wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700', null, true);
 		
 		// two versions of fontawesome

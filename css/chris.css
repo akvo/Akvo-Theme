@@ -95,6 +95,14 @@
     font-size: 24px!important;font-family: 'Roboto Condensed', sans-serif !important;font-weight:300!important;}
 
 
+.whitebg form input[type=button], .whitebg form input[type=submit]  {
+	background:#000!important;color:#fff!important;border:1px solid #000!important;
+}
+.whitebg form input[type=button]:hover, .purplebg form input[type=submit]:hover {
+	background:none!important;color:#000!important;
+}
+
+
 .carousel-caption.microstory {
 	max-width:1100px!important;
 }

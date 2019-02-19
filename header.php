@@ -63,7 +63,7 @@
 							) ); 
 						?>
 							<ul class="nav navbar-nav navbar-right">
-								<li><?php do_action('icl_language_selector'); ?></li>
+								<li><?php //do_action('icl_language_selector'); ?></li>
 								<li><a href="#search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>

@@ -111,3 +111,40 @@ p, strong, .company, .fullwidth li {font-size:17px!important;}
 strong {font-weight:700!important;}
 
 .advertbox {background-color:#fff!important;background-size:95% 95%!important;background-position: center bottom!important;}
+
+/* TEMP FILTERS FIX */
+
+.nested-filters nav ul {
+  padding: 0; }
+.nested-filters .primary-filter-list a {
+  color: #202024;
+  border-radius: 0px; }
+  .nested-filters .primary-filter-list a:hover {
+    color: #202024;
+    background: #f0f0f0;
+    box-shadow: none; }
+.nested-filters .secondary-filter-list {
+  margin-top: 15px; }
+  .nested-filters .secondary-filter-list a {
+    color: #797979;
+    border-radius: 0px; }
+    .nested-filters .secondary-filter-list a:hover {
+      color: #797979;
+      background: #f0f0f0;
+      box-shadow: none; }
+.nested-filters.tertiary-filter-list a {
+  color: #aaa8a8;
+  border-radius: 0px; }
+  .nested-filters.tertiary-filter-list a:hover {
+    color: #aaa8a8;
+    background: #f0f0f0;
+    box-shadow: none; }
+@media screen and (max-width: 768px) {
+  .nested-filters .primary-filter-list a {
+    padding: 10px;
+    display: inline-block; }
+  .nested-filters .secondary-filter-list {
+    display: none; } }
+
+
+

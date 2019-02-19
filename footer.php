@@ -17,12 +17,13 @@
 			<br><br/>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-				<ul class="list-unstyled list-inline social">
-						<li class="list-inline-item"><a href="https://www.facebook.com/1Akvo"><i class="fa fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="https://twitter.com/akvo/staff"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="https://github.com/akvo"><i class="fa fa-github"></i></a></li>
-						<li class="list-inline-item"><a href="http://www.youtube.com/user/Akvofoundation"><i class="fa fa-youtube"></i></a></li>
-						<li class="list-inline-item"><a href="mailto:info@akvo.org" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					<ul class="list-unstyled list-inline social">
+						<li class="list-inline-item"><a href="https://www.linkedin.com/company/akvo/" target="_blank"><i class="fa fa-linkedin-in"></i></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/akvo" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.facebook.com/1Akvo" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="http://www.youtube.com/user/Akvofoundation" target="_blank"><i class="fa fa-youtube"></i></a></li>
+						<li class="list-inline-item"><a href="https://github.com/akvo" target="_blank"><i class="fa fa-github"></i></a></li>
+						<li class="list-inline-item"><a href="https://akvo.org/contact-us/" target="_blank"><i class="fa fa-envelope"></i></a></li>
 					</ul>
 					<p class="text-center"><?php dynamic_sidebar( 'footer_creative_commons_text' ); ?></p>
 				</div>

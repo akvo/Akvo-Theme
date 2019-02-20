@@ -32,7 +32,11 @@
 		<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 	<body <?php body_class(); ?>>
-		
+		<!-- Start Piwik PRO Tag Manager code --><script type="text/javascript">
+function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}var isStgDebug=(window.location.href.match("stg_debug")||window.document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+var url = "//analytics.akvo.org/containers/86745314-4c88-45c4-8c1d-77cd100105ea.sync.js" + (isStgDebug ? "?stg_debug" : "");
+document.write('<script src="' + url + '"></' + 'script>');
+</script><!-- End Piwik PRO Tag Manager code -->
 		<div id="mainbody">
 		
 		<!-- NEW HEADER -->

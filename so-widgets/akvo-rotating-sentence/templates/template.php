@@ -14,8 +14,9 @@
 
 
 <?php if( isset( $instance['phrase'] ) ):?>
-<h2 id="<?php _e( $instance['container_id'] );?>"><?php _e( $instance['phrase'] );?>
-	<div class="nofade"><?php if( isset( $instance['items'] ) ):?></div>
+<h2 id="<?php _e( $instance['container_id'] );?>">
+	<div class="nofade"><?php _e( $instance['phrase'] );?></div>
+	<?php if( isset( $instance['items'] ) ):?>
     <div class="fadeIn">
 		<?php foreach( $instance['items'] as $word ):?>
 		<span><?php _e( $word['word'] );?></span>

@@ -7,10 +7,9 @@
 <?php get_header();?>
 <?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));?>
 <!-- Carousel -->
-<div class="container fullwidth">
+<div class="container fullwidth authorheader">
 	<?php
-		$bg_img_url = get_bloginfo('template_url')."/images/akvocover.jpg";
-		echo do_shortcode("[akvo_header_image title='".$curauth->display_name."' bg_image='".$bg_img_url."' bg_repeat='1']");
+		echo do_shortcode("[akvo_header_image title='".$curauth->display_name."']");
 	?>
 </div>
 <!-- End Carousel -->

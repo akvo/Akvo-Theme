@@ -8,9 +8,7 @@
 <?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));?>
 <!-- Carousel -->
 <div class="container fullwidth authorheader">
-	<?php
-		echo do_shortcode("[akvo_header_image title='".$curauth->display_name."']");
-	?>
+	<div class="carousel-caption microstory"><h1><?php $curauth->display_name(); ?></h1></div>
 </div>
 <!-- End Carousel -->
 

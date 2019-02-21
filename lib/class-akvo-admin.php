@@ -149,12 +149,13 @@
 				),
 				/* ADVERTS */
 				'advert'	=> array(
-					'name' 			=> 'Akvo Adverts',
-					'singular_name' => 'Akvo Advert',
-					'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
-					'menu_icon' 	=> 'dashicons-format-gallery',
-					'rewrite'		=> false,
-					'has_archive' 	=> true	
+					'name' 					=> 'Akvo Adverts',
+					'singular_name' 		=> 'Akvo Advert',
+					'supports' 				=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
+					'menu_icon' 			=> 'dashicons-format-gallery',
+					'exclude_from_search' 	=> true,
+					'rewrite'				=> false,
+					'has_archive' 			=> true	
 				),
 				/* PRODUCT UPDATES */
 				'product_update'	=> array(
@@ -374,11 +375,12 @@
 							'view' 			=> 'View',
 							'view_item' 	=> 'View',
 						),
-						'public' 		=> true,
-						'supports' 		=> $post_type['supports'],
-						'menu_icon' 	=> $post_type['menu_icon'],
-						'has_archive' 	=> $post_type['has_archive'],
-						'rewrite' 		=> isset( $post_type['rewrite'] ) ? $post_type['rewrite'] : array( 'slug' => $slug, 'with_front'=> false, 'feed' => true, 'pages' => true )
+						'public' 				=> true,
+						'supports' 				=> $post_type['supports'],
+						'menu_icon' 			=> $post_type['menu_icon'],
+						'has_archive' 			=> $post_type['has_archive'],
+						'exclude_from_search' 	=> isset( $post_type['exclude_from_search'] ) ? $post_type['exclude_from_search'] : false,
+						'rewrite' 				=> isset( $post_type['rewrite'] ) ? $post_type['rewrite'] : array( 'slug' => $slug, 'with_front'=> false, 'feed' => true, 'pages' => true )
 					)
 				);
 			}

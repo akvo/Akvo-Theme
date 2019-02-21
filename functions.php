@@ -21,6 +21,12 @@
 			'post_type' => 'post'
 			)
 		);
+		new MultiPostThumbnails(array(
+			'label' 	=> 'Secondary Featured Image',
+			'id' 		=> 'background_header_image',
+			'post_type' => 'microstory'
+			)
+		);
 	}
 	
 	function akvo_universal_color_pallet() {

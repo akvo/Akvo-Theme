@@ -129,7 +129,7 @@
 							<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
 							<div class="overlay overlayBottom">
 								<ul class="blog-detail"> 
-								<li><i class="fa fa-clock-o"></i> <?php the_time('F jS, Y'); ?></li> 
+								<li><i class="fa fa-calendar"></i> <?php the_time('F jS, Y'); ?></li> 
 								</ul>
 							</div>
 							 

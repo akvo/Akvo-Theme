@@ -22,7 +22,7 @@
 				<div class="clear both"></div>
 				<?php if (get_the_author_meta('description')) { ?>
 				<br/>
-				<div class="row aboutauthor">
+				<div class="row aboutauthor row-eq-height">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 authorbox bg-light-gray greybox fullheight">
 						<div class="col-lg-2 col-sm-2 authorimage"><?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?></div>
 						<div class="col-lg-10 col-sm-10"><h3><?php $authorDesc = the_author_meta('description'); echo $authorDesc; ?></h3></div>

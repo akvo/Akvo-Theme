@@ -101,11 +101,11 @@
 				global $post;
 					$image_id = MultiPostThumbnails::get_post_thumbnail_id( 'post', 'background_header_image', $post->ID );
 					if( $image_id ){ $image_src = wp_get_attachment_image_src( $image_id, 'full' ); if( is_array( $image_src ) ){ $url = $image_src[0]; } }
-				}
+			}
 				?>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 postpaddingbottom">
 					<a href="<?php echo $advert_url ?>">
-						<div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $image_id  ?>);"></div>
+						<div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $featured_img_url ?>);"></div>
 					</a>
 				</div>
 				<?php endwhile; wp_reset_postdata(); endif; ?>

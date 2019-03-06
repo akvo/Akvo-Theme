@@ -24,7 +24,7 @@
 		new MultiPostThumbnails(array(
 			'label' 	=> 'Secondary Featured Image',
 			'id' 		=> 'background_header_image',
-			'post_type' => 'microstory'
+			'post_type' => 'advert'
 			)
 		);
 	}

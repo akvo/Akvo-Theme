@@ -96,10 +96,12 @@
 				<?php if ( $query2->have_posts() ) :?>	
 				<?php while ( $query2->have_posts() ) : $query2->the_post(); 
 				$advert_url = get_post_meta($post->ID, 'url', true);
-				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+				$image_id = MultiPostThumbnails::get_post_thumbnail_id( 'post', 'background_header_image', $post->ID ); 
+				?>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 postpaddingbottom">
 					<a href="<?php echo $advert_url ?>">
-						<div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $featured_img_url ?>);"></div>
+						<div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $image_id ?>);"></div>
 					</a>
 				</div>
 				<?php endwhile; wp_reset_postdata(); endif; ?>

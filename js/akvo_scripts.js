@@ -181,7 +181,7 @@ $(document).ready(function(){
 				settings	: { slidesToShow: 4 }
 			}, {
 				breakpoint: 520,
-				settings: { slidesToShow: 3 }
+				settings: { slidesToShow: 2 }
 			}]
 		});
 		

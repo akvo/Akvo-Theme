@@ -112,7 +112,7 @@
 				?>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 postpaddingbottom">
 					<a href="<?php echo $advert_url ?>">
-						<div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $featured_img_url ?>);"></div>
+						<div class="col-lg-12 col-xs-12 advertbox" style="background:url(<?php echo $image_id ?>);"></div>
 					</a>
 				</div>
 				<?php endwhile; wp_reset_postdata(); endif; ?>

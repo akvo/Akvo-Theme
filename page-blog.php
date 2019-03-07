@@ -89,8 +89,8 @@ if(1 == $paged) { ?>
 <?php } ?>
 <div class="row paddingbottom">
 <div class="pagenav">
-    <div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
-    <div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
+    <div class="alignleft"><?php previous_posts_link('Newer posts', $query->max_num_pages) ?></div>
+    <div class="alignright"><?php next_posts_link('Older posts', $query->max_num_pages) ?></div>
 </div>
 </div>
 </div>

@@ -95,8 +95,6 @@
 				<?php $query2 = new WP_Query( 'post_type=advert&order=asc&orderby=date&posts_per_page=1' ); ?>
 				<?php if ( $query2->have_posts() ) :?>	
 				<?php while ( $query2->have_posts() ) : $query2->the_post(); 
-				$advert_url = get_post_meta($post->ID, 'url', true);
-				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 				if( class_exists('MultiPostThumbnails') && MultiPostThumbnails::has_post_thumbnail( 'post', 'background_header_image') ) {
 					global $post;
 					$image_id = MultiPostThumbnails::get_post_thumbnail_id( 'post', 'background_header_image', $post->ID ); 
@@ -109,6 +107,8 @@
 					}
 		
 				};
+				$advert_url = get_post_meta($post->ID, 'url', true);
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 				?>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 postpaddingbottom">
 					<a href="<?php echo $advert_url ?>">

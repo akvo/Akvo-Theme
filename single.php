@@ -97,6 +97,18 @@
 				<?php while ( $query2->have_posts() ) : $query2->the_post(); 
 				$advert_url = get_post_meta($post->ID, 'url', true);
 				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+				if( class_exists('MultiPostThumbnails') && MultiPostThumbnails::has_post_thumbnail( 'post', 'background_header_image') ) {
+					global $post;
+					$image_id = MultiPostThumbnails::get_post_thumbnail_id( 'post', 'background_header_image', $post->ID ); 
+					if( $image_id ){
+						$image_src = wp_get_attachment_image_src( $image_id, 'full' );  
+				
+						if( is_array( $image_src ) ){
+						$url = $image_src[0];
+						}
+					}
+		
+				};
 				?>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 postpaddingbottom">
 					<a href="<?php echo $advert_url ?>">

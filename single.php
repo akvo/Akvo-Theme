@@ -93,22 +93,27 @@
 			<h2 class="paddingbottom aligncenter">You might also like...</h2>
 			<div class="row">
 				<?php $query2 = new WP_Query( 'post_type=advert&order=asc&orderby=date&posts_per_page=1' ); ?>
-				<?php if ( $query2->have_posts() ) :?>	
-				<?php while ( $query2->have_posts() ) : $query2->the_post(); 
-				if( class_exists('MultiPostThumbnails') && MultiPostThumbnails::has_post_thumbnail( 'post', 'background_header_image') ) {
-					global $post;
-					$image_id = MultiPostThumbnails::get_post_thumbnail_id( 'post', 'background_header_image', $post->ID ); 
-					if( $image_id ){
-						$image_src = wp_get_attachment_image_src( $image_id, 'full' );  
+				<?php if ( $query2->have_posts() ) : while ( $query2->have_posts() ) : $query2->the_post();
+					
+					// FIRST GET THE FEATURED IMAGE URL
+					$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+					
+					// IF THE SECONDARY IMAGE EXISTS THEN REPLACE WITH THE SECOND ONE
+					if( class_exists('MultiPostThumbnails') && MultiPostThumbnails::has_post_thumbnail( 'post', 'background_header_image') ) {
+						global $post;
+						$image_id = MultiPostThumbnails::get_post_thumbnail_id( 'post', 'background_header_image', $post->ID ); 
+						if( $image_id ){
+							$image_src = wp_get_attachment_image_src( $image_id, 'full' );  
 				
-						if( is_array( $image_src ) ){
-						$url = $image_src[0];
+							if( is_array( $image_src ) ){
+							$featured_img_url = $image_src[0];
+							}
 						}
-					}
 		
-				};
-				$advert_url = get_post_meta($post->ID, 'url', true);
-				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+					}
+					
+					$advert_url = get_post_meta($post->ID, 'url', true);
+					
 				?>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 postpaddingbottom">
 					<a href="<?php echo $advert_url ?>">

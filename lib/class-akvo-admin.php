@@ -301,6 +301,19 @@
 					'context'	=> 'side',
 					'priority'	=> 'default'
 				),
+				'post_settings_box'	=> array(
+					'title'		=> 'Blog Settings',
+					'fields'	=> array(
+						'disable_featured_image'	=> array(
+							'label'		=> 'Hide Featured Image within the post content',
+							'type'		=> 'boolean',
+							'default'	=> false
+						),
+					),
+					'post_type'	=> array('post'),
+					'context'	=> 'side',
+					'priority'	=> 'default'
+				),
 				'foundation_member'	=> array(
 					'title'		=> 'Settings',
 					'fields'	=> array(

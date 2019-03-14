@@ -10,7 +10,10 @@
 					<li>Written by <?php echo get_the_author_link(); ?><br/>
 					<?php the_time('j F Y'); ?></li> 
 				</ul>
+				
+				<?php global $post; $disable_featured_image = get_post_meta( $post->ID, 'disable_featured_image', true ); if( !$disable_featured_image ):?>
 				<div class="postimage"><?php the_post_thumbnail('full'); ?></div>
+				<?php endif;?>
 				<br/>
 				<?php
 					$get_description = get_post(get_post_thumbnail_id())->post_excerpt;

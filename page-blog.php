@@ -17,7 +17,7 @@ if(1 == $paged) { ?>
 				<?php while ( $query3->have_posts() ) : $query3->the_post(); ?>
 			    <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 postpaddingbottom">
                     <div class="col-lg-12 col-xs-12">
-                        <div class="featuredimage"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
+                        <div class="featuredimage"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 						 <div class="blog-column">
 						 <div class="titledatemain">
 							<h4><?php the_title(); ?></h4>

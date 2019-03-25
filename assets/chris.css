@@ -144,9 +144,13 @@ strong {font-weight:700!important;}
     padding: 10px;
     display: inline-block; }
   .nested-filters .secondary-filter-list {
-    display: none; } 
+    display: none; }
 }
 
 body.author .authorheader {max-height:270px!important;background-color:#03AD8C!important;}
 
-
+body.tag{
+	float: none;
+	padding: 0;
+	margin: 0;
+}

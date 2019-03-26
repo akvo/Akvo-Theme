@@ -12,7 +12,7 @@
 		<meta charset="UTF-8">
 		<title><?php wp_title('|', true, 'right'); ?></title>
 		<!--
-		
+
 		<meta name="description" content="Akvo.org: See it Happen" />
 		<meta name="author" content="Akvo Foundation">
 
@@ -22,9 +22,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="HandheldFriendly" content="True">
-		
+
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-NJXGk7R+8gWGBdutmr+/d6XDokLwQhF1U3VA7FhvBDlOq7cNdI69z7NQdnXxcF7k" crossorigin="anonymous">
-		
+
 		<!--link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-j8y0ITrvFafF4EkV1mPW0BKm6dp3c+J9Fky22Man50Ofxo2wNe5pT1oZejDH9/Dt" crossorigin="anonymous"-->
 
 		<?php wp_head(); ?>
@@ -38,7 +38,7 @@ var url = "//analytics.akvo.org/containers/86745314-4c88-45c4-8c1d-77cd100105ea.
 document.write('<script src="' + url + '"></' + 'script>');
 </script><!-- End Piwik PRO Tag Manager code -->
 		<div id="mainbody">
-		
+
 		<!-- NEW HEADER -->
 			<header id="top" role="banner" class="topbar">
 				<nav id="header" class="navbar navbar-fixed-top">
@@ -57,17 +57,17 @@ document.write('<script src="' + url + '"></' + 'script>');
 							</div>
 						</div>
 						<div id="navbar" class="collapse navbar-collapse">
-						<?php 
-							wp_nav_menu( array( 
-								'theme_location' 	=> 'header-menu', 
-								'menu_id' 			=> 'menu-main', 
+						<?php
+							wp_nav_menu( array(
+								'theme_location' 	=> 'header-menu',
+								'menu_id' 			=> 'menu-main',
 								'menu_class' 		=> 'nav navbar-nav',
 								'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 								'walker'            => new WP_Bootstrap_Navwalker(),
-							) ); 
+							) );
 						?>
 							<ul class="nav navbar-nav navbar-right">
-								<li><?php //do_action('icl_language_selector'); ?></li>
+								<li><?php do_action('icl_language_selector'); ?></li>
 								<li><a href="#search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
@@ -82,6 +82,6 @@ document.write('<script src="' + url + '"></' + 'script>');
 			<progress value="0" id="progressBar">
 				<div class="progress-container">
 					<span class="progress-bar"></span>
-				</div>		
+				</div>
 			</progress>
 			<!-- End Progress Bar -->

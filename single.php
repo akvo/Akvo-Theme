@@ -17,16 +17,18 @@
 					<li>Written by <?php echo get_the_author_link(); ?><br/>
 					<?php the_time('j F Y'); ?></li>
 				</ul>
+
 				<!-- HIDE FEATURED IMAGE IF THE PAGE SETTINGS ARE DISABLED -->
-				<?php  if( !$disable_featured_image ):?>
-				<div class="postimage"><?php the_post_thumbnail('full'); ?></div><br/>
 				<?php
-					$featured_img_description = get_post(get_post_thumbnail_id())->post_excerpt;
-					if ( !empty(	$featured_img_description	)	)	{	//If description is not empty then show the div
-						echo '<div class="bg-light-gray greybox fullheight">' . $featured_img_description . '</div><br/>';
+					if( !$disable_featured_image ){
+						echo '<div class="postimage">'. get_the_post_thumbnail('full') .'</div><br/>';
+						$featured_img_description = get_post( get_post_thumbnail_id() )->post_excerpt;
+						if ( !empty(	$featured_img_description	)	)	{
+							// If description is not empty then show the div
+							echo '<div class="bg-light-gray greybox fullheight">' . $featured_img_description . '</div><br/>';
+						}
 					}
 				?>
-				<?php endif;?>
 				<!-- HIDE FEATURED IMAGE IF THE PAGE SETTINGS ARE DISABLED -->
 
 				<div class="blog-column"><?php the_content();?></div>

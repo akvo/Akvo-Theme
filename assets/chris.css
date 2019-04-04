@@ -153,9 +153,15 @@ body.tag{
 	float: none;
 	padding: 0;
 	margin: 0;
+	color: inherit !important;
 }
 
-body.tag #myCarousel .item{
+body.tag:hover{
+	filter: none !important;
+	font-weight: inherit !important;
+}
+
+body.tag #myCarousel .item, body.category #myCarousel .item{
 	height: 350px !important;
 	margin-top: 10px !important;
 	background: #03ad8c !important;

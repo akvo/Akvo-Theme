@@ -4,11 +4,16 @@
 	margin-top: 60px;
 }
 
-#gform_23 a, #gform_23 a:hover{
+
+
+/* ANCHOR LINKS WITHIN THE GRAVITY FORMS IN THE FOOTER */
+#footer .gform_wrapper form a, #footer .gform_wrapper form a:hover{
 	font-size: inherit !important;
 	color: inherit !important;
 	border-bottom: 1px solid #e04d95!important;
 }
+
+
 
 /*FadeIn*/
 .fadeIn{

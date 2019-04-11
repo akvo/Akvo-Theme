@@ -9,6 +9,7 @@
 
 	?>
 	<div class="container fullwidth post"><?php get_template_part('partials/content', 'header');?></div>
+
 	<!-- Posts -->
 	<div class="container paddingtop singlepost">
 		<div class="row singlerow">

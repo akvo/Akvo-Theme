@@ -7,7 +7,7 @@ $(function () {
         $('#search').addClass('open');
         $('#search > form > input[type="search"]').focus();
     });
-    
+
     $('#search, #search button.close').on('click keyup', function(event) {
         if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
             $(this).removeClass('open');
@@ -21,12 +21,12 @@ $(document).ready( function() {
     $('#myCarousel').carousel({
 		interval:   4000
 	});
-	
+
 	var clickEvent = false;
 	$('#myCarousel').on('click', '.nav a', function() {
 			clickEvent = true;
 			$('.nav li').removeClass('active');
-			$(this).parent().addClass('active');		
+			$(this).parent().addClass('active');
 	}).on('slid.bs.carousel', function(e) {
 		if(!clickEvent) {
 			var count = $('.nav').children().length -1;
@@ -34,7 +34,7 @@ $(document).ready( function() {
 			current.removeClass('active').next().addClass('active');
 			var id = parseInt(current.data('slide-to'));
 			if(count == id) {
-				$('.nav li').first().addClass('active');	
+				$('.nav li').first().addClass('active');
 			}
 		}
 		clickEvent = false;
@@ -46,7 +46,7 @@ $(document).ready( function() {
 (function ($) {
 	$.fn.countTo = function (options) {
 		options = options || {};
-		
+
 		return $(this).each(function () {
 			// set options for current element
 			var settings = $.extend({}, $.fn.countTo.defaults, {
@@ -56,58 +56,58 @@ $(document).ready( function() {
 				refreshInterval: $(this).data('refresh-interval'),
 				decimals:        $(this).data('decimals')
 			}, options);
-			
+
 			// how many times to update the value, and how much to increment the value on each update
 			var loops = Math.ceil(settings.speed / settings.refreshInterval),
 				increment = (settings.to - settings.from) / loops;
-			
+
 			// references & variables that will change with each update
 			var self = this,
 				$self = $(this),
 				loopCount = 0,
 				value = settings.from,
 				data = $self.data('countTo') || {};
-			
+
 			$self.data('countTo', data);
-			
+
 			// if an existing interval can be found, clear it first
 			if (data.interval) {
 				clearInterval(data.interval);
 			}
 			data.interval = setInterval(updateTimer, settings.refreshInterval);
-			
+
 			// initialize the element with the starting value
 			render(value);
-			
+
 			function updateTimer() {
 				value += increment;
 				loopCount++;
-				
+
 				render(value);
-				
+
 				if (typeof(settings.onUpdate) == 'function') {
 					settings.onUpdate.call(self, value);
 				}
-				
+
 				if (loopCount >= loops) {
 					// remove the interval
 					$self.removeData('countTo');
 					clearInterval(data.interval);
 					value = settings.to;
-					
+
 					if (typeof(settings.onComplete) == 'function') {
 						settings.onComplete.call(self, value);
 					}
 				}
 			}
-			
+
 			function render(value) {
 				var formattedValue = settings.formatter.call(self, value, settings);
 				$self.html(formattedValue);
 			}
 		});
 	};
-	
+
 	$.fn.countTo.defaults = {
 		from: 0,               // the number the element should start at
 		to: 0,                 // the number the element should end at
@@ -118,7 +118,7 @@ $(document).ready( function() {
 		onUpdate: null,        // callback method for every time the element is updated
 		onComplete: null       // callback method for when the element finishes updating
 	};
-	
+
 	function formatter(value, settings) {
 		return value.toFixed(settings.decimals);
 	}
@@ -131,10 +131,10 @@ jQuery(function ($) {
 	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
 	}
   });
-  
+
   // start all the timers
-  $('.timer').each(count);  
-  
+  $('.timer').each(count);
+
   function count(options) {
 	var $this = $(this);
 	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
@@ -152,22 +152,22 @@ $(document).ready(function(){
 			} else {
 				$('#toTop').fadeOut();
 			}
-		}); 
+		});
     $('#toTop').click(function(){
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
     });
 });
 
-// LOGO SLIDER 
+// LOGO SLIDER
 
 $(document).ready(function(){
-	
-	
+
+
 	$('[data-behaviour~=logos-slick]').each( function(){
-		
+
 		var $el = $( this );
-		
+
 		$el.slick({
 			slidesToShow	: $el.data('items'),
 			slidesToScroll	: 1,
@@ -177,16 +177,19 @@ $(document).ready(function(){
 			dots			: false,
 			pauseOnHover	: false,
 			responsive		: [{
-				breakpoint	: 768,
+				breakpoint	: 960,
 				settings	: { slidesToShow: 4 }
 			}, {
-				breakpoint: 520,
+				breakpoint: 768,
+				settings: { slidesToShow: 3 }
+			},{
+        breakpoint: 520,
 				settings: { slidesToShow: 2 }
-			}]
+      }]
 		});
-		
-	});	
-	
+
+	});
+
 });
 
 
@@ -216,7 +219,7 @@ $(document).ready(function(){
     percent = percent.toFixed();
     $(".progress-bar")
       .css("width",percent+"%")
-      .html(percent+"%");   
+      .html(percent+"%");
   }
 });
 
@@ -237,19 +240,19 @@ $(document).ready(function() {
 // PROGRESS BAR
 
 $(document).ready(function(){
-    
+
     var getMax = function(){
         return $(document).height() - $(window).height();
     }
-    
+
     var getValue = function(){
         return $(window).scrollTop();
     }
-    
+
     if('max' in document.createElement('progress')){
         // Browser supports progress element
         var progressBar = $('progress');
-        
+
         // Set the Max attr for the first time
         progressBar.attr({ max: getMax() });
 
@@ -257,29 +260,29 @@ $(document).ready(function(){
             // On scroll only Value attr needs to be calculated
             progressBar.attr({ value: getValue() });
         });
-      
+
         $(window).resize(function(){
             // On resize, both Max/Value attr needs to be calculated
             progressBar.attr({ max: getMax(), value: getValue() });
-        });   
+        });
     }
     else {
-        var progressBar = $('.progress-bar'), 
-            max = getMax(), 
+        var progressBar = $('.progress-bar'),
+            max = getMax(),
             value, width;
-        
+
         var getWidth = function(){
             // Calculate width in percentage
-            value = getValue();            
+            value = getValue();
             width = (value/max) * 100;
             width = width + '%';
             return width;
         }
-        
+
         var setWidth = function(){
             progressBar.css({ width: getWidth() });
         }
-        
+
         $(document).on('scroll', setWidth);
         $(window).on('resize', function(){
             // Need to reset the Max attr
@@ -292,14 +295,14 @@ $(document).ready(function(){
 /* CLOCKS */
 
 $(document).ready(function(){
-	
-	
+
+
 	$('body').find('[data-behaviour~=clock]').each( function(){
-		
+
 		var el 		= $( this ),
 			imgpath = settings['template_url'] + '/images/jClocks-'; // settings OBJECT IS LOADED FROM FUNCTIONS.PHP
-	
-		
+
+
 		el.jClocksGMT({
 			imgpath	: imgpath,
 			title	: el.data('title'),
@@ -307,19 +310,19 @@ $(document).ready(function(){
 			offset	: el.data('offset'),
 			dst		: true
 		});
-		
+
 	});
-		
+
 	// magic happens here
 	var clocks = $('.jcgmt-container'); // get all clock elements
 
-	// delay 1 second to finish initialization of clocks	
+	// delay 1 second to finish initialization of clocks
 	setTimeout(function() {
 		clocks.each(function(){
 			var clock = $(this);
 			var localeTime = clock.find('.jcgmt-clockHolder').prop('title'); // get clock time
 			var h = parseFloat(localeTime.split(':')[0]); // get hours from time
-			
+
 			if( localeTime.toUpperCase().indexOf('AM') !== -1 || localeTime.toUpperCase().indexOf('PM') !== -1 ) // check for am/pm 12 hour time
 			{ // convert from 12 hour clock
 				if( localeTime.toUpperCase().indexOf('PM') !== -1 )
@@ -333,9 +336,9 @@ $(document).ready(function(){
 						h = 0; // convert to 24 hour time
 				}
 			}
-			
+
 			if( h > 07 && h < 18) // 7am - 6pm
-			{ 
+			{
 				clock.addClass("daytime"); // daytime mode
 			}
 			else
@@ -346,41 +349,41 @@ $(document).ready(function(){
 	}, 1000);
 
 	$('body').find('[data-behaviour~=process]').each( function(){
-		
+
 		var $el = $( this );
-		
+
 		$el.find('.btn-circle').on('click',function(){
-			
+
 			$('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
 			$(this).addClass('btn-info').removeClass('btn-default').blur();
-		
+
 		});
-		
+
 	});
-	
+
 	/*
-	* IMAGE ON CLICK OPENS A VIDEO MODAL. 
+	* IMAGE ON CLICK OPENS A VIDEO MODAL.
 	* WHEN THE VIDEO MODAL OPEN, THE VIDEO SHOULD PLAY AUTOMATICALLY
 	* WHEN THE VIDEO MODAL CLOSES, THE VIDEO SHOULD STOP PLAYING
 	*/
 	$('.video-modal').each( function(){
-		
+
 		var $videoModal = $( this ),
 			$iframe = $videoModal.find('iframe'),
 			src = $iframe.attr('src');
-			
+
 		$videoModal.on( 'show.bs.modal', function( e ){
-			
+
 			var newSrc = src + "?autoplay=1";
-			
+
 			$iframe.attr( 'src', newSrc );
-			
+
 		} );
-		
+
 		$videoModal.on( 'hide.bs.modal', function( e ){
 			$iframe.attr( 'src', src );
 		});
-		
+
 	});
-	
+
 });

@@ -1,5 +1,5 @@
 <!-- Statistics Flex -->
-<div class="fullwidth">
+<div class="fullwidth <?php _e( $instance['theme'] );?>">
 	<div class="so-widget-sow-editor so-widget-sow-editor-base">
 		<h3 class="widget-title"><?php _e( $instance['title'] );?></h3>
 		<div class="row row-flex aligncenter statistics row-eq-height">

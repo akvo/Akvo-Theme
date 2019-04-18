@@ -3,12 +3,12 @@
 	Widget Name: Akvo Stats
 	Description: AKVO SOW for using Custom Statistics within the page builder
 	Author: Samuel Thomas, Akvo
-	Author URI: 
-	Widget URI: 
-	Video URI: 
+	Author URI:
+	Widget URI:
+	Video URI:
 */
 class Akvo_Stats extends SiteOrigin_Widget {
-	
+
 	function __construct() {
 		//Here you can do any preparation required before calling the parent constructor, such as including additional files or initializing variables.
 		//Call the parent constructor with the required arguments.
@@ -30,6 +30,15 @@ class Akvo_Stats extends SiteOrigin_Widget {
 				'title' => array(
 					'type' => 'text',
 					'label' => __( 'Title', 'siteorigin-widgets' )
+				),
+				'theme'	=> array(
+					'type'		=> 'select',
+					'label'		=> 'Choose Theme',
+					'default'	=> 'default',
+					'options'	=> array(
+						'default'	=> 'Default',
+						'fancy'		=> 'Fancy (Designed by Chris on the Homepage)'
+					)
 				),
 				'items' => array(
 					'type' 	=> 'repeater',
@@ -58,14 +67,16 @@ class Akvo_Stats extends SiteOrigin_Widget {
 							'type' => 'tinymce',
 							'label' => __( 'Content', 'siteorigin-widgets' )
 						),
+
 					)
-				)
+				),
+
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/akvo-stats"
 		);
 	}
-	
+
 	function get_template_name($instance) {
 		return 'template';
 	}

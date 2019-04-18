@@ -1,1 +1,1 @@
-<div id="<?php _e( $atts['id'] );?>" data-behaviour='clock' data-offset='<?php _e( $atts['offset'] );?>' data-title="<?php _e( $atts['title'] );?>" data-hello="<?php _e( $atts['hello'] );?>" onclick="location.href='<?php _e( $atts['link'] );?>';"></div>
+<div id="<?php _e( $atts['id'] );?>" data-behaviour='clock' data-offset='<?php _e( $atts['offset'] );?>' data-title="<?php echo __($atts['title'],'akvo'); ?>" data-hello="<?php _e( $atts['hello'] );?>" onclick="location.href='<?php _e( $atts['link'] );?>';"></div>

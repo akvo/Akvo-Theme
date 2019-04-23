@@ -361,6 +361,42 @@ $(document).ready(function(){
 
 	});
 
+  $('body').find('[data-behaviour~=akvo-rotating]').each( function(){
+
+    var $el = $( this ),
+      i     = 0,
+      $span = $el.find('span'),
+      words = $el.data('words');
+
+    console.log( words );
+
+
+
+    function animate(){
+      $span.fadeOut( 500, function(){
+        if( i > words.length-1 ){
+          i = 0;
+        }
+        if( words[i] && words[i].word ){
+          $span.html( words[i].word );
+          $span.fadeIn(100);
+        }
+        i++;
+      });
+
+
+      setTimeout( animate, 2000 );
+    }
+
+    animate();
+
+
+    //$span.html( words[0] );
+
+
+
+  });
+
 	/*
 	* IMAGE ON CLICK OPENS A VIDEO MODAL.
 	* WHEN THE VIDEO MODAL OPEN, THE VIDEO SHOULD PLAY AUTOMATICALLY

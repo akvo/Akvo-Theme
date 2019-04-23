@@ -379,13 +379,13 @@ $(document).ready(function(){
         }
         if( words[i] && words[i].word ){
           $span.html( words[i].word );
-          $span.fadeIn(100);
+          $span.fadeIn(500);
         }
         i++;
       });
 
 
-      setTimeout( animate, 2000 );
+      setTimeout( animate, 2500 );
     }
 
     animate();

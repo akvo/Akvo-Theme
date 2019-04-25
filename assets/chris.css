@@ -197,3 +197,44 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 }
 
 /**/
+
+
+/* #357 */
+@media(min-width:768px){
+	.navbar-toggle{
+		display: block;
+	}
+	.navbar-header{
+		float: none;
+	}
+	.navbar-nav, .navbar-nav>li{
+		float: none !important;
+	}
+
+}
+@media(min-width:960px){
+	.navbar-toggle{
+		display: none;
+	}
+	.navbar-header, .navbar-nav, .navbar-nav>li{
+		float: left !important;
+	}
+	.navbar-right{
+		float: right !important;
+	}
+}
+
+@media only screen and (max-width: 960px) and (min-width: 0){
+	.navbar-nav{
+		margin-left: 0 !important;
+	}
+	#navbar{
+		display: none !important;
+	}
+	#navbar.in{
+		display: block !important;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+/* #357 */

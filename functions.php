@@ -1,5 +1,7 @@
 <?php
 
+	define( 'AKVO_VERSION', '1.1.0' );
+
 	$inc_files = array(
 		'lib/class-akvo-admin.php',
 		'lib/class-akvo.php',
@@ -80,7 +82,7 @@
 		// Why/Where are we using this?
 		wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js', array('jquery'), null, true);
 
-		wp_enqueue_script('akvo-script', get_template_directory_uri() .'/js/akvo_scripts.js', array('jquery'), '1.0.8', true);
+		wp_enqueue_script('akvo-script', get_template_directory_uri() .'/js/akvo_scripts.js', array('jquery'), AKVO_VERSION, true);
 
 		wp_localize_script( 'akvo-script', 'settings', $settings );
 
@@ -100,8 +102,8 @@
 
 		//Enqueue Styles
 		wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', null, true);
-		wp_enqueue_style('style', get_template_directory_uri() .'/assets/main.css', array('bootstrap'), '1.0.0' );
-		wp_enqueue_style('style-chris', get_template_directory_uri() .'/assets/chris.css', array('bootstrap'), '1.0.6' );
+		wp_enqueue_style('style', get_template_directory_uri() .'/assets/main.css', array('bootstrap'), AKVO_VERSION );
+		wp_enqueue_style('style-chris', get_template_directory_uri() .'/assets/chris.css', array('bootstrap'), AKVO_VERSION );
 
 
 		// load google fonts - can be combined for later

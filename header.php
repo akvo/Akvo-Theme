@@ -31,11 +31,9 @@
 
 		<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		
-		<!--[if gt IE 9]>
-		<style type="text/css">
+		<!--[if IE ]><style type="text/css">
 		.tab-content .sow-image-container, .tab-content .panel-grid-cell .sow-image-container {display:block!important;}
-		</style>
-		<![endif]-->
+		</style><![endif]-->
 		
 		
 		<!-- Hotjar Tracking Code for www.akvo.org -->

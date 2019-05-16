@@ -33,7 +33,7 @@
 		
 		<!--[if gt IE 9]>
 		<style type="text/css">
-		.so-panel .sow-image-container {display:block!important;}
+		.tab-content .sow-image-container, .tab-content .panel-grid-cell .sow-image-container {display:block!important;}
 		</style>
 		<![endif]-->
 		

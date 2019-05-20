@@ -13,6 +13,18 @@ $(function () {
             $(this).removeClass('open');
         }
     });
+
+    $('[data-behaviour~=downloads-dropdown]').each( function(){
+      var $el   = $(this),
+        $button = $el.find('a[href]'),
+        $select = $el.find('select');
+
+      $select.change( function(){
+        var value = $select.val();
+        $button.attr( 'href', value );
+      });
+    });
+
 });
 
 // CAROUSEL

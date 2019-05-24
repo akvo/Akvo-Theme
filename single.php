@@ -20,16 +20,12 @@
 				</ul>
 
 				<!-- HIDE FEATURED IMAGE IF THE PAGE SETTINGS ARE DISABLED -->
-				<?php
-					if( !$disable_featured_image ){
-						echo '<div class="postimage">'. get_the_post_thumbnail('full') .'</div><br/>';
-						$featured_img_description = get_post( get_post_thumbnail_id() )->post_excerpt;
-						if ( !empty(	$featured_img_description	)	)	{
-							// If description is not empty then show the div
-							echo '<div class="bg-light-gray greybox fullheight">' . $featured_img_description . '</div><br/>';
-						}
-					}
-				?>
+				<?php if( !$disable_featured_image ): $featured_img_description = get_post( get_post_thumbnail_id() )->post_excerpt;?>
+						<div class="postimage"><?php the_post_thumbnail('full');?></div><br>
+						<?php if ( !empty(	$featured_img_description	)	): // If description is not empty then show the div ?>
+						<div class="bg-light-gray greybox fullheight"><?php _e( $featured_img_description );?></div><br/>
+						<?php endif;?>
+				<?php endif;?>
 				<!-- HIDE FEATURED IMAGE IF THE PAGE SETTINGS ARE DISABLED -->
 
 				<div class="blog-column"><?php the_content();?></div>

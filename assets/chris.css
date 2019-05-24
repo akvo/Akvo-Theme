@@ -241,3 +241,8 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	}
 }
 /* #357 */
+
+
+.singlerow .postimage img{
+	height: auto;
+}

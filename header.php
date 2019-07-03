@@ -30,12 +30,12 @@
 		<?php wp_head(); ?>
 
 		<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-		
+
 		<!--[if IE ]><style type="text/css">
 		.tab-content .sow-image-container, .tab-content .panel-grid-cell .sow-image-container {display:block!important;}
 		</style><![endif]-->
-		
-		
+
+
 		<!-- Hotjar Tracking Code for www.akvo.org -->
 <script>
     (function(h,o,t,j,a,r){
@@ -49,6 +49,17 @@
 </script>
 	</head>
 	<body <?php body_class(); ?>>
+		<!-- Google Analytics -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-143149382-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- End Google Analytics -->
 		<!-- Start Piwik PRO Tag Manager code --><script type="text/javascript">
 function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}var isStgDebug=(window.location.href.match("stg_debug")||window.document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
 var url = "//analytics.akvo.org/containers/86745314-4c88-45c4-8c1d-77cd100105ea.sync.js" + (isStgDebug ? "?stg_debug" : "");

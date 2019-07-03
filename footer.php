@@ -18,23 +18,23 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 					<ul class="list-unstyled list-inline social">
-						<li class="list-inline-item"><a href="https://www.linkedin.com/company/akvo/" target="_blank"><i class="fa fa-linkedin-in"></i></a></li>
-						<li class="list-inline-item"><a href="https://twitter.com/akvo" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.facebook.com/1Akvo" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="http://www.youtube.com/user/Akvofoundation" target="_blank"><i class="fa fa-youtube"></i></a></li>
-						<li class="list-inline-item"><a href="https://github.com/akvo" target="_blank"><i class="fa fa-github"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.linkedin.com/company/akvo/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/akvo" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.facebook.com/1Akvo" target="_blank"><i class="fab fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="http://www.youtube.com/user/Akvofoundation" target="_blank"><i class="fab fa-youtube"></i></a></li>
+						<li class="list-inline-item"><a href="https://github.com/akvo" target="_blank"><i class="fab fa-github"></i></a></li>
 						<li class="list-inline-item"><a href="https://akvo.org/contact-us/" target="_blank"><i class="fa fa-envelope"></i></a></li>
 					</ul>
 					<p class="text-center"><?php dynamic_sidebar( 'footer_creative_commons_text' ); ?></p>
 				</div>
 				</hr>
-			</div>	
+			</div>
 		</div>
 	</section>
 	<!-- ./Footer -->
 
 	<!-- End /footer -->
-<?php /*	
+<?php /*
 <!-- line modal -->
 <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -89,9 +89,9 @@
 		right: auto;
 		bottom: 8%;
 	}
-	
-	
-	
+
+
+
 
 	body.single-microstory iframe{
 		margin-left: auto;

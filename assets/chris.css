@@ -248,34 +248,34 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 }
 
 /* AKVO PRICING WIDGET */
-.sow-pricing{
+.sow-pricing-wrapper .sow-pricing{
 	width:100%;
 	height:auto;
 }
-.sow-pricing ul > li{
+.sow-pricing-wrapper .sow-pricing ul > li{
 	margin-bottom: 20px;
 }
-.sow-pricing-desc{
+.sow-pricing-wrapper .sow-pricing-desc{
 	display: none;
 }
 .show{
 	display: block;
 }
 @media( min-width: 768px ){
-	.sow-pricing{
+	.sow-pricing-wrapper .sow-pricing{
 		padding: 50px
 	}
-	.sow-pricing ul{
+	.sow-pricing-wrapper .sow-pricing ul{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 20px;
 	}
 }
 @media( max-width: 767px ){
-	.sow-pricing{
+	.sow-pricing-wrapper .sow-pricing{
 		padding: 0 15px
 	}
-	.sow-pricing ul{
+	.sow-pricing-wrapper .sow-pricing ul{
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: 20px;

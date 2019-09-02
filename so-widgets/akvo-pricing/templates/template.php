@@ -23,7 +23,7 @@
 	text-decoration: none;
 }
 .content-active{
-	color: <?php _e( $instance['content_text'] );?>;;
+	color: <?php _e( $instance['content_text'] );?>;
 	text-decoration: none;
 }
 </style>

@@ -435,3 +435,41 @@ $(document).ready(function(){
 	});
 
 });
+
+// AKVO PRICING POPUP SCRIPT
+jQuery(document).ready(function(){
+  jQuery( '.dropdown-content ul > li a' ).each( function(){
+    var $el = jQuery( this );
+    var $link = $el.attr( 'href' );
+    jQuery( $el ).on( 'click', function( event ){
+      event.preventDefault();
+      active( $el );
+      remove();
+      jQuery( $link ).addClass( 'show' );
+      jQuery('html, body').animate({
+        scrollTop: jQuery($link).offset().top
+    }, 500);
+    });
+
+  }); //each loop
+
+//Toggle content-active class
+function active( $el ){
+  var $faded = jQuery( $el ).parent().hasClass( 'faded' );
+  if( $faded ){
+    jQuery( '.dropdown-content ul > li' ).removeClass( 'content-active' ).addClass('faded');
+    jQuery( $el ).parent().removeClass( 'faded' ).addClass( 'content-active' );
+  }
+}
+
+// Checks whether the class show is present or not,removes class show if exists
+  function remove(){
+    jQuery( '.content-desc' ).each( function(){
+      $check = jQuery( this ).hasClass( 'show' );
+      if( $check ){
+        jQuery( this ).removeClass( 'show' );
+      }
+    });
+  }
+
+});

@@ -246,3 +246,38 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 .singlerow .postimage img{
 	height: auto;
 }
+
+/* AKVO PRICING WIDGET */
+.dropdown-content{
+	width:100%;
+	height:auto;
+}
+.dropdown-content ul > li{
+	margin-bottom: 20px;
+}
+.content-desc{
+	display: none;
+}
+.show{
+	display: block;
+}
+@media( min-width: 768px ){
+	.dropdown-content{
+		padding: 50px
+	}
+	.dropdown-content ul{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+	}
+}
+@media( max-width: 767px ){
+	.dropdown-content{
+		padding: 0 15px
+	}
+	.dropdown-content ul{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 20px;
+	}
+}

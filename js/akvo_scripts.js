@@ -465,13 +465,13 @@ jQuery(document).ready(function(){
 
   }, 2000);
 
-  setTimeout(function() {
-    jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
-      var $el = jQuery( this ),
-        $target = jQuery( $el.attr('href') );
-      $target.addClass('hide');
-    } );
-  }, 3500);
+  // setTimeout(function() {
+  //   jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
+  //     var $el = jQuery( this ),
+  //       $target = jQuery( $el.attr('href') );
+  //     $target.addClass('hide');
+  //   } );
+  // }, 3500);
 
   jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
     var $el = jQuery( this ),

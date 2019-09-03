@@ -255,16 +255,13 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 .sow-pricing-wrapper .sow-pricing ul > li{
 	margin-bottom: 20px;
 }
-.sow-pricing-wrapper .sow-pricing-desc{
-	display: none;
+.sow-pricing-desc{
+	display: none !important;
 }
-.show{
-	display: block;
+.sow-pricing-desc.show{
+	display: flex !important;
 }
 @media( min-width: 768px ){
-	.sow-pricing-wrapper .sow-pricing{
-		padding: 50px
-	}
 	.sow-pricing-wrapper .sow-pricing ul{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -272,9 +269,6 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	}
 }
 @media( max-width: 767px ){
-	.sow-pricing-wrapper .sow-pricing{
-		padding: 0 15px
-	}
 	.sow-pricing-wrapper .sow-pricing ul{
 		display: grid;
 		grid-template-columns: 1fr;

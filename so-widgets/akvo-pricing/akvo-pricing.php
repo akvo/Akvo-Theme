@@ -29,7 +29,7 @@ class Akvo_Pricing extends SiteOrigin_Widget {
 			array(
 				'items' => array(
 					'type' 	=> 'repeater',
-					'label' => __( 'Content Repeater' , 'siteorigin-widgets' ),
+					'label' => __( 'Content Repeater Link' , 'siteorigin-widgets' ),
 					'item_name'  => __( 'Repeater item', 'siteorigin-widgets' ),
 					'fields' => array(
 						'content_editor' => array(
@@ -38,10 +38,15 @@ class Akvo_Pricing extends SiteOrigin_Widget {
 				        'rows' => 10,
 				        'default_editor' => 'html',
 				    ),
-						'content_desc' => array(
-							'type' 	=> 'builder',
-							'label' => __( 'Content Description', 'siteorigin-widgets' )
-						),
+						// 'content_desc' => array(
+						// 	'type' 	=> 'builder',
+						// 	'label' => __( 'Content Description', 'siteorigin-widgets' )
+						// ),
+						'popup_id' => array(
+							'type' => 'text',
+							'label' => __('Popup ID', 'siteorigin-widgets'),
+							// 'default' => 'Some default text.'
+						)
 					)
 				),
 				'content_text' => array(
@@ -49,11 +54,11 @@ class Akvo_Pricing extends SiteOrigin_Widget {
 					'label' => __( 'Choose text color', 'siteorigin-widgets' ),
 					'default' => '#ffffff'
 				),
-				'content_backround' => array(
-        	'type' => 'color',
-        	'label' => __( 'Choose background color', 'siteorigin-widgets' ),
-        	'default' => '#404898'
-    		)
+				// 'content_backround' => array(
+        // 	'type' => 'color',
+        // 	'label' => __( 'Choose background color', 'siteorigin-widgets' ),
+        // 	'default' => '#404898'
+    		// )
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/akvo-pricing"

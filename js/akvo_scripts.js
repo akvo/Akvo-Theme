@@ -438,38 +438,59 @@ $(document).ready(function(){
 
 // AKVO PRICING POPUP SCRIPT
 jQuery(document).ready(function(){
+
+  // var URI = jQuery( location ).attr('href'),
+  // parts = URI.split('/'),
+  // lastPart = parts.pop() == '' ? parts[parts.length - 1] : parts.pop();
+  // console.log(parts);
+  // console.log(lastPart);
+
   jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
-    var $el = jQuery( this );
-    var $link = $el.attr( 'href' );
+    var $el = jQuery( this ),
+      $parent = $el.closest('.sow-pricing-wrapper'),
+      link = $el.attr( 'href' ),
+      $target = jQuery( link );
+      // window.location.replace(link);
+
+    //Toggle sow-desc-active class
+    function active( $el ){
+      var $faded = jQuery( $el ).parent().hasClass( 'faded' );
+      if( $faded ){
+        jQuery( '.sow-pricing-wrapper .sow-pricing ul > li' ).removeClass( 'sow-desc-active' ).addClass('faded');
+        jQuery( $el ).parent().removeClass( 'faded' ).addClass( 'sow-desc-active' );
+      }
+    }
+
+    // Checks whether the class show is present or not,removes class show if exists
+    function hideAllTargets(){
+      $parent.find( '.sow-pricing ul > li a' ).each( function(){
+        var $pricing_anchor = jQuery( this ),
+          $pricing_target   = jQuery( $pricing_anchor.attr('href') );
+
+        $pricing_target.addClass('hide');
+      });
+    }
+
     jQuery( $el ).on( 'click', function( event ){
+
       event.preventDefault();
       active( $el );
-      remove();
-      jQuery( $link ).addClass( 'show' );
+
+      hideAllTargets();
+
+      $target.removeClass( 'hide' );
+
       jQuery('html, body').animate({
-        scrollTop: jQuery($link).offset().top
-    }, 500);
+        scrollTop: $target.offset().top
+      }, 500);
+
+      window.location.replace(link);
     });
 
   }); //each loop
 
-//Toggle sow-desc-active class
-function active( $el ){
-  var $faded = jQuery( $el ).parent().hasClass( 'faded' );
-  if( $faded ){
-    jQuery( '.sow-pricing-wrapper .sow-pricing ul > li' ).removeClass( 'sow-desc-active' ).addClass('faded');
-    jQuery( $el ).parent().removeClass( 'faded' ).addClass( 'sow-desc-active' );
-  }
-}
 
-// Checks whether the class show is present or not,removes class show if exists
-  function remove(){
-    jQuery( '.sow-pricing-wrapper .sow-pricing-desc' ).each( function(){
-      $check = jQuery( this ).hasClass( 'show' );
-      if( $check ){
-        jQuery( this ).removeClass( 'show' );
-      }
-    });
-  }
+
+
 
 });

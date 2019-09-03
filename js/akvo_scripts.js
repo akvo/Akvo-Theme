@@ -462,7 +462,7 @@ jQuery(document).ready(function(){
     }
 
 
-  }, 1000);
+  }, 2000);
 
   jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
     var $el = jQuery( this ),

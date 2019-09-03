@@ -439,11 +439,30 @@ $(document).ready(function(){
 // AKVO PRICING POPUP SCRIPT
 jQuery(document).ready(function(){
 
-  // var URI = jQuery( location ).attr('href'),
-  // parts = URI.split('/'),
-  // lastPart = parts.pop() == '' ? parts[parts.length - 1] : parts.pop();
-  // console.log(parts);
-  // console.log(lastPart);
+
+  /*
+  * HIDE TARGETS OF THE PRICING WIDGETS
+   */
+  setTimeout(function() {
+
+    jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
+      var $el = jQuery( this ),
+        $target = jQuery( $el.attr('href') );
+      $target.addClass('hide');
+    } );
+
+    // IF URL HAS SELECTED ANCHOR LINK THEN LOAD THE TARGET
+    var URI = jQuery( location ).attr('href'),
+     parts = URI.split('#'),
+    activeTarget = "#" + parts[ parts.length-1 ];
+
+    var selector = '.sow-pricing-wrapper .sow-pricing ul > li a[href="' + activeTarget + '"]';
+    if( jQuery( selector ).length ){
+      jQuery( selector ).click();
+    }
+
+
+  }, 1000);
 
   jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
     var $el = jQuery( this ),

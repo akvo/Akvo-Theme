@@ -443,27 +443,7 @@ jQuery(document).ready(function(){
   /*
   * HIDE TARGETS OF THE PRICING WIDGETS
    */
-  setTimeout(function() {
-    /*
-    jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
-      var $el = jQuery( this ),
-        $target = jQuery( $el.attr('href') );
-      $target.addClass('hide');
-    } );
-    */
 
-    // IF URL HAS SELECTED ANCHOR LINK THEN LOAD THE TARGET
-    var URI = jQuery( location ).attr('href'),
-     parts = URI.split('#'),
-    activeTarget = "#" + parts[ parts.length-1 ];
-
-    var selector = '.sow-pricing-wrapper .sow-pricing ul > li a[href="' + activeTarget + '"]';
-    if( jQuery( selector ).length ){
-      jQuery( selector ).click();
-    }
-
-
-  }, 2000);
 
   // setTimeout(function() {
   //   jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
@@ -473,49 +453,100 @@ jQuery(document).ready(function(){
   //   } );
   // }, 3500);
 
-  jQuery( '.sow-pricing-wrapper .sow-pricing ul > li a' ).each( function(){
-    var $el = jQuery( this ),
-      $parent = $el.closest('.sow-pricing-wrapper'),
-      link = $el.attr( 'href' ),
-      $target = jQuery( link );
-      // window.location.replace(link);
+  // jQuery(document).scroll(function(){
+  //   console.log( 'hii' );
+  // });
 
-    //Toggle sow-desc-active class
-    function active( $el ){
-      var $faded = jQuery( $el ).parent().hasClass( 'faded' );
-      if( $faded ){
-        jQuery( '.sow-pricing-wrapper .sow-pricing ul > li' ).removeClass( 'sow-desc-active' ).addClass('faded');
-        jQuery( $el ).parent().removeClass( 'faded' ).addClass( 'sow-desc-active' );
+    jQuery( '.sow-pricing-wrapper' ).each( function(){
+
+      var $wrapper = jQuery( this ),
+        offset = $wrapper.offset().top;
+
+      $wrapper.addClass( 'not-scrolled' );
+
+      function getActiveElementFromURL(){
+        var URI = jQuery( location ).attr('href'),
+         parts = URI.split('#'),
+         activeTarget = '#' + parts[ parts.length-1 ],
+         $target = $wrapper.find( '.sow-pricing ul > li a[href="' + activeTarget + '"]' );
+         if( $target.length ){ return $target; }
+         return false;
       }
-    }
 
-    // Checks whether the class show is present or not,removes class show if exists
-    function hideAllTargets(){
-      $parent.find( '.sow-pricing ul > li a' ).each( function(){
-        var $pricing_anchor = jQuery( this ),
-          $pricing_target   = jQuery( $pricing_anchor.attr('href') );
+      /*
+      * CHECK IF TARGET IS PRESENT IN THE URL
+      * IF NOT THEN ON SCROLL HIDE THE SUBSEQUENT TAB CONTENT
+      * IF YES THEN CLICK THE TARGET
+      */
+      if( !getActiveElementFromURL() ){
+        jQuery( window ).scroll( function(){
+          if( ( $(this).scrollTop() + 300 ) > offset && $wrapper.hasClass('not-scrolled') ){
+            console.log('scrolled');
+            $wrapper.find( '.sow-pricing ul > li a' ).each( function(){
+               var $el = jQuery( this ),
+                 $target = jQuery( $el.attr('href') );
+                 $target.addClass( 'hide' );
+             } );
+            $wrapper.removeClass( 'not-scrolled' );
+          }
+        });
+      }
+      else{
+        setTimeout(function() {
+          var $target = getActiveElementFromURL();
+          if( $target ){ $target.click(); }
+        }, 2000);
+      }
 
-        $pricing_target.addClass('hide');
+      // Checks whether the class show is present or not,removes class show if exists
+      function hideAllTargets(){
+        $wrapper.find( '.sow-pricing ul > li a' ).each( function(){
+          var $pricing_anchor = jQuery( this ),
+            $pricing_target   = jQuery( $pricing_anchor.attr('href') );
+          $pricing_target.addClass('hide');
+        });
+      }
+
+      //Toggle sow-desc-active class
+      function activeTab( $el ){
+        if( jQuery( $el ).closest('li').hasClass( 'faded' ) ){
+          $wrapper.find( '.sow-pricing ul > li' ).removeClass( 'sow-desc-active' ).addClass('faded');
+          jQuery( $el ).closest('li').removeClass( 'faded' ).addClass( 'sow-desc-active' );
+        }
+      }
+
+      // handles click event on tab
+      $wrapper.find( '.sow-pricing ul > li a' ).each( function(){
+
+        var $el = jQuery( this ),
+          $target = jQuery( $el.attr( 'href' ) );
+
+        $el.on( 'click', function( event ){
+          event.preventDefault();
+
+          activeTab( $el );
+
+          hideAllTargets();
+
+          // show only the target
+          $target.removeClass( 'hide' );
+
+          // scroll to the target
+          jQuery('html, body').animate({
+            scrollTop: $target.offset().top
+          }, 500);
+
+          // ADD THE TARGET LINK TO THE URL
+          window.location.replace( $el.attr( 'href' ) );
+        });
+
       });
-    }
 
-    jQuery( $el ).on( 'click', function( event ){
 
-      event.preventDefault();
-      active( $el );
 
-      hideAllTargets();
+    } );
 
-      $target.removeClass( 'hide' );
-
-      jQuery('html, body').animate({
-        scrollTop: $target.offset().top
-      }, 500);
-
-      window.location.replace(link);
-    });
-
-  }); //each loop
+   //each loop
 
 
 

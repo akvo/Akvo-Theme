@@ -3,7 +3,7 @@
 		<ul class="list-unstyled">
 		<?php foreach ( $instance['bullet_items'] as $value) :?>
 			<li class="bullet-item row" style="opacity: <?php ( $value['is_faded'] ? _e( '0.5' ) : _e( '1' ) ); ?>;" >
-				<div class="col-md-3">
+				<div class="<?php if( isset( $value['bullet_desc'] ) && $value['bullet_desc'] ){ _e( 'col-md-3' );} else{ _e( 'col-md-12' ); }?>">
 					<div class="bullet-title">
 						<div class="bullet-title-icon">
 							<i class="<?php _e( $value['bullet_icon_class'] ); ?>" aria-hidden="true"></i>
@@ -13,9 +13,11 @@
 						</div>
 					</div>
 				</div>
+				<?php if( isset( $value['bullet_desc'] ) && $value['bullet_desc'] ):?>
 				<div class="col-md-9">
 					<p><?php _e( $value['bullet_desc'] );?></p>
 				</div>
+				<?php endif;?>
 			</li>
 		<?php endforeach;?>
 	</ul>

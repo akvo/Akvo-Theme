@@ -275,3 +275,18 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 		grid-gap: 20px;
 	}
 }
+/* AKVO BULLET LIST */
+.sow-bullet-wrapper ul li.bullet-item{
+	background: #f2f2f2;
+	padding: 10px;
+}
+.sow-bullet-wrapper ul li.bullet-item:nth-child(2n){
+	background: #ffffff;
+}
+.sow-bullet-wrapper .bullet-item .bullet-title{
+	color: #404898;
+}
+.sow-bullet-wrapper .bullet-item .bullet-title i{
+	font-size:30px;
+	margin-right: 10px;
+}

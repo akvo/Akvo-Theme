@@ -462,8 +462,6 @@ jQuery(document).ready(function(){
       var $wrapper = jQuery( this ),
         offset = $wrapper.offset().top;
 
-      $wrapper.addClass( 'not-scrolled' );
-
       function getActiveElementFromURL(){
         var URI = jQuery( location ).attr('href'),
          parts = URI.split('#'),
@@ -471,31 +469,6 @@ jQuery(document).ready(function(){
          $target = $wrapper.find( '.sow-pricing ul > li a[href="' + activeTarget + '"]' );
          if( $target.length ){ return $target; }
          return false;
-      }
-
-      /*
-      * CHECK IF TARGET IS PRESENT IN THE URL
-      * IF NOT THEN ON SCROLL HIDE THE SUBSEQUENT TAB CONTENT
-      * IF YES THEN CLICK THE TARGET
-      */
-      if( !getActiveElementFromURL() ){
-        jQuery( window ).scroll( function(){
-          if( ( $(this).scrollTop() + 300 ) > offset && $wrapper.hasClass('not-scrolled') ){
-            console.log('scrolled');
-            $wrapper.find( '.sow-pricing ul > li a' ).each( function(){
-               var $el = jQuery( this ),
-                 $target = jQuery( $el.attr('href') );
-                 $target.addClass( 'hide' );
-             } );
-            $wrapper.removeClass( 'not-scrolled' );
-          }
-        });
-      }
-      else{
-        setTimeout(function() {
-          var $target = getActiveElementFromURL();
-          if( $target ){ $target.click(); }
-        }, 2000);
       }
 
       // Checks whether the class show is present or not,removes class show if exists
@@ -507,12 +480,20 @@ jQuery(document).ready(function(){
         });
       }
 
+
+
       //Toggle sow-desc-active class
       function activeTab( $el ){
         if( jQuery( $el ).closest('li').hasClass( 'faded' ) ){
           $wrapper.find( '.sow-pricing ul > li' ).removeClass( 'sow-desc-active' ).addClass('faded');
           jQuery( $el ).closest('li').removeClass( 'faded' ).addClass( 'sow-desc-active' );
         }
+      }
+
+      function init(){
+        hideAllTargets();
+        var $target = getActiveElementFromURL();
+        if( $target ){ $target.click(); }
       }
 
       // handles click event on tab
@@ -536,13 +517,16 @@ jQuery(document).ready(function(){
             scrollTop: $target.offset().top
           }, 1200);
 
+          // THIS EVENT IS MANUALLY TRIGGERED SO THAT SITEORIGIN WILL RECALCAULATE ITS ROW WIDTH AGAIN
+          $( window ).trigger( 'load' );
+
           // ADD THE TARGET LINK TO THE URL
           window.location.replace( $el.attr( 'href' ) );
         });
 
       });
 
-
+      init();
 
     } );
 

@@ -17,7 +17,7 @@
 .sow-pricing-wrapper .sow-pricing h5,
 .sow-pricing-wrapper .sow-pricing h6{
 	color: <?php _e( $instance['content_text'] );?>;
-	line-height: 1;
+	line-height: 1.2;
 }
 .sow-pricing-wrapper .sow-pricing ul > li a,
 .sow-pricing-wrapper .sow-pricing ul > li a:hover{

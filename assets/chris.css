@@ -265,7 +265,7 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	.sow-pricing-wrapper .sow-pricing ul{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 20px;
+		grid-gap: 30px;
 	}
 }
 @media( max-width: 767px ){
@@ -282,7 +282,26 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 }
 .sow-bullet-wrapper ul li.bullet-item:nth-child(2n){ background: #ffffff; }
 .sow-bullet-wrapper .bullet-item .bullet-title{ color: #404898; }
+.sow-bullet-wrapper .bullet-item .bullet-title.fade-active:hover,
+.sow-bullet-wrapper .bullet-item .bullet-title.fade-active{ color: #000; }
 .sow-bullet-wrapper .bullet-item .bullet-title i{ font-size:30px; }
 .sow-bullet-wrapper .bullet-title{ display: flex; flex-wrap: wrap; }
 .sow-bullet-wrapper .bullet-title .bullet-title-icon{ width: 45px; }
 .sow-bullet-wrapper .bullet-title .bullet-title-text{ width: calc(100% - 45px); }
+
+/* bullet-grid2 */
+@media( min-width: 768px ){
+	.sow-bullet-wrapper .bullet-grid2{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.sow-bullet-wrapper ul.bullet-grid2 li.bullet-item{
+		width: 50%;
+		background: none;
+		padding: 5px 20px;
+	}
+	.sow-bullet-wrapper ul.bullet-grid2 li.bullet-item .col-md-12{
+		background: #f2f2f2;
+		padding: 20px;
+	}
+}

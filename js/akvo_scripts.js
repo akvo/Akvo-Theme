@@ -534,7 +534,7 @@ jQuery(document).ready(function(){
           // scroll to the target
           jQuery('html, body').animate({
             scrollTop: $target.offset().top
-          }, 500);
+          }, 1200);
 
           // ADD THE TARGET LINK TO THE URL
           window.location.replace( $el.attr( 'href' ) );

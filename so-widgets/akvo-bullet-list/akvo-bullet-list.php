@@ -59,6 +59,11 @@ class Akvo_Bullet_List extends SiteOrigin_Widget {
 						// ),
 					)
 				),
+				'bullet_grid' => array(
+					'type' => 'checkbox',
+					'label' => __( '2 Column Grid?', 'siteorigin-widgets' ),
+					'default' => false
+				),
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/akvo-bullet-list"

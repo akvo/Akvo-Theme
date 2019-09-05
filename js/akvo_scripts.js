@@ -515,7 +515,7 @@ jQuery(document).ready(function(){
           // scroll to the target
           jQuery('html, body').animate({
             scrollTop: $target.offset().top
-          }, 1200);
+          }, 1000);
 
           // THIS EVENT IS MANUALLY TRIGGERED SO THAT SITEORIGIN WILL RECALCAULATE ITS ROW WIDTH AGAIN
           $( window ).trigger( 'load' );

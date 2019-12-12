@@ -305,3 +305,6 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 		padding: 20px;
 	}
 }
+
+/* ALIGN CLOCK HANDS */
+.jcgmt-clockHolder{ max-width: 150px; }

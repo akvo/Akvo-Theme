@@ -6,17 +6,19 @@
 				<div class="row">
 					<div class="<?php if( isset( $value['bullet_desc'] ) && $value['bullet_desc'] ){ _e( 'col-md-3' );} else{ _e( 'col-md-12' ); }?>">
 						<div class="bullet-title <?php ( $value['is_faded'] ? _e( 'fade-active' ) : _e( '' ) ) ?>">
-							<div class="bullet-title-icon">
+							<div class="bullet-title-icon" style="color: <?php _e( $value['bullet_icon_color'] );?>;">
 								<i class="<?php _e( $value['bullet_icon_class'] ); ?>" aria-hidden="true"></i>
 							</div>
-							<div class="bullet-title-text">
+							<div class="bullet-title-text" style="color: <?php _e( $value['bullet_title_color'] );?>;">
 								<strong><?php _e( $value['bullet_title'] );?></strong>
 							</div>
 						</div>
 					</div>
 					<?php if( isset( $value['bullet_desc'] ) && $value['bullet_desc'] ):?>
 					<div class="col-md-9">
-						<p><?php _e( $value['bullet_desc'] );?></p>
+						<p style="color: <?php _e( $value['bullet_desc_color'] );?>;">
+							<?php _e( $value['bullet_desc'] );?>
+						</p>
 					</div>
 					<?php endif;?>
 				</div>

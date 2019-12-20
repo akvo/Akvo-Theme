@@ -47,6 +47,21 @@ class Akvo_Bullet_List extends SiteOrigin_Widget {
 							'label' => __( 'Description', 'siteorigin-widgets' ),
 							'rows' => 10
 				    ),
+						'bullet_icon_color' => array(
+							'type' => 'color',
+							'label' => __( 'Choose icon color', 'siteorigin-widgets' ),
+							'default' => '#404898'
+						),
+						'bullet_title_color' => array(
+							'type' => 'color',
+							'label' => __( 'Choose title color', 'siteorigin-widgets' ),
+							'default' => '#404898'
+						),
+						'bullet_desc_color' => array(
+        			'type' => 'color',
+			        'label' => __( 'Choose description color', 'siteorigin-widgets' ),
+			        'default' => '#000000'
+			    	),
 						'is_faded' => array(
 							'type' => 'checkbox',
 							'label' => __( 'Is faded?', 'siteorigin-widgets' ),

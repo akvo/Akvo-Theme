@@ -327,3 +327,31 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 
 /* ALIGN CLOCK HANDS */
 .jcgmt-clockHolder{ max-width: 150px; }
+
+
+/*Sow Steps List*/
+.sow-steps-list .sow-features-list .sow-features-feature .textwidget h5{
+	color: #00bcb4 !important;
+}
+
+@media( min-width: 768px ){
+ .sow-steps-list .sow-features-list .sow-features-feature:after{
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    top: 18%;
+   	width: 235px;
+    display: block;
+	}
+  .sow-steps-list .sow-features-list :first-child:after{
+  	left: 210px;
+  }
+  .sow-steps-list .sow-features-list :nth-child(2):after{
+  	left: 220px;
+  }
+  .sow-steps-list .sow-features-list :last-child:after{
+  	display: none;
+  }
+}
+/*Sow Steps List*/

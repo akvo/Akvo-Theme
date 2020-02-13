@@ -329,29 +329,86 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 .jcgmt-clockHolder{ max-width: 150px; }
 
 
-/*Sow Steps List*/
-.sow-steps-list .sow-features-list .sow-features-feature .textwidget h5{
-	color: #00bcb4 !important;
+/*Akvo Steps List SOW*/
+.steps-list-wrapper .step-body{
+	text-align: center;
+	margin-bottom: 30px;
+	position: relative;
 }
-
+.steps-list-wrapper .step-body:last-child{
+	margin-bottom: 0;
+}
+.steps-list-wrapper .step-body .title,
+.steps-list-wrapper .step-body .step-icon{
+	color: #03ad8c !important;
+}
+.steps-list-wrapper .step-body .title{ font-size: 18px; }
+.steps-list-wrapper .step-body .step-icon{ font-size: 50px; }
+.steps-list-wrapper .step-body .step-icon{
+	position: relative;
+}
+.steps-list-wrapper .step-body .step-icon i{
+  display:inline-block;
+  font-size: 40px;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: bottom;
+}
+.steps-list-wrapper .step-body .step-content{
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
 @media( min-width: 768px ){
- .sow-steps-list .sow-features-list .sow-features-feature:after{
-    position: absolute;
-    content: "";
-    background-color: #fff;
-    height: 2px;
-    top: 18%;
-   	width: 235px;
-    display: block;
+	.steps-list-wrapper{
+		display: flex;
+		width: 960px;
+		margin: 0 auto;
 	}
-  .sow-steps-list .sow-features-list :first-child:after{
-  	left: 210px;
-  }
-  .sow-steps-list .sow-features-list :nth-child(2):after{
-  	left: 220px;
-  }
-  .sow-steps-list .sow-features-list :last-child:after{
-  	display: none;
-  }
+	.steps-list-wrapper .step-body{
+		max-width: 30%;
+		text-align: center;
+		margin-right:  50px;
+	}
+	.steps-list-wrapper .step-body:last-child{
+		margin-right: 0;
+	}
+	.steps-list-wrapper .step-body:after{
+     position: absolute;
+     content: "";
+     background-color: #fff;
+     height: 2px;
+     top: 10%;
+     width: 260px;
+     display: block;
+ 	}
+ .steps-list-wrapper :first-child:after{
+	left: 180px;
+ }
+ .steps-list-wrapper :nth-child(2):after{
+	left: 180px;
+ }
+ .steps-list-wrapper :last-child:after{
+ 	display: none;
+ }
 }
-/*Sow Steps List*/
+@media only screen and (max-width: 768px) and (min-width: 768px){
+	.steps-list-wrapper{
+		width: 100%;
+	}
+	.steps-list-wrapper .step-body{
+		margin-right:  35px;
+	}
+	.steps-list-wrapper .step-body:after{
+		top: 8%;
+		width: 190px;
+	}
+	.steps-list-wrapper :first-child:after{
+	 left: 140px;
+	}
+	.steps-list-wrapper :nth-child(2):after{
+	 left: 135px;
+	}
+}
+/*Akvo Steps List SOW*/

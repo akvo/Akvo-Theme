@@ -360,7 +360,7 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	margin-top: 25px;
 	margin-bottom: 10px;
 }
-@media( min-width: 768px ){
+@media( min-width: 960px ){
 	.steps-list-wrapper{
 		display: flex;
 		width: 960px;
@@ -392,23 +392,5 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
  .steps-list-wrapper :last-child:after{
  	display: none;
  }
-}
-@media only screen and (max-width: 768px) and (min-width: 768px){
-	.steps-list-wrapper{
-		width: 100%;
-	}
-	.steps-list-wrapper .step-body{
-		margin-right:  35px;
-	}
-	.steps-list-wrapper .step-body:after{
-		top: 8%;
-		width: 190px;
-	}
-	.steps-list-wrapper :first-child:after{
-	 left: 140px;
-	}
-	.steps-list-wrapper :nth-child(2):after{
-	 left: 135px;
-	}
 }
 /*Akvo Steps List SOW*/

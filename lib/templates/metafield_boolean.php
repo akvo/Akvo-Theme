@@ -4,4 +4,6 @@
 		<?php _e( $field['label'] );?>
 	</label>
 </p>
+<?php if( isset( $field['desc'] ) ):?>
 <p class="help"><?php _e( $field['desc'] );?></p>
+<?php endif; ?>

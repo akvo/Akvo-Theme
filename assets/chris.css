@@ -368,6 +368,7 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	}
 	.steps-list-wrapper .step-body{
 		max-width: 30%;
+		width: 100%;
 		text-align: center;
 		margin-right:  50px;
 	}
@@ -379,10 +380,11 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
      content: "";
      background-color: #fff;
      height: 2px;
-     top: 10%;
+     top: 25px;
      width: 260px;
      display: block;
  	}
+
  .steps-list-wrapper :first-child:after{
 	left: 180px;
  }
@@ -392,5 +394,20 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
  .steps-list-wrapper :last-child:after{
  	display: none;
  }
+
+ /* For vertical-decoration only */
+ .steps-list-wrapper.vertical .step-body:after{
+	 	height: 102px;
+ 		top: 6px;
+ 		width: 2px;
+		left: 310px;
+		background-color: #ffffff;
+ }
+ .steps-list-wrapper.vertical :last-child:after{
+ 	display: none;
+ }
+/* For vertical-decoration only */
+
+
 }
 /*Akvo Steps List SOW*/

@@ -43,12 +43,21 @@ class Akvo_Steps_List extends SiteOrigin_Widget {
 						),
 						'step_content' => array(
 							'type' => 'tinymce',
-							'label' => __( 'Step Content', 'widget-form-fields-text-domain' ),
+							'label' => __( 'Step Content', 'siteorigin-widgets' ),
 							'rows' => 10,
 							//'default_editor' => 'html',
 						),
 					)
 				),
+				'steps_type' => array(
+					 'type' => 'select',
+					 'label' => __( 'Decoration type', 'siteorigin-widgets' ),
+					 'default' => 'vertical',
+					 'options' => array(
+							 'horizontal' => __( 'Horizontal', 'siteorigin-widgets' ),
+							 'vertical' => __( 'Vertical', 'siteorigin-widgets' ),
+					 )
+	 		 	),
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/akvo-steps-list"

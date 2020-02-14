@@ -2,22 +2,22 @@
 	<section id="footer" class="peopletop">
 		<div class="container">
 			<div class="row text-left text-xs-center text-sm-left text-md-left">
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer1">
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer1">
 					<?php dynamic_sidebar( 'footer_1' ); ?>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer2">
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer2">
 					<?php dynamic_sidebar( 'footer_2' ); ?>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer3">
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer3">
 					<?php dynamic_sidebar( 'footer_3' ); ?>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer4">
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer4">
 					<?php dynamic_sidebar( 'footer_4' ); ?>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer5">
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer5">
 					<?php dynamic_sidebar( 'footer_5' ); ?>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer6">
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer6">
 					<?php dynamic_sidebar( 'footer_6' ); ?>
 				</div>
 			</div>
@@ -40,14 +40,30 @@
 	</section>
 	<!-- ./Footer -->
 
+	<div class="modal fade" id="main-menu-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
+					<?php
+						wp_nav_menu( array(
+							'theme_location' 	=> 'header-menu',
+							'menu_id' 			=> 'menu-main',
+							'menu_class' 		=> 'nav navbar-nav',
+							'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+							'walker'            => new WP_Bootstrap_Navwalker(),
+						) );
+					?>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- End /footer -->
 <?php /*
+
 <!-- line modal -->
-<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<?php dynamic_sidebar( 'newsletter_modal' ); ?>
-	</div>
-</div>
+
 <!-- apply modal -->
 <div class="modal fade" id="squarespaceModalApply" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -85,4 +101,130 @@
 	body.single-microstory iframe{ margin-left: auto; margin-right: auto; display: block; }
 
 	#footer ul.menu{ padding-left: 0; }
+	#footer .footercol{ min-height: 200px; }
+
+	#main-menu-modal{
+		left: auto;
+		right: 0;
+    background: #fff;
+    width: 100%;
+    max-width: 700px;
+		/*
+		display:block !important; opacity:1 !important
+		*/
+	}
+	#main-menu-modal .modal-dialog { transform: translate(0, 0); }
+
+	#main-menu-modal .modal-content{
+		box-shadow: none;
+    border: none;
+    padding: 50px 100px;
+    border-radius: 0;
+	}
+
+
+
+	#main-menu-modal .modal-dialog .modal-content button.btn.btn-default {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 36px;
+    position: absolute;
+    right: -70px;
+    top: -50px;
+	}
+
+	#main-menu-modal .modal-content .navbar-nav,
+	#main-menu-modal .modal-content .navbar-nav li{
+		float: none !important;
+		background: none !important;
+		margin-left: 0;
+	}
+
+	#main-menu-modal .navbar-nav .caret{ display: inline-block !important; }
+
+	#main-menu-modal .navbar-nav li a{
+		text-transform: uppercase;
+	  position: relative;
+	  padding: 15px;
+	  background-color: transparent;
+	  color: #555 !important;
+	  font-size: 24px !important;
+	  line-height: 1.4;
+	  margin-bottom: 5px;
+		text-decoration: none;
+		display: block;
+		word-break: break-word;
+		white-space: normal;
+	}
+
+	#main-menu-modal .navbar-nav li.active a,
+	#main-menu-modal .navbar-nav li .dropdown-menu li.active a,
+	#main-menu-modal .navbar-nav li .dropdown-menu li:hover a,
+	#main-menu-modal .navbar-nav li:hover a {
+    color: #4bbda1 !important;
+	}
+
+	#main-menu-modal .navbar-nav a:before{
+		display: inline-block;
+    position: absolute;
+    content: '';
+    width: 0px;
+    border-top: 1px solid #4bbda1;
+    left: -50px;
+    top: 50%;
+    transition: width 0.3s ease;
+	}
+	#main-menu-modal .navbar-nav li.active a:before,
+	#main-menu-modal .navbar-nav .submenu li.active a:before,
+	#main-menu-modal .navbar-nav .submenu li:hover a:before,
+	#main-menu-modal .navbar-nav li:hover a:before {
+    width: 50px;
+	}
+
+
+
+	#main-menu-modal .navbar-nav li .dropdown-menu{
+		list-style: none;
+		display: block;
+		position: relative;
+		float: none;
+		border: none !important;
+		box-shadow: none !important;
+		background: none !important;
+		padding-left: 40px;
+		display: none;
+	}
+	#main-menu-modal .navbar-nav li.dropdown.open .dropdown-menu,
+	#main-menu-modal .navbar-nav li.current-menu-parent .dropdown-menu{
+		display: block;
+	}
+
+	#main-menu-modal .navbar-nav li.active .dropdown-menu a:before,
+	#main-menu-modal .navbar-nav li:hover .dropdown-menu a:before{
+		width: 0;
+	}
+	#main-menu-modal .navbar-nav li .dropdown-menu a{
+		padding: 10px;
+		font-size: 18px !important;
+	}
+	#main-menu-modal .dropdown-menu>li>a:focus,
+	#main-menu-modal .dropdown-menu>li>a:hover{
+		background: none !important;
+	}
+
+	#main-menu-modal .navbar-nav li:hover .dropdown-menu a,
+	#main-menu-modal .navbar-nav li.active .dropdown-menu a{
+		color: #555 !important;
+	}
+
+	@media( max-width: 768px ){
+		#main-menu-modal .modal-content{
+			padding: 50px 20px 50px 50px;
+	  }
+		#main-menu-modal .modal-dialog .modal-content button.btn.btn-default{
+			right: 0;
+		}
+	}
+
 </style>

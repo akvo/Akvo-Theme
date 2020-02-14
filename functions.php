@@ -49,7 +49,9 @@
 
 	/* GRAVITY FORMS FIX */
 	/*add_filter( 'gform_confirmation_anchor', '__return_true' );*/
-	add_filter("gform_confirmation_anchor", create_function("","return true;"));
+	//add_filter("gform_confirmation_anchor", create_function("","return true;"));
+	add_filter( 'gform_confirmation_anchor', function( $args ){ return true; } );
+
 
 
 	/* HIDE ADMIN BAR FROM THE FRONTEND */

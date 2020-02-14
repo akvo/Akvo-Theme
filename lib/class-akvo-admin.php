@@ -1,113 +1,113 @@
 <?php
 
 	class AKVO_ADMIN{
-		
+
 		var $meta_boxes;
 		var $taxonomies;
 		var $post_types;
-		
+
 		function __construct(){
-			
+
 			add_action( 'init', array( $this, 'create') );			// REGISTERING POST TYPES AND TAXONOMIES
-			
+
 			$this->set_post_types();
-			
+
 			$this->set_taxonomies();
-			
+
 			$this->set_meta_boxes();
-			
+
 			/*
 			 * FILTER TO UPDATE THE POST TYPES DROPDOWN IN THE SITE ORIGIN WIDGETS
-			 * 
+			 *
 			*/
 			add_filter( 'akvo-sow-post-types', function( $post_types ){
-				
+
 				$post_types = array();
-				
+
 				foreach( $this->get_post_types() as $slug => $post_type ){
 					$post_types[ $slug ] = $post_type['name'];
 				}
-				
+
 				return $post_types;
 			} );
-			
-			
+
+
 			/*
 			 * FILTER TO UPDATE THE TAXONOMIES DROPDOWN IN THE NESTED FILTERS (SITE ORIGIN WIDGETS)
-			 * 
+			 *
 			*/
 			add_filter( 'akvo-sow-taxonomies', function( $taxonomies ){
-				
+
 				$taxonomies = array();
-	
+
 				foreach( $this->get_taxonomies() as $slug => $tax ){
 					$taxonomies[ $slug ] = $tax['labels']['name'];
 				}
-		
+
 				return $taxonomies;
 			} );
-			
+
 			/*
 			* OVERRIDE TEMPLATES FOR EACH POST TYPE THROUGH AKVO_CUSTOM_POSTS IN THE PLUGIN FOLDER OF AKVO_SITEORIGIN_WIDGETS
 			*/
 			foreach( $this->get_post_types() as $slug => $post_type ){
-				
+
 				add_filter( 'akvo-custom-posts-'.$slug.'-item-template', function( $slug ){
-					
+
 					$template = get_template_directory()."/templates/".$slug.".php";
-					
+
 					return $template;
 				});
-			
+
 			}
-			
-			
+
+
 			/* SAVE POST - FOR SAVING META FIELDS */
 			add_action( 'save_post', array( $this, 'save_meta_fields' ), 10, 2 );
-			
+
 			/* change permalinks */
 			add_filter('post_type_link', function( $permalink, $post_id, $leavename ){
-				
+
 				$post = get_post( $post_id );
-				
+
 				if( $post->post_type == 'microstory' ){
-					
+
 					$rewritecode = array(
 						$leavename? '' : '%postname%',
 						'%post_id%',
 						'%category%',
 						$leavename? '' : '%pagename%',
 					);
-					
+
 					$category = "akvo-hub";
 					$hubs = get_the_terms( $post, 'staff_hub' );
 					if( is_array( $hubs ) ){
 						$category = $hubs[0]->slug;
 					}
-					
+
 					$rewritereplace = array(
 						$post->post_name,
 						$post->ID,
 						$category,
 						$post->post_name,
 					);
-					
+
 					$permalink = str_replace($rewritecode, $rewritereplace, $permalink);
-					
+
 				}
-				
+
 				return $permalink;
-			}, 10, 3);   
-			
-			
+			}, 10, 3);
+
+
 		}
-		
+
 		/* SET POST TYPES */
 		function set_post_types(){
-			
+
 			$this->post_types = array(
 				/* FUNNEL ELEMENTS */
-				'funnel'	=> array(						
+				'funnel'	=> array(
 					'name'			=> 'Funnels',
 					'singular_name'	=> 'Funnel',
 					'menu_icon' 	=> 'dashicons-format-aside',
@@ -120,7 +120,7 @@
 					'singular_name' => 'Akvo Staff',
 					'supports' 		=> array( 'title', 'thumbnail', 'revisions'),
 					'menu_icon' 	=> get_bloginfo('template_url').'/images/icons/akvoStaff_icn.png',
-					'has_archive' 	=> true	
+					'has_archive' 	=> true
 				),
 				/* PARTNERS */
 				'new_partners'	=> array(
@@ -128,7 +128,7 @@
 					'singular_name' => 'Akvo Partner',
 					'supports' 		=> array( 'title', 'thumbnail', 'revisions'),
 					'menu_icon' 	=> get_bloginfo('template_url').'/images/icons/akvoPartner_icn.png',
-					'has_archive' 	=> true	
+					'has_archive' 	=> true
 				),
 				/* MICROSTORY */
 				'microstory'	=> array(
@@ -137,7 +137,7 @@
 					'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
 					'menu_icon' 	=> 'dashicons-admin-page',
 					'rewrite'		=> false,
-					'has_archive' 	=> true	
+					'has_archive' 	=> true
 				),
 				/* FOUNDATION MEMBERS */
 				'foundation_member'	=> array(
@@ -145,7 +145,7 @@
 					'singular_name' => 'Akvo Foundation Member',
 					'supports' 		=> array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
 					'menu_icon' 	=> get_bloginfo('template_url').'/images/icons/akvoStaff_icn.png',
-					'has_archive' 	=> true	
+					'has_archive' 	=> true
 				),
 				/* ADVERTS */
 				'advert'	=> array(
@@ -155,7 +155,7 @@
 					'menu_icon' 			=> 'dashicons-format-gallery',
 					'exclude_from_search' 	=> true,
 					'rewrite'				=> false,
-					'has_archive' 			=> true	
+					'has_archive' 			=> true
 				),
 				/* PRODUCT UPDATES */
 				'product_update'	=> array(
@@ -164,15 +164,15 @@
 					'supports' 		=> array( 'title', 'author', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
 					'menu_icon' 	=> 'dashicons-edit',
 					'rewrite'		=> false,
-					'has_archive' 	=> true	
+					'has_archive' 	=> true
 				),
 			);
 		}
 		function get_post_types(){ return $this->post_types; }
-		
+
 		/* TAXONOMIES */
 		function set_taxonomies(){
-			
+
 			$this->taxonomies = array(
 				'product_category'	=> array(
 					'post_type'	=> 'product_update',
@@ -241,9 +241,9 @@
 				),
 			);
 		}
-		
+
 		function get_taxonomies(){ return $this->taxonomies; }
-		
+
 		function set_meta_boxes(){
 			$this->meta_boxes = array(
 				'new_partners'	=> array(
@@ -260,7 +260,7 @@
 				'staff'	=> array(
 					'title'		=> 'New Staff Details',
 					'fields'	=> array(
-						'staff_title'		=> 'Job Title', 
+						'staff_title'		=> 'Job Title',
 						'staff_twitter'		=> 'Twitter Link',
 						'staff_linkedin'	=> 'LinkedIn Link',
 						'staff_blog'		=> 'Blog Link'
@@ -360,19 +360,19 @@
 					'context'	=> 'side',
 				)
 			);
-			
+
 		}
-		
+
 		function get_meta_boxes(){ return $this->meta_boxes; }
-		
+
 		function create(){
-			
+
 			/* rewrite urls for microstory links */
 			global $wp_rewrite;
 			$microstory_structure = '/stories/%category%/%microstory%/';
 			$wp_rewrite->add_rewrite_tag( "%microstory%", '([^/]+)', "microstory=" );
 			$wp_rewrite->add_permastruct( 'microstory', $microstory_structure, false );
-			
+
 			/* registering post types */
 			foreach( $this->get_post_types() as $slug => $post_type ){
 				register_post_type( $slug,
@@ -397,7 +397,7 @@
 					)
 				);
 			}
-			
+
 			/* registering taxonomies */
 			foreach( $this->get_taxonomies() as $slug => $tax ){
 				register_taxonomy(
@@ -413,43 +413,43 @@
 					)
 				);
 			}
-			
+
 			/* META BOXES */
 			add_action( 'admin_init', function(){
-				
+
 				foreach( $this->get_meta_boxes() as $slug => $metabox ){
-					
-					$metabox['context'] = $metabox['context'] ? $metabox['context'] :  'normal';
-					
-					$metabox['priority'] = $metabox['priority'] ? $metabox['priority'] :  'default';
-					
+
+					$metabox['context'] = isset( $metabox['context'] ) ? $metabox['context'] :  'normal';
+
+					$metabox['priority'] = isset( $metabox['priority'] ) ? $metabox['priority'] :  'default';
+
 					/* ADD META BOX */
 					add_meta_box( $slug, $metabox[ 'title' ], array( $this, 'meta_box' ), $metabox['post_type'], $metabox['context'], $metabox['priority']);
 				}
 			} );
-			
+
 		}
-		
+
 		/* META BOXES */
 		function meta_box( $post, $metabox ) {
-			
+
 			// GET THE METABOX ID, IF NOT THEN RETURN
 			if( !is_array( $metabox ) || !isset( $metabox['id'] ) ){ return; }
 			$slug = $metabox['id'];
-			
-			// GET THE REGISTERED META BOX FIELDS 
+
+			// GET THE REGISTERED META BOX FIELDS
 			$metaboxes = $this->get_meta_boxes();
 			if( !is_array( $metaboxes ) || !isset( $metaboxes[ $slug ] ) ){ return ;}
 			$fields = $metaboxes[ $slug ][ 'fields' ];
-			
-			
-			
+
+
+
 			// ITERATING THROUGH EACH FIELD
 			foreach( $fields as $slug => $field ){
-				
+
 				// GETTING VALUE FROM THE DB
 				$value = esc_html( get_post_meta( $post->ID, $slug, true ) );
-				
+
 				// CHECKING IF THE FIELDS IS AN ARRAY OR NEEDS TO INVOKE THE LEGACY CODE
 				if( is_array( $field ) && isset( $field[ 'type' ] ) ){
 					$template_file = false;
@@ -459,13 +459,13 @@
 							break;
 						case 'text':
 							$template_file = "metafield_text.php";
-							break;	
+							break;
 					}
-					
+
 					if( $template_file ){
-						include "templates/".$template_file;	
+						include "templates/".$template_file;
 					}
-					
+
 				}
 				else{
 					// LEGACY CODE ONLY APPICABLE FOR TEXT FIELDS
@@ -473,49 +473,49 @@
 					include "templates/metafield_text.php";
 				}
 			}
-			
+
 		}
-		
+
 		/* SAVE META BOXES */
 		function save_meta_fields( $post_id, $post ){
-			
+
 			$metaboxes = $this->get_meta_boxes();
-			
+
 			foreach( $metaboxes as $metabox ){
-				
+
 				$flag = false;
-				
+
 				// CHECK IF THIS METABOX IS VALID FOR THE CURRENT SCREEN
 				if( isset( $metabox['post_type'] ) ){
-					if( ( is_array( $metabox['post_type'] ) && in_array( $post->post_type, $metabox['post_type'] ) ) || 
+					if( ( is_array( $metabox['post_type'] ) && in_array( $post->post_type, $metabox['post_type'] ) ) ||
 						( $metabox['post_type'] == $post->post_type ) ){
 						$flag = true;
-						
+
 						//print_r( $metabox );
-						
+
 						//wp_die();
 					}
-				} 
-				
+				}
+
 				if( $flag ){
-					
+
 					$fields = $metabox['fields'];
-					
+
 					foreach( $fields as $slug => $field ){									/* ITERATE THROUGH THE FIELDS */
-					
+
 						if ( isset( $_POST[ $slug ] ) ) {
 							update_post_meta( $post_id, $slug, $_POST[ $slug ] );			/* Store data in post meta table if present in post data */
 						}
-						
+
 						if( !isset( $_POST[ $slug ] ) && is_array( $field ) && isset( $field['type'] ) && $field['type'] == 'boolean' ){
 							delete_post_meta( $post_id, $slug );
 						}
-					}	
+					}
 				}
-				
+
 			}
-			
+
 		}
-		
-		
+
+
 	}

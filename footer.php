@@ -2,16 +2,23 @@
 	<section id="footer" class="peopletop">
 		<div class="container">
 			<div class="row text-left text-xs-center text-sm-left text-md-left">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 desktoppadding footer1">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer1">
 					<?php dynamic_sidebar( 'footer_1' ); ?>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 footer2">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer2">
 					<?php dynamic_sidebar( 'footer_2' ); ?>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 explore">
-				<h5><?php echo __('Explore resources','akvo'); ?></h5>
-				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-1', 'container_class' => 'col-xs-12 col-sm-6 col-md-6 nopadding', 'menu_class' => 'list-unstyled quick-links' ) ); ?>
-				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-2', 'container_class' => 'col-xs-12 col-sm-6 col-md-6 nopadding', 'menu_class' => 'list-unstyled quick-links' ) ); ?>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer3">
+					<?php dynamic_sidebar( 'footer_3' ); ?>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer4">
+					<?php dynamic_sidebar( 'footer_4' ); ?>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer5">
+					<?php dynamic_sidebar( 'footer_5' ); ?>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 footer6">
+					<?php dynamic_sidebar( 'footer_6' ); ?>
 				</div>
 			</div>
 			<br><br/>
@@ -71,36 +78,11 @@
 </body></html>
 <!-- TO BE INCLUDED IN THE STYLES -->
 <style>
-
 	/* OVERRIDING HERO WIDGET */
-	.sow-slider-base .sow-slider-pagination, .sow-slider-base .sow-slide-nav{
-		display: none !important;
-	}
-	.sow-slider-base .sow-slider-image-wrapper{
-		padding-left: 15px;
-		padding-right: 15px;
-		max-width: none !important;
-		width: 1170px !important;
-		bottom: 20px;
-	}
-	.sow-slider-base .sow-slider-image-wrapper .carousel-caption{
-		text-align: left;
-		left: auto;
-		right: auto;
-		bottom: 8%;
-	}
+	.sow-slider-base .sow-slider-pagination, .sow-slider-base .sow-slide-nav{ display: none !important; }
+	.sow-slider-base .sow-slider-image-wrapper{ padding-left: 15px; padding-right: 15px; max-width: none !important; width: 1170px !important; bottom: 20px;}
+	.sow-slider-base .sow-slider-image-wrapper .carousel-caption{ text-align: left; left: auto; right: auto; bottom: 8%; }
+	body.single-microstory iframe{ margin-left: auto; margin-right: auto; display: block; }
 
-
-
-
-	body.single-microstory iframe{
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-	}
-	/*
-	a.buttonblack{
-		font-size: 20px!important;
-	}
-	*/
+	#footer ul.menu{ padding-left: 0; }
 </style>

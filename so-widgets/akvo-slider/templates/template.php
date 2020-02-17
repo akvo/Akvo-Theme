@@ -40,6 +40,9 @@
 						<?php if( isset( $slide['content'] ) && $slide['content'] ):?>
 						<br>
 						<h2><?php _e( $slide['content'] );?></h2>
+            <div class="hubspot-btn">
+              <?php _e( $slide['hubspot_button'] );?>
+            </div>
 						<?php endif;?>
 					</div>
 				</div>

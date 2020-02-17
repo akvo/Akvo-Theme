@@ -58,34 +58,23 @@
 				<nav id="header" class="navbar navbar-fixed-top">
 					<div id="header-container" class="container navbar-container">
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<a href="#main-menu-modal" class="navbar-toggle collapsed" data-toggle="modal">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
-							</button>
+							</a>
 							<div class="logobrand">
 								<a id="brand" class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 									<img src="<?php bloginfo('template_url'); ?>/images/logos/random/logo<?php echo rand(1,4); ?>.png" alt="logo" width="200px" >
 								</a>
 							</div>
 						</div>
-						<ul class="nav navbar-nav navbar-right">
-							<li><?php do_action('icl_language_selector'); ?></li>
-							<li><a data-toggle="modal" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
-							<li><a href="#search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-						</ul>
 						<div id="navbar" class="collapse navbar-collapse">
-						<?php
-							wp_nav_menu( array(
-								'theme_location' 	=> 'header-menu',
-								'menu_id' 			=> 'menu-main',
-								'menu_class' 		=> 'nav navbar-nav',
-								'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-								'walker'            => new WP_Bootstrap_Navwalker(),
-							) );
-						?>
-
+							<ul class="nav navbar-nav navbar-right">
+								<li><?php do_action('icl_language_selector'); ?></li>
+								<li><a data-toggle="modal" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+							</ul>
 						</div>
 					</div><!-- /.container -->
 				</nav><!-- /.navbar -->

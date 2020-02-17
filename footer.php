@@ -44,7 +44,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-body">
-					<button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
+					<button type="button" class="btn btn-default btn-close" data-dismiss="modal">&times;</button>
 					<?php
 						wp_nav_menu( array(
 							'theme_location' 	=> 'header-menu',
@@ -54,6 +54,15 @@
 							'walker'            => new WP_Bootstrap_Navwalker(),
 						) );
 					?>
+					<?php get_search_form();?>
+					<ul class="list-inline social">
+						<li class="list-inline-item"><a href="https://www.linkedin.com/company/akvo/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/akvo" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.facebook.com/1Akvo" target="_blank"><i class="fab fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="http://www.youtube.com/user/Akvofoundation" target="_blank"><i class="fab fa-youtube"></i></a></li>
+						<li class="list-inline-item"><a href="https://github.com/akvo" target="_blank"><i class="fab fa-github"></i></a></li>
+						<li class="list-inline-item"><a href="https://akvo.org/contact-us/" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -99,132 +108,4 @@
 	.sow-slider-base .sow-slider-image-wrapper{ padding-left: 15px; padding-right: 15px; max-width: none !important; width: 1170px !important; bottom: 20px;}
 	.sow-slider-base .sow-slider-image-wrapper .carousel-caption{ text-align: left; left: auto; right: auto; bottom: 8%; }
 	body.single-microstory iframe{ margin-left: auto; margin-right: auto; display: block; }
-
-	#footer ul.menu{ padding-left: 0; }
-	#footer .footercol{ min-height: 200px; }
-
-	#main-menu-modal{
-		left: auto;
-		right: 0;
-    background: #fff;
-    width: 100%;
-    max-width: 700px;
-		/*
-		display:block !important; opacity:1 !important
-		*/
-	}
-	#main-menu-modal .modal-dialog { transform: translate(0, 0); }
-
-	#main-menu-modal .modal-content{
-		box-shadow: none;
-    border: none;
-    padding: 50px 100px;
-    border-radius: 0;
-	}
-
-
-
-	#main-menu-modal .modal-dialog .modal-content button.btn.btn-default {
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 36px;
-    position: absolute;
-    right: -70px;
-    top: -50px;
-	}
-
-	#main-menu-modal .modal-content .navbar-nav,
-	#main-menu-modal .modal-content .navbar-nav li{
-		float: none !important;
-		background: none !important;
-		margin-left: 0;
-	}
-
-	#main-menu-modal .navbar-nav .caret{ display: inline-block !important; }
-
-	#main-menu-modal .navbar-nav li a{
-		text-transform: uppercase;
-	  position: relative;
-	  padding: 15px;
-	  background-color: transparent;
-	  color: #555 !important;
-	  font-size: 24px !important;
-	  line-height: 1.4;
-	  margin-bottom: 5px;
-		text-decoration: none;
-		display: block;
-		word-break: break-word;
-		white-space: normal;
-	}
-
-	#main-menu-modal .navbar-nav li.active a,
-	#main-menu-modal .navbar-nav li .dropdown-menu li.active a,
-	#main-menu-modal .navbar-nav li .dropdown-menu li:hover a,
-	#main-menu-modal .navbar-nav li:hover a {
-    color: #4bbda1 !important;
-	}
-
-	#main-menu-modal .navbar-nav a:before{
-		display: inline-block;
-    position: absolute;
-    content: '';
-    width: 0px;
-    border-top: 1px solid #4bbda1;
-    left: -50px;
-    top: 50%;
-    transition: width 0.3s ease;
-	}
-	#main-menu-modal .navbar-nav li.active a:before,
-	#main-menu-modal .navbar-nav .submenu li.active a:before,
-	#main-menu-modal .navbar-nav .submenu li:hover a:before,
-	#main-menu-modal .navbar-nav li:hover a:before {
-    width: 50px;
-	}
-
-
-
-	#main-menu-modal .navbar-nav li .dropdown-menu{
-		list-style: none;
-		display: block;
-		position: relative;
-		float: none;
-		border: none !important;
-		box-shadow: none !important;
-		background: none !important;
-		padding-left: 40px;
-		display: none;
-	}
-	#main-menu-modal .navbar-nav li.dropdown.open .dropdown-menu,
-	#main-menu-modal .navbar-nav li.current-menu-parent .dropdown-menu{
-		display: block;
-	}
-
-	#main-menu-modal .navbar-nav li.active .dropdown-menu a:before,
-	#main-menu-modal .navbar-nav li:hover .dropdown-menu a:before{
-		width: 0;
-	}
-	#main-menu-modal .navbar-nav li .dropdown-menu a{
-		padding: 10px;
-		font-size: 18px !important;
-	}
-	#main-menu-modal .dropdown-menu>li>a:focus,
-	#main-menu-modal .dropdown-menu>li>a:hover{
-		background: none !important;
-	}
-
-	#main-menu-modal .navbar-nav li:hover .dropdown-menu a,
-	#main-menu-modal .navbar-nav li.active .dropdown-menu a{
-		color: #555 !important;
-	}
-
-	@media( max-width: 768px ){
-		#main-menu-modal .modal-content{
-			padding: 50px 20px 50px 50px;
-	  }
-		#main-menu-modal .modal-dialog .modal-content button.btn.btn-default{
-			right: 0;
-		}
-	}
-
 </style>

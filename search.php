@@ -8,20 +8,19 @@
 					<hr>
 					<br>
 					<?php while ( have_posts() ) : the_post(); ?>
-					<div style="padding:20px 0;margin-bottom: 20px">	
+					<div style="padding:20px 0;margin-bottom: 20px">
 						<h4 class="thin search-post-title"><?php the_title(); ?></h4>
 						<p class="search-post-excerpt"><?php the_excerpt(); ?></p>
 						<p class="search-post-link"><a href="<?php the_permalink(); ?>">Read More</a></p>
 					</div>
 					<?php endwhile; ?>
+					<?php global $wp_query;?>
 					<div class="row paddingbottom">
-		<div class="pagenav">
-			<div class="alignleft"><?php previous_posts_link('Newer Posts', $query->max_num_pages) ?></div>
-			<div class="alignright"><?php next_posts_link('Older Posts', $query->max_num_pages) ?></div>
-		</div>
-	</div>
-					
-					
+						<div class="pagenav">
+							<div class="alignleft"><?php previous_posts_link('Newer Posts', $wp_query->max_num_pages) ?></div>
+							<div class="alignright"><?php next_posts_link('Older Posts', $wp_query->max_num_pages) ?></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

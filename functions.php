@@ -1,6 +1,6 @@
 <?php
 
-	define( 'AKVO_VERSION', '1.2.6' );
+	define( 'AKVO_VERSION', '1.2.7' );
 
 	$inc_files = array(
 		'lib/class-akvo-admin.php',
@@ -18,8 +18,8 @@
 	// Define additional "post thumbnails". Relies on MultiPostThumbnails to work
 	if (class_exists('MultiPostThumbnails')) {
 		new MultiPostThumbnails(array(
-			'label' 	=> 'Post Header Image',
-			'id' 		=> 'background_header_image',
+			'label' 		=> 'Post Header Image',
+			'id' 				=> 'background_header_image',
 			'post_type' => 'post'
 			)
 		);

@@ -68,7 +68,7 @@ class Akvo_Slider extends SiteOrigin_Widget {
 						'title_color' => array(
 							'type' 		=> 'color',
 							'label' 	=> __( 'Title Text Color', 'siteorigin-widgets' ),
-							'default' 	=> '#202024'
+							'default' 	=> '#03ad8c'
 						),
 						'title_bg_color' => array(
 							'type' 		=> 'color',
@@ -78,12 +78,12 @@ class Akvo_Slider extends SiteOrigin_Widget {
 						'content_color' => array(
 							'type' 		=> 'color',
 							'label' 	=> __( 'Content Text Color', 'siteorigin-widgets' ),
-							'default' 	=> '#202024'
+							'default' 	=> '#ffffff'
 						),
 						'content_bg_color' => array(
 							'type' 		=> 'color',
 							'label' 	=> __( 'Content Background Color', 'siteorigin-widgets' ),
-							'default' 	=> '#ffffff'
+							'default' 	=> '#03ad8c'
 						),
 	 				)
 				),

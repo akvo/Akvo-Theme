@@ -3,12 +3,12 @@
 	Widget Name: Akvo Slider
 	Description: AKVO SOW for using Bootstrap Carousel within the page builder
 	Author: Samuel Thomas, Akvo
-	Author URI: 
-	Widget URI: 
-	Video URI: 
+	Author URI:
+	Widget URI:
+	Video URI:
 */
 class Akvo_Slider extends SiteOrigin_Widget {
-	
+
 	function __construct() {
 		//Here you can do any preparation required before calling the parent constructor, such as including additional files or initializing variables.
 		//Call the parent constructor with the required arguments.
@@ -60,6 +60,33 @@ class Akvo_Slider extends SiteOrigin_Widget {
 						)
 					)
 				),
+				'design_section' => array(
+	 				'type' => 'section',
+	 				'label' => __( 'Design' , 'siteorigin-widgets' ),
+	 				'hide' => true,
+	 				'fields' => array(
+						'title_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Title Text Color', 'siteorigin-widgets' ),
+							'default' 	=> '#202024'
+						),
+						'title_bg_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Title Background Color', 'siteorigin-widgets' ),
+							'default' 	=> '#ffffff'
+						),
+						'content_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Content Text Color', 'siteorigin-widgets' ),
+							'default' 	=> '#202024'
+						),
+						'content_bg_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Content Background Color', 'siteorigin-widgets' ),
+							'default' 	=> '#ffffff'
+						),
+	 				)
+				),
 				'bg-size' => array(
 					'type' => 'select',
 					'label' => __( 'Choose background image size', 'siteorigin-widgets' ),
@@ -75,7 +102,7 @@ class Akvo_Slider extends SiteOrigin_Widget {
 			get_template_directory()."/so-widgets/akvo-slider"
 		);
 	}
-	
+
 	function get_template_name($instance) {
 		return 'template';
 	}

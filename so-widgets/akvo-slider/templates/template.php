@@ -5,23 +5,23 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner carousel-fade">
 			<?php $i = 0;foreach( $instance['slides'] as $slide ):?>
-			
+
 			<?php
-				
+
 				$item_class = "item";
-				
+
 				if( isset( $instance['bg-size'] ) ){
 					$item_class .= " ".$instance['bg-size'];
 				}
-				
+
 				if( isset( $slide['repeat'] ) && $slide['repeat'] ){
 					$item_class .= " item-repeat";
 				}
-				
-				if( !$i ){ 
+
+				if( !$i ){
 					$item_class .= " active";
 				}
-				
+
 				$item_style = "";
 				if( isset( $slide['image'] ) && $slide['image'] ){
 					$item_style .= "background-image:url('".wp_get_attachment_url( $slide['image'] )."');";
@@ -29,10 +29,10 @@
 				if( isset( $slide['bg_color'] ) && $slide['bg_color'] ){
 					$item_style .= "background-color:".$slide['bg_color'].";";
 				}
-				
-			
+
+
 			?>
-			
+
 			<div class="<?php _e( $item_class );?>" style="<?php _e( $item_style );?>">
 				<div class="container">
 					<div class="carousel-caption microstory">
@@ -45,10 +45,19 @@
 				</div>
 			</div><!-- End Item -->
 			<?php $i++;endforeach;?>
-        </div><!-- End Carousel Inner -->	
+        </div><!-- End Carousel Inner -->
 	</div>
 </div>
 <!-- End Carousel -->
 <?php endif; ?>
 
-	
+<style>
+  .carousel-caption h1{
+    color: <?php _e( $instance['design_section']['title_color'] );?>;
+    background-color:  <?php _e( $instance['design_section']['title_bg_color'] );?>;
+  }
+  .carousel-caption h2{
+    color: <?php _e( $instance['design_section']['content_color'] );?>;
+    background-color:  <?php _e( $instance['design_section']['content_bg_color'] );?>;
+  }
+</style>

@@ -72,7 +72,7 @@
 						</div>
 						<div id="navbar" class="collapse navbar-collapse">
 							<ul class="nav navbar-nav navbar-right">
-								<li><?php do_action('icl_language_selector'); ?></li>
+								<li style="margin-right: 15px;"><?php do_action('icl_language_selector'); ?></li>
 								<li><a data-toggle="modal" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>

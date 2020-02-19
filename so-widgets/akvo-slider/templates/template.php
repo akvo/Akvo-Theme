@@ -67,25 +67,18 @@
   }
 
   /* Scss styles */
-  .carousel-caption.microstory{
-    bottom: auto !important;
-  }
+  .carousel-caption.microstory{ bottom: auto !important; }
   .carousel .carousel-caption{
+    top: 25%;
+    width: 100%;
     text-align: <?php _e( $instance['design_section']['header_text_alignment'] );?>;
   }
-  .carousel-caption h1{
-    font-size: 5rem;
-    line-height: 75px;
-  }
-  .carousel-caption h2{
-    font-size: 22px;
-  }
-  .carousel-caption{ top: 25%; }
+  .carousel-caption h1{ font-size: 5rem; line-height: 75px; }
+  .carousel-caption h2{ font-size: 22px; }
 
   @media( min-width: 960px ){
     .carousel-caption{ top: 35%; }
     .carousel .carousel-caption{
-      width: 100%;
       left: 20%;
       transform: translateX(-20%);
     }

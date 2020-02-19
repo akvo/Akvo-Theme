@@ -120,4 +120,12 @@
 		background: #03AD8C !important;
 		color: #fff !important;
 	}
+
+	/* REMOVE THE DUPLICATE CSS FROM CUSTOMISE */
+	p a{
+		color: #000;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #e04d95!important;
+    text-decoration: none!important;
+	}
 </style>

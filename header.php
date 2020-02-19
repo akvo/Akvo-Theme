@@ -74,6 +74,7 @@
 							<ul class="nav navbar-nav navbar-right">
 								<li style="margin-right: 15px;"><?php do_action('icl_language_selector'); ?></li>
 								<li><a data-toggle="modal" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+								<li class="hubspot-btn"><a href="#">Request a consultation</a></li>
 							</ul>
 						</div>
 					</div><!-- /.container -->

@@ -108,4 +108,12 @@
 	.sow-slider-base .sow-slider-image-wrapper{ padding-left: 15px; padding-right: 15px; max-width: none !important; width: 1170px !important; bottom: 20px;}
 	.sow-slider-base .sow-slider-image-wrapper .carousel-caption{ text-align: left; left: auto; right: auto; bottom: 8%; }
 	body.single-microstory iframe{ margin-left: auto; margin-right: auto; display: block; }
+
+	#navbar .hubspot-btn a[href]{
+		border: #03AD8C solid 1px;
+		font-size: 16px;
+		margin-top: 7px;
+		color: #03AD8C !important;
+		padding: 7px;
+	}
 </style>

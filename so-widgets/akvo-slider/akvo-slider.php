@@ -53,10 +53,10 @@ class Akvo_Slider extends SiteOrigin_Widget {
 							'type' 	=> 'textarea',
 							'label' => __( 'Content', 'siteorigin-widgets' )
 						),
-						'hubspot_button' 	=> array(
-							'type' => 'text',
-							'label' => __( 'HubSpot Button', 'siteorigin-widgets' )
-						),
+						// 'hubspot_button' 	=> array(
+						// 	'type' => 'text',
+						// 	'label' => __( 'HubSpot Button', 'siteorigin-widgets' )
+						// ),
 						'repeat' 	=> array(
 							'type' 		=> 'checkbox',
 							'label' 	=> __( 'Repeat the background image', 'siteorigin-widgets' ),
@@ -88,6 +88,15 @@ class Akvo_Slider extends SiteOrigin_Widget {
 							'type' 		=> 'color',
 							'label' 	=> __( 'Content Background Color', 'siteorigin-widgets' ),
 							'default' 	=> '#03ad8c'
+						),
+						'header_text_alignment' => array(
+							'type' => 'select',
+							'label' => __( 'Header Text Alignment', 'siteorigin-widgets' ),
+							'default' => 'left',
+							'options' => array(
+								'left' 		=> __( 'Default', 'siteorigin-widgets' ),
+								'center' 		=> __( 'Center', 'siteorigin-widgets' ),
+							)
 						),
 	 				)
 				),

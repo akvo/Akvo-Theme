@@ -40,9 +40,11 @@
 						<?php if( isset( $slide['content'] ) && $slide['content'] ):?>
 						<br>
 						<h2><?php _e( $slide['content'] );?></h2>
+            <?php if( !empty( $slide['hubspot_button'] ) ):?>
             <div class="hubspot-btn">
               <?php _e( $slide['hubspot_button'] );?>
             </div>
+            <?php endif;?>
 						<?php endif;?>
 					</div>
 				</div>
@@ -69,7 +71,7 @@
     bottom: auto !important;
   }
   .carousel .carousel-caption{
-    text-align: center;
+    text-align: <?php _e( $instance['design_section']['header_text_alignment'] );?>;
   }
   .carousel-caption h1{
     font-size: 5rem;
@@ -82,7 +84,10 @@
 
   @media( min-width: 960px ){
     .carousel-caption{ top: 35%; }
-    .carousel .carousel-caption{ right: 20%; }
+    .carousel .carousel-caption{
+      width: 100%;
+      left: 20%;
+      transform: translateX(-20%);
+    }
   }
-
 </style>

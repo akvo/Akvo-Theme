@@ -116,4 +116,8 @@
 		color: #03AD8C !important;
 		padding: 7px;
 	}
+	#navbar .hubspot-btn a[href]:hover{
+		background: #03AD8C !important;
+		color: #fff !important;
+	}
 </style>

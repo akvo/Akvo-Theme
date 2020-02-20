@@ -423,7 +423,6 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 #main-menu-modal .navbar-nav .caret{ display: inline-block !important; }
 
 #main-menu-modal .navbar-nav li a{
-	text-transform: uppercase;
 	position: relative;
 	padding: 10px;
 	background-color: transparent;

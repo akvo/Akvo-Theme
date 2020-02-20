@@ -397,7 +397,7 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 
 /* NEW HEADER & FOOTER - #396 */
 #footer ul.menu{ padding-left: 0; }
-#footer .footercol{ min-height: 200px; }
+#footer .footercol{ min-height: 280px; }
 
 #main-menu-modal{ left: auto; right: 0; background: #fff; width: 100%; max-width: 700px; }
 #main-menu-modal .modal-dialog { transform: translate(0, 0); }

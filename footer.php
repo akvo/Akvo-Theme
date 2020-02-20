@@ -131,4 +131,8 @@
     border-bottom: 1px solid #e04d95!important;
     text-decoration: none!important;
 	}
+
+	#footer  ul.menu li{
+		margin-bottom: 10px;
+	}
 </style>

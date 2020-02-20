@@ -72,7 +72,7 @@
 						</div>
 						<div id="navbar" class="collapse navbar-collapse">
 							<ul class="nav navbar-nav navbar-right">
-								<li><a data-toggle="modal" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+								<li><a data-toggle="modal" style="font-size: 22px;" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
 								<li class="hubspot-btn"><a href="#">Request a consultation</a></li>
 							</ul>
 						</div>

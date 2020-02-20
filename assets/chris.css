@@ -544,3 +544,10 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 }
 
 /* NEW HEADER & FOOTER */
+
+/* CLOCKS */
+.jcgmt-rotatingWrapper{
+	left: 50%;
+  transform: translateX(-50%);
+  padding-left: 0 !important;
+}

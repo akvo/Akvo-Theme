@@ -496,7 +496,7 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	color: #555 !important;
 }
 
-#main-menu-modal .list-inline.social{ padding-top: 20px; }
+#main-menu-modal .list-inline.social{ margin-left: 10px; }
 #main-menu-modal .list-inline.social a[href]{ font-size: 22px; color: #555; }
 
 .search-form input[type=search] {

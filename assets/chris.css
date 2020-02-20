@@ -536,6 +536,7 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 */
 
 #main-menu-modal .space-two{ margin-top: 70px; margin-bottom: 70px;}
+#main-menu-modal .wpml-ls-legacy-list-horizontal{ margin-bottom: 15px;}
 
 @media( max-width: 768px ){
 	#main-menu-modal .modal-content{ padding: 50px 20px 50px 50px; }

@@ -54,7 +54,10 @@
 							'walker'            => new WP_Bootstrap_Navwalker(),
 						) );
 					?>
-					<?php get_search_form();?>
+					<div class='space-two'>
+						<?php do_action('icl_language_selector'); ?>
+						<?php get_search_form();?>
+					</div>
 					<ul class="list-inline social">
 						<li class="list-inline-item"><a href="https://www.linkedin.com/company/akvo/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 						<li class="list-inline-item"><a href="https://twitter.com/akvo" target="_blank"><i class="fab fa-twitter"></i></a></li>

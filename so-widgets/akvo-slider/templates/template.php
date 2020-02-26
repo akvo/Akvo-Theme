@@ -79,8 +79,8 @@
   @media( min-width: 960px ){
     .carousel-caption{ top: 35%; }
     .carousel .carousel-caption{
-      left: 20%;
-      transform: translateX(-20%);
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 </style>

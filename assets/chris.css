@@ -503,14 +503,14 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	-webkit-transition: .5s all ease;
   -moz-transition: .5s all ease;
   transition: .5s all ease;
-} 
+}
 #main-menu-modal .list-inline.social a[href]:hover{ font-size: 30px; color: #03AD8C; margin-top: -10px; }
 
 .search-form input[type=search] {
   box-sizing: border-box;
   font-size: 16px;
   background-color: white;
-  background-image: url('../images/searchicon.png');
+  background-image: url('../images/searchicon2.png');
   background-position: 10px 5px;
   background-repeat: no-repeat;
   padding: 12px 0px 12px 40px;

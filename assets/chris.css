@@ -497,7 +497,14 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 }
 
 #main-menu-modal .list-inline.social{ margin-left: 10px; }
-#main-menu-modal .list-inline.social a[href]{ font-size: 22px; color: #555; }
+#main-menu-modal .list-inline.social a[href]{
+	font-size: 22px;
+	color: #555;
+	-webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+} 
+#main-menu-modal .list-inline.social a[href]:hover{ font-size: 30px; color: #03AD8C; margin-top: -10px; }
 
 .search-form input[type=search] {
   box-sizing: border-box;

@@ -53,10 +53,11 @@ class Akvo_Slider extends SiteOrigin_Widget {
 							'type' 	=> 'textarea',
 							'label' => __( 'Content', 'siteorigin-widgets' )
 						),
-						'hubspot_button' 	=> array(
-							'type' => 'text',
-							'label' => __( 'HubSpot Button', 'siteorigin-widgets' )
-						),
+						'hubspot_button' => array(
+			 				'type' => 'tinymce',
+							 'label' => __( 'HubSpot Button', 'siteorigin-widgets' ),
+			 			 		'default_editor' => 'tinymce',
+					 	),
 						'repeat' 	=> array(
 							'type' 		=> 'checkbox',
 							'label' 	=> __( 'Repeat the background image', 'siteorigin-widgets' ),

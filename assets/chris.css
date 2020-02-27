@@ -427,5 +427,9 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	color: #fff;
 	text-align: center;
 }
+.carousel-caption .hubspot-btn a span{
+	font-size: 16px;
+	color: #fff !important;
+}
 .carousel-caption .hubspot-btn a:hover{ background-color: #00a182;text-decoration: none; }
 /* Hubspot Button */

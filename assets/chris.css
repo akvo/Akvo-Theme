@@ -421,7 +421,7 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	max-width: 200px;
 	width: 100%;
 	padding: 10px 5px;
-	border: 2px solid #fff;
+	border: 2px solid #fff !important;
 	font-size: 16px;
 	background-color: #03ad8c;
 	color: #fff;

@@ -411,3 +411,21 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 
 }
 /*Akvo Steps List SOW*/
+
+/* Hubspot Button */
+.carousel-caption .hubspot-btn{
+	margin-top: 30px;
+}
+.carousel-caption .hubspot-btn a{
+	display: inline-block;
+	max-width: 200px;
+	width: 100%;
+	padding: 10px 5px;
+	border: 2px solid #fff;
+	font-size: 16px;
+	background-color: #03ad8c;
+	color: #fff;
+	text-align: center;
+}
+.carousel-caption .hubspot-btn a:hover{ background-color: #00a182;text-decoration: none; }
+/* Hubspot Button */

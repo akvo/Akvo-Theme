@@ -76,6 +76,8 @@
   .carousel-caption h1{ font-size: 5rem; line-height: 75px; }
   .carousel-caption h2{ font-size: 22px; }
 
+  /* Scss styles */
+
   @media( min-width: 960px ){
     .carousel-caption{ top: 35%; }
     .carousel .carousel-caption{

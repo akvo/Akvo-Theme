@@ -1,6 +1,18 @@
-<?php global $akvo_widgets_template; if( isset( $instance['slides'] ) ):?>
+<?php
+
+global $akvo_widgets_template;
+
+$widget_id = "";
+if( $akvo_widgets_template ){
+  $widget_id = $akvo_widgets_template->getUniqueID( $instance );
+}
+
+$widget_id = "akvoSlider" . $widget_id;
+?>
+
+<?php if( isset( $instance['slides'] ) ):?>
 <!-- Carousel -->
-<div class="container fullwidth short-title">
+<div id="<?php _e( $widget_id );?>" class="container fullwidth short-title">
     <div class="carousel slide carousel-fade" data-ride="carousel">
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner carousel-fade">
@@ -35,7 +47,7 @@
 
 			<div class="<?php _e( $item_class );?>" style="<?php _e( $item_style );?>">
 				<div class="container">
-					<div class="carousel-caption microstory">
+					<div class="carousel-caption microstory <?php if( isset( $slide['content'] ) && $slide['content'] ){ _e('new-version');}?>">
 						<?php if( isset( $slide['title'] ) && $slide['title'] ):?><h1><?php _e( $slide['title'] );?></h1><?php endif;?>
 						<?php if( isset( $slide['content'] ) && $slide['content'] ):?>
 						<br>
@@ -57,30 +69,30 @@
 <?php endif; ?>
 
 <style>
-  .carousel-caption h1{
+  <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h1{
     color: <?php _e( $instance['design_section']['title_color'] );?>;
     background-color:  <?php _e( $instance['design_section']['title_bg_color'] );?>;
   }
-  .carousel-caption h2{
+  <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h2{
     color: <?php _e( $instance['design_section']['content_color'] );?>;
     background-color:  <?php _e( $instance['design_section']['content_bg_color'] );?>;
   }
 
   /* Scss styles */
-  .carousel-caption.microstory{ bottom: auto !important; }
-  .carousel .carousel-caption{
+  <?php _e( "#" . $widget_id );?> .carousel-caption.microstory.new-version{ bottom: auto !important; }
+  <?php _e( "#" . $widget_id );?> .carousel .carousel-caption.new-version{
     top: 25%;
     width: 100%;
     text-align: <?php _e( $instance['design_section']['header_text_alignment'] );?>;
   }
-  .carousel-caption h1{ font-size: 5rem; line-height: 75px; }
-  .carousel-caption h2{ font-size: 22px; }
+  <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h1{ font-size: 5rem; line-height: 75px; }
+  <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h2{ font-size: 22px; }
 
   /* Scss styles */
 
   @media( min-width: 960px ){
-    .carousel-caption{ top: 35%; }
-    .carousel .carousel-caption{
+    <?php _e( "#" . $widget_id );?> .carousel-caption.new-version{ top: 35%; }
+    <?php _e( "#" . $widget_id );?> .carousel .carousel-caption.new-version{
       left: 50%;
       transform: translateX(-50%);
     }

@@ -118,11 +118,15 @@
 		margin-top: 7px;
 		color: #03AD8C !important;
 		padding: 7px;
+		display: inline-block;
+		text-decoration: none;
 	}
+	#navbar .hubspot-btn a[href] span{ color: #03AD8C !important; }
 	#navbar .hubspot-btn a[href]:hover{
 		background: #03AD8C !important;
 		color: #fff !important;
 	}
+	#navbar .hubspot-btn a[href]:hover span{ color: #FFF !important; }
 
 	/* REMOVE THE DUPLICATE CSS FROM CUSTOMISE */
 	p a{

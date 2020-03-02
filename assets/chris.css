@@ -504,7 +504,7 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
   -moz-transition: .5s all ease;
   transition: .5s all ease;
 }
-#main-menu-modal .list-inline.social a[href]:hover{ font-size: 30px; color: #03AD8C; margin-top: -10px; }
+#main-menu-modal .list-inline.social a[href]:hover{ /*font-size: 30px; margin-top: -10px; */ color: #03AD8C; }
 
 .search-form input[type=search] {
   box-sizing: border-box;

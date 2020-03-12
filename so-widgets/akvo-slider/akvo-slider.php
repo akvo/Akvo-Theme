@@ -3,12 +3,12 @@
 	Widget Name: Akvo Slider
 	Description: AKVO SOW for using Bootstrap Carousel within the page builder
 	Author: Samuel Thomas, Akvo
-	Author URI: 
-	Widget URI: 
-	Video URI: 
+	Author URI:
+	Widget URI:
+	Video URI:
 */
 class Akvo_Slider extends SiteOrigin_Widget {
-	
+
 	function __construct() {
 		//Here you can do any preparation required before calling the parent constructor, such as including additional files or initializing variables.
 		//Call the parent constructor with the required arguments.
@@ -53,12 +53,53 @@ class Akvo_Slider extends SiteOrigin_Widget {
 							'type' 	=> 'textarea',
 							'label' => __( 'Content', 'siteorigin-widgets' )
 						),
+						'hubspot_button' => array(
+			 				'type' => 'tinymce',
+							 'label' => __( 'HubSpot Button', 'siteorigin-widgets' ),
+			 			 		'default_editor' => 'tinymce',
+					 	),
 						'repeat' 	=> array(
 							'type' 		=> 'checkbox',
 							'label' 	=> __( 'Repeat the background image', 'siteorigin-widgets' ),
 							'default' 	=> false
 						)
 					)
+				),
+				'design_section' => array(
+	 				'type' => 'section',
+	 				'label' => __( 'Design' , 'siteorigin-widgets' ),
+	 				'hide' => true,
+	 				'fields' => array(
+						'title_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Title Text Color', 'siteorigin-widgets' ),
+							'default' 	=> '#03ad8c'
+						),
+						'title_bg_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Title Background Color', 'siteorigin-widgets' ),
+							'default' 	=> '#ffffff'
+						),
+						'content_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Content Text Color', 'siteorigin-widgets' ),
+							'default' 	=> '#ffffff'
+						),
+						'content_bg_color' => array(
+							'type' 		=> 'color',
+							'label' 	=> __( 'Content Background Color', 'siteorigin-widgets' ),
+							'default' 	=> '#03ad8c'
+						),
+						'header_text_alignment' => array(
+							'type' => 'select',
+							'label' => __( 'Header Text Alignment', 'siteorigin-widgets' ),
+							'default' => 'left',
+							'options' => array(
+								'left' 		=> __( 'Default', 'siteorigin-widgets' ),
+								'center' 		=> __( 'Center', 'siteorigin-widgets' ),
+							)
+						),
+	 				)
 				),
 				'bg-size' => array(
 					'type' => 'select',
@@ -75,7 +116,7 @@ class Akvo_Slider extends SiteOrigin_Widget {
 			get_template_directory()."/so-widgets/akvo-slider"
 		);
 	}
-	
+
 	function get_template_name($instance) {
 		return 'template';
 	}

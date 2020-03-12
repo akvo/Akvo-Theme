@@ -368,6 +368,7 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	}
 	.steps-list-wrapper .step-body{
 		max-width: 30%;
+		width: 100%;
 		text-align: center;
 		margin-right:  50px;
 	}
@@ -379,10 +380,11 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
      content: "";
      background-color: #fff;
      height: 2px;
-     top: 10%;
+     top: 25px;
      width: 260px;
      display: block;
  	}
+
  .steps-list-wrapper :first-child:after{
 	left: 180px;
  }
@@ -392,9 +394,25 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
  .steps-list-wrapper :last-child:after{
  	display: none;
  }
+
+ /* For vertical-decoration only */
+ .steps-list-wrapper.vertical .step-body:after{
+	 	height: 102px;
+ 		top: 6px;
+ 		width: 2px;
+		left: 310px;
+		background-color: #ffffff;
+ }
+ .steps-list-wrapper.vertical :last-child:after{
+ 	display: none;
+ }
+/* For vertical-decoration only */
+
+
 }
 /*Akvo Steps List SOW*/
 
+<<<<<<< HEAD
 /* NEW HEADER & FOOTER - #396 */
 #footer ul.menu{ padding-left: 0; }
 #footer .footercol{ min-height: 280px; }
@@ -558,3 +576,25 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
   transform: translateX(-50%);
   padding-left: 0 !important;
 }
+
+/* Hubspot Button */
+.carousel-caption .hubspot-btn{
+	margin-top: 30px;
+}
+.carousel-caption .hubspot-btn a{
+	display: inline-block;
+	max-width: 200px;
+	width: 100%;
+	padding: 10px 5px;
+	border: 2px solid #fff !important;
+	font-size: 16px;
+	background-color: #03ad8c;
+	color: #fff;
+	text-align: center;
+}
+.carousel-caption .hubspot-btn a span{
+	font-size: 16px;
+	color: #fff !important;
+}
+.carousel-caption .hubspot-btn a:hover{ background-color: #00a182;text-decoration: none; }
+/* Hubspot Button */

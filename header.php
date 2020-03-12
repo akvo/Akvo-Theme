@@ -11,42 +11,27 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta charset="UTF-8">
 		<title><?php wp_title('|', true, 'right'); ?></title>
-		<!--
-
-		<meta name="description" content="Akvo.org: See it Happen" />
-		<meta name="author" content="Akvo Foundation">
-
-		These tags will come from the YOAST SEO plugin
-
-		-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="HandheldFriendly" content="True">
-
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-NJXGk7R+8gWGBdutmr+/d6XDokLwQhF1U3VA7FhvBDlOq7cNdI69z7NQdnXxcF7k" crossorigin="anonymous">
-
-		<!--link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-j8y0ITrvFafF4EkV1mPW0BKm6dp3c+J9Fky22Man50Ofxo2wNe5pT1oZejDH9/Dt" crossorigin="anonymous"-->
-
 		<?php wp_head(); ?>
-
 		<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
 		<!--[if IE ]><style type="text/css">
 		.tab-content .sow-image-container, .tab-content .panel-grid-cell .sow-image-container {display:block!important;}
 		</style><![endif]-->
 
-
 		<!-- Hotjar Tracking Code for www.akvo.org -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1319999,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+		<script>
+		    (function(h,o,t,j,a,r){
+		        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+		        h._hjSettings={hjid:1319999,hjsv:6};
+		        a=o.getElementsByTagName('head')[0];
+		        r=o.createElement('script');r.async=1;
+		        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+		        a.appendChild(r);
+		    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
 	</head>
 	<body <?php body_class(); ?>>
 		<!-- Google Analytics -->
@@ -60,11 +45,12 @@
 		ga('send', 'pageview');
 		</script>
 		<!-- End Google Analytics -->
-		<!-- Start Piwik PRO Tag Manager code --><script type="text/javascript">
-function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}var isStgDebug=(window.location.href.match("stg_debug")||window.document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
-var url = "//analytics.akvo.org/containers/86745314-4c88-45c4-8c1d-77cd100105ea.sync.js" + (isStgDebug ? "?stg_debug" : "");
-document.write('<script src="' + url + '"></' + 'script>');
-</script><!-- End Piwik PRO Tag Manager code -->
+		<!-- Start Piwik PRO Tag Manager code -->
+		<script type="text/javascript">
+		function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}var isStgDebug=(window.location.href.match("stg_debug")||window.document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+		var url = "//analytics.akvo.org/containers/86745314-4c88-45c4-8c1d-77cd100105ea.sync.js" + (isStgDebug ? "?stg_debug" : "");
+		document.write('<script src="' + url + '"></' + 'script>');
+		</script><!-- End Piwik PRO Tag Manager code -->
 		<div id="mainbody">
 
 		<!-- NEW HEADER -->
@@ -72,12 +58,12 @@ document.write('<script src="' + url + '"></' + 'script>');
 				<nav id="header" class="navbar navbar-fixed-top">
 					<div id="header-container" class="container navbar-container">
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<a href="#main-menu-modal" class="navbar-toggle collapsed" data-toggle="modal">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
-							</button>
+							</a>
 							<div class="logobrand">
 								<a id="brand" class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 									<img src="<?php bloginfo('template_url'); ?>/images/logos/random/logo<?php echo rand(1,4); ?>.png" alt="logo" width="200px" >
@@ -85,18 +71,22 @@ document.write('<script src="' + url + '"></' + 'script>');
 							</div>
 						</div>
 						<div id="navbar" class="collapse navbar-collapse">
-						<?php
-							wp_nav_menu( array(
-								'theme_location' 	=> 'header-menu',
-								'menu_id' 			=> 'menu-main',
-								'menu_class' 		=> 'nav navbar-nav',
-								'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-								'walker'            => new WP_Bootstrap_Navwalker(),
-							) );
-						?>
 							<ul class="nav navbar-nav navbar-right">
-								<li><?php do_action('icl_language_selector'); ?></li>
-								<li><a href="#search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+								<li><a data-toggle="modal" style="font-size: 22px;" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+								<li class="hubspot-btn">
+									<!--HubSpot Call-to-Action Code -->
+									<span class="hs-cta-wrapper" id="hs-cta-wrapper-c121e58b-7132-4e02-8aa7-db4122167850">
+										<span class="hs-cta-node hs-cta-c121e58b-7132-4e02-8aa7-db4122167850" id="hs-cta-c121e58b-7132-4e02-8aa7-db4122167850">
+											<!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]-->
+											<a href="https://cta-redirect.hubspot.com/cta/redirect/1891949/c121e58b-7132-4e02-8aa7-db4122167850" >
+												<img class="hs-cta-img" id="hs-cta-img-c121e58b-7132-4e02-8aa7-db4122167850" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1891949/c121e58b-7132-4e02-8aa7-db4122167850.png"  alt="Request a consultation"/>
+											</a>
+										</span>
+										<script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script>
+										<script type="text/javascript"> hbspt.cta.load(1891949, 'c121e58b-7132-4e02-8aa7-db4122167850', {}); </script>
+									</span>
+									<!-- end HubSpot Call-to-Action Code -->
+								</li>
 							</ul>
 						</div>
 					</div><!-- /.container -->

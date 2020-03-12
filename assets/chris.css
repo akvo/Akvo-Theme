@@ -412,6 +412,171 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 }
 /*Akvo Steps List SOW*/
 
+<<<<<<< HEAD
+/* NEW HEADER & FOOTER - #396 */
+#footer ul.menu{ padding-left: 0; }
+#footer .footercol{ min-height: 280px; }
+
+#main-menu-modal{ left: auto; right: 0; background: #fff; width: 100%; max-width: 700px; }
+#main-menu-modal .modal-dialog { transform: translate(0, 0); }
+#main-menu-modal .modal-content{ box-shadow: none; border: none; padding: 50px 100px; border-radius: 0; }
+
+#main-menu-modal .modal-dialog .modal-content button.btn.btn-default.btn-close {
+	background: none;
+	border: none;
+	color: #333;
+	font-size: 36px;
+	position: absolute;
+	right: -70px;
+	top: -50px;
+}
+
+#main-menu-modal .modal-content .navbar-nav,
+#main-menu-modal .modal-content .navbar-nav li{
+	float: none !important;
+	background: none !important;
+	margin-left: 0;
+}
+
+#main-menu-modal .navbar-nav .caret{ display: inline-block !important; }
+
+#main-menu-modal .navbar-nav li a{
+	position: relative;
+	padding: 10px;
+	background-color: transparent;
+	color: #555 !important;
+	font-size: 24px !important;
+	line-height: 1.4;
+	margin-bottom: 5px;
+	text-decoration: none;
+	display: block;
+	word-break: break-word;
+	white-space: normal;
+}
+
+#main-menu-modal .navbar-nav li.active a,
+#main-menu-modal .navbar-nav li .dropdown-menu li.active a,
+#main-menu-modal .navbar-nav li .dropdown-menu li:hover a,
+#main-menu-modal .navbar-nav li:hover a {
+	color: #4bbda1 !important;
+}
+
+#main-menu-modal .navbar-nav a:before{
+	display: inline-block;
+	position: absolute;
+	content: '';
+	width: 0px;
+	border-top: 1px solid #4bbda1;
+	left: -50px;
+	top: 50%;
+	transition: width 0.3s ease;
+}
+#main-menu-modal .navbar-nav li.active a:before,
+#main-menu-modal .navbar-nav .submenu li.active a:before,
+#main-menu-modal .navbar-nav .submenu li:hover a:before,
+#main-menu-modal .navbar-nav li:hover a:before {
+	width: 50px;
+}
+
+
+
+#main-menu-modal .navbar-nav li .dropdown-menu{
+	list-style: none;
+	display: block;
+	position: relative;
+	float: none;
+	border: none !important;
+	box-shadow: none !important;
+	background: none !important;
+	padding-left: 40px;
+	display: none;
+}
+#main-menu-modal .navbar-nav li.dropdown.open .dropdown-menu,
+#main-menu-modal .navbar-nav li.current-menu-parent .dropdown-menu{
+	display: block;
+}
+
+#main-menu-modal .navbar-nav li.active .dropdown-menu a:before,
+#main-menu-modal .navbar-nav li:hover .dropdown-menu a:before{
+	width: 0;
+}
+#main-menu-modal .navbar-nav li .dropdown-menu a{
+	padding: 10px;
+	font-size: 18px !important;
+}
+#main-menu-modal .dropdown-menu>li>a:focus,
+#main-menu-modal .dropdown-menu>li>a:hover{
+	background: none !important;
+}
+
+#main-menu-modal .navbar-nav li:hover .dropdown-menu a,
+#main-menu-modal .navbar-nav li.active .dropdown-menu a{
+	color: #555 !important;
+}
+
+#main-menu-modal .list-inline.social{ margin-left: 10px; }
+#main-menu-modal .list-inline.social a[href]{
+	font-size: 22px;
+	color: #555;
+	-webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+#main-menu-modal .list-inline.social a[href]:hover{ /*font-size: 30px; margin-top: -10px; */ color: #03AD8C; }
+
+.search-form input[type=search] {
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../images/searchicon2.png');
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  padding: 12px 0px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+	width: 0;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding-bottom: 10px;
+}
+
+.search-form input[type=search]:focus {
+  width: 200px;
+	border-bottom: #ccc solid 1px;
+}
+
+/*
+.search-form .search-wrap{ position: relative;}
+.search-form input[type=search]{ width: 100%; box-shadow: none; }
+.search-form .input-group-btn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: auto !important;
+}
+.search-form .input-group-btn button{ border-left-width: 0; color: #999; }
+.search-form .input-group-btn button:hover{ background-color: #fff; }
+#main-menu-modal .search-form{ margin: 30px 0;}
+*/
+
+#main-menu-modal .space-two{ margin-top: 70px; margin-bottom: 70px;}
+#main-menu-modal .wpml-ls-legacy-list-horizontal{ margin-bottom: 15px;}
+
+@media( max-width: 768px ){
+	#main-menu-modal .modal-content{ padding: 50px 20px 50px 50px; }
+	#main-menu-modal .modal-dialog .modal-content button.btn.btn-default.btn-close{ right: 0; }
+}
+
+/* NEW HEADER & FOOTER */
+
+/* CLOCKS */
+.jcgmt-rotatingWrapper{
+	left: 50%;
+  transform: translateX(-50%);
+  padding-left: 0 !important;
+}
+
 /* Hubspot Button */
 .carousel-caption .hubspot-btn{
 	margin-top: 30px;

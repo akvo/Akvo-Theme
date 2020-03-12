@@ -1,6 +1,6 @@
 <?php
 
-	define( 'AKVO_VERSION', '1.3.0' );
+define( 'AKVO_VERSION', '1.3.4' );
 
 	$inc_files = array(
 		'lib/class-akvo-admin.php',
@@ -18,8 +18,8 @@
 	// Define additional "post thumbnails". Relies on MultiPostThumbnails to work
 	if (class_exists('MultiPostThumbnails')) {
 		new MultiPostThumbnails(array(
-			'label' 	=> 'Post Header Image',
-			'id' 		=> 'background_header_image',
+			'label' 		=> 'Post Header Image',
+			'id' 				=> 'background_header_image',
 			'post_type' => 'post'
 			)
 		);
@@ -129,8 +129,12 @@
 		// REGISTER NAV MENUS
 		register_nav_menus( array(
 			'header-menu' 	=> __( 'Header Menu' ),
-			'footer-menu-1' => __( 'Footer Menu 1' ),
-			'footer-menu-2' => __( 'Footer Menu 2' )
+			//'footer-menu-1' => __( 'Footer Menu 1' ),
+			//'footer-menu-2' => __( 'Footer Menu 2' ),
+			//'footer-menu-3' => __( 'Footer Menu 3' ),
+			//'footer-menu-4' => __( 'Footer Menu 4' ),
+			//'footer-menu-5' => __( 'Footer Menu 5' ),
+			//'footer-menu-6' => __( 'Footer Menu 6' )
 		) );
 	} );
 
@@ -149,6 +153,42 @@
 		register_sidebar( array(
 			'name'          => 'Footer Widget Area 2',
 			'id'            => 'footer_2',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Footer Widget Area 3',
+			'id'            => 'footer_3',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Footer Widget Area 4',
+			'id'            => 'footer_4',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Footer Widget Area 5',
+			'id'            => 'footer_5',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Footer Widget Area 6',
+			'id'            => 'footer_6',
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h5>',

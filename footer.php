@@ -113,7 +113,7 @@
 	body.single-microstory iframe{ margin-left: auto; margin-right: auto; display: block; }
 
 	#navbar .hubspot-btn a[href]{
-		border: #03AD8C solid 1px;
+		border: #03AD8C solid 1px !important;
 		font-size: 16px;
 		margin-top: 7px;
 		color: #03AD8C !important;

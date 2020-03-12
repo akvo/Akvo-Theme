@@ -47,7 +47,7 @@ $widget_id = "akvoSlider" . $widget_id;
 
 			<div class="<?php _e( $item_class );?>" style="<?php _e( $item_style );?>">
 				<div class="container">
-					<div class="carousel-caption microstory <?php if( isset( $slide['content'] ) && $slide['content'] ){ _e('new-version');}?>">
+					<div class="carousel-caption microstory <?php if( isset( $slide['hubspot_button'] ) && !empty( $slide['hubspot_button'] ) ){ _e('new-version');}?>">
 						<?php if( isset( $slide['title'] ) && $slide['title'] ):?><h1><?php _e( $slide['title'] );?></h1><?php endif;?>
 						<?php if( isset( $slide['content'] ) && $slide['content'] ):?>
 						<br>

@@ -74,18 +74,7 @@
 							<ul class="nav navbar-nav navbar-right">
 								<li><a data-toggle="modal" style="font-size: 22px;" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
 								<li class="hubspot-btn">
-									<!--HubSpot Call-to-Action Code -->
-									<span class="hs-cta-wrapper" id="hs-cta-wrapper-c121e58b-7132-4e02-8aa7-db4122167850">
-										<span class="hs-cta-node hs-cta-c121e58b-7132-4e02-8aa7-db4122167850" id="hs-cta-c121e58b-7132-4e02-8aa7-db4122167850">
-											<!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]-->
-											<a href="https://cta-redirect.hubspot.com/cta/redirect/1891949/c121e58b-7132-4e02-8aa7-db4122167850" >
-												<img class="hs-cta-img" id="hs-cta-img-c121e58b-7132-4e02-8aa7-db4122167850" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1891949/c121e58b-7132-4e02-8aa7-db4122167850.png"  alt="Request a consultation"/>
-											</a>
-										</span>
-										<script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script>
-										<script type="text/javascript"> hbspt.cta.load(1891949, 'c121e58b-7132-4e02-8aa7-db4122167850', {}); </script>
-									</span>
-									<!-- end HubSpot Call-to-Action Code -->
+									<?php if( is_active_sidebar( 'request_hubspot' ) ){ dynamic_sidebar( 'request_hubspot' ); }?>
 								</li>
 							</ul>
 						</div>

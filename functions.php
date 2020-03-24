@@ -211,6 +211,15 @@ define( 'AKVO_VERSION', '1.3.4' );
 			'after_widget'  => '</div>',
 		) );
 
+		register_sidebar( array(
+			'name'          => 'Request Hubspot Button',
+			'id'            => 'request_hubspot',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
 		/*
 		register_sidebar( array(
 			'name'          => 'Video Modal',

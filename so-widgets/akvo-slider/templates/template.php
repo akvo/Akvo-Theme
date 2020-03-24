@@ -84,6 +84,8 @@ $widget_id = "akvoSlider" . $widget_id;
     top: 25%;
     width: 100%;
     text-align: <?php _e( $instance['design_section']['header_text_alignment'] );?>;
+    left: 0;
+    padding: 10px !important;
   }
   <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h1{ font-size: 5rem; line-height: 75px; }
   <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h2{ font-size: 22px; }

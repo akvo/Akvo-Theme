@@ -128,7 +128,10 @@ define( 'AKVO_VERSION', '1.3.4' );
 
 		// REGISTER NAV MENUS
 		register_nav_menus( array(
-			'header-menu' 	=> __( 'Header Menu' ),
+			'header-menu' 		=> 	__( 'Header Menu' ),
+			'header-menu-en' 	=> 	__( 'Header Menu For English' ),
+			'header-menu-fr' 	=> 	__( 'Header Menu For French' ),
+			'header-menu-es' 	=> 	__( 'Header Menu For Spannish' ),
 			//'footer-menu-1' => __( 'Footer Menu 1' ),
 			//'footer-menu-2' => __( 'Footer Menu 2' ),
 			//'footer-menu-3' => __( 'Footer Menu 3' ),
@@ -255,3 +258,7 @@ define( 'AKVO_VERSION', '1.3.4' );
 		) );
 		*/
 	} );
+
+	function getUniqueID( $data ){
+		return substr( md5( json_encode( $data ) ), 0, 8 );
+	}

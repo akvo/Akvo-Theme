@@ -46,10 +46,17 @@
 				<div class="modal-body">
 					<button type="button" class="btn btn-default btn-close" data-dismiss="modal">&times;</button>
 					<?php
+
+						$current_lang = ICL_LANGUAGE_CODE;
+						$menu_id = 'header-menu';
+						if( $current_lang ){
+							$menu_id .= '-' . $current_lang;
+						}
+						
 						wp_nav_menu( array(
-							'theme_location' 	=> 'header-menu',
-							'menu_id' 			=> 'menu-main',
-							'menu_class' 		=> 'nav navbar-nav',
+							'theme_location' 		=> $menu_id,
+							'menu_id' 					=> 	'menu-main',
+							'menu_class' 				=> 'nav navbar-nav',
 							'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 							'walker'            => new WP_Bootstrap_Navwalker(),
 						) );
@@ -120,6 +127,7 @@
 		padding: 7px;
 		display: inline-block;
 		text-decoration: none;
+		line-height: 20px;
 	}
 	#navbar .hubspot-btn a[href] span{ color: #03AD8C !important; }
 	#navbar .hubspot-btn a[href]:hover{

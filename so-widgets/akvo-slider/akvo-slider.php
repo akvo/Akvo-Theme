@@ -99,6 +99,18 @@ class Akvo_Slider extends SiteOrigin_Widget {
 								'center' 		=> __( 'Center', 'siteorigin-widgets' ),
 							)
 						),
+						'desktop' => array(
+	            'type' => 'section',
+	            'label' => __( 'Desktop Styles' , 'siteorigin-widgets' ),
+	            'hide' => true,
+	            'fields' => $this->get_common_fields( 'desktop' ),
+	          ),
+	          'mobile' => array(
+	            'type' => 'section',
+	            'label' => __( 'Mobile Styles' , 'siteorigin-widgets' ),
+	            'hide' => true,
+	            'fields' => $this->get_common_fields( 'mobile' )
+	          ),
 	 				)
 				),
 				'bg-size' => array(
@@ -116,6 +128,23 @@ class Akvo_Slider extends SiteOrigin_Widget {
 			get_template_directory()."/so-widgets/akvo-slider"
 		);
 	}
+
+	function get_common_fields( $screen ){
+    $useable_units = array( 'px', 'vh' );
+    return array(
+      'bg_image_height'  => array(
+        'type' => 'multi-measurement',
+        'label' => __( 'Background Image Height','siteorigin-widgets' ),
+        'autofill' => true,
+        'default' => '600px',
+        'measurements' => array(
+          'image_height' => array(
+            'units' => $useable_units,
+          ),
+        ),
+      ),
+    );
+  }
 
 	function get_template_name($instance) {
 		return 'template';

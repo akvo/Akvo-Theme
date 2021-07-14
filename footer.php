@@ -1,7 +1,7 @@
 <!-- Footer -->
 	<section id="footer" class="peopletop">
 		<div class="container">
-			<div class="row text-left text-xs-center text-sm-left text-md-left">
+			<div id="prefooter" class="row text-left text-xs-center text-sm-left text-md-left">
 				<?php
 					$current_lang = ICL_LANGUAGE_CODE;
 					$footer_id = 'prefooter';

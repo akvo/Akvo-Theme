@@ -2,6 +2,10 @@
 	<section id="footer" class="peopletop">
 		<div class="container">
 			<div class="row text-left text-xs-center text-sm-left text-md-left">
+				<?php dynamic_sidebar( 'prefooter' ); ?>
+				<?php
+
+				/*
 				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer1">
 					<?php dynamic_sidebar( 'footer_1' ); ?>
 				</div>
@@ -20,6 +24,7 @@
 				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer6">
 					<?php dynamic_sidebar( 'footer_6' ); ?>
 				</div>
+				*/?>
 			</div>
 			<br><br/>
 			<div class="row">
@@ -52,7 +57,7 @@
 						if( $current_lang ){
 							$menu_id .= '-' . $current_lang;
 						}
-						
+
 						wp_nav_menu( array(
 							'theme_location' 		=> $menu_id,
 							'menu_id' 					=> 	'menu-main',

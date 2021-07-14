@@ -144,6 +144,7 @@ define( 'AKVO_VERSION', '1.3.4' );
 	// Register Widgets through sidebars
 	add_action( 'widgets_init', function(){
 
+		/*
 		register_sidebar( array(
 			'name'          => 'Footer Widget Area 1',
 			'id'            => 'footer_1',
@@ -192,6 +193,16 @@ define( 'AKVO_VERSION', '1.3.4' );
 		register_sidebar( array(
 			'name'          => 'Footer Widget Area 6',
 			'id'            => 'footer_6',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+		*/
+
+		register_sidebar( array(
+			'name'          => 'Pre Footer',
+			'id'            => 'prefooter',
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h5>',

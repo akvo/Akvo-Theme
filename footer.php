@@ -2,7 +2,14 @@
 	<section id="footer" class="peopletop">
 		<div class="container">
 			<div class="row text-left text-xs-center text-sm-left text-md-left">
-				<?php dynamic_sidebar( 'prefooter' ); ?>
+				<?php
+					$current_lang = ICL_LANGUAGE_CODE;
+					$footer_id = 'prefooter';
+					if( $current_lang ){
+						$footer_id .= '-' . $current_lang;
+					}
+					dynamic_sidebar( $footer_id );
+				?>
 				<?php
 
 				/*

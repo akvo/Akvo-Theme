@@ -201,8 +201,26 @@ define( 'AKVO_VERSION', '1.3.4' );
 		*/
 
 		register_sidebar( array(
-			'name'          => 'Pre Footer',
-			'id'            => 'prefooter',
+			'name'          => 'Pre Footer English',
+			'id'            => 'prefooter-en',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Pre Footer French',
+			'id'            => 'prefooter-fr',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Pre Footer Spanish',
+			'id'            => 'prefooter-es',
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h5>',

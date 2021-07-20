@@ -609,40 +609,56 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 .hubspot-btn-center{
 	text-align: center;
 }
-.hubspot-btn-white, .hubspot-btn-black{
+.hubspot-btn-white > .hs-cta-wrapper,
+.hubspot-btn-black > .hs-cta-wrapper{
+	font-family: "Assistant", sans-serif !important;
+	font-size: 16px !important;
+	background: transparent;
+	text-shadow: 0 1px 0 rgb(0 0 0 / 5%);
+	text-align: center;
+	display: inline-block;
+	line-height: 1em;
+}
+
+.hubspot-btn-white > .hs-cta-wrapper a,
+.hubspot-btn-black > .hs-cta-wrapper a{
+	display: block;
+	outline: none !important;
+	text-decoration: none !important;
+	padding: 1em 2em;
 	-ms-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	font-family: "Assistant", sans-serif !important;
-	font-size: 16px !important;
-	padding: 1em 2em;
-	background: transparent;
-	-webkit-border-radius: 0em;
-	-moz-border-radius: 0em;
-	border-radius: 0em;
-	text-shadow: 0 1px 0 rgb(0 0 0 / 5%);
-	text-align: center;
-	display: inline-block;
-	cursor: pointer;
-	text-decoration: none;
-	line-height: 1em;
-	margin: 0 auto;
 }
-.hubspot-btn-white{
-	color: #ffffff;
+
+.hubspot-btn-white > .hs-cta-wrapper a{
 	border: 2px solid #ffffff;
 }
-.hubspot-btn-white:hover{
+
+.hubspot-btn-white  > .hs-cta-wrapper a span{
+	color: #ffffff !important;
+}
+
+.hubspot-btn-white  > .hs-cta-wrapper a:hover{
 	background: #ffffff;
-	color: #202024;
 }
-.hubspot-btn-black{
+
+.hubspot-btn-white  > .hs-cta-wrapper a:hover span{
+	color: #202024 !important;
+}
+
+.hubspot-btn-black  > .hs-cta-wrapper a{
 	border: 2px solid #000000;
-	color: #000000;
 }
-.hubspot-btn-black:hover{
+.hubspot-btn-black  > .hs-cta-wrapper a span{
+	color: #000000 !important;
+}
+.hubspot-btn-black  > .hs-cta-wrapper a:hover{
 	background: #000000;
-	color: #ffffff;
 }
+.hubspot-btn-black  > .hs-cta-wrapper a:hover span{
+	color: #ffffff !important;
+}
+
 /* AKVO HUBSPOT CTA WIDGET */

@@ -28,10 +28,12 @@ class Akvo_Hubspot_CTA extends SiteOrigin_Widget{
 			//The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
 			array(
         'embed_code' => array(
-          'type' 			=> 'textarea',
-          'label' 		=> __( 'Embed Code', 'siteorigin-widgets' ),
-          'default' 	=> '',
-        ),
+					'type' => 'tinymce',
+					'label' => __( 'Embed Code', 'siteorigin-widgets' ),
+					'default' => '',
+					'rows' => 10,
+					'default_editor' => 'tinymce'
+				),
         'alignment' => array(
           'type'    => 'select',
           'label'   => __( 'Alignment', 'siteorigin-widgets' ),

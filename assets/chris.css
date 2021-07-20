@@ -598,3 +598,51 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 }
 .carousel-caption .hubspot-btn a:hover{ background-color: #00a182;text-decoration: none; }
 /* Hubspot Button */
+
+/* AKVO HUBSPOT CTA WIDGET */
+.hubspot-btn-right{
+	text-align: right;
+}
+.hubspot-btn-left{
+	text-align: left;
+}
+.hubspot-btn-center{
+	text-align: center;
+}
+.hubspot-btn-white, .hubspot-btn-black{
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "Assistant", sans-serif !important;
+	font-size: 16px !important;
+	padding: 1em 2em;
+	background: transparent;
+	-webkit-border-radius: 0em;
+	-moz-border-radius: 0em;
+	border-radius: 0em;
+	text-shadow: 0 1px 0 rgb(0 0 0 / 5%);
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 1em;
+	margin: 0 auto;
+}
+.hubspot-btn-white{
+	color: #ffffff;
+	border: 2px solid #ffffff;
+}
+.hubspot-btn-white:hover{
+	background: #ffffff;
+	color: #202024;
+}
+.hubspot-btn-black{
+	border: 2px solid #000000;
+	color: #000000;
+}
+.hubspot-btn-black:hover{
+	background: #000000;
+	color: #ffffff;
+}
+/* AKVO HUBSPOT CTA WIDGET */

@@ -609,8 +609,12 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 .hubspot-btn-center{
 	text-align: center;
 }
-.hubspot-btn-white > .hs-cta-wrapper,
-.hubspot-btn-black > .hs-cta-wrapper{
+.hubspot-btn-white > p,
+.hubspot-btn-black > p{
+	margin: 0;
+}
+.hubspot-btn-white .hs-cta-wrapper,
+.hubspot-btn-black .hs-cta-wrapper{
 	font-family: "Assistant", sans-serif !important;
 	font-size: 16px !important;
 	background: transparent;
@@ -620,8 +624,8 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	line-height: 1em;
 }
 
-.hubspot-btn-white > .hs-cta-wrapper a,
-.hubspot-btn-black > .hs-cta-wrapper a{
+.hubspot-btn-white a.cta_button,
+.hubspot-btn-black a.cta_button{
 	display: block;
 	outline: none !important;
 	text-decoration: none !important;
@@ -632,32 +636,32 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 	box-sizing: border-box;
 }
 
-.hubspot-btn-white > .hs-cta-wrapper a{
-	border: 2px solid #ffffff;
+.hubspot-btn-white a.cta_button{
+	border: 2px solid #ffffff !important;
 }
 
-.hubspot-btn-white  > .hs-cta-wrapper a span{
+.hubspot-btn-white a.cta_button span{
 	color: #ffffff !important;
 }
 
-.hubspot-btn-white  > .hs-cta-wrapper a:hover{
-	background: #ffffff;
+.hubspot-btn-white a.cta_button:hover{
+	background: #ffffff !important;
 }
 
-.hubspot-btn-white  > .hs-cta-wrapper a:hover span{
+.hubspot-btn-white a.cta_button:hover span{
 	color: #202024 !important;
 }
 
-.hubspot-btn-black  > .hs-cta-wrapper a{
-	border: 2px solid #000000;
+.hubspot-btn-black a.cta_button{
+	border: 2px solid #000000 !important;
 }
-.hubspot-btn-black  > .hs-cta-wrapper a span{
+.hubspot-btn-black a.cta_button span{
 	color: #000000 !important;
 }
-.hubspot-btn-black  > .hs-cta-wrapper a:hover{
-	background: #000000;
+.hubspot-btn-black a.cta_button:hover{
+	background: #000000 !important;
 }
-.hubspot-btn-black  > .hs-cta-wrapper a:hover span{
+.hubspot-btn-black a.cta_button:hover span{
 	color: #ffffff !important;
 }
 

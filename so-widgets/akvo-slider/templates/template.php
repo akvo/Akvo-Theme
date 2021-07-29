@@ -80,16 +80,20 @@
   <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h1{ font-size: 5rem; line-height: 75px; }
   <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h2{ font-size: 22px; }
 
-  <?php _e( "#" . $widget_id );?> .carousel-inner, <?php _e( "#" . $widget_id );?> .carousel-inner .item{
-     height: <?php echo $instance['design_section']['mobile']['bg_image_height'];?> !important;
-  }
+  <?php _e( "#" . $widget_id );?> .carousel-inner .item-narrow, <?php _e( "#" . $widget_id );?> .carousel-inner .item{
+   height: <?php echo( $instance['bg-size'] == "item-narrow" ? "450px" :
+     ( $instance['bg-size'] == "item-extra-narrow" ? "250px" : $instance['design_section']['mobile']['bg_image_height'] )
+   ); ?> !important;
+ }
 
   /* Scss styles */
   @media( min-width: 960px ){
     <?php _e( "#" . $widget_id );?> .carousel-caption.new-version{ top: 35%; }
     <?php _e( "#" . $widget_id );?> .carousel .carousel-caption.new-version{ left: 50%; transform: translateX(-50%); }
     <?php _e( "#" . $widget_id );?> .carousel-inner, <?php _e( "#" . $widget_id );?> .carousel-inner .item{
-	     height: <?php echo $instance['design_section']['desktop']['bg_image_height'];?> !important;
+       height: <?php echo( $instance['bg-size'] == "item-narrow" ? "450px" :
+         ( $instance['bg-size'] == "item-extra-narrow" ? "250px" : $instance['design_section']['desktop']['bg_image_height'] )
+       ); ?> !important;
     }
 
   }

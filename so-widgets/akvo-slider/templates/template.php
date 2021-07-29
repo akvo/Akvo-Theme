@@ -80,10 +80,11 @@
   <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h1{ font-size: 5rem; line-height: 75px; }
   <?php _e( "#" . $widget_id );?> .carousel-caption.new-version h2{ font-size: 22px; }
 
-  <?php _e( "#" . $widget_id );?> .carousel-inner .item-narrow, <?php _e( "#" . $widget_id );?> .carousel-inner .item{
+  <?php _e( "#" . $widget_id );?> .carousel-inner, <?php _e( "#" . $widget_id );?> .carousel-inner .item{
    height: <?php echo( $instance['bg-size'] == "item-narrow" ? "450px" :
      ( $instance['bg-size'] == "item-extra-narrow" ? "250px" : $instance['design_section']['mobile']['bg_image_height'] )
    ); ?> !important;
+
  }
 
   /* Scss styles */

@@ -7,8 +7,7 @@
 			<?php echo do_shortcode("[akvo_clock id='clock_west_africa' offset='+0' title='West Africa' hello='Salut' link='https://akvo.org/west-africa/']");?>
 			<?php echo do_shortcode("[akvo_clock id='clock_europe' offset='+1' title='Europe' hello='Hello' link='https://akvo.org/europe/']");?>
 			<?php echo do_shortcode("[akvo_clock id='clock_east_africa' offset='+3' title='East Africa' hello='Jambo' link='https://akvo.org/east-africa/']");?>
-			<?php echo do_shortcode("[akvo_clock id='clock_south_asia' offset='+5.5' title='South Asia' hello='Namaste' link='https://akvo.org/south-asia/']");?>
-			<?php echo do_shortcode("[akvo_clock id='clock_apac' offset='+8' title='South East Asia & Pacific' hello='Apa kabar?' link='https://akvo.org/south-east-asia-pacific/']");?>
+			<?php echo do_shortcode("[akvo_clock id='clock_apac' offset='+8' title='Asia Pacific' hello='Apa kabar?' link='https://akvo.org/south-east-asia-pacific/']");?>
 		</div>
 	</div>
 </div>

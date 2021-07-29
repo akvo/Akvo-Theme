@@ -666,3 +666,10 @@ body.tag #myCarousel .item, body.category #myCarousel .item{
 }
 
 /* AKVO HUBSPOT CTA WIDGET */
+
+/* CLOCKS */
+@media (max-width: 768px){
+	.jcgmt-container {
+	  width: 50% !important;
+	}
+}

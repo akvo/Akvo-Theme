@@ -73,6 +73,7 @@
 						<div id="navbar" class="collapse navbar-collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<li><a data-toggle="modal" style="font-size: 22px;" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+								<li class="space-two"><?php do_action('icl_language_selector'); ?></li>
 								<li class="hubspot-btn">
 									<?php if( is_active_sidebar( 'request_hubspot' ) ){ dynamic_sidebar( 'request_hubspot' ); }?>
 								</li>

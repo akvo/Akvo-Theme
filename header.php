@@ -76,11 +76,7 @@
 								<li class="space-two"><?php do_action('icl_language_selector'); ?></li>
 								<li class="hubspot-btn">
 								<?php
-									$current_lang = ICL_LANGUAGE_CODE;
-									$widget_id = 'request_hubspot';
-									if( $current_lang ){
-										$widget_id .= '_' . $current_lang;
-									}
+									$widget_id = getWidgetLangID( 'request_hubspot' );
 									if( is_active_sidebar( $widget_id ) ){ dynamic_sidebar( $widget_id ); }
 								?>
 								</li>

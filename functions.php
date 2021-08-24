@@ -327,3 +327,11 @@ define( 'AKVO_VERSION', '1.3.8' );
 	function getUniqueID( $data ){
 		return substr( md5( json_encode( $data ) ), 0, 8 );
 	}
+
+	// FUNCTION THAT HAS BEEN USED TO DEFINE SEPARATE WIDGET ID FOR EACH LANGUAGE
+	function getWidgetLangID( $widget_id, $seperator = '_' ){
+		if( defined( 'ICL_LANGUAGE_CODE' ) && ICL_LANGUAGE_CODE ){
+			$widget_id .= $seperator . ICL_LANGUAGE_CODE;
+		}
+		return $widget_id;
+	}

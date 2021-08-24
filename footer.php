@@ -2,14 +2,7 @@
 	<section id="footer" class="peopletop">
 		<div class="container">
 			<div id="prefooter" class="text-left text-xs-center text-sm-left text-md-left">
-				<?php
-					$current_lang = ICL_LANGUAGE_CODE;
-					$footer_id = 'prefooter';
-					if( $current_lang ){
-						$footer_id .= '-' . $current_lang;
-					}
-					dynamic_sidebar( $footer_id );
-				?>
+				<?php dynamic_sidebar( getWidgetLangID( 'prefooter', '-' ) ); ?>
 			</div>
 			<br><br/>
 			<div class="row">
@@ -22,16 +15,7 @@
 						<li class="list-inline-item"><a href="https://github.com/akvo" target="_blank"><i class="fab fa-github"></i></a></li>
 						<li class="list-inline-item"><a href="https://akvo.org/contact-us/" target="_blank"><i class="fa fa-envelope"></i></a></li>
 					</ul>
-					<p class="text-center">
-					<?php
-						$current_lang = ICL_LANGUAGE_CODE;
-						$footer_id = 'footer_creative_commons_text';
-						if( $current_lang ){
-							$footer_id .= '_' . $current_lang;
-						}
-						dynamic_sidebar( $footer_id );
-					?>
-					</p>
+					<p class="text-center"><?php dynamic_sidebar( getWidgetLangID( 'footer_creative_commons_text' ) ); ?></p>
 				</div>
 				</hr>
 			</div>
@@ -45,16 +29,9 @@
 				<div class="modal-body">
 					<button type="button" class="btn btn-default btn-close" data-dismiss="modal">&times;</button>
 					<?php
-
-						$current_lang = ICL_LANGUAGE_CODE;
-						$menu_id = 'header-menu';
-						if( $current_lang ){
-							$menu_id .= '-' . $current_lang;
-						}
-
 						wp_nav_menu( array(
-							'theme_location' 		=> $menu_id,
-							'menu_id' 					=> 	'menu-main',
+							'theme_location' 		=> getWidgetLangID( 'header-menu', '-' ),
+							'menu_id' 					=> 'menu-main',
 							'menu_class' 				=> 'nav navbar-nav',
 							'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 							'walker'            => new WP_Bootstrap_Navwalker(),

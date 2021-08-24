@@ -228,8 +228,26 @@ define( 'AKVO_VERSION', '1.3.8' );
 		) );
 
 		register_sidebar( array(
-			'name'          => 'Footer Creative Commons Text',
-			'id'            => 'footer_creative_commons_text',
+			'name'          => 'Footer Creative Commons Text (EN)',
+			'id'            => 'footer_creative_commons_text_en',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Footer Creative Commons Text (FR)',
+			'id'            => 'footer_creative_commons_text_fr',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Footer Creative Commons Text (ES)',
+			'id'            => 'footer_creative_commons_text_es',
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h5>',

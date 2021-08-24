@@ -10,28 +10,6 @@
 					}
 					dynamic_sidebar( $footer_id );
 				?>
-				<?php
-
-				/*
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer1">
-					<?php dynamic_sidebar( 'footer_1' ); ?>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer2">
-					<?php dynamic_sidebar( 'footer_2' ); ?>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer3">
-					<?php dynamic_sidebar( 'footer_3' ); ?>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer4">
-					<?php dynamic_sidebar( 'footer_4' ); ?>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer5">
-					<?php dynamic_sidebar( 'footer_5' ); ?>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 footercol footer6">
-					<?php dynamic_sidebar( 'footer_6' ); ?>
-				</div>
-				*/?>
 			</div>
 			<br><br/>
 			<div class="row">
@@ -44,7 +22,16 @@
 						<li class="list-inline-item"><a href="https://github.com/akvo" target="_blank"><i class="fab fa-github"></i></a></li>
 						<li class="list-inline-item"><a href="https://akvo.org/contact-us/" target="_blank"><i class="fa fa-envelope"></i></a></li>
 					</ul>
-					<p class="text-center"><?php dynamic_sidebar( 'footer_creative_commons_text' ); ?></p>
+					<p class="text-center">
+					<?php
+						$current_lang = ICL_LANGUAGE_CODE;
+						$footer_id = 'footer_creative_commons_text';
+						if( $current_lang ){
+							$footer_id .= '_' . $current_lang;
+						}
+						dynamic_sidebar( $footer_id );
+					?>
+					</p>
 				</div>
 				</hr>
 			</div>

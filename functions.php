@@ -144,62 +144,6 @@ define( 'AKVO_VERSION', '1.3.8' );
 	// Register Widgets through sidebars
 	add_action( 'widgets_init', function(){
 
-		/*
-		register_sidebar( array(
-			'name'          => 'Footer Widget Area 1',
-			'id'            => 'footer_1',
-			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h5>',
-			'after_title'   => '</h5>',
-		) );
-
-		register_sidebar( array(
-			'name'          => 'Footer Widget Area 2',
-			'id'            => 'footer_2',
-			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h5>',
-			'after_title'   => '</h5>',
-		) );
-
-		register_sidebar( array(
-			'name'          => 'Footer Widget Area 3',
-			'id'            => 'footer_3',
-			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h5>',
-			'after_title'   => '</h5>',
-		) );
-
-		register_sidebar( array(
-			'name'          => 'Footer Widget Area 4',
-			'id'            => 'footer_4',
-			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h5>',
-			'after_title'   => '</h5>',
-		) );
-
-		register_sidebar( array(
-			'name'          => 'Footer Widget Area 5',
-			'id'            => 'footer_5',
-			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h5>',
-			'after_title'   => '</h5>',
-		) );
-
-		register_sidebar( array(
-			'name'          => 'Footer Widget Area 6',
-			'id'            => 'footer_6',
-			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h5>',
-			'after_title'   => '</h5>',
-		) );
-		*/
-
 		register_sidebar( array(
 			'name'          => 'Pre Footer English',
 			'id'            => 'prefooter-en',

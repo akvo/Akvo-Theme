@@ -75,7 +75,14 @@
 								<li><a data-toggle="modal" style="font-size: 22px;" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
 								<li class="space-two"><?php do_action('icl_language_selector'); ?></li>
 								<li class="hubspot-btn">
-									<?php if( is_active_sidebar( 'request_hubspot' ) ){ dynamic_sidebar( 'request_hubspot' ); }?>
+								<?php
+									$current_lang = ICL_LANGUAGE_CODE;
+									$widget_id = 'request_hubspot';
+									if( $current_lang ){
+										$widget_id .= '_' . $current_lang;
+									}
+									if( is_active_sidebar( $widget_id ) ){ dynamic_sidebar( $widget_id ); }
+								?>
 								</li>
 							</ul>
 						</div>

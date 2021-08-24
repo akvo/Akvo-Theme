@@ -244,8 +244,26 @@ define( 'AKVO_VERSION', '1.3.8' );
 		) );
 
 		register_sidebar( array(
-			'name'          => 'Request Hubspot Button',
-			'id'            => 'request_hubspot',
+			'name'          => 'Request Hubspot Button (EN)',
+			'id'            => 'request_hubspot_en',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Request Hubspot Button (FR)',
+			'id'            => 'request_hubspot_fr',
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		) );
+
+		register_sidebar( array(
+			'name'          => 'Request Hubspot Button (ES)',
+			'id'            => 'request_hubspot_es',
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h5>',

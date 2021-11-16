@@ -89,8 +89,8 @@ define( 'AKVO_VERSION', '1.3.8' );
 		wp_localize_script( 'akvo-script', 'settings', $settings );
 
 		// clocks for every region
-		wp_enqueue_script( 'clock', get_template_directory_uri() .'/js/jClocksGMT.js', array('jquery'), null, true);
-		wp_enqueue_script( 'rotate', get_template_directory_uri() .'/js/jquery.rotate.js', array('jquery'), null, true);
+		//wp_enqueue_script( 'clock', get_template_directory_uri() .'/js/jClocksGMT.js', array('jquery'), null, true);
+		//wp_enqueue_script( 'rotate', get_template_directory_uri() .'/js/jquery.rotate.js', array('jquery'), null, true);
 		wp_enqueue_script( 'akvo-combined', get_template_directory_uri() .'/js/combined.js', array('jquery'), null, true );
 		//wp_enqueue_script('easing-min', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js', array('jquery'), null, true);
 

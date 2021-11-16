@@ -83,7 +83,7 @@
 <?php wp_footer(); ?>
 
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-NJXGk7R+8gWGBdutmr+/d6XDokLwQhF1U3VA7FhvBDlOq7cNdI69z7NQdnXxcF7k" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/1891949.js"></script>
@@ -99,31 +99,14 @@
 	body.single-microstory iframe{ margin-left: auto; margin-right: auto; display: block; }
 
 	#navbar .hubspot-btn a[href]{
-		border: #03AD8C solid 1px !important;
-		font-size: 16px;
-		margin-top: 7px;
-		color: #03AD8C !important;
-		padding: 7px;
-		display: inline-block;
-		text-decoration: none;
-		line-height: 20px;
+		border: #03AD8C solid 1px !important; font-size: 16px; margin-top: 7px; color: #03AD8C !important; padding: 7px;
+		display: inline-block; text-decoration: none; line-height: 20px;
 	}
 	#navbar .hubspot-btn a[href] span{ color: #03AD8C !important; }
-	#navbar .hubspot-btn a[href]:hover{
-		background: #03AD8C !important;
-		color: #fff !important;
-	}
+	#navbar .hubspot-btn a[href]:hover{ background: #03AD8C !important; color: #fff !important; }
 	#navbar .hubspot-btn a[href]:hover span{ color: #FFF !important; }
 
 	/* REMOVE THE DUPLICATE CSS FROM CUSTOMISE */
-	p a{
-		color: #000;
-    padding-bottom: 2px;
-    border-bottom: 1px solid #e04d95!important;
-    text-decoration: none!important;
-	}
-
-	#footer  ul.menu li{
-		margin-bottom: 10px;
-	}
+	p a{ color: #000; padding-bottom: 2px; border-bottom: 1px solid #e04d95!important; text-decoration: none!important; }
+	#footer  ul.menu li{ margin-bottom: 10px;}
 </style>

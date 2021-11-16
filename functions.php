@@ -94,7 +94,7 @@ define( 'AKVO_VERSION', '1.3.8' );
 		wp_enqueue_script('easing-min', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js', array('jquery'), null, true);
 
 		// Why/Where are we using this?
-		wp_enqueue_script('bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.js', array('jquery'), null, true);
+		//	wp_enqueue_script('bxslider', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.js', array('jquery'), null, true);
 
 		wp_enqueue_script('easing', 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/vendor/jquery.easing.1.3.js', array('jquery'), null, true);
 

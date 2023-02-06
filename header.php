@@ -67,13 +67,23 @@
 							</a>
 							<div class="logobrand">
 								<a id="brand" class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-									<img src="<?php bloginfo('template_url'); ?>/images/logos/random/logo<?php echo rand(1,4); ?>.png" alt="logo" width="200px" >
+									<img src="<?php bloginfo('template_url'); ?>/images/logos/akvologoblack.png" alt="logo" width="200px" >
 								</a>
 							</div>
 						</div>
 						<div id="navbar" class="collapse navbar-collapse">
+							<!-- Primary Menu -->
+							<?php
+								wp_nav_menu( array(
+									'theme_location' 		=> getWidgetLangID( 'header-menu', '-' ),
+									'menu_id' 					=> 'menu-main',
+									'menu_class' 				=> 'nav navbar-nav',
+									'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+									'walker'            => new WP_Bootstrap_Navwalker(),
+								) );
+							?>
 							<ul class="nav navbar-nav navbar-right">
-								<li><a data-toggle="modal" style="font-size: 22px;" href="#main-menu-modal"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+								<li><a style="font-size: 17px;color: #202024 !important;" data-toggle="modal" href="#search-modal"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 								<li class="space-two"><?php do_action('icl_language_selector'); ?></li>
 								<li class="hubspot-btn">
 								<?php

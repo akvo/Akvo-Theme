@@ -1,0 +1,120 @@
+/* NEW HEADER */
+nav#header,
+nav#header .navbar-header {
+	background: #ffffff !important;
+}
+
+.navbar-toggle .icon-bar{
+	color: #000000 !important;
+	background: #000000 !important;
+}
+
+.navbar.navbar-fixed-top{
+	border-color: #F2F2F2;
+	box-shadow: unset;
+}
+
+.navbar.navbar-fixed-top .navbar-container {
+	padding: 15px 0 !important;
+}
+
+.navbar-nav > li > a {
+	color: #000000 !important;
+}
+
+.dropdown-toggle > .caret{
+	display: inline-block !important;
+}
+
+.dropdown-menu,
+.dropdown-menu li:hover {
+	background: #ffffff !important;
+}
+
+.dropdown-menu > li > a {
+	color: #000000 !important;
+}
+
+.navbar-nav > li.active > a,
+.dropdown-menu a:hover,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+	background-color: unset !important;
+	color: #03AD8C !important;
+}
+
+/* Highlight current-menu-ancestor */
+.navbar-nav > li.dropdown.current-menu-ancestor > a { color: #03AD8C !important; }
+
+/* SEARCH MODAL */
+#search-modal {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#search-modal .modal-dialog {
+  max-width: 600px;
+}
+
+#search-modal .modal-dialog {
+  top: 25%;
+}
+
+#search-modal .modal-content {
+  box-shadow: none;
+  background: transparent;
+}
+
+#search-modal form {
+	text-align: center;
+}
+
+#search-modal input[type='search'] {
+	border: 0px;
+	width: 100%;
+	outline: none;
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: 300;
+  text-align: center;
+	background: transparent;
+}
+
+#search-modal .modal-content .btn {
+  margin-top: 60px;
+  font-size: 16px;
+  padding: 1em 2em;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 0em;
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  line-height: 1em;
+}
+
+@media (min-width: 960px){
+	.navbar-nav { margin: 0; }
+
+	nav#header .navbar-brand {
+		padding: 8px 15px;
+		height: 55px;
+	}
+
+	.navbar-nav > li > a,
+	.dropdown-menu > li > a {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.navbar-nav > li > a {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		margin: -15px 0;
+	}
+
+	.navbar-nav > li > .dropdown-menu {
+		margin-top: 15px;
+	}
+
+}

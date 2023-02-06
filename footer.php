@@ -53,6 +53,18 @@
 			</div>
 		</div>
 	</div>
+	<div id="search-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<form method="GET" action="<?php bloginfo('url');?>">
+		        <input type="search" name="s" value="" autocomplete="off" placeholder="type keyword(s) here">
+		        <button type="submit" class="btn btn-primary">Search</button>
+			    </form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- End /footer -->
 <?php /*
@@ -99,12 +111,10 @@
 	body.single-microstory iframe{ margin-left: auto; margin-right: auto; display: block; }
 
 	#navbar .hubspot-btn a[href]{
-		border: #03AD8C solid 1px !important; font-size: 16px; margin-top: 7px; color: #03AD8C !important; padding: 7px;
-		display: inline-block; text-decoration: none; line-height: 20px;
+		border: #03AD8C solid 1px !important; font-size: 16px; background-color: #03AD8C !important; padding: 15px 25px;
+		display: inline-block; text-decoration: none; line-height: 24px;
 	}
-	#navbar .hubspot-btn a[href] span{ color: #03AD8C !important; }
-	#navbar .hubspot-btn a[href]:hover{ background: #03AD8C !important; color: #fff !important; }
-	#navbar .hubspot-btn a[href]:hover span{ color: #FFF !important; }
+	#navbar .hubspot-btn a[href] span{ color: #ffffff !important; }
 
 	/* REMOVE THE DUPLICATE CSS FROM CUSTOMISE */
 	p a{ color: #000; padding-bottom: 2px; border-bottom: 1px solid #e04d95!important; text-decoration: none!important; }

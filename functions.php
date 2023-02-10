@@ -1,6 +1,6 @@
 <?php
 
-define( 'AKVO_VERSION', '1.4.0' );
+define( 'AKVO_VERSION', '1.4.1' );
 
 	$inc_files = array(
 		'lib/class-akvo-admin.php',

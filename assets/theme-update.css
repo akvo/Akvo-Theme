@@ -92,6 +92,49 @@ nav#header .navbar-header {
   line-height: 1em;
 }
 
+/* Akvo Hubspot blog and Webinars sow */
+.akvo-hubspot-blog-webinars,
+.akvo-hubspot-blog-webinars li.post,
+.akvo-hubspot-blog-webinars li.post a[href] {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.akvo-hubspot-blog-webinars li.post a[href]{
+	width: 100%;
+	flex-direction: column;
+}
+
+.akvo-hubspot-blog-webinars li.post .post-meta{
+	flex: 1;
+}
+
+.akvo-hubspot-blog-webinars .featured-image {
+	background-color: #ffffff;
+	background-size: cover;
+	background-position: center center;
+	overflow: hidden;
+	max-height: 217px;
+	height: 250px;
+}
+
+.akvo-hubspot-blog-webinars li.post .post-meta {
+	background: #f2f2f2;
+	padding: 20px 25px;
+}
+
+.akvo-hubspot-blog-webinars li.post .post-label {
+	font-size: 16px;
+	line-height: 24px;
+	color: #202024;
+}
+
+.akvo-hubspot-blog-webinars li.post .post-title {
+	font-size: 24px;
+	line-height: 32px;
+	color: #27303E;
+}
+
 @media (min-width: 960px){
 	.navbar-nav { margin: 0; }
 
@@ -117,4 +160,10 @@ nav#header .navbar-header {
 		margin-top: 15px;
 	}
 
+}
+
+@media(min-width: 769px){
+	.akvo-hubspot-blog-webinars li.post:hover .post-meta {
+		background: #ffffff;
+	}
 }

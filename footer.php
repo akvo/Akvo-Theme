@@ -116,6 +116,9 @@
 	}
 	#navbar .hubspot-btn a[href] span{ color: #ffffff !important; }
 
+	#navbar .hubspot-btn a[href]:hover{ background-color: #ffffff !important; }
+	#navbar .hubspot-btn a[href]:hover span{ color: #03AD8C !important; }
+
 	/* REMOVE THE DUPLICATE CSS FROM CUSTOMISE */
 	p a{ color: #000; padding-bottom: 2px; border-bottom: 1px solid #e04d95!important; text-decoration: none!important; }
 	#footer  ul.menu li{ margin-bottom: 10px;}

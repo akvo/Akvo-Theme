@@ -35,7 +35,6 @@ nav#header .navbar-header {
 	color: #000000 !important;
 }
 
-.navbar-nav > li.active > a,
 .dropdown-menu a:hover,
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:focus,
@@ -43,9 +42,6 @@ nav#header .navbar-header {
 	background-color: unset !important;
 	color: #03AD8C !important;
 }
-
-/* Highlight current-menu-ancestor */
-.navbar-nav > li.dropdown.current-menu-ancestor > a { color: #03AD8C !important; }
 
 /* SEARCH MODAL */
 #search-modal {
@@ -149,6 +145,10 @@ nav#header .navbar-header {
 		height: 55px;
 	}
 
+	nav#header .logobrand {
+		margin-right: 25px;
+	}
+
 	.navbar-nav > li > a,
 	.dropdown-menu > li > a {
 		font-weight: 600;
@@ -156,10 +156,35 @@ nav#header .navbar-header {
 		line-height: 24px;
 	}
 
-	.navbar-nav > li > a {
-		padding-top: 30px;
-		padding-bottom: 30px;
+	.navbar-nav > li.menu-item:not(:last-child) {
+		margin-right: 25px;
+	}
+
+	.navbar-nav > li.menu-item > a {
+		color: #000000 !important;
+	}
+
+	.navbar-nav > li.menu-item > a {
+		padding: 30px 0;
 		margin: -15px 0;
+		position: relative;
+	}
+
+	.navbar-nav > li.menu-item > a::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -3px;
+		height: 3px;
+		width: 100%;
+		background: transparent;
+		z-index: 9999;
+	}
+
+	.navbar-nav > li.active > a::after,
+	.navbar-nav > li.menu-item:hover > a::after,
+	.navbar-nav > li.dropdown.current-menu-ancestor > a::after {
+		background: #03AD8C;
 	}
 
 	.navbar-nav > li > .dropdown-menu {

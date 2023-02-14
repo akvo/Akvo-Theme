@@ -93,6 +93,10 @@ nav#header .navbar-header {
 }
 
 /* Akvo Hubspot blog and Webinars sow */
+.akvo-hubspot-blog-webinars{
+	margin: 0 -15px;
+}
+
 .akvo-hubspot-blog-webinars,
 .akvo-hubspot-blog-webinars li.post,
 .akvo-hubspot-blog-webinars li.post a[href] {
@@ -110,7 +114,7 @@ nav#header .navbar-header {
 }
 
 .akvo-hubspot-blog-webinars .featured-image {
-	background-color: #ffffff;
+	background-color: #dddddd;
 	background-size: cover;
 	background-position: center center;
 	overflow: hidden;
@@ -121,12 +125,14 @@ nav#header .navbar-header {
 .akvo-hubspot-blog-webinars li.post .post-meta {
 	background: #f2f2f2;
 	padding: 20px 25px;
+	transition: background .3s linear;
 }
 
 .akvo-hubspot-blog-webinars li.post .post-label {
 	font-size: 16px;
 	line-height: 24px;
 	color: #202024;
+	margin-bottom: 15px;
 }
 
 .akvo-hubspot-blog-webinars li.post .post-title {
@@ -163,7 +169,7 @@ nav#header .navbar-header {
 }
 
 @media(min-width: 769px){
-	.akvo-hubspot-blog-webinars li.post:hover .post-meta {
+	.akvo-hubspot-blog-webinars li.post > a:hover .post-meta {
 		background: #ffffff;
 	}
 }

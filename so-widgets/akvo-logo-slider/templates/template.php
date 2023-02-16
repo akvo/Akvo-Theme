@@ -14,7 +14,7 @@
 		<?php foreach( $instance['slides'] as $slide ): $logo_link = $slide['link']; ?>
 			<div class="slide">
 				<?php if( !empty( $logo_link ) ):?>
-					<a href="<?php _e( $logo_link ); ?>">
+					<a href="<?php _e( $logo_link ); ?>" target="_blank">
 						<?php echo wp_get_attachment_image( $slide['image'], 'thumbnail' );?>
 				  </a>
 				<?php else: ?>

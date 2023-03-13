@@ -1,6 +1,6 @@
 <!-- Akvo Hubspot blog and Webinars -->
 <h1><?php _e( $instance['title'] );?></h1>
-<ul class="akvo-hubspot-blog-webinars akvo-custom-posts">
+<ul class="akvo-hubspot-blog-webinars">
 	<?php foreach( $instance['items'] as $item ):
 		$post_label = $item['post_label'];
 		$image_url = wp_get_attachment_url( $item['featured_image'] );

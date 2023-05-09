@@ -1,6 +1,6 @@
 <?php
 
-define( 'AKVO_VERSION', '1.4.0' );
+define( 'AKVO_VERSION', '1.4.2' );
 
 	$inc_files = array(
 		'lib/class-akvo-admin.php',
@@ -110,6 +110,7 @@ define( 'AKVO_VERSION', '1.4.0' );
 		wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', null, true);
 		wp_enqueue_style('style', get_template_directory_uri() .'/assets/main.css', array('bootstrap'), AKVO_VERSION );
 		wp_enqueue_style('style-chris', get_template_directory_uri() .'/assets/chris.css', array('bootstrap'), AKVO_VERSION );
+		wp_enqueue_style('style-theme-update', get_template_directory_uri() .'/assets/theme-update.css', array('bootstrap'), AKVO_VERSION );
 
 
 		// load google fonts - can be combined for later

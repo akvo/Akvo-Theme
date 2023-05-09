@@ -187,7 +187,7 @@ $(document).ready(function(){
 			autoplaySpeed	: 1500,
 			arrows			: false,
 			dots			: false,
-			pauseOnHover	: false,
+			// pauseOnHover	: false,
 			responsive		: [{
 				breakpoint	: 960,
 				settings	: { slidesToShow: 4 }

@@ -1,6 +1,6 @@
 <?php
 
-define( 'AKVO_VERSION', '1.4.1' );
+define( 'AKVO_VERSION', '1.4.2' );
 
 	$inc_files = array(
 		'lib/class-akvo-admin.php',
@@ -85,7 +85,7 @@ define( 'AKVO_VERSION', '1.4.1' );
 		// Why/Where are we using this?
 		//wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js', array('jquery'), null, true);
 
-		wp_enqueue_script( 'akvo-script', get_template_directory_uri() .'/js/akvo_scripts.js', array( 'jquery' ), time(), true);
+		wp_enqueue_script( 'akvo-script', get_template_directory_uri() .'/js/akvo_scripts.js', array( 'jquery' ), AKVO_VERSION, true);
 
 		wp_localize_script( 'akvo-script', 'settings', $settings );
 
@@ -110,7 +110,7 @@ define( 'AKVO_VERSION', '1.4.1' );
 		wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', null, true);
 		wp_enqueue_style('style', get_template_directory_uri() .'/assets/main.css', array('bootstrap'), AKVO_VERSION );
 		wp_enqueue_style('style-chris', get_template_directory_uri() .'/assets/chris.css', array('bootstrap'), AKVO_VERSION );
-		wp_enqueue_style('style-theme-update', get_template_directory_uri() .'/assets/theme-update.css', array('bootstrap'), time() );
+		wp_enqueue_style('style-theme-update', get_template_directory_uri() .'/assets/theme-update.css', array('bootstrap'), AKVO_VERSION );
 
 
 		// load google fonts - can be combined for later

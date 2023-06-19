@@ -14,6 +14,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="HandheldFriendly" content="True">
+		<!-- Viewport for screens with a maximum width of 768px -->
+	  <meta name="viewport" content="width=768, initial-scale=1" media="(max-width: 768px)">
+	  <!-- Viewport for screens with a maximum width of 480px -->
+	  <meta name="viewport" content="width=480, initial-scale=1" media="(max-width: 480px)">
+	  <!-- Viewport for screens with a maximum width of 320px -->
+	  <meta name="viewport" content="width=320, initial-scale=1" media="(max-width: 320px)">
+	  <!-- Viewport for screens with a maximum width of 1024px -->
+	  <meta name="viewport" content="width=1024, initial-scale=1" media="(max-width: 1024px)">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<?php wp_head(); ?>

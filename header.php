@@ -12,7 +12,6 @@
 		<meta charset="UTF-8">
 		<title><?php wp_title('|', true, 'right'); ?></title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="HandheldFriendly" content="True">
 		<!-- Viewport for screens with a maximum width of 768px -->
 	  <meta name="viewport" content="width=768, initial-scale=1" media="(max-width: 768px)">

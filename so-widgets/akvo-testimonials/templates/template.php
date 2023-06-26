@@ -1,6 +1,6 @@
 <!-- Testimonials Section -->
 <?php if( isset( $instance['testimonials'] ) ):?>
-<div class="fullwidth paddingtop paddingbottom whitetext">
+<div class="fullwidth paddingtop paddingbottom">
 	<div class="container testimonials">
         <div class="row">
 			<div class="col-md-12">

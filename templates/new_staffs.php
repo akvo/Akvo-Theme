@@ -14,7 +14,7 @@
 ?>
 
 	<!-- Display featured image in right-aligned floating div -->
-	<div class="imgWrapper"><?php the_post_thumbnail(); ?></div>
+	<div class="imgWrapper"><?php the_post_thumbnail('large'); ?></div>
 	<!-- Display Title and Name -->
 	<div class="staffName"><?php the_title(); ?></div>
 	<p class="staffTitle"><?php _e( $staff_fields['staff_title'] ); ?></p>
